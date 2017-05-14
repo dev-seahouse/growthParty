@@ -1,5 +1,9 @@
 const { mix } = require('laravel-mix');
 mix.browserSync('growthparty.dev');
+mix.autoload({
+  jquery: ['$', 'jQuery', 'window.jQuery'],
+  tether: ['Tether', 'window.Tether']
+});
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
