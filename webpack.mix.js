@@ -1,5 +1,5 @@
 const { mix } = require('laravel-mix');
-
+mix.browserSync('growthparty.dev');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
