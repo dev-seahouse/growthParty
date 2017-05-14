@@ -1,6 +1,6 @@
 # Setup guide
 ### Configure apache vhost
-this is necessary if browsersync is used during development
+this is necessary only if browsersync is used during development
 #### Step 1
 open c:\xampp\apache\conf\extra\httpd-vhosts.conf and add
 ```
