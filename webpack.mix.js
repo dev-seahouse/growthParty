@@ -14,6 +14,6 @@ mix.autoload({
  | file for the application as well as bundling up all the JS files.
  |
  */
-
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.sass('resources/assets/sass/app.scss', 'public/css')
+   .js('resources/assets/js/app.js', 'public/js')
+    .extract(['vue','axios','jquery','foundation-sites/dist/js/foundation.min']);
