@@ -1,5 +1,5 @@
 # Setup guide
-##### Configure apache vhost
+### Configure apache vhost
 #### Step 1
 open c:\xampp\apache\conf\extra\httpd-vhosts.conf and add
 ```
