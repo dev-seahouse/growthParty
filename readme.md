@@ -30,3 +30,7 @@ Solution:
 cp .example.env .env
 php artisan key:generate
 ```
+-----------------------------------------
+> Internal server error 500, web app not showing up in linux  
+Solution:
+Refer to http://stackoverflow.com/questions/30639174/file-permissions-for-laravel-5-and-others
