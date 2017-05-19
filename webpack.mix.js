@@ -1,9 +1,9 @@
-const { mix } = require('laravel-mix');
-mix.browserSync('growthparty.dev');
+const { mix } = require('laravel-mix')
+mix.browserSync('growthparty.dev')
 mix.autoload({
-  jquery: ['$', 'jQuery', 'window.jQuery'],
-  //tether: ['Tether', 'window.Tether']
-});
+  jquery: ['$', 'jQuery', 'window.jQuery']
+  // tether: ['Tether', 'window.Tether']
+})
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -16,4 +16,4 @@ mix.autoload({
  */
 mix.sass('resources/assets/sass/app.scss', 'public/css')
    .js('resources/assets/js/app.js', 'public/js')
-    .extract(['vue','axios','jquery','foundation-sites/dist/js/foundation.min']);
+    .extract(['vue', 'axios', 'jquery', 'foundation-sites/dist/js/foundation.min'])
