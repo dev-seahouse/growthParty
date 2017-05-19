@@ -30,16 +30,15 @@
 
     <!-- csrf script -->
     <script>
-        window.Laravel = {!!json_encode([
-                'csrfToken' => csrf_token(),
-            ]) !!
-        };
-
+        window.Laravel = {!!json_encode(['csrfToken' => csrf_token()])!!};
     </script>
 
 </head>
 
 <body>
+    <div id="app">
+        
+    </div>
     @yield('nav')<!-- navigation bar -->
     
     @yield('header')<!-- header content, e.g jumpbotron , slider -->
@@ -49,12 +48,13 @@
     <script src="/js/manifest.js"></script><!-- webpack runtime -->
     <script src="/js/vendor.js"></script><!-- vendor library -->
     <script src="/js/app.js"></script><!-- application wide script -->
-    @stack('page_scripts')<!-- page js libs/scripts -->   
     <script>
         var _token = '{!! Session::token() !!}';
         var _url = '{!! url("/") !!}';
         $(document).foundation();
     </script>
+    @stack('page_scripts')<!-- page js libs/scripts -->   
+
 
 </body>
 
