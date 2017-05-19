@@ -18,7 +18,7 @@
     </title>
 
     <link rel="icon" href="/favicon.ico">
-
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet"> 
     @stack('page_styles') <!-- page specific styles -->
     
@@ -51,7 +51,6 @@
     <script>
         var _token = '{!! Session::token() !!}';
         var _url = '{!! url("/") !!}';
-        $(document).foundation();
     </script>
     @stack('page_scripts')<!-- page js libs/scripts -->   
 
