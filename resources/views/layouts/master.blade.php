@@ -36,14 +36,19 @@
 </head>
 
 <body>
-    <div id="app">
         
-    </div>
-    @yield('nav')<!-- navigation bar -->
-    
-    @yield('header')<!-- header content, e.g jumpbotron , slider -->
-    
-    @yield('content')<!-- main content -->
+        <!-- navigation bar -->
+        @yield('nav')
+        <!-- end navigation bar --> 
+
+        <!-- header content, e.g jumpbotron , slider -->
+        @yield('header')
+        <!-- end header -->
+
+        <!-- main content -->
+        @yield('content')
+        <!-- end main content -->
+
     
     <script src="/js/manifest.js"></script><!-- webpack runtime -->
     <script src="/js/vendor.js"></script><!-- vendor library -->
