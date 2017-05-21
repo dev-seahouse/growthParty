@@ -36,7 +36,9 @@
 </head>
 
 <body>
-        
+       <div id="app">
+           
+       </div> 
         <!-- navigation bar -->
         @yield('nav')
         <!-- end navigation bar --> 

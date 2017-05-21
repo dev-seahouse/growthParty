@@ -9,7 +9,6 @@
 try {
   window.$ = window.jQuery = require('jquery')
   require('foundation-sites/dist/js/foundation.min.js')
-    // require('bootstrap-sass');
 } catch (e) {
   console.log(e)
 }

@@ -3,7 +3,7 @@ webpackJsonp([1],{
 /***/ 11:
 /***/ (function(module, exports, __webpack_require__) {
 
-
+/* WEBPACK VAR INJECTION */(function(jQuery) {
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -12,6 +12,7 @@ webpackJsonp([1],{
 
 __webpack_require__(32);
 window.Vue = __webpack_require__(5);
+console.log(jQuery);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -26,6 +27,7 @@ var app = new Vue({
     console.log('Flash component mounted');
   }
 });
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 
@@ -69,7 +71,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 try {
   window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(1);
   __webpack_require__(4);
-  // require('bootstrap-sass');
 } catch (e) {
   console.log(e);
 }
