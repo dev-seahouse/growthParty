@@ -1,7 +1,0 @@
-/* Text clolors */
-// for each color defined in foundation pallets, generate text-color class
-@each $key, $value in $foundation-palette {
-    .#{$key}-text {
-        color: $value !important;
-    }
-}

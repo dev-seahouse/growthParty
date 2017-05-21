@@ -1,0 +1,12 @@
+/* Text color and backgrounds */
+// for each color defined in foundation pallets, 
+// generate corresponding color class
+
+@each $key, $value in $foundation-palette {
+    .#{$key}-text {
+        color: $value !important;
+    }
+    .#{$key}-bg {
+        background-color: $value !important;
+    }
+}
