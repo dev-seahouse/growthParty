@@ -8,10 +8,12 @@
  */
 try {
   window.$ = window.jQuery = require('jquery')
-  require('foundation-sites/dist/js/foundation.min.js')
 } catch (e) {
   console.log(e)
 }
+
+require('foundation-sites/dist/js/foundation.min')
+require('what-input')
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -22,6 +24,7 @@ try {
 window.axios = require('axios')
 window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+
 $(document).foundation()
 
 /**
