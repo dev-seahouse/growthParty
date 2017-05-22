@@ -28,7 +28,7 @@
 <div class="row">
   <div class="small-12 columns lighter-primary-bg">
     <h1 class="medium-text-center">Fund your <span class="pale-red-text">passion</span> by growing business.</h1>
-    <p class="medium-text-center"><strong class="dark-text">Help business owners.Risk-Free. Reap rewards.</strong></p>
+    <p class="medium-text-center "><strong class="dark-text">Help business owners.Risk-Free. Reap rewards.</strong></p>
   </div>
 </div>
 
@@ -39,7 +39,7 @@
   </div>
 </div>
 
-<div class="row medium-text-center">
+<div class="row">
 
   <div class="small-12 medium-4 columns">
     <h3 class="pale-red-text">Extra income</h3>
