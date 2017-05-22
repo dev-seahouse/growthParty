@@ -1,4 +1,8 @@
 @extends('layouts.master') 
+@section('title')
+  Welcome to growth party! Your exciting journet starts now 
+@endsection
+
 @push("page_styles")
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.2/motion-ui.css"> 
 @endpush @section('nav')
@@ -69,8 +73,6 @@
   <div class="columns">
     <div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
       <ul class="orbit-container">
-        <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
-        <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
         
         <li class="is-active orbit-slide">
           <div class="docs-example-orbit-slide">
@@ -84,13 +86,17 @@
           <div class="docs-example-orbit-slide">
             <h4 class="pale-red-text">Step 2</h4>
             <h2 class="pale-red-text thin-header">Earn</h2>
-            <p>Use the Growth Party platform to promote and communicate from your desktop or on the go. This can be creative!</p>
+            <p>Use the Growth Party platform to promote and communicate from your desktop or on the go.</p>
+            <p>This can be creative!</p>
           </div>
         </li>
         
         <li class="orbit-slide">
           <div class="docs-example-orbit-slide">
-            <p><strong>This is darkgoldenrod.</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h4 class="pale-red-text">Step 3</h4>
+            <h2 class="pale-red-text thin-header">Get Paid</h2>
+            <p>Invoicing and payments happen on the platform.</p>
+            <p>Earn confidently with Growth Party Payment Protection.</p>
           </div>
         </li>
         
