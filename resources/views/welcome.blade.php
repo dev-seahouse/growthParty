@@ -1,28 +1,13 @@
-@extends('layouts.master') 
+@extends('layouts.master')
 @section('title')
-  Welcome to growth party! Your exciting journet starts now 
+  Welcome to growth party! Your exciting journet starts now
 @endsection
 
 @push("page_styles")
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.2/motion-ui.css"> 
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.2/motion-ui.css">
 @endpush @section('nav')
 
-<div class="title-bar" data-responsive-toggle="top-menu" data-hide-for="medium">
-  <button class="menu-icon" type="button" data-toggle></button>
-  <h3 class="title-bar-title">Growth Party</h3>
-  <button class="button">Start Earning</button>
-</div>
-
-<div class="top-bar" id="top-menu">
-  <div class="top-bar-left">
-    <ul class="vertical medium-horizontal menu" data-dropdown-menu>
-      <li class="menu-text show-for-medium">Growth Party</li>
-      <li><a href="#login">Login</a></li>
-      <div class="divider"></div>
-      <li><a href="#partner">I want to grow my business</a></li>
-    </ul>
-  </div>
-</div>
+<navigation></navigation>
 
 @endsection @section('content')
 <div class="row">
@@ -73,7 +58,7 @@
   <div class="columns">
     <div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
       <ul class="orbit-container">
-        
+
         <li class="is-active orbit-slide">
           <div class="docs-example-orbit-slide">
             <h4 class="pale-red-text">Step 1</h4>
@@ -81,7 +66,7 @@
             <p>Become a growth affiliate, choose the businesses you want to help and get paid for your efforts.</p>
           </div>
         </li>
-        
+
         <li class="orbit-slide">
           <div class="docs-example-orbit-slide">
             <h4 class="pale-red-text">Step 2</h4>
@@ -90,7 +75,7 @@
             <p>This can be creative!</p>
           </div>
         </li>
-        
+
         <li class="orbit-slide">
           <div class="docs-example-orbit-slide">
             <h4 class="pale-red-text">Step 3</h4>
@@ -99,7 +84,7 @@
             <p>Earn confidently with Growth Party Payment Protection.</p>
           </div>
         </li>
-        
+
       </ul>
       <nav class="orbit-bullets">
         <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>

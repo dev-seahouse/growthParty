@@ -324,7 +324,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ 12:
 /***/ (function(module, exports, __webpack_require__) {
 
-
+/* WEBPACK VAR INJECTION */(function($) {
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -340,13 +340,16 @@ window.Vue = __webpack_require__(5);
  */
 
 Vue.component('flash', __webpack_require__(35));
+Vue.component('navigation', __webpack_require__(46));
 
 var app = new Vue({
   el: '#app',
   mounted: function mounted() {
-    console.log('Flash component mounted');
+    console.log("root vue component mounted");
+    $(document).foundation();
   }
 });
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 
@@ -379,7 +382,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, $) {
+/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {
 // window._ = require('lodash');
 
 /**
@@ -405,8 +408,6 @@ window.axios = __webpack_require__(4);
 window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
-$(document).foundation();
-
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
@@ -421,7 +422,7 @@ $(document).foundation();
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1), __webpack_require__(1)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
 
@@ -544,6 +545,137 @@ if (false) {
 
 module.exports = __webpack_require__(12);
 
+
+/***/ }),
+
+/***/ 45:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    }
+});
+
+/***/ }),
+
+/***/ 46:
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(36)(
+  /* script */
+  __webpack_require__(45),
+  /* template */
+  __webpack_require__(47),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Navigation.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-24338ddb", Component.options)
+  } else {
+    hotAPI.reload("data-v-24338ddb", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 47:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('nav', [_c('div', {
+    staticClass: "title-bar",
+    attrs: {
+      "data-responsive-toggle": "top-menu",
+      "data-hide-for": "medium"
+    }
+  }, [_c('button', {
+    staticClass: "menu-icon",
+    attrs: {
+      "type": "button",
+      "data-toggle": "top-menu"
+    }
+  }), _vm._v(" "), _c('h3', {
+    staticClass: "title-bar-title"
+  }, [_vm._v("Growth Party")]), _vm._v(" "), _c('button', {
+    staticClass: "button"
+  }, [_vm._v("Start Earning")])]), _vm._v(" "), _c('div', {
+    staticClass: "top-bar",
+    attrs: {
+      "id": "top-menu"
+    }
+  }, [_c('div', {
+    staticClass: "top-bar-left"
+  }, [_c('ul', {
+    staticClass: "vertical medium-horizontal menu align-right",
+    attrs: {
+      "data-dropdown-menu": ""
+    }
+  }, [_c('li', {
+    staticClass: "menu-text show-for-medium",
+    staticStyle: {
+      "-webkit-align-self": "flex-start",
+      "align-self": "flex-start",
+      "margin-left": "0"
+    }
+  }, [_vm._v("Growth Party")]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "#login"
+    }
+  }, [_vm._v("Login")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "#partner"
+    }
+  }, [_vm._v("I want to grow my business")])])])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-24338ddb", module.exports)
+  }
+}
 
 /***/ })
 

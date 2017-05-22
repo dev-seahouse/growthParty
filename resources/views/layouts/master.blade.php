@@ -17,9 +17,10 @@
 
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-  <link href="/css/app.css" rel="stylesheet"> @stack('page_styles')
-  <!-- page specific styles -->
+  <link href="/css/app.css" rel="stylesheet">
 
+  <!-- page specific styles -->
+   @stack('page_styles')
 
   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -35,35 +36,31 @@
 
 <body>
   <div id="app">
+    <!-- navigation bar -->
+    @yield('nav')
+    <!-- end navigation bar -->
 
+    <!-- header content, e.g jumpbotron , slider -->
+    @yield('header')
+    <!-- end header -->
+
+    <!-- main content -->
+    @yield('content')
+    <!-- end main content -->
   </div>
-  <!-- navigation bar -->
-  @yield('nav')
-  <!-- end navigation bar -->
-
-  <!-- header content, e.g jumpbotron , slider -->
-  @yield('header')
-  <!-- end header -->
-
-  <!-- main content -->
-  @yield('content')
-  <!-- end main content -->
-
-
-  <script src="/js/manifest.js"></script>
   <!-- webpack runtime -->
-  <script src="/js/vendor.js"></script>
+  <script src="/js/manifest.js"></script>
   <!-- vendor library -->
-  <script src="/js/app.js"></script>
+  <script src="/js/vendor.js"></script>
   <!-- application wide script -->
+  <script src="/js/app.js"></script>
   <script>
     var _token = '{!! Session::token() !!}';
     var _url = '{!! url("/") !!}';
 
   </script>
-  @stack('page_scripts')
   <!-- page js libs/scripts -->
-
+  @stack('page_scripts')
 
 </body>
 
