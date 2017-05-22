@@ -441,7 +441,7 @@ var Component = __webpack_require__(36)(
   /* cssModules */
   null
 )
-Component.options.__file = "D:\\vhosts\\growthParty\\resources\\assets\\js\\components\\Flash.vue"
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Flash.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -530,7 +530,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "role": "alert"
     }
-  }, [_c('strong', [_vm._v("Success")]), _vm._v("\r\n    " + _vm._s(_vm.body) + "\r\n")])
+  }, [_c('strong', [_vm._v("Success")]), _vm._v("\n    " + _vm._s(_vm.body) + "\n")])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
