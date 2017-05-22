@@ -593,7 +593,7 @@ $thumbnail-radius: $global-radius;
 // 35. Title Bar
 // -------------
 
-$titlebar-background: get_color("milky-white");
+$titlebar-background: $white;
 $titlebar-color: $black;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
