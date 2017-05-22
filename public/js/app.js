@@ -332,8 +332,6 @@ return /******/ (function(modules) { // webpackBootstrap
  */
 
 __webpack_require__(33);
-__webpack_require__(2);
-__webpack_require__(11);
 window.Vue = __webpack_require__(5);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -391,12 +389,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 try {
   window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(1);
+  __webpack_require__(2);
+  __webpack_require__(11);
 } catch (e) {
   console.log(e);
 }
-
-__webpack_require__(2);
-__webpack_require__(11);
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

@@ -8,12 +8,12 @@
  */
 try {
   window.$ = window.jQuery = require('jquery')
+  require('foundation-sites/dist/js/foundation.min')
+  require('what-input')
 } catch (e) {
   console.log(e)
 }
 
-require('foundation-sites/dist/js/foundation.min')
-require('what-input')
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests

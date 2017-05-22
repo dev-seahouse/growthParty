@@ -6,8 +6,6 @@
  */
 
 require('./bootstrap')
-require('foundation-sites/dist/js/foundation.min')
-require('what-input')
 window.Vue = require('vue')
 /**
  * Next, we will create a fresh Vue application instance and attach it to
