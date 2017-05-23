@@ -115,8 +115,8 @@
     document.addEventListener("DOMContentLoaded", function(){
     Typed.new(".typed", {
       strings: ["PASSION", "DREAM", "GOAL"],
-      typeSpeed: 100,
-      backDelay:2000,
+      typeSpeed: 50,
+      backDelay:2800,
       backSpeed:0,
       shuffle:true,
       loop:true,

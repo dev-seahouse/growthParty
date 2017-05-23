@@ -1,7 +1,7 @@
 const { mix } = require('laravel-mix')
 mix.browserSync('growthparty.dev')
 mix.autoload({
-  jquery: ['$', 'jQuery', 'window.jQuery']
+  jquery: ['$', 'jQuery', 'window.jQuery', 'jquery']
   // tether: ['Tether', 'window.Tether']
 })
 /*

@@ -3,6 +3,7 @@
 // Settings
 @import "_custom_variables";
 @import "settings";
+@import "typography";
 // Foundation
 @import "node_modules/foundation-sites/assets/foundation-flex";
 // Theme Styles
@@ -11,5 +12,4 @@
 @import 'layouts';
 // Component Styles
 @import "orbit";
-@import "typography";
-$white: #fefefe;
+@import 'typed';
