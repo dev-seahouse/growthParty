@@ -11,9 +11,6 @@
   margin-left:auto;
 }
 
-.flex-v-align-items {
-}
-
 .l-full-screen-bg {
   background: url('../img/backgrounds/bg.jpeg') no-repeat center center;
   background-color:white; //fallback
@@ -25,4 +22,12 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   align-items:middle;
+}
+
+img.l-img-restraint-width {
+  max-width: 200px;
+}
+
+.l-padded {
+  @include v-and-h-padding();
 }

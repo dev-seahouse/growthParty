@@ -1,0 +1,14 @@
+// apply standard vertical and horizontal paddings
+@mixin v-and-h-padding(
+  $gutter: auto,
+  $gutters: $grid-column-gutter
+) {
+  @include -zf-breakpoint-value($gutter, $gutters) {
+    $padding: rem-calc($-zf-bp-value) / 2;
+
+    padding-right: $padding;
+    padding-left: $padding;
+    padding-top: $padding;
+    padding-bottom: $padding;
+  }
+}

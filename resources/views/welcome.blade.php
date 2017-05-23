@@ -1,11 +1,11 @@
 @extends('layouts.master')
 @section('title')
-  Welcome to growth party! Your exciting journet starts now
+Welcome to growth party! Your exciting journet starts now
 @endsection
 
 @push("page_styles")
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.2/motion-ui.css">
-  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.2/motion-ui.css">
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 @endpush @section('nav')
 
 <navigation></navigation>
@@ -19,13 +19,13 @@
 </div>
 
 <!-- why join us -->
-<div class="row">
+<div class="l-padded row">
   <div class="small-12 columns">
     <h3>Why you'll love joining this party.</h3>
   </div>
 </div>
 
-<div class="row">
+<div class="l-padded row">
 
   <div class="small-12 medium-4 columns" data-aos="fade-right">
     <img src="/images/icons/piggy-bank.svg" alt="piggy bank icon">
@@ -50,13 +50,13 @@
 <!-- end why join us -->
 
 <!-- How it works -->
-<div class="row">
+<div class="l-padded row">
   <div class="columns">
     <h2>How it works</h2>
   </div>
 </div>
 
-<div class="row gradient-bg">
+<div class="l-padded row gradient-bg">
   <div class="columns">
     <div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
       <ul class="orbit-container">
@@ -97,21 +97,20 @@
   </div>
 </div>
 
-
 <!-- Stats -->
-<div class="row medium-unstack bitmap-bg primary-text">
+<div class="l-padded row medium-unstack bitmap-bg primary-text">
   <div class="columns text-center">
     <div class="stat">3422</div>
     <p class="white-text">Flourishing companies</p>
   </div>
 
   <div class="columns text-center">
-    <div class="stat">20%</div> 
+    <div class="stat">20%</div>
     <p class="white-text">Average growth</p>
   </div>
 
   <div class="columns text-center">
-    <div class="stat">$2,101,193</div>   
+    <div class="stat">$2,101,193</div>
     <p class="white-text">attributed earnings</p>
   </div>
 </div>
@@ -122,7 +121,16 @@
 
 <!-- Why they love the party -->
 <div class="row">
+  <div class="l-padded media-object stack-for-small">
+    <div class="media-object-section text-center">
+        <img class="l-img-restraint-width  round-img" src="http://i.pravatar.cc/300">
+    </div>
 
+    <div class="media-object-section">
+      <p>“One of the best things about GP is that I can also provide value to my community groups.” </p>
+      <span>Shari C. SMU Business Student, Year 3</span>
+    </div>
+  </div>
 </div>
 <!-- end why they love the party -->
 
@@ -131,21 +139,21 @@
 <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function(){
-    Typed.new(".typed", {
-      strings: ["PASSION", "DREAM", "GOAL"],
-      typeSpeed: 50,
-      backDelay:2800,
-      backSpeed:0,
-      shuffle:true,
-      loop:true,
-      showCursor:false
-    });
-  });
-    AOS.init({
-      offset:200,
-      duration:600
-    });
+  document.addEventListener("DOMContentLoaded", function(){
+  Typed.new(".typed", {
+  strings: ["PASSION", "DREAM", "GOAL"],
+  typeSpeed: 50,
+  backDelay:2800,
+  backSpeed:0,
+  shuffle:true,
+  loop:true,
+  showCursor:false
+});
+});
+AOS.init({
+offset:200,
+duration:600
+});
 </script>
 
 @endpush

@@ -3,13 +3,25 @@
 // Settings
 @import "_custom_variables";
 @import "settings";
-@import "typography";
+
+// Mixins
+@import "mixins";
+
 // Foundation
 @import "node_modules/foundation-sites/assets/foundation-flex";
+
+// util
+@import "utils";
+
+// typography
+@import "typography";
+
 // Theme Styles
 @import "theme";
+
 // Layout Styles
 @import 'layouts';
+
 // Component Styles
 @import "orbit";
 @import 'typed';
