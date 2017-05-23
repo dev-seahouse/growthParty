@@ -15,8 +15,8 @@
 }
 
 .l-full-screen-bg {
-  background: url('../img/bg5.jpeg') no-repeat center center;
-  background-color:transparent;
+  background: url('../img/backgrounds/bg.jpeg') no-repeat center center;
+  background-color:white; //fallback
   width: 100%;
   height: 100vh;
   overflow: hidden;

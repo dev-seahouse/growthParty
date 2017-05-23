@@ -49,16 +49,14 @@
 <!-- end why join us -->
 
 <!-- How it works -->
-<!-- This demo uses flex grid but you can use float grid too -->
-
 <div class="row">
   <div class="columns">
     <h2>How it works</h2>
   </div>
 </div>
 
-<div class="row">
-  <div class="columns gradient-bg">
+<div class="row gradient-bg">
+  <div class="columns">
     <div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
       <ul class="orbit-container">
 
@@ -97,10 +95,26 @@
     </div>
   </div>
 </div>
-<div class="row">
-  <div class="columns">
+
+
+<!-- Stats -->
+<div class="row medium-unstack bitmap-bg primary-text">
+  <div class="columns text-center">
+    <div class="stat">3422</div>
+    <p class="white-text">Flourishing companies</p>
+  </div>
+
+  <div class="columns text-center">
+    <div class="stat">20%</div> 
+    <p class="white-text">Average growth</p>
+  </div>
+
+  <div class="columns text-center">
+    <div class="stat">$2,101,193</div>   
+    <p class="white-text">attributed earnings</p>
   </div>
 </div>
+<!-- Stats -->
 
 
 <!-- End how it works -->

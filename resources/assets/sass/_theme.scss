@@ -1,3 +1,6 @@
+$gradient-bg: linear-gradient(to bottom, #ffffff, #d1fcf0);
+$bitmap-bg-url: '../img/backgrounds/Bitmap.png';
+
 /* Text color and backgrounds */
 
 // for each color defined in foundation pallets, 
@@ -19,5 +22,11 @@ $value in $foundation-palette {
 }
 
 .gradient-bg {
-    background-image: linear-gradient(to bottom, #ffffff, #d1fcf0);
+    background-image:$gradient-bg;
+}
+
+.bitmap-bg {
+    background: url("#{$bitmap-bg-url}") no-repeat center center;
+    background-color:#3684c2 ; // fallback color
+    background-size:cover;
 }
