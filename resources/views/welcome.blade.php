@@ -58,7 +58,7 @@
 </div>
 
 <div class="row">
-  <div class="columns">
+  <div class="columns gradient-bg">
     <div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
       <ul class="orbit-container">
 
