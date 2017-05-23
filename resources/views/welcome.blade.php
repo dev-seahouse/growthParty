@@ -27,7 +27,7 @@ Welcome to growth party! Your exciting journet starts now
 
 <div class="l-padded row">
 
-  <div class="small-12 medium-4 columns" data-aos="fade-right">
+  <div class="l-padded small-12 medium-4 columns" data-aos="fade-right">
     <img src="/images/icons/piggy-bank.svg" alt="piggy bank icon">
     <h3 class="pale-red-text">Extra income</h3>
     <p>With more companies on Growth Party, the opportunities to earn are endless so is funding your heart's content.</p>
