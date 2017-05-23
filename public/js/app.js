@@ -1,7 +1,676 @@
-webpackJsonp([1],{11:function(t,e){t.exports=function(t,e,n,o){var r,i=t=t||{},a=typeof t.default;"object"!==a&&"function"!==a||(r=t,i=t.default);var u="function"==typeof i?i.options:i;if(e&&(u.render=e.render,u.staticRenderFns=e.staticRenderFns),n&&(u._scopeId=n),o){var s=Object.create(u.computed||null);Object.keys(o).forEach(function(t){var e=o[t];s[t]=function(){return e}}),u.computed=s}return{esModule:r,exports:i,options:u}}},12:function(t,e,n){(function(t){n(34),window.Vue=n(5),Vue.component("flash",n(36)),Vue.component("navigation",n(37));new Vue({el:"#app",mounted:function(){t(document).foundation()}})}).call(e,n(1))},32:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default={data:function(){return{body:"Temp for now"}},mounted:function(){}}},33:function(t,e,n){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default={mounted:function(){}}},34:function(t,e,n){(function(t){try{window.$=n(1),n(4),n(41)}catch(t){}window.axios=n(3),window.axios.defaults.headers.common["X-CSRF-TOKEN"]=window.Laravel.csrfToken,window.axios.defaults.headers.common["X-Requested-With"]="XMLHttpRequest"}).call(e,n(1))},36:function(t,e,n){var o=n(11)(n(32),n(39),null,null);t.exports=o.exports},37:function(t,e,n){var o=n(11)(n(33),n(38),null,null);t.exports=o.exports},38:function(t,e){t.exports={render:function(){var t=this,e=t.$createElement;t._self._c;return t._m(0)},staticRenderFns:[function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("nav",[n("div",{staticClass:"title-bar",attrs:{"data-responsive-toggle":"top-menu","data-hide-for":"medium"}},[n("button",{staticClass:"menu-icon",attrs:{type:"button","data-toggle":"top-menu"}}),t._v(" "),n("h3",{staticClass:"title-bar-title"},[t._v("Growth Party")]),t._v(" "),n("button",{staticClass:"button"},[t._v("Start Earning")])]),t._v(" "),n("div",{staticClass:"top-bar",attrs:{id:"top-menu"}},[n("div",{staticClass:"top-bar-left"},[n("ul",{staticClass:"vertical medium-horizontal menu align-right",attrs:{"data-dropdown-menu":""}},[n("li",{staticClass:"menu-text show-for-medium flex-align-left"},[t._v("Growth Party")]),t._v(" "),n("li",[n("a",{attrs:{href:"#login"}},[t._v("Login")])]),t._v(" "),n("li",[n("a",{attrs:{href:"#partner"}},[t._v("I want to grow my business")])])])])])])}]}},39:function(t,e){t.exports={render:function(){var t=this,e=t.$createElement,n=t._self._c||e;return n("div",{staticClass:"alert callout",attrs:{role:"alert"}},[n("strong",[t._v("Success")]),t._v("\n    "+t._s(t.body)+"\n")])},staticRenderFns:[]}},41:function(t,e,n){/**
+webpackJsonp([1],{
+
+/***/ 11:
+/***/ (function(module, exports) {
+
+// this module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  scopeId,
+  cssModules
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  // inject cssModules
+  if (cssModules) {
+    var computed = Object.create(options.computed || null)
+    Object.keys(cssModules).forEach(function (key) {
+      var module = cssModules[key]
+      computed[key] = function () { return module }
+    })
+    options.computed = computed
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+
+/***/ 12:
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
+
+__webpack_require__(34);
+window.Vue = __webpack_require__(5);
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+Vue.component('flash', __webpack_require__(36));
+Vue.component('navigation', __webpack_require__(37));
+
+var app = new Vue({
+  el: '#app',
+  mounted: function mounted() {
+    console.log("root vue component mounted");
+    $(document).foundation();
+  }
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+
+/***/ 32:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            body: "Temp for now"
+        };
+    },
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    }
+});
+
+/***/ }),
+
+/***/ 33:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    }
+});
+
+/***/ }),
+
+/***/ 34:
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery) {
+// window._ = require('lodash');
+
+/**
+ * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+try {
+  window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(1);
+  __webpack_require__(4);
+  __webpack_require__(41);
+} catch (e) {
+  console.log(e);
+}
+
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+
+window.axios = __webpack_require__(3);
+window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+/**
+ * Echo exposes an expressive API for subscribing to channels and listening
+ * for events that are broadcast by Laravel. Echo and event broadcasting
+ * allows your team to easily build robust real-time web applications.
+ */
+
+// import Echo from 'laravel-echo'
+
+// window.Pusher = require('pusher-js');
+
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: 'your-pusher-key'
+// });
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(11)(
+  /* script */
+  __webpack_require__(32),
+  /* template */
+  __webpack_require__(39),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Flash.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7beea40e", Component.options)
+  } else {
+    hotAPI.reload("data-v-7beea40e", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 37:
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(11)(
+  /* script */
+  __webpack_require__(33),
+  /* template */
+  __webpack_require__(38),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Navigation.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-24338ddb", Component.options)
+  } else {
+    hotAPI.reload("data-v-24338ddb", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 38:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('nav', [_c('div', {
+    staticClass: "title-bar",
+    attrs: {
+      "data-responsive-toggle": "top-menu",
+      "data-hide-for": "medium"
+    }
+  }, [_c('button', {
+    staticClass: "menu-icon",
+    attrs: {
+      "type": "button",
+      "data-toggle": "top-menu"
+    }
+  }), _vm._v(" "), _c('h3', {
+    staticClass: "title-bar-title"
+  }, [_vm._v("Growth Party")]), _vm._v(" "), _c('button', {
+    staticClass: "button"
+  }, [_vm._v("Start Earning")])]), _vm._v(" "), _c('div', {
+    staticClass: "top-bar",
+    attrs: {
+      "id": "top-menu"
+    }
+  }, [_c('div', {
+    staticClass: "top-bar-left"
+  }, [_c('ul', {
+    staticClass: "vertical medium-horizontal menu align-right",
+    attrs: {
+      "data-dropdown-menu": ""
+    }
+  }, [_c('li', {
+    staticClass: "menu-text show-for-medium flex-align-left"
+  }, [_vm._v("Growth Party")]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "#login"
+    }
+  }, [_vm._v("Login")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "#partner"
+    }
+  }, [_vm._v("I want to grow my business")])])])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-24338ddb", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 39:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "alert callout",
+    attrs: {
+      "role": "alert"
+    }
+  }, [_c('strong', [_vm._v("Success")]), _vm._v("\n    " + _vm._s(_vm.body) + "\n")])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-7beea40e", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 41:
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
  * what-input - A global utility for tracking the current input method (mouse, keyboard or touch).
  * @version v4.1.3
  * @link https://github.com/ten1seven/what-input
  * @license MIT
  */
-!function(e,n){t.exports=n()}(0,function(){return function(t){function e(o){if(n[o])return n[o].exports;var r=n[o]={exports:{},id:o,loaded:!1};return t[o].call(r.exports,r,r.exports,e),r.loaded=!0,r.exports}var n={};return e.m=t,e.c=n,e.p="",e(0)}([function(t,e){"use strict";t.exports=function(){var t=document.documentElement,e="initial",n=null,o=["input","select","textarea"],r=[16,17,18,91,93],i={keydown:"keyboard",mousedown:"mouse",mousemove:"mouse",MSPointerDown:"pointer",MSPointerMove:"pointer",pointerdown:"pointer",pointermove:"pointer",touchstart:"touch"},a=[],u=!1,s=!1,c={x:null,y:null},d={2:"touch",3:"touch",4:"mouse"},l=function(){window.PointerEvent?(t.addEventListener("pointerdown",f),t.addEventListener("pointermove",v)):window.MSPointerEvent?(t.addEventListener("MSPointerDown",f),t.addEventListener("MSPointerMove",v)):(t.addEventListener("mousedown",f),t.addEventListener("mousemove",v),"ontouchstart"in window&&(t.addEventListener("touchstart",m),t.addEventListener("touchend",m))),t.addEventListener(h(),v),t.addEventListener("keydown",f)},f=function(t){if(!u){var a=t.which,s=i[t.type];if("pointer"===s&&(s=w(t)),e!==s||n!==s){var c=document.activeElement,d=!1;c&&c.nodeName&&-1===o.indexOf(c.nodeName.toLowerCase())&&(d=!0),("touch"===s||"mouse"===s||"keyboard"===s&&d&&-1===r.indexOf(a))&&(e=n=s,p())}}},p=function(){t.setAttribute("data-whatinput",e),t.setAttribute("data-whatintent",e),-1===a.indexOf(e)&&(a.push(e),t.className+=" whatinput-types-"+e)},v=function(e){if(c.x!==e.screenX||c.y!==e.screenY?(s=!1,c.x=e.screenX,c.y=e.screenY):s=!0,!u&&!s){var o=i[e.type];"pointer"===o&&(o=w(e)),n!==o&&(n=o,t.setAttribute("data-whatintent",n))}},m=function(t){"touchstart"===t.type?(u=!1,f(t)):u=!0},w=function(t){return"number"==typeof t.pointerType?d[t.pointerType]:"pen"===t.pointerType?"touch":t.pointerType},h=function(){return"onwheel"in document.createElement("div")?"wheel":void 0!==document.onmousewheel?"mousewheel":"DOMMouseScroll"};return"addEventListener"in window&&Array.prototype.indexOf&&function(){i[h()]="mouse",l(),p()}(),{ask:function(t){return"loose"===t?n:e},types:function(){return a}}}()}])})},43:function(t,e,n){t.exports=n(12)}},[43]);
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(true)
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define("whatInput", [], factory);
+	else if(typeof exports === 'object')
+		exports["whatInput"] = factory();
+	else
+		root["whatInput"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	module.exports = function () {
+	  /*
+	   * variables
+	   */
+
+	  // cache document.documentElement
+	  var docElem = document.documentElement;
+
+	  // last used input type
+	  var currentInput = 'initial';
+
+	  // last used input intent
+	  var currentIntent = null;
+
+	  // form input types
+	  var formInputs = ['input', 'select', 'textarea'];
+
+	  // list of modifier keys commonly used with the mouse and
+	  // can be safely ignored to prevent false keyboard detection
+	  var ignoreMap = [16, // shift
+	  17, // control
+	  18, // alt
+	  91, // Windows key / left Apple cmd
+	  93 // Windows menu / right Apple cmd
+	  ];
+
+	  // mapping of events to input types
+	  var inputMap = {
+	    keydown: 'keyboard',
+	    mousedown: 'mouse',
+	    mousemove: 'mouse',
+	    MSPointerDown: 'pointer',
+	    MSPointerMove: 'pointer',
+	    pointerdown: 'pointer',
+	    pointermove: 'pointer',
+	    touchstart: 'touch'
+	  };
+
+	  // array of all used input types
+	  var inputTypes = [];
+
+	  // boolean: true if touch buffer is active
+	  var isBuffering = false;
+
+	  // boolean: true if the page is being scrolled
+	  var isScrolling = false;
+
+	  // store current mouse position
+	  var mousePos = {
+	    x: null,
+	    y: null
+	  };
+
+	  // map of IE 10 pointer events
+	  var pointerMap = {
+	    2: 'touch',
+	    3: 'touch', // treat pen like touch
+	    4: 'mouse'
+	  };
+
+	  /*
+	   * set up
+	   */
+
+	  var setUp = function setUp() {
+	    // add correct mouse wheel event mapping to `inputMap`
+	    inputMap[detectWheel()] = 'mouse';
+
+	    addListeners();
+	    setInput();
+	  };
+
+	  /*
+	   * events
+	   */
+
+	  var addListeners = function addListeners() {
+	    // `pointermove`, `MSPointerMove`, `mousemove` and mouse wheel event binding
+	    // can only demonstrate potential, but not actual, interaction
+	    // and are treated separately
+
+	    // pointer events (mouse, pen, touch)
+	    if (window.PointerEvent) {
+	      docElem.addEventListener('pointerdown', updateInput);
+	      docElem.addEventListener('pointermove', setIntent);
+	    } else if (window.MSPointerEvent) {
+	      docElem.addEventListener('MSPointerDown', updateInput);
+	      docElem.addEventListener('MSPointerMove', setIntent);
+	    } else {
+	      // mouse events
+	      docElem.addEventListener('mousedown', updateInput);
+	      docElem.addEventListener('mousemove', setIntent);
+
+	      // touch events
+	      if ('ontouchstart' in window) {
+	        docElem.addEventListener('touchstart', touchBuffer);
+	        docElem.addEventListener('touchend', touchBuffer);
+	      }
+	    }
+
+	    // mouse wheel
+	    docElem.addEventListener(detectWheel(), setIntent);
+
+	    // keyboard events
+	    docElem.addEventListener('keydown', updateInput);
+	  };
+
+	  // checks conditions before updating new input
+	  var updateInput = function updateInput(event) {
+	    // only execute if the touch buffer timer isn't running
+	    if (!isBuffering) {
+	      var eventKey = event.which;
+	      var value = inputMap[event.type];
+	      if (value === 'pointer') value = pointerType(event);
+
+	      if (currentInput !== value || currentIntent !== value) {
+	        var activeElem = document.activeElement;
+	        var activeInput = false;
+
+	        if (activeElem && activeElem.nodeName && formInputs.indexOf(activeElem.nodeName.toLowerCase()) === -1) {
+	          activeInput = true;
+	        }
+
+	        if (value === 'touch' ||
+	        // ignore mouse modifier keys
+	        value === 'mouse' ||
+	        // don't switch if the current element is a form input
+	        value === 'keyboard' && activeInput && ignoreMap.indexOf(eventKey) === -1) {
+	          // set the current and catch-all variable
+	          currentInput = currentIntent = value;
+
+	          setInput();
+	        }
+	      }
+	    }
+	  };
+
+	  // updates the doc and `inputTypes` array with new input
+	  var setInput = function setInput() {
+	    docElem.setAttribute('data-whatinput', currentInput);
+	    docElem.setAttribute('data-whatintent', currentInput);
+
+	    if (inputTypes.indexOf(currentInput) === -1) {
+	      inputTypes.push(currentInput);
+	      docElem.className += ' whatinput-types-' + currentInput;
+	    }
+	  };
+
+	  // updates input intent for `mousemove` and `pointermove`
+	  var setIntent = function setIntent(event) {
+	    // test to see if `mousemove` happened relative to the screen
+	    // to detect scrolling versus mousemove
+	    if (mousePos['x'] !== event.screenX || mousePos['y'] !== event.screenY) {
+	      isScrolling = false;
+
+	      mousePos['x'] = event.screenX;
+	      mousePos['y'] = event.screenY;
+	    } else {
+	      isScrolling = true;
+	    }
+
+	    // only execute if the touch buffer timer isn't running
+	    // or scrolling isn't happening
+	    if (!isBuffering && !isScrolling) {
+	      var value = inputMap[event.type];
+	      if (value === 'pointer') value = pointerType(event);
+
+	      if (currentIntent !== value) {
+	        currentIntent = value;
+
+	        docElem.setAttribute('data-whatintent', currentIntent);
+	      }
+	    }
+	  };
+
+	  // buffers touch events because they frequently also fire mouse events
+	  var touchBuffer = function touchBuffer(event) {
+	    if (event.type === 'touchstart') {
+	      isBuffering = false;
+
+	      // set the current input
+	      updateInput(event);
+	    } else {
+	      isBuffering = true;
+	    }
+	  };
+
+	  /*
+	   * utilities
+	   */
+
+	  var pointerType = function pointerType(event) {
+	    if (typeof event.pointerType === 'number') {
+	      return pointerMap[event.pointerType];
+	    } else {
+	      // treat pen like touch
+	      return event.pointerType === 'pen' ? 'touch' : event.pointerType;
+	    }
+	  };
+
+	  // detect version of mouse wheel event to use
+	  // via https://developer.mozilla.org/en-US/docs/Web/Events/wheel
+	  var detectWheel = function detectWheel() {
+	    var wheelType = void 0;
+
+	    // Modern browsers support "wheel"
+	    if ('onwheel' in document.createElement('div')) {
+	      wheelType = 'wheel';
+	    } else {
+	      // Webkit and IE support at least "mousewheel"
+	      // or assume that remaining browsers are older Firefox
+	      wheelType = document.onmousewheel !== undefined ? 'mousewheel' : 'DOMMouseScroll';
+	    }
+
+	    return wheelType;
+	  };
+
+	  /*
+	   * init
+	   */
+
+	  // don't start script unless browser cuts the mustard
+	  // (also passes if polyfills are used)
+	  if ('addEventListener' in window && Array.prototype.indexOf) {
+	    setUp();
+	  }
+
+	  /*
+	   * api
+	   */
+
+	  return {
+	    // returns string: the current input type
+	    // opt: 'loose'|'strict'
+	    // 'strict' (default): returns the same value as the `data-whatinput` attribute
+	    // 'loose': includes `data-whatintent` value if it's more current than `data-whatinput`
+	    ask: function ask(opt) {
+	      return opt === 'loose' ? currentIntent : currentInput;
+	    },
+
+	    // returns array: all the detected input types
+	    types: function types() {
+	      return inputTypes;
+	    }
+	  };
+	}();
+
+/***/ })
+/******/ ])
+});
+;
+
+/***/ }),
+
+/***/ 43:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(12);
+
+
+/***/ })
+
+},[43]);
