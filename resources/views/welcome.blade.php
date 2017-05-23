@@ -33,13 +33,13 @@ Welcome to growth party! Your exciting journet starts now
     <p>With more companies on Growth Party, the opportunities to earn are endless so is funding your heart's content.</p>
   </div>
 
-  <div class="small-12 medium-4 columns" data-aos="flip-up">
+  <div class="l-padded small-12 medium-4 columns" data-aos="flip-up">
     <img src="/images/icons/book.svg" alt="book icon">
     <h3 class="pale-red-text">Step-by-step</h3>
     <p>We are your partner. Tools and steps are prescribed to bring you to success.</p>
   </div>
 
-  <div class="small-12 medium-4 columns" data-aos="flip-right">
+  <div class="l-padded small-12 medium-4 columns" data-aos="flip-right">
     <img src="/images/icons/timer.svg" alt="timer icon">
     <h3 class="pale-red-text">Flexibility</h3>
     <p>It’s your lifestyle, set your days and decide when to earn and how often.</p>
