@@ -89,7 +89,7 @@
         </li>
 
       </ul>
-      <nav class="orbit-bullets">
+      <nav class="rectangular orbit-bullets">
         <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
         <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
         <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>

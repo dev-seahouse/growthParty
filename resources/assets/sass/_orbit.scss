@@ -1,1 +1,8 @@
-
+// orbit bullet subclass
+.rectangular.orbit-bullets {
+    button {
+        border-radius: rem-calc(20px);
+        padding: 0px rem-calc(40px);
+        height: .7rem;
+    }
+}
