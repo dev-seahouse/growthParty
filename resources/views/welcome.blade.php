@@ -10,9 +10,9 @@
 <navigation></navigation>
 
 @endsection @section('content')
-<div class="row">
-  <div class="small-12 columns lighter-primary-bg">
-    <h1 class="medium-text-center">Fund your <span class="pale-red-text">passion</span> by growing business.</h1>
+<div class="row expanded align-middle l-full-screen-bg">
+  <div class="expanded columns">
+    <h1 class="medium-text-center">Fund your <span class="pale-red-text typed"> passion </span> by growing business.</h1>
     <p class="medium-text-center "><strong class="dark-text">Help business owners.Risk-Free. Reap rewards.</strong></p>
   </div>
 </div>
@@ -28,7 +28,7 @@
 
   <div class="small-12 medium-4 columns">
     <h3 class="pale-red-text">Extra income</h3>
-    <p>With more companies on Growth Party, the opportunities to earn are endless so is funding your passion.</p>
+    <p>With more companies on Growth Party, the opportunities to earn are endless so is funding your heart's content.</p>
   </div>
 
   <div class="small-12 medium-4 columns">
@@ -109,3 +109,20 @@
 <!-- end why they love the party -->
 
 @endsection
+@push('page_scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    Typed.new(".typed", {
+      strings: ["PASSION", "DREAM", "GOAL"],
+      typeSpeed: 100,
+      backDelay:2000,
+      backSpeed:0,
+      shuffle:true,
+      loop:true,
+      showCursor:false
+    });
+  });
+</script>
+
+@endpush
