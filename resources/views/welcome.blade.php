@@ -5,6 +5,7 @@
 
 @push("page_styles")
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.2/motion-ui.css">
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 @endpush @section('nav')
 
 <navigation></navigation>
@@ -127,6 +128,7 @@
 
 @endsection
 @push('page_scripts')
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function(){
