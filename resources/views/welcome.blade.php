@@ -99,17 +99,17 @@ Welcome to growth party! Your exciting journet starts now
 
 <!-- Stats -->
 <div class="l-padded row medium-unstack bitmap-bg primary-text">
-  <div class="columns text-center">
+  <div class="l-padded columns text-center">
     <div class="stat">3422</div>
     <p class="white-text">Flourishing companies</p>
   </div>
 
-  <div class="columns text-center">
+  <div class="l-padded columns text-center">
     <div class="stat">20%</div>
     <p class="white-text">Average growth</p>
   </div>
 
-  <div class="columns text-center">
+  <div class="l-padded columns text-center">
     <div class="stat">$2,101,193</div>
     <p class="white-text">attributed earnings</p>
   </div>
