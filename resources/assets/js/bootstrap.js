@@ -8,7 +8,6 @@
  */
 try {
   window.$ = window.jQuery = require('jquery')
-  require('./foundation_imports')
   require('what-input')
 } catch (e) {
   console.log(e)

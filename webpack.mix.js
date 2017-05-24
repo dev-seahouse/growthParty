@@ -16,5 +16,5 @@ mix.autoload({
  */
 mix.sass('resources/assets/sass/app.scss', 'public/css')
    .js('resources/assets/js/app.js', 'public/js')
-    .extract(['vue', 'axios', 'jquery', 'foundation-sites/dist/js/foundation.min'])
+    .extract(['vue', 'axios', 'jquery', 'foundation-sites'])
     .version()
