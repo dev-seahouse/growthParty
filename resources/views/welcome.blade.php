@@ -57,12 +57,12 @@ Welcome to growth party! Your exciting journet starts now
 </div>
 
 <div class="l-padded row gradient-bg">
-  <div class="columns">
-    <div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
-      <ul class="orbit-container">
 
-        <li class="is-active orbit-slide">
-          <div class="docs-example-orbit-slide">
+  <div class="columns">
+    <div class="orbit" role="region" aria-label="How it works" data-orbit>
+      <ul class="orbit-container">
+        <li class="orbit-slide">
+          <div>
             <h4 class="pale-red-text">Step 1</h4>
             <h2 class="pale-red-text thin-header">Choose</h2>
             <p>Become a growth affiliate, choose the businesses you want to help and get paid for your efforts.</p>
@@ -70,7 +70,7 @@ Welcome to growth party! Your exciting journet starts now
         </li>
 
         <li class="orbit-slide">
-          <div class="docs-example-orbit-slide">
+          <div>
             <h4 class="pale-red-text">Step 2</h4>
             <h2 class="pale-red-text thin-header">Earn</h2>
             <p>Use the Growth Party platform to promote and communicate from your desktop or on the go.</p>
@@ -79,7 +79,7 @@ Welcome to growth party! Your exciting journet starts now
         </li>
 
         <li class="orbit-slide">
-          <div class="docs-example-orbit-slide">
+          <div>
             <h4 class="pale-red-text">Step 3</h4>
             <h2 class="pale-red-text thin-header">Get Paid</h2>
             <p>Invoicing and payments happen on the platform.</p>
@@ -94,6 +94,7 @@ Welcome to growth party! Your exciting journet starts now
         <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
       </nav>
     </div>
+
   </div>
 </div>
 
@@ -136,6 +137,7 @@ Welcome to growth party! Your exciting journet starts now
 
 @endsection
 @push('page_scripts')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.2/motion-ui.js"></script>
 <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
 <script>
