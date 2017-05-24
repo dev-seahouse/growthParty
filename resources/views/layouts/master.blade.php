@@ -17,7 +17,7 @@
 
   <link rel="icon" href="/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-  <link href="/css/app.css" rel="stylesheet">
+  <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
   <!-- page specific styles -->
    @stack('page_styles')
@@ -49,11 +49,11 @@
     <!-- end main content -->
   </div>
   <!-- webpack runtime -->
-  <script src="/js/manifest.js"></script>
+  <script src="{{ mix('/js/manifest.js') }}"></script>
   <!-- vendor library -->
-  <script src="/js/vendor.js"></script>
+  <script src="{{ mix('/js/vendor.js')}}"></script>
   <!-- application wide script -->
-  <script src="/js/app.js"></script>
+  <script src="{{ mix('/js/app.js') }}"></script>
   <script>
     var _token = '{!! Session::token() !!}';
     var _url = '{!! url("/") !!}';
