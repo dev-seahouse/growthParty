@@ -52,6 +52,7 @@
   <script src="{{ mix('/js/manifest.js') }}"></script>
   <!-- vendor library -->
   <script src="{{ mix('/js/vendor.js')}}"></script>
+  <<script src="{{ mix('js/foundation.js') }}"></script>
   <!-- application wide script -->
   <script src="{{ mix('/js/app.js') }}"></script>
   <script>
