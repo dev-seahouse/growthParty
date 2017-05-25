@@ -1,4 +1,4 @@
-
+'use strict'
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -19,7 +19,7 @@ Vue.component('navigation', require('./components/Navigation.vue'))
 const app = new Vue({
   el: '#app',
   mounted () {
-    console.log("root vue component mounted")
+    console.log('root vue component mounted')
     $(document).foundation()
   }
 })

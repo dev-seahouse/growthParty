@@ -4,14 +4,13 @@ Welcome to growth party! Your exciting journet starts now
 @endsection
 
 @push("page_styles")
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.2/motion-ui.css">
 <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 @endpush @section('nav')
 
 <navigation></navigation>
 
 @endsection @section('content')
-<div class="row expanded align-middle l-full-screen-bg">
+<div class="row expanded align-middle full-screen-header">
   <div class="expanded columns">
     <h1 class="medium-text-center">Fund your <span class="pale-red-text typed"> passion </span> by growing business.</h1>
     <p class="medium-text-center "><strong class="dark-text">Help business owners.Risk-Free. Reap rewards.</strong></p>

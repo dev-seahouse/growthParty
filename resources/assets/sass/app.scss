@@ -1,14 +1,14 @@
-// Fonts
+// fonts
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
-// Settings
-@import "_custom_variables";
-@import "settings";
 
-// Mixins
+// custom variables
+@import "settings/custom_variables";
+
+// mixins
 @import "mixins";
-
-// Foundation
-@import "node_modules/foundation-sites/assets/foundation-flex";
+ // foundation library
+@import "settings/settings";
+@import "foundation";
 
 // util
 @import "utils";
@@ -23,5 +23,6 @@
 @import 'layouts';
 
 // Component Styles
-@import "orbit";
-@import 'typed';
+@import "components/orbit";
+@import 'components/typed';
+@import "components/header"
