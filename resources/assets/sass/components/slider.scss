@@ -1,0 +1,16 @@
+// orbit bullet subclass
+.rectangular.slider-bullets {
+  button {
+    border-radius: rem-calc(20px);
+    height: .7rem;
+    padding: 0 rem-calc(40px);
+  }
+}
+
+
+.owl-carousel.slider-container {
+    .owl-wrapper-outer {
+    & .owl-wrapper {
+    }
+  }
+}
