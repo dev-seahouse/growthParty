@@ -70,49 +70,32 @@
     </div>
   </div>
 
-  <div class="l-padded row gradient-bg">
+  <div class="row l-padded gradient-bg owl-carousel slider-container">
 
-    <div class="columns">
 
-      <div class="orbit" role="region" aria-label="How it works" data-orbit>
-        <ul class="orbit-container">
-
-          <li class="orbit-slide">
-              <h4 class="pale-red-text">Step 1</h4>
-              <h2 class="pale-red-text thin-header">Choose</h2>
-              <p>
-                Become a growth affiliate, choose the businesses you want to help and get paid for your efforts.
-              </p>
-          </li>
-
-          <li class="orbit-slide">
-              <h4 class="pale-red-text">Step 2</h4>
-              <h2 class="pale-red-text thin-header">Earn</h2>
-              <p>
-                Use the Growth Party platform to promote and communicate from your desktop or on the go.
-              </p>
-              <p>This can be creative!</p>
-          </li>
-
-          <li class="orbit-slide">
-              <h4 class="pale-red-text">Step 3</h4>
-              <h2 class="pale-red-text thin-header">Get Paid</h2>
-              <p>Invoicing and payments happen on the platform.</p>
-              <p>Earn confidently with Growth Party Payment Protection.</p>
-          </li>
-
-        </ul>
-
-        <nav class="rectangular orbit-bullets">
-          <button class="is-active" data-slide="0">
-           <span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span>
-          </button>
-          <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-          <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-        </nav>
-
+      <div class="slide-item columns"> <h4 class="pale-red-text">Step 1</h4>
+        <h2 class="pale-red-text thin-header">Choose</h2>
+        <p>
+          Become a growth affiliate, choose the businesses you want to help and get paid for your efforts.
+        </p>
       </div>
-    </div>
+
+      <div class="slide-item columns">
+          <h4 class="pale-red-text">Step 2</h4>
+          <h2 class="pale-red-text thin-header">Earn</h2>
+          <p>
+            Use the Growth Party platform to promote and communicate from your desktop or on the go.
+          </p>
+          <p>This can be creative!</p>
+      </div>
+
+      <div class="slide-item columns">
+          <h4 class="pale-red-text">Step 3</h4>
+          <h2 class="pale-red-text thin-header">Get Paid</h2>
+          <p>Invoicing and payments happen on the platform.</p>
+          <p>Earn confidently with Growth Party Payment Protection.</p>
+      </div>
+
   </div>
 
   <!-- end how it works -->
@@ -185,6 +168,17 @@
         delay: 10,
         time: 1000
       });
+
+      // init owl carousel
+      $(".owl-carousel").owlCarousel({
+        margin:100,
+        loop:true,
+        autoWidth:true,
+        autoPlay:true,
+        autoplayHoverPause:true,
+        autoPlaySpeed: 100
+      });
+
     })
   </script>
 
