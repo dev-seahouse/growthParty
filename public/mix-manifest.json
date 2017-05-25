@@ -1,8 +1,8 @@
 {
-  "/js/foundation.js": "/js/foundation.ccea19ef325f41dda42b.js",
-  "/js/vendor.js": "/js/vendor.3146cfffb0b84f8d6b4d.js",
-  "/js/app.js": "/js/app.06f8ac2735d24a1f96a3.js",
-  "/mix.js": "/mix.0a8c4e42d296116bbe72.js",
-  "/css/app.css": "/css/app.9a7cc4ffa9d678226407fa1b05a1e631.css",
-  "/js/manifest.js": "/js/manifest.d41d8cd98f00b204e980.js"
+  "/js/foundation.js": "/js/foundation.js",
+  "/js/vendor.js": "/js/vendor.js",
+  "/js/app.js": "/js/app.js",
+  "/mix.js": "/mix.js",
+  "/css/app.css": "/css/app.css",
+  "/js/manifest.js": "/js/manifest.js"
 }
