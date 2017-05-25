@@ -2,27 +2,28 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 
 // custom variables
-@import "settings/custom_variables";
+@import 'settings/custom_variables';
 
 // mixins
-@import "mixins";
- // foundation library
-@import "settings/settings";
-@import "foundation";
+@import 'mixins';
+
+// foundation library
+@import 'settings/settings';
+@import 'foundation';
 
 // util
-@import "utils";
+@import 'utils';
 
 // typography
-@import "typography";
+@import 'typography';
 
 // Theme Styles
-@import "theme";
+@import 'theme';
 
 // Layout Styles
 @import 'layouts';
 
 // Component Styles
-@import "components/orbit";
+@import 'components/slider';
 @import 'components/typed';
-@import "components/header"
+@import 'components/header';
