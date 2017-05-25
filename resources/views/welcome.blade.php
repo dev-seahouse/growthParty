@@ -61,29 +61,23 @@ Welcome to growth party! Your exciting journet starts now
     <div class="orbit" role="region" aria-label="How it works" data-orbit>
       <ul class="orbit-container">
         <li class="orbit-slide">
-          <div>
             <h4 class="pale-red-text">Step 1</h4>
             <h2 class="pale-red-text thin-header">Choose</h2>
             <p>Become a growth affiliate, choose the businesses you want to help and get paid for your efforts.</p>
-          </div>
         </li>
 
         <li class="orbit-slide">
-          <div>
             <h4 class="pale-red-text">Step 2</h4>
             <h2 class="pale-red-text thin-header">Earn</h2>
             <p>Use the Growth Party platform to promote and communicate from your desktop or on the go.</p>
             <p>This can be creative!</p>
-          </div>
         </li>
 
         <li class="orbit-slide">
-          <div>
             <h4 class="pale-red-text">Step 3</h4>
             <h2 class="pale-red-text thin-header">Get Paid</h2>
             <p>Invoicing and payments happen on the platform.</p>
             <p>Earn confidently with Growth Party Payment Protection.</p>
-          </div>
         </li>
 
       </ul>
