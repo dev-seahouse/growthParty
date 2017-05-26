@@ -161,11 +161,11 @@
         duration:600
       });
 
-      // init counter
-      $('.stat-animated').counterUp({
-        delay: 10,
-        time: 1000
-      });
+      // // init counter
+      // $('.stat-animated').counterUp({
+      //   delay: 10,
+      //   time: 1000
+      // });
 
       // init owl carousel
       $(".owl-carousel").owlCarousel({
