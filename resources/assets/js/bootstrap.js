@@ -1,4 +1,3 @@
-
 // window._ = require('lodash');
 
 /**
@@ -13,6 +12,7 @@ try {
   console.log(e)
 }
 
+require('jquery.counterup')
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
