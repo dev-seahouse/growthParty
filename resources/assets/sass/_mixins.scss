@@ -1,14 +1,42 @@
-// apply standard vertical and horizontal paddings
-@mixin v-and-h-padding(
-  $gutter: auto,
-  $gutters: $grid-column-gutter
-) {
+// this mixin applies standard padding across different screen sizes
+// gutter:auto makes gutter responsive, using the $gutters map values
+// @param{Keyword} $option
+//  - v adds vertical paddings
+//  - h adds horizontal paddings
+//  - if no value is passed in both v and h padding will be added
+@mixin responsive-padding($option: default, $offset: 0) {
+  $gutter: auto;
+  $gutters: $grid-column-gutter;
+  $padding: 0;
   @include -zf-breakpoint-value($gutter, $gutters) {
     $padding: rem-calc($-zf-bp-value) / 2;
+    $padding: $padding + $offset;
+    @if ($option == 'v' or $option == default) {
+      padding-bottom: $padding;
+      padding-top: $padding;
+    }
 
-    padding-right: $padding;
-    padding-left: $padding;
-    padding-top: $padding;
-    padding-bottom: $padding;
+    @if ($option == 'h' or $option == default) {
+      padding-left: $padding;
+      padding-right: $padding;
+    }
   }
 }
+
+// apply standard vertical and horizontal paddings
+// @param{Number} $offset
+//  - adjust the size of padding
+@mixin v-and-h-padding ($offset: 0) {
+  @include responsive-padding(default, $offset);
+}
+
+@mixin v-padding($offset: 0) {
+  @include responsive-padding('v', $offset);
+}
+
+@mixin h-padding($offset: 0) {
+  @include responsive-padding('h', $offset);
+}
+
+
+

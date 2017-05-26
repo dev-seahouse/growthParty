@@ -3,6 +3,10 @@
 	[
 		{
 			"path": "."
+		},
+		{
+			"follow_symlinks": true,
+			"path": "/Users/kenan/Projects/growthParty/node_modules/foundation-sites"
 		}
 	]
 }
