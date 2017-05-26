@@ -137,11 +137,11 @@
   <!-- end why they love the party -->
 
   <!-- register -->
-  <div class="l-padded row full-screen-header" id="registerForm" data-magellan-target="registerForm">
+  <div class="l-padded row full-screen-header"  >
     <div class="small-12 columns">
-      <h2 class="pale-red-text">Register as a Growth Affiliate</h2>
+      <h2 class="pale-red-text" data-magellan-target="registerForm">Register as a Growth Affiliate</h2>
 
-      <form action="" method="get" accept-charset="utf-8">
+      <form action="" method="get" accept-charset="utf-8" id="registerForm">
 
         <div class="row medium-center">
 
