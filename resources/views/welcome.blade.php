@@ -139,16 +139,59 @@
   <!-- register -->
   <div class="l-padded row">
     <div class="small-12 columns">
-      <h2>Register as a Growth Affiliate</h2>
+      <h2 class="pale-red-text">Register as a Growth Affiliate</h2>
+
       <form action="" method="get" accept-charset="utf-8">
+
         <div class="row medium-center">
-          <div class="small-12 medium-8 columns">
-            <label> Email address
-             <input type="text" name="" value="" placeholder="e.g. yourname@example.com">
+
+          <div class="small-12 large-6 columns">
+            <label> First Name
+             <input type="text" name="first_name" value="" placeholder="don't be shy, you must have a nice first name" required>
             </label>
+          </div>
+
+          <div class="small-12 large-6 columns">
+            <label> Last Name
+             <input type="text" name="last_name" value="" placeholder="you look cute awesome, may i konw your last name?" required>
+            </label>
+          </div>
+
+        </div>
+
+        <div class="row medium-center">
+
+          <div class="small-12 large-6 columns">
+            <label> Email address
+             <input type="text" name="email" value="" placeholder="e.g. yourname@example.com" required>
+            </label>
+          </div>
+
+          <div class="small-12 large-6 columns">
+            <label> Mobile
+             <input type="text" name="" value="" placeholder="e.g. 9233xxxx" required>
+            </label>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="small-12 large-6 columns">
+            <label> Password
+             <input type="text" name="" value="" placeholder="Please choose a secure password">
+            </label>
+          </div>
+
+        </div>
+
+        <div class="row l-v-padded align-center">
+          <div class="small-12 medium-4 columns">
+          <button type="submit" class="button expanded">Submit</button>
           </div>
         </div>
       </form>
+
     </div>
   </div>
   <!-- end Register -->
