@@ -4,6 +4,10 @@ mix.autoload({
   jquery: ['$', 'jQuery', 'window.jQuery', 'jquery']
   // tether: ['Tether', 'window.Tether']
 })
+
+mix.options({
+  purifyCss:true
+})
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
