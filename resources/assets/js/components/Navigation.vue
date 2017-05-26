@@ -1,9 +1,11 @@
 <template>
 <nav>
-  <div class="title-bar" data-responsive-toggle="top-menu"  data-hide-for="medium">
+  <div class="title-bar" data-responsive-toggle="top-menu"  data-hide-for="medium" >
     <button class="menu-icon" type="button" data-toggle="top-menu"></button>
     <h3 class="title-bar-title">Growth Party</h3>
-    <button class="button" @click="showRegisterForm">Start Earning</button>
+    <div data-magellan>
+      <a class="button" href="#registerForm">Start Earning</a>
+    </div>
   </div>
 
   <div class="top-bar" id="top-menu">
@@ -24,9 +26,7 @@
             console.log('Component mounted.')
         },
         methods: {
-          showRegisterForm(){
-            alert("hello");
-          }
         }
+
     }
 </script>

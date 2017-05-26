@@ -137,7 +137,7 @@
   <!-- end why they love the party -->
 
   <!-- register -->
-  <div class="l-padded row">
+  <div class="l-padded row full-screen-header" id="registerForm" data-magellan-target="registerForm">
     <div class="small-12 columns">
       <h2 class="pale-red-text">Register as a Growth Affiliate</h2>
 
@@ -185,8 +185,8 @@
 
         </div>
 
-        <div class="row l-v-padded align-center">
-          <div class="small-12 medium-4 columns">
+        <div class="row l-v-padded align-left">
+          <div class="small-12 large-4 columns">
           <button type="submit" class="button expanded">Submit</button>
           </div>
         </div>
