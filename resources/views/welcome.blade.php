@@ -142,6 +142,7 @@
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
   <script>
     $(function(){
       // init typed js
@@ -161,11 +162,11 @@
         duration:600
       });
 
-      // // init counter
-      // $('.stat-animated').counterUp({
-      //   delay: 10,
-      //   time: 1000
-      // });
+      // init counter
+      $('.stat-animated').counterUp({
+        delay: 10,
+        time: 1000
+      });
 
       // init owl carousel
       $(".owl-carousel").owlCarousel({
