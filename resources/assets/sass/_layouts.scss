@@ -1,3 +1,10 @@
+$padding-offsets: (
+  default: 0,
+  small: rem-calc(10px),
+  medium: rem-calc(20px),
+  large: rem-calc(30px)
+);
+
 .flex-align-left {
    -webkit-align-self: flex-start;
    align-self: flex-start;
@@ -16,6 +23,33 @@ img.l-img-restraint-width {
   max-width: 200px;
 }
 
-.l-padded {
-  @include v-and-h-padding();
+// generates vertical and horizontal padding
+// based on $padding-offsets map
+
+@each $key, $value in $padding-offsets {
+  @if ($key == default) {
+    .l-padded {
+      @include v-and-h-padding($value)
+    }
+
+    .l-v-padded {
+      @include v-padding($value)
+    }
+
+    .l-h-padded {
+      @include h-padding($value)
+    }
+  }@else {
+    .l-#{$key}-padded {
+      @include v-and-h-padding($value);
+    }
+
+    .l-#{$key}-v-padded {
+      @include v-padding($value);
+    }
+
+    .l-#{$key}-h-padded {
+      @include h-padding($value);
+    }
+  }
 }

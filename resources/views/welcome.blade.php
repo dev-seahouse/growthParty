@@ -37,7 +37,7 @@
     </div>
   </div>
 
-  <div class="l-padded row">
+  <div class="l-h-padded row">
 
     <div class="l-padded small-12 medium-4 columns" data-aos="fade-right">
       <img src="/images/icons/piggy-bank.svg" alt="piggy bank icon">
@@ -64,13 +64,13 @@
   <!-- end why join us -->
 
   <!-- How it works -->
-  <div class="l-padded row">
+  <div class="l-h-padded row">
     <div class="columns">
       <h2>How it works</h2>
     </div>
   </div>
 
-  <div class="row l-padded gradient-bg owl-carousel slider-container">
+  <div class="row l-padded l-medium-v-padded gradient-bg owl-carousel slider-container">
 
 
       <div class="slide-item columns"> <h4 class="pale-red-text">Step 1</h4>
@@ -101,7 +101,7 @@
   <!-- end how it works -->
 
   <!-- Stats -->
-  <div class="l-padded row medium-unstack bitmap-bg primary-text">
+  <div class="l-medium-v-padded row medium-unstack bitmap-bg primary-text">
     <div class="l-padded columns text-center">
       <div class="stat"><span class="stat-animated">3,422</span></div>
       <p class="white-text">Flourishing companies</p>
@@ -158,7 +158,7 @@
 
       // init AOS
       AOS.init({
-        offset:200,
+        offset:0,
         duration:600
       });
 
