@@ -16,8 +16,8 @@ class AddFieldsToUsersTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->timestamp('last_login')->useCurrent();
             $table->date('dob')->nullable()->comment("for verification");
-            $table->string('first_name');
-            $table->string('last_name');
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
             $table->string('last_login_ip', 30)->nullable();
             $table->string('registered_ip', 30)->nullable();
             $table->boolean('is_activated')->default(false);
