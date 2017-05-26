@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 10:
+/***/ 11:
 /***/ (function(module, exports) {
 
 // this module is a runtime utility for cleaner component module output and will
@@ -58,7 +58,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 12:
+/***/ 13:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {/**
@@ -67,16 +67,16 @@ module.exports = function normalizeComponent (
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(35);
-window.Vue = __webpack_require__(4);
+__webpack_require__(36);
+window.Vue = __webpack_require__(5);
 /**
  * Next, we will create a fresh Vue application instance and attach it te
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('flash', __webpack_require__(65));
-Vue.component('navigation', __webpack_require__(66));
+Vue.component('flash', __webpack_require__(66));
+Vue.component('navigation', __webpack_require__(67));
 
 var app = new Vue({
   el: '#app',
@@ -89,7 +89,7 @@ var app = new Vue({
 
 /***/ }),
 
-/***/ 33:
+/***/ 34:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -115,7 +115,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 34:
+/***/ 35:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -149,7 +149,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 35:
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, global) {// window._ = require('lodash');
@@ -161,12 +161,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 try {
   global.$ = global.jQuery = window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(0);
-  __webpack_require__(69);
+  __webpack_require__(70);
 } catch (e) {
   console.log(e);
 }
 
-__webpack_require__(79);
+__webpack_require__(4);
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -192,18 +192,18 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(11)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(12)))
 
 /***/ }),
 
-/***/ 65:
+/***/ 66:
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(10)(
+var Component = __webpack_require__(11)(
   /* script */
-  __webpack_require__(33),
+  __webpack_require__(34),
   /* template */
-  __webpack_require__(68),
+  __webpack_require__(69),
   /* scopeId */
   null,
   /* cssModules */
@@ -231,14 +231,14 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 66:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(10)(
+var Component = __webpack_require__(11)(
   /* script */
-  __webpack_require__(34),
+  __webpack_require__(35),
   /* template */
-  __webpack_require__(67),
+  __webpack_require__(68),
   /* scopeId */
   null,
   /* cssModules */
@@ -266,7 +266,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 67:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -322,7 +322,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 68:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -343,7 +343,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 69:
+/***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -664,143 +664,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 
-/***/ 71:
+/***/ 72:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(12);
+module.exports = __webpack_require__(13);
 
-
-/***/ }),
-
-/***/ 79:
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(jQuery) {/*!
- * jquery.counterup.js 2.1.0
- *
- * Copyright 2013, Benjamin Intal http://gambit.ph @bfintal
- * Released under the GPL v2 License
- *
- * Amended by Jeremy Paris, Ciro Mattia Gonano and others
- *
- * Date: Feb 24, 2017
- */
-(function ($) {
-    "use strict";
-
-    $.fn.counterUp = function (options) {
-
-        // Defaults
-        var settings = $.extend({
-                'time': 400,
-                'delay': 10,
-                'offset': 100,
-                'beginAt': 0,
-                'formatter': false,
-                'context': 'window',
-                callback: function () {
-                }
-            }, options),
-            s;
-
-        return this.each(function () {
-
-            // Store the object
-            var $this = $(this),
-                counter = {
-                    time: $(this).data('counterup-time') || settings.time,
-                    delay: $(this).data('counterup-delay') || settings.delay,
-                    offset: $(this).data('counterup-offset') || settings.offset,
-                    beginAt: $(this).data('counterup-beginat') || settings.beginAt,
-                    context: $(this).data('counterup-context') || settings.context
-                };
-
-            var counterUpper = function () {
-                var nums = [];
-                var divisions = counter.time / counter.delay;
-                var num = $(this).attr('data-num') ? $(this).attr('data-num') : $this.text();
-                var isComma = /[0-9]+,[0-9]+/.test(num);
-                num = num.replace(/,/g, '');
-                var decimalPlaces = (num.split('.')[1] || []).length;
-                if (counter.beginAt > num)
-                    counter.beginAt = num;
-
-                var isTime = /[0-9]+:[0-9]+:[0-9]+/.test(num);
-
-                // Convert time to total seconds
-                if (isTime) {
-                    var times = num.split(':'),
-                        m = 1;
-                    s = 0;
-                    while (times.length > 0) {
-                        s += m * parseInt(times.pop(), 10);
-                        m *= 60;
-                    }
-                }
-
-                // Generate list of incremental numbers to display
-                for (var i = divisions; i >= counter.beginAt / num * divisions; i--) {
-
-                    var newNum = parseFloat(num / divisions * i).toFixed(decimalPlaces);
-
-                    // Add incremental seconds and convert back to time
-                    if (isTime) {
-                        newNum = parseInt(s / divisions * i);
-                        var hours = parseInt(newNum / 3600) % 24;
-                        var minutes = parseInt(newNum / 60) % 60;
-                        var seconds = parseInt(newNum % 60, 10);
-                        newNum = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds < 10 ? "0" + seconds : seconds);
-                    }
-
-                    // Preserve commas if input had commas
-                    if (isComma) {
-                        while (/(\d+)(\d{3})/.test(newNum.toString())) {
-                            newNum = newNum.toString().replace(/(\d+)(\d{3})/, '$1' + ',' + '$2');
-                        }
-                    }
-                    if (settings.formatter) {
-                        newNum = settings.formatter.call(this, newNum);
-                    }
-                    nums.unshift(newNum);
-                }
-
-                $this.data('counterup-nums', nums);
-                $this.text(counter.beginAt);
-
-                // Updates the number until we're done
-                var f = function () {
-                    if (!$this.data('counterup-nums')) {
-                        settings.callback.call(this);
-                        return;
-                    }
-                    $this.html($this.data('counterup-nums').shift());
-                    if ($this.data('counterup-nums').length) {
-                        setTimeout($this.data('counterup-func'), counter.delay);
-                    } else {
-                        $this.data('counterup-nums', null);
-                        $this.data('counterup-func', null);
-                        settings.callback.call(this);
-                    }
-                };
-                $this.data('counterup-func', f);
-
-                // Start the count up
-                setTimeout($this.data('counterup-func'), counter.delay);
-            };
-
-            // Perform counts when the element gets into view
-            $this.waypoint(function (direction) {
-                counterUpper();
-                this.destroy(); //-- Waypoint 3.0 version of triggerOnce
-            }, {offset: counter.offset + "%", context: counter.context});
-        });
-
-    };
-
-})(jQuery);
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ })
 
-},[71]);
+},[72]);

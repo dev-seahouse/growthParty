@@ -5,9 +5,6 @@ mix.autoload({
   // tether: ['Tether', 'window.Tether']
 })
 
-mix.options({
-  purifyCss:true
-})
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
