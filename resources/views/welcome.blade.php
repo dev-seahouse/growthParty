@@ -139,7 +139,7 @@
   <!-- register -->
   <div class="l-padded row full-screen-header"  >
     <div class="small-12 columns">
-      <h2 class="pale-red-text" data-magellan-target="registerForm">Register as a Growth Affiliate</h2>
+      <h2 class="pale-red-text l-v-padded" data-magellan-target="registerForm">Register as a Growth Affiliate</h2>
 
       <form action="" method="get" accept-charset="utf-8" id="registerForm">
 
@@ -185,7 +185,7 @@
 
         </div>
 
-        <div class="row l-v-padded align-left">
+        <div class="row l-medium-v-padded align-left">
           <div class="small-12 large-4 columns">
           <button type="submit" class="button expanded">Submit</button>
           </div>
