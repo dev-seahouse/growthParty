@@ -21,4 +21,4 @@ mix.options({
 mix.sass('resources/assets/sass/app.scss', 'public/css')
    .js('resources/assets/js/foundation.js', 'public/js')
    .js('resources/assets/js/app.js', 'public/js')
-    .extract(['vue', 'axios', 'jquery'])
+    .extract(['vue', 'axios', 'jquery','jquery.counterup'])
