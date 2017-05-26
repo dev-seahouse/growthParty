@@ -5,6 +5,8 @@ $padding-offsets: (
   large: rem-calc(30px)
 );
 
+// ========= Alignments =========
+
 .flex-align-left {
    -webkit-align-self: flex-start;
    align-self: flex-start;
@@ -18,10 +20,27 @@ $padding-offsets: (
   margin-left:auto;
 }
 
+// for each breakpoint, add breakpoint-{#hdir} flex classes
+@include -zf-each-breakpoint {
+  @each $hdir, $prop in $-zf-flex-justify {
+    .row{
+      .#{$-zf-size}-#{$hdir} {
+          @include flex-align($x: $hdir);
+       }
+    }
+
+  }
+}
 
 img.l-img-restraint-width {
   max-width: 200px;
 }
+
+
+
+
+
+// ======= paddings =====
 
 // generates vertical and horizontal padding
 // based on $padding-offsets map

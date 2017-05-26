@@ -120,7 +120,7 @@
   <!-- End Stats -->
 
   <!-- Why they love the party -->
-  <div class="row">
+  <div class="l-padded row">
     <div class="l-padded media-object stack-for-small">
 
       <div class="media-object-section text-center">
@@ -135,6 +135,23 @@
     </div>
   </div>
   <!-- end why they love the party -->
+
+  <!-- register -->
+  <div class="l-padded row">
+    <div class="small-12 columns">
+      <h2>Register as a Growth Affiliate</h2>
+      <form action="" method="get" accept-charset="utf-8">
+        <div class="row medium-center">
+          <div class="small-12 medium-8 columns">
+            <label> Email address
+             <input type="text" name="" value="" placeholder="e.g. yourname@example.com">
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- end Register -->
 @endsection
 
 @push('page_scripts')
