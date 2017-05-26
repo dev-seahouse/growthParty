@@ -1,4 +1,5 @@
 $padding-offsets: (
+  default: 0,
   small: rem-calc(10px),
   medium: rem-calc(20px),
   large: rem-calc(30px)
@@ -24,20 +25,31 @@ img.l-img-restraint-width {
 
 // generates vertical and horizontal padding
 // based on $padding-offsets map
-.l-padded {
-  @include v-and-h-padding(0);
-}
 
 @each $key, $value in $padding-offsets {
-  .l-#{$key}-padded {
-    @include v-and-h-padding($value);
-  }
+  @if ($key == default) {
+    .l-padded {
+      @include v-and-h-padding($value)
+    }
 
-  .l-#{$key}-v-padded {
-    @include v-padding($value);
-  }
+    .l-v-padded {
+      @include v-padding($value)
+    }
 
-  .l-#{$key}-h-padded {
-    @include h-padding($value);
+    .l-h-padded {
+      @include h-padding($value)
+    }
+  }@else {
+    .l-#{$key}-padded {
+      @include v-and-h-padding($value);
+    }
+
+    .l-#{$key}-v-padded {
+      @include v-padding($value);
+    }
+
+    .l-#{$key}-h-padded {
+      @include h-padding($value);
+    }
   }
 }

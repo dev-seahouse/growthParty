@@ -11,6 +11,7 @@
   @include -zf-breakpoint-value($gutter, $gutters) {
     $padding: rem-calc($-zf-bp-value) / 2;
     $padding: $padding + $offset;
+
     @if ($option == 'v' or $option == default) {
       padding-bottom: $padding;
       padding-top: $padding;
