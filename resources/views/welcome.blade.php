@@ -141,19 +141,13 @@
     <div class="small-12 columns">
       <h2 class="pale-red-text l-v-padded" data-magellan-target="registerForm">Register as a Growth Affiliate</h2>
 
-      <form action="" method="get" accept-charset="utf-8" id="registerForm">
-
+      <form method="post" action= "{{ route('register') }}" id="registerForm">
+        {{ csrf_field() }}
         <div class="row medium-center">
 
           <div class="small-12 large-6 columns">
-            <label> First Name
-             <input type="text" name="first_name" value="" placeholder="don't be shy, you must have a nice first name" required>
-            </label>
-          </div>
-
-          <div class="small-12 large-6 columns">
-            <label> Last Name
-             <input type="text" name="last_name" value="" placeholder="you look cute awesome, may i konw your last name?" required>
+            <label> Name
+             <input type="text" name="name" placeholder="Enter your name" required>
             </label>
           </div>
 
@@ -162,14 +156,14 @@
         <div class="row medium-center">
 
           <div class="small-12 large-6 columns">
-            <label> Email address
+            <label> Email address 
              <input type="text" name="email" value="" placeholder="e.g. yourname@example.com" required>
             </label>
           </div>
 
           <div class="small-12 large-6 columns">
             <label> Mobile
-             <input type="text" name="" value="" placeholder="e.g. 9233xxxx" required>
+             <input type="text" name="mobile" value="" placeholder="e.g. 9233xxxx" required>
             </label>
           </div>
 
@@ -179,7 +173,7 @@
 
           <div class="small-12 large-6 columns">
             <label> Password
-             <input type="text" name="" value="" placeholder="Please choose a secure password">
+             <input type="password" name="password" placeholder="Please choose a secure password">
             </label>
           </div>
 
@@ -190,6 +184,7 @@
           <button type="submit" class="button expanded">Submit</button>
           </div>
         </div>
+
       </form>
 
     </div>

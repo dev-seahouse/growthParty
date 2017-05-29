@@ -214,7 +214,7 @@ var Component = __webpack_require__(11)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Flash.vue"
+Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Flash.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -249,7 +249,7 @@ var Component = __webpack_require__(11)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Navigation.vue"
+Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Navigation.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported with templates, they should use render functions.")}
 
