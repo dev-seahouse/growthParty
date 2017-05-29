@@ -147,7 +147,13 @@
 
           <div class="small-12 large-6 columns">
             <label> Name
-             <input type="text" name="name" placeholder="Enter your name" required>
+             <input type="text" name="name" placeholder="Enter your full name" required>
+            </label>
+          </div>
+
+          <div class="small-12 large-6 columns">
+            <label> Mobile
+             <input type="text" name="mobile" placeholder="e.g. 9233xxxx" required>
             </label>
           </div>
 
@@ -157,19 +163,9 @@
 
           <div class="small-12 large-6 columns">
             <label> Email address 
-             <input type="text" name="email" value="" placeholder="e.g. yourname@example.com" required>
+             <input type="text" name="email" placeholder="e.g. yourname@example.com" required>
             </label>
           </div>
-
-          <div class="small-12 large-6 columns">
-            <label> Mobile
-             <input type="text" name="mobile" value="" placeholder="e.g. 9233xxxx" required>
-            </label>
-          </div>
-
-        </div>
-
-        <div class="row">
 
           <div class="small-12 large-6 columns">
             <label> Password
