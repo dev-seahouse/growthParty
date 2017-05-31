@@ -19,7 +19,7 @@
   <!-- fullscreen header -->
   <div class="full-screen-header">
     <div class="row column l-padded">
-    
+
       <div class="l-h-padded columns">
 
 
@@ -30,7 +30,7 @@
         </h5>
 
       </div>
-    </div>    
+    </div>
   </div>
 
   <!-- end fullscreen header -->
@@ -100,9 +100,9 @@
         <h2 class="pale-red-text thin-header">Get Paid</h2>
         <p>Invoicing and payments happen on the platform.</p>
         <p>Earn confidently with Growth Party Payment Protection.</p>
-      </div>     
+      </div>
     </div>
-  
+
   </div>
 
 
@@ -155,7 +155,69 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
   <!— Start of HubSpot Embed Code —>
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/3327713.js"></script>
+  <script>
+    // HubSpot Script Loader. Please do not block this resource. See more: http://hubs.ly/H0702_H0
+    function loadForm(){
+        (function (id, src, attrs) {
+        if (document.getElementById(id)) { return; }
+        var js = document.createElement('script');
+        js.src = src;
+        js.type = 'text/javascript';
+        js.id = id;
+        for (var name in attrs) { if(attrs.hasOwnProperty(name)) { js.setAttribute(name, attrs[name]); } }
+        var e = document.getElementsByTagName('script')[0];
+        e.parentNode.insertBefore(js, e);
+      })('CollectedForms-3327713', 'https://js.hscollectedforms.net/collectedforms.js', {"crossorigin":"anonymous","data-leadin-portal-id":3327713,"data-leadin-env":"prod","data-loader":"hs-scriptloader"});
+
+      (function (id, src, attrs) {
+        if (document.getElementById(id)) { return; }
+        var js = document.createElement('script');
+        js.src = src;
+        js.type = 'text/javascript';
+        js.id = id;
+        for (var name in attrs) { if(attrs.hasOwnProperty(name)) { js.setAttribute(name, attrs[name]); } }
+        var e = document.getElementsByTagName('script')[0];
+        e.parentNode.insertBefore(js, e);
+      })('messages-3327713', 'https://api.usemessages.com/messages/v2/embed/3327713.js', {"data-loader":"hs-scriptloader"});
+
+      (function (id, src, attrs) {
+        if (document.getElementById(id)) { return; }
+        var js = document.createElement('script');
+        js.src = src;
+        js.type = 'text/javascript';
+        js.id = id;
+        for (var name in attrs) { if(attrs.hasOwnProperty(name)) { js.setAttribute(name, attrs[name]); } }
+        var e = document.getElementsByTagName('script')[0];
+        e.parentNode.insertBefore(js, e);
+      })('LeadFlows-3327713', 'https://js.hsleadflows.net/leadflows.js', {"crossorigin":"anonymous","data-leadin-portal-id":3327713,"data-leadin-env":"prod","data-loader":"hs-scriptloader"});
+
+      (function (id, src, attrs) {
+        if (document.getElementById(id)) { return; }
+        var js = document.createElement('script');
+        js.src = src;
+        js.type = 'text/javascript';
+        js.id = id;
+        for (var name in attrs) { if(attrs.hasOwnProperty(name)) { js.setAttribute(name, attrs[name]); } }
+        var e = document.getElementsByTagName('script')[0];
+        e.parentNode.insertBefore(js, e);
+      })('hs-analytics', '//js.hs-analytics.net/analytics/1496247900000/3327713.js', {"data-loader":"hs-scriptloader"});
+    }
+
+    loadForm();
+
+    function delete_cookie( name ) {
+      document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    }
+
+    window.onbeforeunload = function () {
+      delete_cookie('__hstc');
+      delete_cookie('__hssc');
+      delete_cookie('hubspotutk');
+      delete_cookie('__hssrc');
+      localStorage.clear();
+    };
+
+  </script>
   <!— End of HubSpot Embed Code —>
   <script>
     $(function(){
