@@ -70,6 +70,11 @@ img.l-img-restraint-width {
   }
 }
 
+.p-b-0 {
+  padding-bottom: 0;
+}
+
+// ====  Component specific layouts
 
 .l-logo-text {
   @extend.flex-align-left;

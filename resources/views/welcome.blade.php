@@ -36,7 +36,7 @@
   <!-- end fullscreen header -->
 
   <!-- why join us -->
-  <div class="l-padded row">
+  <div class="l-padded p-b-0 row">
     <div class="small-12 columns">
       <h3>Why you'll love joining this party.</h3>
     </div>
