@@ -17,14 +17,16 @@
 
 @section('content')
   <!-- fullscreen header -->
-  <div class="row expanded align-middle full-screen-header">
-    <div class="expanded columns">
+  <div class="row l-padded expanded align-middle full-screen-header">
 
-      <h1 class="medium-text-center">Fund your <span class="pale-red-text typed"> passion </span> by growing business.</h1>
+    <div class="l-h-padded columns">
 
-      <p class="medium-text-center ">
-        <strong class="dark-text">Help business owners.Risk-Free. Reap rewards.</strong>
-      </p>
+
+      <h1>Fund your <span class="pale-red-text typed"> passion </span> <br>by growing business.</h1>
+
+      <h5>
+        <strong class="dark-text">Help business owners. Risk-Free. Reap rewards.</strong>
+      </h5>
 
     </div>
   </div>
@@ -144,11 +146,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
+  <!— Start of HubSpot Embed Code —>
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/3327713.js"></script>
+  <!— End of HubSpot Embed Code —>
   <script>
     $(function(){
       // init typed js
       $(".typed").typed({
-       strings: ["PASSION", "DREAM", "GOAL"],
+       strings: ["passion", "dream", "goal"],
           typeSpeed: 50,
           backDelay:2800,
           backSpeed:0,
