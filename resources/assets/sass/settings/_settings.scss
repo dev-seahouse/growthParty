@@ -44,10 +44,10 @@
 // 1. Global
 // ---------
 $global-font-size: 100%;
-$global-width: rem-calc(1200);
+$global-width: rem-calc(1400);
 $global-lineheight: 1.5;
 $foundation-palette: (white:#fff, primary: #63f3c9, // light-greenish-blue
-secondary: #767676, success: #3adb76, warning: #ffae00, alert: #cc4b37, pale-red: #dd4f46, milky-white: #ffe, lighter-primary: #a1f7de, teal-gray:#253039, dark: #000);
+secondary: #767676, success: #3adb76, warning: #ffae00, alert: #cc4b37, pale-red:  #dd4f46, milky-white:  #ffe,  lighter-primary: #a1f7de, teal-gray: #253039, dark: #000 , medium-gray: #cacaca);
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
@@ -86,7 +86,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 $header-font-family: $body-font-family;
-$header-font-weight: 900;
+$header-font-weight: 700;
 $header-font-style: normal;
 $font-family-monospace: Consolas,
 'Liberation Mono',

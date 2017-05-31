@@ -18,6 +18,7 @@
 @section('content')
   <!-- fullscreen header -->
   <div class="full-screen-header">
+    <img src="{{ asset('images/partybg.png') }}" class="header-bg" alt="color background of header">
     <div class="row column l-padded">
 
       <div class="l-h-padded columns">
@@ -35,32 +36,73 @@
 
   <!-- end fullscreen header -->
 
+  <!-- How it works -->
+  <div class="l-padded p-b-0 row">
+    <div class="columns">
+      <h2 class="thin-header">How it works</h2>
+    </div>
+  </div>
+
+  <div class="row l-padded l-small-v-padded">
+
+    <div class="small-12 column">
+      <div class="owl-carousel owl-theme">
+        <div class="slide-item">
+          <h4 class="pale-red-text thin-header">Step 1</h4>
+          <h2 class="pale-red-text thin-header">Choose</h2>
+          <p>
+            Become a growth affiliate, choose the businesses you want to help and get paid for your efforts.
+          </p>
+        </div>
+
+        <div class="slide-item">
+          <h4 class="pale-red-text thin-header">Step 2</h4>
+          <h2 class="pale-red-text thin-header">Earn</h2>
+          <p>
+            Use the Growth Party platform to promote and communicate from your desktop or on the go.
+          </p>
+          <p>This can be creative!</p>
+        </div>
+
+        <div class="slide-item">
+          <h4 class="pale-red-text thin-header">Step 3</h4>
+          <h2 class="pale-red-text thin-header">Get Paid</h2>
+          <p>Invoicing and payments happen on the platform.</p>
+          <p>Earn confidently with Growth Party Payment Protection.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- end how it works -->
   <!-- why join us -->
   <div class="l-padded p-b-0 row">
-    <div class="small-12 columns">
-      <h3>Why you'll love joining this party.</h3>
+    <div class="columns">
+      <h2 class="thin-header">Why you'll love joining this party.</h2>
     </div>
   </div>
 
   <div class="l-h-padded row">
 
     <div class="l-padded small-12 medium-4 columns" data-aos="fade-right">
-      <img src="/images/icons/piggy-bank.svg" alt="piggy bank icon">
-      <h3 class="pale-red-text">Extra income</h3>
+      <img src="/images/icons/piggy-bank.svg" class="featured-icon" alt="piggy bank icon">
+      <h3 class="pale-red-text thin-header">Extra income</h3>
       <p>With more companies on Growth Party,
       the opportunities to earn are endless so is funding your heart's content.
       </p>
     </div>
 
     <div class="l-padded small-12 medium-4 columns" data-aos="flip-up">
-      <img src="/images/icons/book.svg" alt="book icon">
-      <h3 class="pale-red-text">Step-by-step</h3>
+      <img src="/images/icons/book.svg" class="featured-icon" alt="book icon">
+      <h3 class="pale-red-text thin-header">Step-by-step</h3>
       <p>We are your partner. Tools and steps are prescribed to bring you to success.</p>
     </div>
 
     <div class="l-padded small-12 medium-4 columns" data-aos="flip-right">
-      <img src="/images/icons/timer.svg" alt="timer icon">
-      <h3 class="pale-red-text">Flexibility</h3>
+      <img src="/images/icons/timer.svg" class="featured-icon" alt="timer icon">
+      <h3 class="pale-red-text thin-header">Flexibility</h3>
       <p>It’s your lifestyle, set your days and decide when to earn and how often.</p>
     </div>
 
@@ -68,47 +110,7 @@
 
   <!-- end why join us -->
 
-  <!-- How it works -->
-  <div class="l-h-padded row">
-    <div class="columns">
-      <h2>How it works</h2>
-    </div>
-  </div>
 
-  <div class="row l-padded l-medium-v-padded gradient-bg">
-  <div class="small-12 column">
-    <div class="owl-carousel owl-theme">
-      <div class="slide-item">
-        <h4 class="pale-red-text">Step 1</h4>
-        <h2 class="pale-red-text thin-header">Choose</h2>
-        <p>
-          Become a growth affiliate, choose the businesses you want to help and get paid for your efforts.
-        </p>
-      </div>
-
-      <div class="slide-item">
-        <h4 class="pale-red-text">Step 2</h4>
-        <h2 class="pale-red-text thin-header">Earn</h2>
-        <p>
-          Use the Growth Party platform to promote and communicate from your desktop or on the go.
-        </p>
-        <p>This can be creative!</p>
-      </div>
-
-      <div class="slide-item">
-        <h4 class="pale-red-text">Step 3</h4>
-        <h2 class="pale-red-text thin-header">Get Paid</h2>
-        <p>Invoicing and payments happen on the platform.</p>
-        <p>Earn confidently with Growth Party Payment Protection.</p>
-      </div>
-    </div>
-
-  </div>
-
-
-  </div>
-
-  <!-- end how it works -->
 
   <!-- Stats -->
   <div class="l-medium-v-padded row medium-unstack bitmap-bg primary-text">

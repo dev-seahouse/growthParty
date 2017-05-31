@@ -50,6 +50,7 @@
       <!-- main content -->
       @yield('content')
       <!-- end main content -->
+      @include('layouts.footer')
     </div>
     <!-- webpack runtime -->
     <script src="{{ mix('/js/manifest.js') }}"></script>

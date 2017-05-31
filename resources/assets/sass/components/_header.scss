@@ -1,13 +1,15 @@
 .full-screen-header {
-  display:flex;
-  @include flex-align($x:"left ",$y: "middle");
-  background: url('../img/backgrounds/bg.jpeg') no-repeat center center;
-  background-color:white; //fallback
+  display: flex;
+  @include flex-align($x: 'left', $y: 'middle');
   height: 60vh;
   overflow: hidden;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  z-index: 100;
 
+  img.header-bg {
+    position: absolute;
+    width: 100%;
+    opacity: .3;
+    height: 60vh;
+    z-index: -1;
+  }
 }
