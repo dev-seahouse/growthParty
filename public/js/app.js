@@ -143,6 +143,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -290,8 +291,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "button",
       "data-toggle": "top-menu"
     }
+  }), _vm._v(" "), _c('img', {
+    staticClass: "logo",
+    attrs: {
+      "src": "images/logo.jpe",
+      "alt": ""
+    }
   }), _vm._v(" "), _c('h3', {
-    staticClass: "title-bar-title"
+    staticClass: "title-bar-title l-logo-text"
   }, [_vm._v("Growth Party")]), _vm._v(" "), _c('div', {
     attrs: {
       "data-magellan": ""
@@ -315,7 +322,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('li', {
     staticClass: "menu-text show-for-medium flex-align-left"
-  }, [_vm._v("Growth Party")])])]), _vm._v(" "), _c('div', {
+  }, [_c('img', {
+    staticClass: "logo",
+    attrs: {
+      "src": "images/logo.jpe",
+      "alt": "company logo"
+    }
+  }), _vm._v("Growth Party")])])]), _vm._v(" "), _c('div', {
     attrs: {
       "data-magellan": ""
     }

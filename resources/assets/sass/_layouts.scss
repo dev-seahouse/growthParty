@@ -37,9 +37,6 @@ img.l-img-restraint-width {
 }
 
 
-
-
-
 // ======= paddings =====
 
 // generates vertical and horizontal padding
@@ -71,4 +68,17 @@ img.l-img-restraint-width {
       @include h-padding($value);
     }
   }
+}
+
+
+.l-logo-text {
+  @extend.flex-align-left;
+  padding-top:rem_calc(15px);
+  padding-left:rem_calc(15px);
+}
+
+img.logo {
+  max-width:rem_calc(50px);
+  margin-left:20px;
+  margin-right:20px
 }
