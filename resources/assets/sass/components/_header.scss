@@ -1,7 +1,9 @@
 .full-screen-header {
+  display:flex;
   background: url('../img/backgrounds/bg.jpeg') no-repeat center center;
   background-color:white; //fallback
   height: 60vh;
+  width:100%;
   overflow: hidden;
   background-size: cover;
   -webkit-background-size: cover;

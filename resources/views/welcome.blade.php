@@ -17,19 +17,22 @@
 
 @section('content')
   <!-- fullscreen header -->
-  <div class="row l-padded expanded align-middle full-screen-header">
+  <div class="full-screen-header">
+    <div class="row l-padded">
+    
+      <div class="l-h-padded columns">
 
-    <div class="l-h-padded columns">
 
+        <h1>Fund your <span class="pale-red-text typed"> passion </span> <br>by growing business.</h1>
 
-      <h1>Fund your <span class="pale-red-text typed"> passion </span> <br>by growing business.</h1>
+        <h5>
+          <strong class="dark-text">Help business owners. Risk-Free. Reap rewards.</strong>
+        </h5>
 
-      <h5>
-        <strong class="dark-text">Help business owners. Risk-Free. Reap rewards.</strong>
-      </h5>
-
-    </div>
+      </div>
+    </div>    
   </div>
+
   <!-- end fullscreen header -->
 
   <!-- why join us -->
