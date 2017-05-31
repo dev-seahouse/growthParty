@@ -257,11 +257,12 @@
         responsive:{
             0:{
                 items:1,
-                nav:true
+                nav:false
             },
             600:{
                 items:2,
-                nav:false
+                nav:false,
+                dots:true
             },
             1000:{
                 items:3,
