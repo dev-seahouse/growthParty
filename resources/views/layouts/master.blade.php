@@ -35,6 +35,9 @@
   </head>
 
   <body>
+    <!-- debug -->
+
+    <!-- end debug -->
     <div id="app">
       <!-- navigation bar -->
       @yield('nav')

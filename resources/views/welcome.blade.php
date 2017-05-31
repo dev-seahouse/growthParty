@@ -193,6 +193,7 @@
   <h2 class="text-center">Growth Party</h2>
   <h3 class="lead">Login</h3>
   <form action="{{ route('login') }}" method="post" accept-charset="utf-8">
+    {{ csrf_field() }}
     <input type="text" name="id" placeholder="Enter email or phone number" required>
     <input type="password" name="password" placeholder="Enter password" required>
     <button class="button secondary expanded">Login in</button>
