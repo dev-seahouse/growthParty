@@ -142,6 +142,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -300,7 +301,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "#registerForm"
     }
-  }, [_vm._v("Start Earning")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Join Our Beta")])])]), _vm._v(" "), _c('div', {
     staticClass: "top-bar",
     attrs: {
       "id": "top-menu"
@@ -314,16 +315,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('li', {
     staticClass: "menu-text show-for-medium flex-align-left"
-  }, [_vm._v("Growth Party")]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_vm._v("Growth Party")])])]), _vm._v(" "), _c('div', {
     attrs: {
-      "href": "#login",
-      "data-open": "loginModal"
+      "data-magellan": ""
     }
-  }, [_vm._v("Login")])]), _vm._v(" "), _c('li', [_c('a', {
+  }, [_c('a', {
+    staticClass: "button show-for-medium",
     attrs: {
-      "href": "#partner"
+      "href": "#registerForm"
     }
-  }, [_vm._v("I want to grow my business")])])])])])])
+  }, [_vm._v("Join Our Beta")])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
