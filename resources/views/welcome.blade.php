@@ -75,31 +75,36 @@
     </div>
   </div>
 
-  <div class="row l-padded l-medium-v-padded gradient-bg owl-carousel slider-container">
-
-
-      <div class="slide-item columns"> <h4 class="pale-red-text">Step 1</h4>
+  <div class="row l-padded l-medium-v-padded gradient-bg">
+  <div class="small-12 column">
+    <div class="owl-carousel">
+      <div class="slide-item">
+        <h4 class="pale-red-text">Step 1</h4>
         <h2 class="pale-red-text thin-header">Choose</h2>
         <p>
           Become a growth affiliate, choose the businesses you want to help and get paid for your efforts.
         </p>
       </div>
 
-      <div class="slide-item columns">
-          <h4 class="pale-red-text">Step 2</h4>
-          <h2 class="pale-red-text thin-header">Earn</h2>
-          <p>
-            Use the Growth Party platform to promote and communicate from your desktop or on the go.
-          </p>
-          <p>This can be creative!</p>
+      <div class="slide-item">
+        <h4 class="pale-red-text">Step 2</h4>
+        <h2 class="pale-red-text thin-header">Earn</h2>
+        <p>
+          Use the Growth Party platform to promote and communicate from your desktop or on the go.
+        </p>
+        <p>This can be creative!</p>
       </div>
 
-      <div class="slide-item columns">
-          <h4 class="pale-red-text">Step 3</h4>
-          <h2 class="pale-red-text thin-header">Get Paid</h2>
-          <p>Invoicing and payments happen on the platform.</p>
-          <p>Earn confidently with Growth Party Payment Protection.</p>
-      </div>
+      <div class="slide-item">
+        <h4 class="pale-red-text">Step 3</h4>
+        <h2 class="pale-red-text thin-header">Get Paid</h2>
+        <p>Invoicing and payments happen on the platform.</p>
+        <p>Earn confidently with Growth Party Payment Protection.</p>
+      </div>     
+    </div>
+  
+  </div>
+
 
   </div>
 
