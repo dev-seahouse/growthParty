@@ -18,7 +18,7 @@
 @section('content')
   <!-- fullscreen header -->
   <div class="full-screen-header">
-    <div class="row l-padded">
+    <div class="row column l-padded">
     
       <div class="l-h-padded columns">
 
