@@ -12,7 +12,7 @@
     <div class="top-bar-left">
        <ul class="vertical medium-horizontal menu align-right" data-dropdown-menu>
           <li class="menu-text show-for-medium flex-align-left">Growth Party</li>
-          <li><a href="#login">Login</a></li>
+          <li><a href="#login" data-open="loginModal">Login</a></li>
           <li><a href="#partner">I want to grow my business</a></li>
       </ul>
     </div>

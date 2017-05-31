@@ -186,6 +186,23 @@
     </div>
   </div>
   <!-- end Register -->
+
+
+  <!-- login -->
+<div class="small reveal" id="loginModal" data-reveal>
+  <h2 class="text-center">Growth Party</h2>
+  <h3 class="lead">Login</h3>
+  <form action="{{ route('login') }}" method="post" accept-charset="utf-8">
+    <input type="text" name="id" placeholder="Enter email or phone number" required>
+    <input type="password" name="password" placeholder="Enter password" required>
+    <button class="button secondary expanded">Login in</button>
+
+  </form>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+  <!-- end login -->
 @endsection
 
 @push('page_scripts')

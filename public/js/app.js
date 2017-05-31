@@ -316,7 +316,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "menu-text show-for-medium flex-align-left"
   }, [_vm._v("Growth Party")]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
-      "href": "#login"
+      "href": "#login",
+      "data-open": "loginModal"
     }
   }, [_vm._v("Login")])]), _vm._v(" "), _c('li', [_c('a', {
     attrs: {
