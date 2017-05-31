@@ -6,8 +6,8 @@
 
 @push("page_styles")
   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.green.min.css">
 @endpush
 
 @section('nav')
@@ -77,7 +77,7 @@
 
   <div class="row l-padded l-medium-v-padded gradient-bg">
   <div class="small-12 column">
-    <div class="owl-carousel">
+    <div class="owl-carousel owl-theme">
       <div class="slide-item">
         <h4 class="pale-red-text">Step 1</h4>
         <h2 class="pale-red-text thin-header">Choose</h2>
@@ -152,7 +152,7 @@
 
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
   <!— Start of HubSpot Embed Code —>
   <script>
@@ -246,12 +246,29 @@
 
       // init owl carousel
       $(".owl-carousel").owlCarousel({
-        margin:100,
+        margin:40,
         loop:true,
-        autoWidth:true,
+        autoWidth:false,
         autoPlay:true,
+        nav:false,
+        dots:true,
         autoplayHoverPause:true,
-        autoPlaySpeed: 100
+        autoPlaySpeed: 100,
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:2,
+                nav:false
+            },
+            1000:{
+                items:3,
+                nav:true,
+                loop:false
+            }
+        }
       });
 
     })
