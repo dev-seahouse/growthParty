@@ -1,32 +1,36 @@
-$gradient-bg: linear-gradient(to bottom, #ffffff, #d1fcf0);
+$gradient-bg: linear-gradient(to bottom, #fff, #d1fcf0);
 $bitmap-bg-url: '../img/backgrounds/Bitmap.png';
-
-/* Text color and backgrounds */
-
-// for each color defined in foundation pallets, 
+$bitmap-bg-color: #3684c2;
+$box-shadow-color: rgba(180, 180, 180, .5);
+// Text color and backgrounds
+// for each color defined in foundation pallets,
 // generate corresponding color class
-@each $key,
-$value in $foundation-palette {
-	.#{$key}-text {
-		color: $value !important;
-	}
-	.#{$key}-bg {
-		background-color: $value !important;
-	}
+@each $key, $value in $foundation-palette {
+  .#{$key}-text {
+    color: $value;
+  }
+
+  .#{$key}-bg {
+    background-color: $value;
+  }
 }
 
-#{headings(1,6)} {
-	&.thin-header {
-		font-weight: 400;
-	}
+#{headings(1, 6)} {
+  &.thin-header {
+    font-weight: 400;
+  }
 }
 
 .gradient-bg {
-    background-image:$gradient-bg;
+  background-image: $gradient-bg;
 }
 
 .bitmap-bg {
-    background: url("#{$bitmap-bg-url}") no-repeat center center;
-    background-color:#3684c2 ; // fallback color
-    background-size:cover;
+  background: url("#{$bitmap-bg-url}") no-repeat center center;
+  background-color: $bitmap-bg-color;
+  background-size: cover;
+}
+
+.drop-shadow {
+  box-shadow: 0 4px 10px -1px $box-shadow-color;
 }

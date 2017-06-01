@@ -144,6 +144,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -280,7 +283,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _vm._m(0)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('nav', [_c('div', {
-    staticClass: "title-bar",
+    staticClass: "title-bar drop-shadow",
     attrs: {
       "data-responsive-toggle": "top-menu",
       "data-hide-for": "medium"
@@ -309,7 +312,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "href": "#registerForm"
     }
   }, [_vm._v("Join Our Beta")])])]), _vm._v(" "), _c('div', {
-    staticClass: "top-bar",
+    staticClass: "top-bar drop-shadow",
     attrs: {
       "id": "top-menu"
     }

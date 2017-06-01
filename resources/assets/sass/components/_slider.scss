@@ -1,8 +1,6 @@
 // orbit bullet subclass
 .rectangular.slider-bullets {
   button {
-
-
     padding: 0 rem-calc(40px);
   }
 }
@@ -11,7 +9,9 @@
   float: left;
 }
 
-.owl-theme .owl-dots .owl-dot span {
-  width: rem-calc(60px);
-  margin-left: 0;
+.owl-carousel.owl-theme .owl-dots  {
+  .owl-dot span{
+    width: rem-calc(60px);
+    margin-left: 0;
+  }
 }

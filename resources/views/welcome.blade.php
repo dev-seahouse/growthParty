@@ -49,7 +49,7 @@
       <div class="owl-carousel owl-theme">
         <div class="slide-item">
           <h5 class="pale-red-text thin-header">Step 1</h5>
-          <h2 class="pale-red-text thin-header">Choose</h2>
+          <h2 class="pale-red-text">Choose</h2>
           <p>
             Become a growth affiliate, choose the businesses you want to help and get paid for your efforts.
           </p>
@@ -57,7 +57,7 @@
 
         <div class="slide-item">
           <h5 class="pale-red-text thin-header">Step 2</h5>
-          <h2 class="pale-red-text thin-header">Earn</h2>
+          <h2 class="pale-red-text">Earn</h2>
           <p>
             Use the Growth Party platform to promote and communicate from your desktop or on the go.
           </p>
@@ -66,7 +66,7 @@
 
         <div class="slide-item">
           <h5 class="pale-red-text thin-header">Step 3</h5>
-          <h2 class="pale-red-text thin-header">Get Paid</h2>
+          <h2 class="pale-red-text">Get Paid</h2>
           <p>Invoicing and payments happen on the platform.</p>
           <p>Earn confidently with Growth Party Payment Protection.</p>
         </div>
@@ -88,7 +88,7 @@
 
     <div class="l-padded small-12 medium-4 columns" data-aos="fade-right">
       <img src="/images/icons/piggy-bank.svg" class="featured-icon" alt="piggy bank icon">
-      <h3 class="pale-red-text thin-header">Extra income</h3>
+      <h3 class="pale-red-text">Extra income</h3>
       <p>With more companies on Growth Party,
       the opportunities to earn are endless so is funding your heart's content.
       </p>
@@ -96,13 +96,13 @@
 
     <div class="l-padded small-12 medium-4 columns" data-aos="fade-up">
       <img src="/images/icons/book.svg" class="featured-icon" alt="book icon">
-      <h3 class="pale-red-text thin-header">Step-by-step</h3>
+      <h3 class="pale-red-text">Step-by-step</h3>
       <p>We are your partner. Tools and steps are prescribed to bring you to success.</p>
     </div>
 
     <div class="l-padded small-12 medium-4 columns" data-aos="fade-left">
       <img src="/images/icons/timer.svg" class="featured-icon" alt="timer icon">
-      <h3 class="pale-red-text thin-header">Flexibility</h3>
+      <h3 class="pale-red-text">Flexibility</h3>
       <p>It’s your lifestyle, set your days and decide when to earn and how often.</p>
     </div>
 
