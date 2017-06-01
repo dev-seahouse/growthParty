@@ -48,27 +48,49 @@
     <div class="small-12 column">
       <div class="owl-carousel owl-theme">
         <div class="slide-item">
-          <h5 class="pale-red-text thin-header">Step 1</h5>
-          <h2 class="pale-red-text">Choose</h2>
-          <p>
-            Become a growth affiliate, choose the businesses you want to help and get paid for your efforts.
-          </p>
+          <div class="row">
+              <div class="small-6 columns">
+                <h5 class="pale-red-text thin-header">Step 1</h5>
+                <h2 class="pale-red-text">Sign up</h2>
+                <p>
+                <strong>Join as growth affiliate.</strong> Lend a helping hand to businesses matched to you , by simply sharing about their services around your network.
+                </p>
+              </div>
+              <div class="small-6 columns">
+                <img src="/images/step1.png" alt="image of step 2">
+              </div>
+          </div>
         </div>
 
         <div class="slide-item">
-          <h5 class="pale-red-text thin-header">Step 2</h5>
-          <h2 class="pale-red-text">Earn</h2>
-          <p>
-            Use the Growth Party platform to promote and communicate from your desktop or on the go.
-          </p>
-          <p>This can be creative!</p>
+          <div class="row">
+              <div class="small-6 columns">
+                <h5 class="pale-red-text thin-header">Step 2</h5>
+                <h2 class="pale-red-text">Earn</h2>
+                <p>
+                <strong>Earn credits</strong> for every sales meeting you schedule for businesses with interested parties from your network.
+                </p>
+              </div>
+              <div class="small-6 columns">
+                <img src="/images/step2.png" alt="image of step 3">
+              </div>
+          </div>
+
         </div>
 
         <div class="slide-item">
-          <h5 class="pale-red-text thin-header">Step 3</h5>
-          <h2 class="pale-red-text">Get Paid</h2>
-          <p>Invoicing and payments happen on the platform.</p>
-          <p>Earn confidently with Growth Party Payment Protection.</p>
+          <div class="row">
+              <div class="small-6 columns">
+                <h5 class="pale-red-text thin-header">Step 3</h5>
+                <h2 class="pale-red-text">Cash out!</h2>
+                <p>Invoicing and payments happen on our secure payment platform. Cash out confidently with Growth Party Payment Protection.</p>
+              </div>
+              <div class="small-6 columns">
+                <img src="/images/step3.png" alt="image of step 3">
+              </div>
+          </div>
+
+
         </div>
       </div>
 
@@ -136,7 +158,7 @@
     <div class="l-padded media-object stack-for-small">
 
       <div class="media-object-section text-center">
-          <img class="l-img-restraint-width  round-img" src="http://i.pravatar.cc/300">
+          <img class="l-img-restraint-width round-img" src="{{ asset('images/testimonial.png') }}">
       </div>
 
       <div class="media-object-section">
