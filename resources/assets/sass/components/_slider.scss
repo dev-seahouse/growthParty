@@ -1,4 +1,3 @@
-// orbit bullet subclass
 .rectangular.slider-bullets {
   button {
     padding: 0 rem-calc(40px);
@@ -9,9 +8,12 @@
   float: left;
 }
 
-.owl-carousel.owl-theme .owl-dots  {
-  .owl-dot span{
-    width: rem-calc(60px);
+// orbit bullet subclass
+
+.owl-carousel.owl-theme .owl-dots {
+  .owl-dot span {
     margin-left: 0;
+    margin-right: rem-calc(10px);
+    width: rem-calc(60px);
   }
 }
