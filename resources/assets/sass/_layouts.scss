@@ -1,49 +1,33 @@
-$padding-offsets: (
-  default: 0,
-  small: rem-calc(10px),
-  medium: rem-calc(20px),
-  large: rem-calc(30px)
-);
-
+$padding-offsets: (default: 0, small: rem-calc(10px), medium: rem-calc(20px), large: rem-calc(30px));
 // ========= Alignments =========
-
 .flex-align-left {
-   -webkit-align-self: flex-start;
-   align-self: flex-start;
+  align-self: flex-start;
   margin-right: auto;
-
 }
 
 .flex-align-right {
-   -webkit-align-self: flex-end;
-   align-self: flex-end;
-  margin-left:auto;
+  align-self: flex-end;
+  margin-left: auto;
 }
-
 // for each breakpoint, add breakpoint-{#hdir} flex classes
 @include -zf-each-breakpoint {
-  @each $hdir, $prop in $-zf-flex-justify {
-    .row{
+   @each $hdir, $prop in $-zf-flex-justify{
+    .row {
       .#{$-zf-size}-#{$hdir} {
-          @include flex-align($x: $hdir);
-       }
+        @include flex-align($x: $hdir);
+      }
     }
-
   }
 }
 
 img.l-img-restraint-width {
   max-width: 200px;
 }
-
-
 // ======= paddings =====
-
 // generates vertical and horizontal padding
 // based on $padding-offsets map
-
 @each $key, $value in $padding-offsets {
-  @if ($key == default) {
+   @if ($key == default){
     .l-padded {
       @include v-and-h-padding($value)
     }
@@ -55,7 +39,8 @@ img.l-img-restraint-width {
     .l-h-padded {
       @include h-padding($value)
     }
-  }@else {
+  }
+  @else {
     .l-#{$key}-padded {
       @include v-and-h-padding($value);
     }
@@ -81,23 +66,24 @@ img.l-img-restraint-width {
 .m-l-0 {
   margin-left: 0;
 }
-
 // ====  Component specific layouts
-
 .l-logo-text {
-  @extend.flex-align-left;
-  padding-top:rem_calc(15px);
-  padding-left:rem_calc(15px);
+  @extend .flex-align-left;
+  padding-left: rem-calc(15px);
+  padding-top: rem-calc(15px);
 }
 
 img.logo {
-  max-width:rem_calc(50px);
-  margin-left:20px;
-  margin-right:20px
+  margin-left: rem-calc(30px);
+  margin-right: auto;
+  max-width: rem-calc(50px);
+  @include breakpoint('medium') {
+    margin-right: 20px;
+  }
 }
 
 .featured-icon {
-  padding-bottom:rem_calc(20px);
+  padding-bottom: rem-calc(20px);
 }
 
 .l-footer {

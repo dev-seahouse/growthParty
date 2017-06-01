@@ -3,7 +3,7 @@
   <div class="title-bar drop-shadow" data-responsive-toggle="top-menu"  data-hide-for="medium" >
     <button class="menu-icon" type="button" data-toggle="top-menu"></button>
     <img src="images/logo.jpe" alt="" class="logo"/>
-    <h3 class="title-bar-title l-logo-text">Growth Party</h3>
+    <h4 class="title-bar-title l-logo-text show-for-medium">Growth Party</h4>
     <div data-magellan>
       <a class="register button" href="#registerForm">Join Our Beta</a>
     </div>
