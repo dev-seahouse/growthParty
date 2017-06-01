@@ -56,7 +56,7 @@
                 <strong>Join as growth affiliate.</strong> Lend a helping hand to businesses matched to you , by simply sharing about their services around your network.
                 </p>
               </div>
-              <div class="small-6 columns">
+              <div class="small-6 columns p-l-0">
                 <img src="/images/step1.png" alt="image of step 2">
               </div>
           </div>
@@ -71,7 +71,7 @@
                 <strong>Earn credits</strong> for every sales meeting you schedule for businesses with interested parties from your network.
                 </p>
               </div>
-              <div class="small-6 columns">
+              <div class="small-6 columns p-l-0">
                 <img src="/images/step2.png" alt="image of step 3">
               </div>
           </div>
@@ -85,7 +85,7 @@
                 <h2 class="pale-red-text">Cash out!</h2>
                 <p>Invoicing and payments happen on our secure payment platform. Cash out confidently with Growth Party Payment Protection.</p>
               </div>
-              <div class="small-6 columns">
+              <div class="small-6 columns p-l-0">
                 <img src="/images/step3.png" alt="image of step 3">
               </div>
           </div>
