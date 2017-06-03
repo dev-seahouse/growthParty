@@ -53,7 +53,7 @@
                 <h5 class="pale-red-text thin-header">Step 1</h5>
                 <h2 class="pale-red-text">Sign up</h2>
                 <p>
-                Join as growth affiliate and help businesses being matched to you by sharing about their services to your network.
+                Join as growth affiliate and help matched businesses share their services to your network.
                 </p>
               </div>
               <div class="small-6 columns p-l-0">
@@ -68,7 +68,7 @@
                 <h5 class="pale-red-text thin-header">Step 2</h5>
                 <h2 class="pale-red-text">Earn</h2>
                 <p>
-                You earn for every sales meeting you schedule for businesses with interested parties from your network.
+                You earn from every sales meeting you schedule between matched businesses and interested parties from your network
                 </p>
               </div>
               <div class="small-6 columns p-l-0">
