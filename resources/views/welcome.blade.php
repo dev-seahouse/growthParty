@@ -46,6 +46,7 @@
   <div class="row l-padded l-small-v-padded">
 
     <div class="small-12 column">
+
       <div class="owl-carousel owl-theme">
         <div class="slide-item">
           <div class="row">
@@ -99,6 +100,7 @@
   </div>
 
   <!-- end how it works -->
+
   <!-- why join us -->
   <div class="l-padded p-b-0 row" id="aos-container">
     <div class="columns">
@@ -129,10 +131,7 @@
     </div>
 
   </div>
-
   <!-- end why join us -->
-
-
 
   <!-- Stats -->
   <div class="l-medium-v-padded row medium-unstack bitmap-bg primary-text">

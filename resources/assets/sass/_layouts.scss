@@ -1,9 +1,11 @@
 $padding-offsets: (default: 0, small: rem-calc(10px), medium: rem-calc(20px), large: rem-calc(30px));
+
 // ========= Alignments =========
 .flex-align-left {
   align-self: flex-start;
   margin-right: auto;
 }
+
 
 .flex-align-right {
   align-self: flex-end;
@@ -66,6 +68,11 @@ img.l-img-restraint-width {
 .m-l-0 {
   margin-left: 0;
 }
+
+.m-b-0 {
+  margin-bottom: 0;
+}
+
 // ====  Component specific layouts
 .l-logo-text {
   @extend .flex-align-left;

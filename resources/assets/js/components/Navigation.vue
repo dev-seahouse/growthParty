@@ -5,7 +5,7 @@
     <img src="images/logo.jpe" alt="" class="logo"/>
     <h4 class="title-bar-title l-logo-text show-for-medium">Growth Party</h4>
     <div data-magellan>
-      <a class="register button" href="#registerForm">Join Our Beta</a>
+      <a class="register button m-b-0" href="#registerForm">Join Our Beta</a>
     </div>
   </div>
 
@@ -14,11 +14,12 @@
     <div class="top-bar-left">
        <ul class="vertical medium-horizontal menu align-right" data-dropdown-menu>
           <li class="menu-text show-for-medium flex-align-left"><img src="images/logo.jpe" alt="company logo" class="logo">Growth Party</li>
+          <li class="menu-text"><a>Login</a></li>
       </ul>
     </div>
 
     <div data-magellan>
-      <a class="register button show-for-medium" href="#registerForm">Join Our Beta</a>
+      <a class="register button show-for-mediu m-b-0" href="#registerForm">Join Our Beta</a>
     </div>
 
   </div>

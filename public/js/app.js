@@ -147,6 +147,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -307,7 +308,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "data-magellan": ""
     }
   }, [_c('a', {
-    staticClass: "register button",
+    staticClass: "register button m-b-0",
     attrs: {
       "href": "#registerForm"
     }
@@ -331,12 +332,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "src": "images/logo.jpe",
       "alt": "company logo"
     }
-  }), _vm._v("Growth Party")])])]), _vm._v(" "), _c('div', {
+  }), _vm._v("Growth Party")]), _vm._v(" "), _c('li', {
+    staticClass: "menu-text"
+  }, [_c('a', [_vm._v("Login")])])])]), _vm._v(" "), _c('div', {
     attrs: {
       "data-magellan": ""
     }
   }, [_c('a', {
-    staticClass: "register button show-for-medium",
+    staticClass: "register button show-for-mediu m-b-0",
     attrs: {
       "href": "#registerForm"
     }
