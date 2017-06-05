@@ -108,7 +108,7 @@
 
   <div class="l-h-padded row">
 
-    <div class="l-padded small-12 medium-4 columns" data-aos="fade-right">
+    <div class="l-padded small-12 medium-4 columns" data-aos="fade-down">
       <img src="/images/icons/piggy-bank.svg" class="featured-icon" alt="piggy bank icon">
       <h3 class="pale-red-text">Extra income</h3>
       <p>With more companies on Growth Party,
@@ -122,7 +122,7 @@
       <p>We are your partner. Tools and steps are prescribed to bring you to success.</p>
     </div>
 
-    <div class="l-padded small-12 medium-4 columns" data-aos="fade-left">
+    <div class="l-padded small-12 medium-4 columns" data-aos="fade-down">
       <img src="/images/icons/timer.svg" class="featured-icon" alt="timer icon">
       <h3 class="pale-red-text">Flexibility</h3>
       <p>It’s your lifestyle, set your days and decide when to earn and how often.</p>
