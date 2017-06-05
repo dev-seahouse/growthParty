@@ -77,11 +77,11 @@ window.Vue = __webpack_require__(5);
 
 Vue.component('flash', __webpack_require__(66));
 Vue.component('navigation', __webpack_require__(67));
+Vue.component('modal', __webpack_require__(80));
 
 var app = new Vue({
   el: '#app',
   mounted: function mounted() {
-    console.log('root vue component mounted');
     $(document).foundation();
   }
 });
@@ -120,6 +120,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -281,9 +306,49 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
+  return _c('nav', [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('modal', {
+    staticClass: "small",
+    attrs: {
+      "id": "loginModal",
+      "closable": "true"
+    }
+  }, [_c('h3', {
+    slot: "title"
+  }, [_vm._v("Login")]), _vm._v(" "), _c('form', {
+    attrs: {
+      "action": "/login",
+      "method": "post",
+      "accept-charset": "utf-8"
+    }
+  }, [_c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "small-12 columns"
+  }, [_c('label', [_vm._v("Email or phone"), _c('input', {
+    attrs: {
+      "type": "text",
+      "placeholder": "Enter email or mobile"
+    }
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "small-12 columns"
+  }, [_c('label', [_vm._v("Password"), _c('input', {
+    attrs: {
+      "type": "password",
+      "name": "password",
+      "placeholder": "Enter password"
+    }
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "row column"
+  }, [_c('button', {
+    staticClass: "button",
+    attrs: {
+      "type": "submit"
+    }
+  }, [_vm._v("Login")])])])])], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('nav', [_c('div', {
+  return _c('div', {
     staticClass: "title-bar drop-shadow",
     attrs: {
       "data-responsive-toggle": "top-menu",
@@ -312,7 +377,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "#registerForm"
     }
-  }, [_vm._v("Join Our Beta")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Join Our Beta")])])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
     staticClass: "top-bar drop-shadow",
     attrs: {
       "id": "top-menu"
@@ -334,16 +401,20 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }), _vm._v("Growth Party")]), _vm._v(" "), _c('li', {
     staticClass: "menu-text"
-  }, [_c('a', [_vm._v("Login")])])])]), _vm._v(" "), _c('div', {
+  }, [_c('a', {
+    attrs: {
+      "data-open": "loginModal"
+    }
+  }, [_vm._v("Login")])])])]), _vm._v(" "), _c('div', {
     attrs: {
       "data-magellan": ""
     }
   }, [_c('a', {
-    staticClass: "register button show-for-mediu m-b-0",
+    staticClass: "register button show-for-medium m-b-0",
     attrs: {
       "href": "#registerForm"
     }
-  }, [_vm._v("Join Our Beta")])])])])
+  }, [_vm._v("Join Our Beta")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -702,6 +773,134 @@ return /******/ (function(modules) { // webpackBootstrap
 
 module.exports = __webpack_require__(13);
 
+
+/***/ }),
+
+/***/ 79:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['labelledby', 'animation', 'closable', 'label', 'size', 'id', 'overlay'],
+    computed: {
+        cid: function cid() {
+            if (this.id) {
+                return this.id;
+            }
+            return "modal-" + this._uid;
+        },
+        animationin: function animationin() {
+            if (this.animation) {
+                return this.animation + '-in';
+            }
+            return "";
+        },
+        animationout: function animationout() {
+            if (this.animation) {
+                return this.animation + '-out';
+            }
+            return "";
+        }
+    }
+});
+
+/***/ }),
+
+/***/ 80:
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(11)(
+  /* script */
+  __webpack_require__(79),
+  /* template */
+  __webpack_require__(81),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Modal.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Modal.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-f081db94", Component.options)
+  } else {
+    hotAPI.reload("data-v-f081db94", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 81:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "reveal",
+    class: _vm.size,
+    attrs: {
+      "id": _vm.cid,
+      "data-reveal": "",
+      "data-overlay": _vm.overlay,
+      "data-animation-in": _vm.animationin,
+      "data-animation-out": _vm.animationout,
+      "aria-labelledby": _vm.labelledby
+    }
+  }, [_c('div', {
+    staticClass: "row column"
+  }, [_vm._t("title")], 2), _vm._v(" "), _vm._t("default"), _vm._v(" "), (_vm.closable) ? _c('button', {
+    staticClass: "close-button",
+    attrs: {
+      "data-close": "",
+      "aria-label": "Close Modal",
+      "type": "button"
+    }
+  }, [_c('span', {
+    attrs: {
+      "aria-hidden": "true"
+    }
+  }, [_vm._v("×")])]) : _vm._e()], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-f081db94", module.exports)
+  }
+}
 
 /***/ })
 

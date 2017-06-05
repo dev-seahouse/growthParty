@@ -14,11 +14,11 @@ window.Vue = require('vue')
 
 Vue.component('flash', require('./components/Flash.vue'))
 Vue.component('navigation', require('./components/Navigation.vue'))
+Vue.component('modal', require('./components/Modal.vue'))
 
 const app = new Vue({
   el: '#app',
   mounted () {
-    console.log('root vue component mounted')
     $(document).foundation()
   }
 })

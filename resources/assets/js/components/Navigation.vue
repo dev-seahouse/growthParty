@@ -14,16 +14,41 @@
     <div class="top-bar-left">
        <ul class="vertical medium-horizontal menu align-right" data-dropdown-menu>
           <li class="menu-text show-for-medium flex-align-left"><img src="images/logo.jpe" alt="company logo" class="logo">Growth Party</li>
-          <li class="menu-text"><a>Login</a></li>
+          <li class="menu-text"><a data-open="loginModal">Login</a></li>
       </ul>
     </div>
 
     <div data-magellan>
-      <a class="register button show-for-mediu m-b-0" href="#registerForm">Join Our Beta</a>
+      <a class="register button show-for-medium m-b-0" href="#registerForm">Join Our Beta</a>
     </div>
 
   </div>
+
+<!-- <div class="small reveal" id="loginModal" data-reveal> -->
+<modal class="small" id="loginModal" closable=true>
+  <h3 slot="title">Login</h3>
+
+  <form action="/login" method="post" accept-charset="utf-8">
+    <div class="row">
+      <div class="small-12 columns">
+        <label>Email or phone<input type="text" placeholder="Enter email or mobile"></label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <label>Password<input type="password" name="password" placeholder="Enter password"></label>
+      </div>
+    </div>
+    <div class="row column">
+        <button type="submit" class="button">Login</button>
+    </div>
+  </form>
+
+</modal>
+<!-- </div> -->
+
 </nav>
+
 </template>
 
 <script>
