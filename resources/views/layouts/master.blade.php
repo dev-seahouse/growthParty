@@ -12,7 +12,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>
-      @section('title') {{ config('app.name', 'Growth Party') }} @show
+      @section('title') {{ config('app.name', 'Help business grow - growth party') }} @show
     </title>
 
     <link rel="icon" href="/favicon.ico">
