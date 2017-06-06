@@ -27,11 +27,10 @@
 <!-- <div class="small reveal" id="loginModal" data-reveal> -->
 <modal class="small" id="loginModal" closable=true>
   <h3 slot="title">Login</h3>
-
   <form action="/login" method="post" accept-charset="utf-8">
     <div class="row">
       <div class="small-12 columns">
-        <label>Email or phone<input type="text" placeholder="Enter email or mobile"></label>
+        <label>Email or phone<input type="text" name="loginId" placeholder="Enter email or mobile"></label>
       </div>
     </div>
     <div class="row">
