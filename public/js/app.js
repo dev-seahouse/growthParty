@@ -231,9 +231,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  methods: {}
+  data: function data() {
+    return {
+      loginId: "",
+      password: "",
+      passError: ""
+    };
+  },
+
+  methods: {
+    onSubmit: function onSubmit() {
+      var _this = this;
+
+      axios.post("/login", {
+        loginId: this.loginId,
+        password: this.password
+      }).then(function (response) {
+        console.log(response);
+      }).catch(function (error) {
+        _this.passError = error.response.data;
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -406,6 +428,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "action": "/login",
       "method": "post"
+    },
+    on: {
+      "submit": function($event) {
+        $event.preventDefault();
+        _vm.onSubmit($event)
+      }
     }
   }, [_c('input', {
     attrs: {
@@ -420,22 +448,54 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "small-12 columns"
   }, [_c('label', [_vm._v("Email or phone"), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.loginId),
+      expression: "loginId"
+    }],
     attrs: {
       "type": "text",
       "name": "loginId",
       "placeholder": "Enter email or mobile"
+    },
+    domProps: {
+      "value": (_vm.loginId)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.loginId = $event.target.value
+      }
     }
   })])])]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "small-12 columns"
   }, [_c('label', [_vm._v("Password"), _c('input', {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: (_vm.password),
+      expression: "password"
+    }],
     attrs: {
       "type": "password",
       "name": "password",
       "placeholder": "Enter password"
+    },
+    domProps: {
+      "value": (_vm.password)
+    },
+    on: {
+      "input": function($event) {
+        if ($event.target.composing) { return; }
+        _vm.password = $event.target.value
+      }
     }
-  })])])]), _vm._v(" "), _c('div', {
+  })]), _vm._v(" "), _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.passError))])])]), _vm._v(" "), _c('div', {
     staticClass: "row column"
   }, [_c('button', {
     staticClass: "button",
