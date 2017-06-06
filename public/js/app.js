@@ -11,12 +11,17 @@ webpackJsonp([2],{
 
 __webpack_require__(37);
 window.Vue = __webpack_require__(6);
-/**
- * Next, we will create a fresh Vue application instance and attach it te
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
 
+// define global mixin
+Vue.mixin({
+  data: function data() {
+    return {
+      get csrf_token() {
+        return window._token;
+      }
+    };
+  }
+});
 Vue.component('flash', __webpack_require__(67));
 Vue.component('navigation', __webpack_require__(69));
 Vue.component('modal', __webpack_require__(68));
@@ -225,13 +230,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    },
-
-    methods: {}
+  methods: {}
 
 });
 
@@ -403,9 +405,19 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     slot: "title"
   }, [_vm._v("Login")]), _vm._v(" "), _c('form', {
     attrs: {
-      "action": "login"
+      "action": "/login",
+      "method": "post",
+      "accept-charset": "utf-8"
     }
-  }, [_c('div', {
+  }, [_c('input', {
+    attrs: {
+      "type": "hidden",
+      "name": "_token"
+    },
+    domProps: {
+      "value": _vm.csrf_token
+    }
+  }), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "small-12 columns"
@@ -485,7 +497,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "src": "images/logo.jpe",
       "alt": "company logo"
     }
-  }), _vm._v("Growth Party")]), _vm._v(" "), _c('li', {
+  }), _vm._v("Growth Party\n        ")]), _vm._v(" "), _c('li', {
     staticClass: "menu-text"
   }, [_c('a', {
     attrs: {
