@@ -405,8 +405,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("Login")]), _vm._v(" "), _c('form', {
     attrs: {
       "action": "/login",
-      "method": "post",
-      "accept-charset": "utf-8"
+      "method": "post"
     }
   }, [_c('input', {
     attrs: {

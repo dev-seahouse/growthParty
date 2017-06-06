@@ -29,7 +29,7 @@
     <modal class="small" id="loginModal" closable=true>
 
       <h3 slot="title">Login</h3>
-      <form action="/login" method="post" accept-charset="utf-8">
+      <form action="/login" method="post">
         <input type="hidden" name="_token" :value="csrf_token">
         <div class="row">
           <div class="small-12 columns">
