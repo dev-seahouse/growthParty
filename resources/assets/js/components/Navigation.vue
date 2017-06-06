@@ -28,6 +28,7 @@
 <modal class="small" id="loginModal" closable=true>
   <h3 slot="title">Login</h3>
   <form action="/login" method="post" accept-charset="utf-8">
+    <input type="hidden" name="_token" :value="csrf_token">
     <div class="row">
       <div class="small-12 columns">
         <label>Email or phone<input type="text" name="loginId" placeholder="Enter email or mobile"></label>
@@ -52,9 +53,6 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Component mounted.')
-        },
         methods: {
         }
 
