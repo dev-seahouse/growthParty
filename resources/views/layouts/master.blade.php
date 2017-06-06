@@ -30,7 +30,7 @@
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     <!-- end fav icons -->
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta id="token" name="csrf-token" content="{{ csrf_token() }}">
 
     <title>
       @section('title') {{ config('app.name', 'Help business grow - growth party') }} @show
@@ -79,11 +79,12 @@
     <script src="{{ mix('/js/vendor.js')}}"></script>
     <script src="{{ mix('js/foundation.js') }}"></script>
     <!-- application wide script -->
-    <script src="{{ mix('/js/app.js') }}"></script>
     <script>
       var _token = '{!! Session::token() !!}';
       var _url = '{!! url("/") !!}';
     </script>
+    <script src="{{ mix('/js/app.js') }}"></script>
+
     <!-- page js libs/scripts -->
     @stack('page_scripts')
 
