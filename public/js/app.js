@@ -1,6 +1,37 @@
 webpackJsonp([2],{
 
-/***/ 11:
+/***/ 13:
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
+
+__webpack_require__(37);
+window.Vue = __webpack_require__(6);
+/**
+ * Next, we will create a fresh Vue application instance and attach it te
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+Vue.component('flash', __webpack_require__(67));
+Vue.component('navigation', __webpack_require__(69));
+Vue.component('modal', __webpack_require__(68));
+
+var app = new Vue({
+  el: '#app',
+  mounted: function mounted() {
+    $(document).foundation();
+  }
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+
+/***/ 3:
 /***/ (function(module, exports) {
 
 // this module is a runtime utility for cleaner component module output and will
@@ -58,37 +89,6 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 13:
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
-__webpack_require__(36);
-window.Vue = __webpack_require__(5);
-/**
- * Next, we will create a fresh Vue application instance and attach it te
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-Vue.component('flash', __webpack_require__(66));
-Vue.component('navigation', __webpack_require__(67));
-Vue.component('modal', __webpack_require__(80));
-
-var app = new Vue({
-  el: '#app',
-  mounted: function mounted() {
-    $(document).foundation();
-  }
-});
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
-
-/***/ }),
-
 /***/ 34:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -121,6 +121,58 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['labelledby', 'animation', 'closable', 'label', 'size', 'id', 'overlay'],
+    computed: {
+        cid: function cid() {
+            if (this.id) {
+                return this.id;
+            }
+            return "modal-" + this._uid;
+        },
+        animationin: function animationin() {
+            if (this.animation) {
+                return this.animation + '-in';
+            }
+            return "";
+        },
+        animationout: function animationout() {
+            if (this.animation) {
+                return this.animation + '-out';
+            }
+            return "";
+        }
+    }
+});
+
+/***/ }),
+
+/***/ 36:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
@@ -185,7 +237,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 36:
+/***/ 37:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, global) {// window._ = require('lodash');
@@ -197,12 +249,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 try {
   global.$ = global.jQuery = window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(0);
-  __webpack_require__(70);
+  __webpack_require__(73);
 } catch (e) {
   console.log(e);
 }
 
-__webpack_require__(4);
+__webpack_require__(5);
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -210,7 +262,7 @@ __webpack_require__(4);
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(3);
+window.axios = __webpack_require__(4);
 window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -232,14 +284,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ 66:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(11)(
+var Component = __webpack_require__(3)(
   /* script */
   __webpack_require__(34),
   /* template */
-  __webpack_require__(69),
+  __webpack_require__(71),
   /* scopeId */
   null,
   /* cssModules */
@@ -267,14 +319,49 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 67:
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
-var Component = __webpack_require__(11)(
+var Component = __webpack_require__(3)(
   /* script */
   __webpack_require__(35),
   /* template */
-  __webpack_require__(68),
+  __webpack_require__(72),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Modal.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Modal.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-f081db94", Component.options)
+  } else {
+    hotAPI.reload("data-v-f081db94", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 69:
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(3)(
+  /* script */
+  __webpack_require__(36),
+  /* template */
+  __webpack_require__(70),
   /* scopeId */
   null,
   /* cssModules */
@@ -302,7 +389,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 68:
+/***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -316,9 +403,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     slot: "title"
   }, [_vm._v("Login")]), _vm._v(" "), _c('form', {
     attrs: {
-      "action": "/login",
-      "method": "post",
-      "accept-charset": "utf-8"
+      "action": "login"
     }
   }, [_c('div', {
     staticClass: "row"
@@ -327,6 +412,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('label', [_vm._v("Email or phone"), _c('input', {
     attrs: {
       "type": "text",
+      "name": "loginId",
       "placeholder": "Enter email or mobile"
     }
   })])])]), _vm._v(" "), _c('div', {
@@ -426,7 +512,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 69:
+/***/ 71:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -447,7 +533,47 @@ if (false) {
 
 /***/ }),
 
-/***/ 70:
+/***/ 72:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "reveal",
+    class: _vm.size,
+    attrs: {
+      "id": _vm.cid,
+      "data-reveal": "",
+      "data-overlay": _vm.overlay,
+      "data-animation-in": _vm.animationin,
+      "data-animation-out": _vm.animationout,
+      "aria-labelledby": _vm.labelledby
+    }
+  }, [_c('div', {
+    staticClass: "row column"
+  }, [_vm._t("title")], 2), _vm._v(" "), _vm._t("default"), _vm._v(" "), (_vm.closable) ? _c('button', {
+    staticClass: "close-button",
+    attrs: {
+      "data-close": "",
+      "aria-label": "Close Modal",
+      "type": "button"
+    }
+  }, [_c('span', {
+    attrs: {
+      "aria-hidden": "true"
+    }
+  }, [_vm._v("×")])]) : _vm._e()], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-f081db94", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -768,140 +894,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 
-/***/ 72:
+/***/ 75:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(13);
 
 
-/***/ }),
-
-/***/ 79:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['labelledby', 'animation', 'closable', 'label', 'size', 'id', 'overlay'],
-    computed: {
-        cid: function cid() {
-            if (this.id) {
-                return this.id;
-            }
-            return "modal-" + this._uid;
-        },
-        animationin: function animationin() {
-            if (this.animation) {
-                return this.animation + '-in';
-            }
-            return "";
-        },
-        animationout: function animationout() {
-            if (this.animation) {
-                return this.animation + '-out';
-            }
-            return "";
-        }
-    }
-});
-
-/***/ }),
-
-/***/ 80:
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(11)(
-  /* script */
-  __webpack_require__(79),
-  /* template */
-  __webpack_require__(81),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Modal.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Modal.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-f081db94", Component.options)
-  } else {
-    hotAPI.reload("data-v-f081db94", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 81:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "reveal",
-    class: _vm.size,
-    attrs: {
-      "id": _vm.cid,
-      "data-reveal": "",
-      "data-overlay": _vm.overlay,
-      "data-animation-in": _vm.animationin,
-      "data-animation-out": _vm.animationout,
-      "aria-labelledby": _vm.labelledby
-    }
-  }, [_c('div', {
-    staticClass: "row column"
-  }, [_vm._t("title")], 2), _vm._v(" "), _vm._t("default"), _vm._v(" "), (_vm.closable) ? _c('button', {
-    staticClass: "close-button",
-    attrs: {
-      "data-close": "",
-      "aria-label": "Close Modal",
-      "type": "button"
-    }
-  }, [_c('span', {
-    attrs: {
-      "aria-hidden": "true"
-    }
-  }, [_vm._v("×")])]) : _vm._e()], 2)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-f081db94", module.exports)
-  }
-}
-
 /***/ })
 
-},[72]);
+},[75]);
