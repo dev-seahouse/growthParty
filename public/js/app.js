@@ -250,7 +250,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         loginId: this.loginId,
         password: this.password
       }).then(function (response) {
-        console.log(response);
+        window.location.replace('/home');
       }).catch(function (error) {
         _this.passError = error.response.data;
       });

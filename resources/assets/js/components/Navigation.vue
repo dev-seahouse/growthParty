@@ -66,8 +66,8 @@
         axios.post("/login", {
           loginId: this.loginId,
           password: this.password
-        }).then( response =>{
-          console.log(response);
+        }).then(response =>{
+            window.location.replace('/home');
         }).catch(error => {
           this.passError = error.response.data;
         })

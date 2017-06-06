@@ -85,8 +85,8 @@ class LoginController extends Controller
 
     $this->clearLoginAttempts($request);
 
-    $this->authenticated($request, $this->guard()->user())
-      ?: redirect()->intended($this->redirectPath());
+/*    $this->authenticated($request, $this->guard()->user())
+      ?: redirect()->intended($this->redirectPath());*/
     return response()->json(['SUCCESS' => 'AUTHENTICATED'], 200);
   }
 
