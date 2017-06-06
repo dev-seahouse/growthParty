@@ -77,6 +77,14 @@ class LoginController extends Controller
     }
   }
 
+  protected function validateLogin(Request $request)
+  {
+    $this->validate($request, [
+      $this->userIdFieldName => 'required|string',
+      'password' => 'required|string',
+    ]);
+  }
+
   /**
    * Create a new controller instance.
    *
