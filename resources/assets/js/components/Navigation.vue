@@ -26,19 +26,19 @@
 
   </div>
 
-  <modal class="small" id="loginModal" closable=true>
-
-    <h3 slot="title">Login</h3>
-    <form action="/login" method="post" accept-charset="utf-8">
-      <input type="hidden" name="_token" :value="csrf_token">
-      <div class="row">
-        <div class="small-12 columns">
-          <label>Email or phone<input type="text" name="loginId" placeholder="Enter email or mobile"></label>
+      <h3 slot="title">Login</h3>
+      <form action="/login" method="post" @submit.prevent="onSubmit">
+        <input type="hidden" name="_token" :value="csrf_token">
+        <div class="row">
+          <div class="small-12 columns">
+            <label>Email or phone<input type="text" v-model="loginId" name="loginId" placeholder="Enter email or mobile"></label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="small-12 columns">
-          <label>Password<input type="password" name="password" placeholder="Enter password"></label>
+        <div class="row">
+          <div class="small-12 columns">
+            <label>Password<input type="password" name="password" v-model="password" placeholder="Enter password"></label>
+            <span class="form-error is-visible">{{ passError}}</span>
+          </div>
         </div>
       </div>
       <div class="row column">
@@ -79,6 +79,24 @@
 
 <script>
   export default {
-    methods: {}
+    data() {
+      return {
+        loginId: "",
+        password: "",
+        passError:""
+      }
+    },
+    methods: {
+      onSubmit(){
+        axios.post("/login", {
+          loginId: this.loginId,
+          password: this.password
+        }).then(response =>{
+            window.location.replace('/home');
+        }).catch(error => {
+          this.passError = error.response.data;
+        })
+      }
+    }
   }
 </script>

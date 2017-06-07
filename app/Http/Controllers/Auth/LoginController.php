@@ -39,11 +39,13 @@ class LoginController extends Controller
    * User is using email or mobile number to login?
    * @var string
    */
-  protected $loginIdType="email";
+  protected $loginIdType = "email";
 
   public function login(Request $request)
   {
     $this->setIdType($request);
+
+    $this->replaceRequestField($request);
 
     $this->validateLogin($request);
 
@@ -70,21 +72,35 @@ class LoginController extends Controller
 
   protected function setIdType(Request $request)
   {
-    if (is_numeric($request->input($this->userIdFieldName))){
+    if (is_numeric($request->input($this->userIdFieldName))) {
       $this->loginIdType = "mobile";
-    }else if (filter_var($request->input($this->userIdFieldName),FILTER_VALIDATE_EMAIL)){
+    } else if (filter_var($request->input($this->userIdFieldName), FILTER_VALIDATE_EMAIL)) {
       $this->loginIdType = "email";
     }
   }
 
-  protected function validateLogin(Request $request)
+  protected function sendLoginResponse(Request $request)
   {
-    $this->validate($request, [
-      $this->userIdFieldName => 'required|string',
-      'password' => 'required|string',
-    ]);
+    $request->session()->regenerate();
+
+    $this->clearLoginAttempts($request);
+
+/*    $this->authenticated($request, $this->guard()->user())
+      ?: redirect()->intended($this->redirectPath());*/
+    return response()->json(['SUCCESS' => 'AUTHENTICATED'], 200);
   }
 
+  protected function sendFailedLoginResponse(Request $request)
+  {
+    $errors = [$this->username() => trans('auth.failed')];
+    if ($request->expectsJson()) {
+      return response()->json($errors,422);
+    }
+
+    return redirect()->back()
+      ->withInput($request->only($this->username(), 'remember'))
+      ->withErrors($errors);
+  }
   /**
    * Create a new controller instance.
    *
@@ -93,6 +109,14 @@ class LoginController extends Controller
   public function __construct()
   {
     $this->middleware('guest')->except('logout');
+  }
+
+  /**
+   * @param Request $request
+   */
+  protected function replaceRequestField(Request $request)
+  {
+    $request->merge([$this->loginIdType => $request->input($this->userIdFieldName)]);
   }
 
 

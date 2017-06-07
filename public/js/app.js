@@ -257,9 +257,46 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  methods: {}
+  data: function data() {
+    return {
+      loginId: "",
+      password: "",
+      passError: ""
+    };
+  },
+
+  methods: {
+    onSubmit: function onSubmit() {
+      var _this = this;
+
+      axios.post("/login", {
+        loginId: this.loginId,
+        password: this.password
+      }).then(function (response) {
+        window.location.replace('/home');
+      }).catch(function (error) {
+        _this.passError = error.response.data;
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -419,186 +456,7 @@ module.exports = Component.exports
 /***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('nav', [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('modal', {
-    staticClass: "small",
-    attrs: {
-      "id": "loginModal",
-      "closable": "true"
-    }
-  }, [_c('h3', {
-    slot: "title"
-  }, [_vm._v("Login")]), _vm._v(" "), _c('form', {
-    attrs: {
-      "action": "/login",
-      "method": "post",
-      "accept-charset": "utf-8"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "hidden",
-      "name": "_token"
-    },
-    domProps: {
-      "value": _vm.csrf_token
-    }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "small-12 columns"
-  }, [_c('label', [_vm._v("Email or phone"), _c('input', {
-    attrs: {
-      "type": "text",
-      "name": "loginId",
-      "placeholder": "Enter email or mobile"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "small-12 columns"
-  }, [_c('label', [_vm._v("Password"), _c('input', {
-    attrs: {
-      "type": "password",
-      "name": "password",
-      "placeholder": "Enter password"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "row column"
-  }, [_c('button', {
-    staticClass: "button",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_vm._v("Login")])])])]), _vm._v(" "), _c('modal', {
-    staticClass: "small",
-    attrs: {
-      "id": "registerModal",
-      "closable": "true"
-    }
-  }, [_c('h3', {
-    slot: "title"
-  }, [_vm._v("Register")]), _vm._v(" "), _c('form', {
-    attrs: {
-      "action": "/register",
-      "method": "post",
-      "accept-charset": "utf-8"
-    }
-  }, [_c('input', {
-    attrs: {
-      "type": "hidden",
-      "name": "_token"
-    },
-    domProps: {
-      "value": _vm.csrf_token
-    }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "small-12 columns"
-  }, [_c('label', [_vm._v("Email"), _c('input', {
-    attrs: {
-      "type": "email",
-      "name": "email",
-      "placeholder": "Enter email"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "small-12 columns"
-  }, [_c('label', [_vm._v("Phone No."), _c('input', {
-    attrs: {
-      "type": "text",
-      "name": "mobile",
-      "placeholder": "Enter phone no."
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "small-12 columns"
-  }, [_c('label', [_vm._v("Password"), _c('input', {
-    attrs: {
-      "type": "password",
-      "name": "password",
-      "placeholder": "Enter password"
-    }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "row column"
-  }, [_c('button', {
-    staticClass: "button",
-    attrs: {
-      "type": "submit"
-    }
-  }, [_vm._v("Register")])])])])], 1)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "title-bar drop-shadow",
-    attrs: {
-      "data-responsive-toggle": "top-menu",
-      "data-hide-for": "medium"
-    }
-  }, [_c('button', {
-    staticClass: "menu-icon",
-    attrs: {
-      "type": "button",
-      "data-toggle": "top-menu"
-    }
-  }), _vm._v(" "), _c('img', {
-    staticClass: "logo",
-    attrs: {
-      "src": "images/logo.jpe",
-      "alt": ""
-    }
-  }), _vm._v(" "), _c('h4', {
-    staticClass: "title-bar-title l-logo-text show-for-medium"
-  }, [_vm._v("Growth Party")]), _vm._v(" "), _c('div', {
-    attrs: {
-      "data-magellan": ""
-    }
-  }, [_c('a', {
-    staticClass: "register button m-b-0",
-    attrs: {
-      "data-open": "registerModal"
-    }
-  }, [_vm._v(">Join Our Beta")])])])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "top-bar drop-shadow",
-    attrs: {
-      "id": "top-menu"
-    }
-  }, [_c('div', {
-    staticClass: "top-bar-left"
-  }, [_c('ul', {
-    staticClass: "vertical medium-horizontal menu align-right",
-    attrs: {
-      "data-dropdown-menu": ""
-    }
-  }, [_c('li', {
-    staticClass: "menu-text show-for-medium flex-align-left"
-  }, [_c('img', {
-    staticClass: "logo",
-    attrs: {
-      "src": "images/logo.jpe",
-      "alt": "company logo"
-    }
-  }), _vm._v("Growth Party\n         ")]), _vm._v(" "), _c('li', {
-    staticClass: "menu-text"
-  }, [_c('a', {
-    attrs: {
-      "data-open": "loginModal"
-    }
-  }, [_vm._v("Login")])])])]), _vm._v(" "), _c('div', {
-    attrs: {
-      "data-magellan": ""
-    }
-  }, [_c('a', {
-    staticClass: "register button show-for-medium m-b-0",
-    attrs: {
-      "data-open": "registerModal"
-    }
-  }, [_vm._v("Join Our Beta")])])])
-}]}
-module.exports.render._withStripped = true
+module.exports={render:function(){},staticRenderFns:[]}
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
