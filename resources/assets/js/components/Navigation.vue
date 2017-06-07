@@ -18,62 +18,64 @@
          </li>
          <li class="menu-text"><a data-open="loginModal">Login</a></li>
        </ul>
-     </div>
+      </div>
 
-     <div data-magellan>
-     <a class="register button show-for-medium m-b-0" data-open="registerModal">Join Our Beta</a>
+      <div data-magellan>
+        <a class="register button show-for-medium m-b-0" data-open="registerModal">Join Our Beta</a>
+      </div>
+
     </div>
 
-  </div>
+    <modal class="small" id="loginModal" closable=true>
+        <h3 slot="title">Login</h3>
+        <form action="/login" method="post" @submit.prevent="onSubmit">
+          <input type="hidden" name="_token" :value="csrf_token">
+          <div class="row">
+            <div class="small-12 columns">
+              <label>Email or phone<input type="text" v-model="loginId" name="loginId" placeholder="Enter email or mobile"></label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-12 columns">
+              <label>Password<input type="password" name="password" v-model="password" placeholder="Enter password"></label>
+              <span class="form-error is-visible">{{ passError}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="row column">
+          <button type="submit" class="button">Login</button>
+        </div>
+      </form>
+    </modal>
 
-      <h3 slot="title">Login</h3>
-      <form action="/login" method="post" @submit.prevent="onSubmit">
+    <modal class="small" id="registerModal" closable=true>
+
+      <h3 slot="title">Register</h3>
+      <form action="/register" method="post" accept-charset="utf-8">
         <input type="hidden" name="_token" :value="csrf_token">
         <div class="row">
           <div class="small-12 columns">
-            <label>Email or phone<input type="text" v-model="loginId" name="loginId" placeholder="Enter email or mobile"></label>
+            <label>Email<input type="email" name="email" placeholder="Enter email"></label>
           </div>
         </div>
         <div class="row">
           <div class="small-12 columns">
-            <label>Password<input type="password" name="password" v-model="password" placeholder="Enter password"></label>
-            <span class="form-error is-visible">{{ passError}}</span>
+            <label>Phone No.<input type="text" name="mobile" placeholder="Enter phone no."></label>
           </div>
         </div>
-      </div>
-      <div class="row column">
-        <button type="submit" class="button">Login</button>
-      </div>
-    </form>
-  </modal>
-
-  <modal class="small" id="registerModal" closable=true>
-
-    <h3 slot="title">Register</h3>
-    <form action="/register" method="post" accept-charset="utf-8">
-      <input type="hidden" name="_token" :value="csrf_token">
-      <div class="row">
-        <div class="small-12 columns">
-          <label>Email<input type="email" name="email" placeholder="Enter email"></label>
+        <div class="row">
+          <div class="small-12 columns">
+            <label>Password<input type="password" name="password" placeholder="Enter password"></label>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="small-12 columns">
-          <label>Phone No.<input type="text" name="mobile" placeholder="Enter phone no."></label>
+        <div class="row column">
+          <button type="submit" class="button">Register</button>
         </div>
-      </div>
-      <div class="row">
-        <div class="small-12 columns">
-          <label>Password<input type="password" name="password" placeholder="Enter password"></label>
-        </div>
-      </div>
-      <div class="row column">
-        <button type="submit" class="button">Register</button>
-      </div>
-    </form>
-  </modal>
+      </form>
 
-</nav>
+    </modal>
+
+  </nav>
 
 </template>
 
