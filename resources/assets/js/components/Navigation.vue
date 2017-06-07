@@ -33,12 +33,13 @@
           <div class="row">
             <div class="small-12 columns">
               <label>Email or phone<input type="text" v-model="loginId" name="loginId" placeholder="Enter email or mobile"></label>
+              <span class="form-error is-visible">{{ idError }}</span>
             </div>
           </div>
           <div class="row">
             <div class="small-12 columns">
               <label>Password<input type="password" name="password" v-model="password" placeholder="Enter password"></label>
-              <span class="form-error is-visible">{{ passError}}</span>
+              <span class="form-error is-visible">{{ passError }}</span>
             </div>
           </div>
         </div>
@@ -85,7 +86,8 @@
       return {
         loginId: "",
         password: "",
-        passError:""
+        passError:"",
+        idError:""
       }
     },
     methods: {
@@ -96,7 +98,14 @@
         }).then(response =>{
             window.location.replace('/home');
         }).catch(error => {
-          this.passError = error.response.data;
+          console.log(error.response.data)
+          error = error.response.data;
+          this.idError = error.mobile && (error.mobile || error.mobile.pop()) ||
+            error.email && (error.email || error.email.pop());
+          if(Array.isArray(this.idError)) {
+            this.idError = this.idError.toString();
+          }
+          this.passError = error.password && error.password.pop() || "";
         })
       }
     }
