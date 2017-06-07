@@ -18,6 +18,18 @@
 @section('content')
   <!-- fullscreen header -->
   <div class="full-screen-header">
+  <div>
+                            {{-- @if ($errors->has('email'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                                 @if ($errors->has('password'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif  --}}
+  </div>
     <img src="{{ asset('images/partybg.png') }}" class="header-bg" alt="color background of header">
     <div class="row column l-padded">
 

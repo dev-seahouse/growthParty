@@ -231,6 +231,32 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   methods: {}
@@ -298,7 +324,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Flash.vue"
+Component.options.__file = "C:\\xampp\\htdocs\\growthParty\\resources\\assets\\js\\components\\Flash.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -333,7 +359,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Modal.vue"
+Component.options.__file = "C:\\xampp\\htdocs\\growthParty\\resources\\assets\\js\\components\\Modal.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Modal.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -368,7 +394,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Navigation.vue"
+Component.options.__file = "C:\\xampp\\htdocs\\growthParty\\resources\\assets\\js\\components\\Navigation.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -443,7 +469,66 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "type": "submit"
     }
-  }, [_vm._v("Login")])])])])], 1)
+  }, [_vm._v("Login")])])])]), _vm._v(" "), _c('modal', {
+    staticClass: "small",
+    attrs: {
+      "id": "registerModal",
+      "closable": "true"
+    }
+  }, [_c('h3', {
+    slot: "title"
+  }, [_vm._v("Register")]), _vm._v(" "), _c('form', {
+    attrs: {
+      "action": "/register",
+      "method": "post",
+      "accept-charset": "utf-8"
+    }
+  }, [_c('input', {
+    attrs: {
+      "type": "hidden",
+      "name": "_token"
+    },
+    domProps: {
+      "value": _vm.csrf_token
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "small-12 columns"
+  }, [_c('label', [_vm._v("Email"), _c('input', {
+    attrs: {
+      "type": "email",
+      "name": "email",
+      "placeholder": "Enter email"
+    }
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "small-12 columns"
+  }, [_c('label', [_vm._v("Phone No."), _c('input', {
+    attrs: {
+      "type": "text",
+      "name": "mobile",
+      "placeholder": "Enter phone no."
+    }
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "small-12 columns"
+  }, [_c('label', [_vm._v("Password"), _c('input', {
+    attrs: {
+      "type": "password",
+      "name": "password",
+      "placeholder": "Enter password"
+    }
+  })])])]), _vm._v(" "), _c('div', {
+    staticClass: "row column"
+  }, [_c('button', {
+    staticClass: "button",
+    attrs: {
+      "type": "submit"
+    }
+  }, [_vm._v("Register")])])])])], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "title-bar drop-shadow",
@@ -472,9 +557,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('a', {
     staticClass: "register button m-b-0",
     attrs: {
-      "href": "#registerForm"
+      "data-open": "registerModal"
     }
-  }, [_vm._v("Join Our Beta")])])])
+  }, [_vm._v(">Join Our Beta")])])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "top-bar drop-shadow",
@@ -496,7 +581,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "src": "images/logo.jpe",
       "alt": "company logo"
     }
-  }), _vm._v("Growth Party\n        ")]), _vm._v(" "), _c('li', {
+  }), _vm._v("Growth Party\n         ")]), _vm._v(" "), _c('li', {
     staticClass: "menu-text"
   }, [_c('a', {
     attrs: {
@@ -509,7 +594,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('a', {
     staticClass: "register button show-for-medium m-b-0",
     attrs: {
-      "href": "#registerForm"
+      "data-open": "registerModal"
     }
   }, [_vm._v("Join Our Beta")])])])
 }]}
@@ -532,7 +617,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "role": "alert"
     }
-  }, [_c('strong', [_vm._v("Success")]), _vm._v("\n    " + _vm._s(_vm.body) + "\n")])
+  }, [_c('strong', [_vm._v("Success")]), _vm._v("\r\n    " + _vm._s(_vm.body) + "\r\n")])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
