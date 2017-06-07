@@ -10,10 +10,10 @@ webpackJsonp([2],{
  */
 
 __webpack_require__(37);
-window.Vue = __webpack_require__(6);
+window.Vue = __webpack_require__(6
 
 // define global mixin
-Vue.mixin({
+);Vue.mixin({
   data: function data() {
     return {
       get csrf_token() {
@@ -304,7 +304,7 @@ try {
   console.log(e);
 }
 
-__webpack_require__(5);
+__webpack_require__(5
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -312,7 +312,7 @@ __webpack_require__(5);
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(4);
+);window.axios = __webpack_require__(4);
 window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -619,7 +619,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "data-open": "registerModal"
     }
-  }, [_vm._v(">Join Our Beta")])])])
+  }, [_vm._v("Join Our Beta")])])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "top-bar drop-shadow",
