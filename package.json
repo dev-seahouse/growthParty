@@ -19,5 +19,6 @@
     "motion-ui": "^1.2.2",
     "vue": "^2.3.3"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "false": {}
 }

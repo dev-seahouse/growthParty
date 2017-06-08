@@ -6,14 +6,14 @@ $padding-offsets: (default: 0, small: rem-calc(10px), medium: rem-calc(20px), la
   margin-right: auto;
 }
 
-
 .flex-align-right {
   align-self: flex-end;
   margin-left: auto;
 }
+
 // for each breakpoint, add breakpoint-{#hdir} flex classes
 @include -zf-each-breakpoint {
-   @each $hdir, $prop in $-zf-flex-justify{
+  @each $hdir, $prop in $-zf-flex-justify {
     .row {
       .#{$-zf-size}-#{$hdir} {
         @include flex-align($x: $hdir);
@@ -25,32 +25,32 @@ $padding-offsets: (default: 0, small: rem-calc(10px), medium: rem-calc(20px), la
 img.l-img-restraint-width {
   max-width: 200px;
 }
+
 // ======= paddings =====
 // generates vertical and horizontal padding
 // based on $padding-offsets map
 @each $key, $value in $padding-offsets {
-   @if ($key == default){
+  @if ($key == default) {
     .l-padded {
       @include v-and-h-padding($value)
     }
-
+    
     .l-v-padded {
       @include v-padding($value)
     }
-
+    
     .l-h-padded {
       @include h-padding($value)
     }
-  }
-  @else {
+  } @else {
     .l-#{$key}-padded {
       @include v-and-h-padding($value);
     }
-
+    
     .l-#{$key}-v-padded {
       @include v-padding($value);
     }
-
+    
     .l-#{$key}-h-padded {
       @include h-padding($value);
     }
@@ -65,8 +65,21 @@ img.l-img-restraint-width {
   padding-left: 0;
 }
 
+.p-r-0 {
+  padding-right: 0;
+}
+
+.p-v-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .m-l-0 {
   margin-left: 0;
+}
+
+.m-r-0 {
+  margin-right: 0;
 }
 
 .m-b-0 {
@@ -96,3 +109,15 @@ img.logo {
 .l-footer {
   min-height: 20vh;
 }
+
+/* menu */
+.menu > li > a.inline-block {
+  display: inline-block;
+}
+
+img.l-post-image {
+  height:300px;
+  max-width: 200px;
+}
+
+

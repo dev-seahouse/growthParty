@@ -260,6 +260,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -632,7 +634,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("Join Our Beta")])])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "top-bar drop-shadow",
+    staticClass: "top-bar drop-shadow p-v-0",
     attrs: {
       "id": "top-menu"
     }
@@ -645,13 +647,24 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('li', {
     staticClass: "menu-text show-for-medium flex-align-left"
+  }, [_c('a', {
+    staticClass: "inline-block",
+    attrs: {
+      "href": "/"
+    }
   }, [_c('img', {
     staticClass: "logo",
     attrs: {
       "src": "images/logo.jpe",
       "alt": "company logo"
     }
-  }), _vm._v("Growth Party\n       ")]), _vm._v(" "), _c('li', {
+  })]), _vm._v("Growth Party\n       ")]), _vm._v(" "), _c('li', {
+    staticClass: "menu-text m-r-0 p-r-0"
+  }, [_c('a', {
+    attrs: {
+      "href": "/blog"
+    }
+  }, [_vm._v("Blog")])]), _vm._v(" "), _c('li', {
     staticClass: "menu-text"
   }, [_c('a', {
     attrs: {

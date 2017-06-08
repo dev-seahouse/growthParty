@@ -9,13 +9,15 @@
       </div>
     </div>
 
-    <div class="top-bar drop-shadow" id="top-menu">
+    <div class="top-bar drop-shadow p-v-0" id="top-menu">
 
       <div class="top-bar-left">
         <ul class="vertical medium-horizontal menu align-right" data-dropdown-menu>
-          <li class="menu-text show-for-medium flex-align-left"><img src="images/logo.jpe" alt="company logo"
-           class="logo">Growth Party
+          <li class="menu-text show-for-medium flex-align-left">
+            <a class="inline-block" href="/"><img src="images/logo.jpe" alt="company logo"
+                    class="logo"></a>Growth Party
          </li>
+          <li class="menu-text m-r-0 p-r-0"><a href="/blog">Blog</a></li>
          <li class="menu-text"><a data-open="loginModal">Login</a></li>
        </ul>
       </div>

@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-  Welcome to growth party!
+  Help business grow - growth party
 @endsection
 
 @push("page_styles")
