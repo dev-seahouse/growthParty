@@ -10,10 +10,10 @@ webpackJsonp([2],{
  */
 
 __webpack_require__(37);
-window.Vue = __webpack_require__(6
+window.Vue = __webpack_require__(6);
 
 // define global mixin
-);Vue.mixin({
+Vue.mixin({
   data: function data() {
     return {
       get csrf_token() {
@@ -259,13 +259,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       loginId: "",
       password: "",
-      passError: ""
+      passError: "",
+      idError: ""
     };
   },
 
@@ -279,7 +281,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }).then(function (response) {
         window.location.replace('/home');
       }).catch(function (error) {
-        _this.passError = error.response.data;
+        console.log(error.response.data);
+        error = error.response.data;
+        _this.idError = error.mobile && (error.mobile || error.mobile.pop()) || error.email && (error.email || error.email.pop());
+        if (Array.isArray(_this.idError)) {
+          _this.idError = _this.idError.toString();
+        }
+        _this.passError = error.password && error.password.pop() || "";
       });
     }
   }
@@ -304,7 +312,7 @@ try {
   console.log(e);
 }
 
-__webpack_require__(5
+__webpack_require__(5);
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -312,7 +320,7 @@ __webpack_require__(5
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-);window.axios = __webpack_require__(4);
+window.axios = __webpack_require__(4);
 window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -347,7 +355,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Flash.vue"
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Flash.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -382,7 +390,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Modal.vue"
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Modal.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Modal.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -417,7 +425,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Navigation.vue"
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Navigation.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -495,7 +503,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.loginId = $event.target.value
       }
     }
-  })])])]), _vm._v(" "), _c('div', {
+  })]), _vm._v(" "), _c('span', {
+    staticClass: "form-error is-visible"
+  }, [_vm._v(_vm._s(_vm.idError))])])]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "small-12 columns"

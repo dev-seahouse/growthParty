@@ -40,6 +40,7 @@ class RegisterController extends Controller
     }
 
     /**
+     * Attention: remember to modify rules defined in loginController
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
@@ -50,7 +51,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             //'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'mobile' =>'required',
+            'mobile' =>'required|numeric|digits:8',
             'password' => 'required|string|min:6',
         ]);
     }
