@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 13:
+/***/ 12:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {/**
@@ -9,16 +9,16 @@ webpackJsonp([2],{
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(37);
-window.Vue = __webpack_require__(6
+__webpack_require__(33);
+window.Vue = __webpack_require__(5
 /**
  * Next, we will create a fresh Vue application instance and attach it te
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-);Vue.component('flash', __webpack_require__(67));
-Vue.component('navigation', __webpack_require__(69));
+);Vue.component('flash', __webpack_require__(63));
+Vue.component('navigation', __webpack_require__(64));
 
 var app = new Vue({
   el: '#app',
@@ -31,140 +31,7 @@ var app = new Vue({
 
 /***/ }),
 
-/***/ 3:
-/***/ (function(module, exports) {
-
-// this module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle
-
-module.exports = function normalizeComponent (
-  rawScriptExports,
-  compiledTemplate,
-  scopeId,
-  cssModules
-) {
-  var esModule
-  var scriptExports = rawScriptExports = rawScriptExports || {}
-
-  // ES6 modules interop
-  var type = typeof rawScriptExports.default
-  if (type === 'object' || type === 'function') {
-    esModule = rawScriptExports
-    scriptExports = rawScriptExports.default
-  }
-
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (compiledTemplate) {
-    options.render = compiledTemplate.render
-    options.staticRenderFns = compiledTemplate.staticRenderFns
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = scopeId
-  }
-
-  // inject cssModules
-  if (cssModules) {
-    var computed = Object.create(options.computed || null)
-    Object.keys(cssModules).forEach(function (key) {
-      var module = cssModules[key]
-      computed[key] = function () { return module }
-    })
-    options.computed = computed
-  }
-
-  return {
-    esModule: esModule,
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-
-/***/ 34:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            body: "Temp for now"
-        };
-    },
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    }
-});
-
-/***/ }),
-
-/***/ 36:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    },
-
-    methods: {}
-
-});
-
-/***/ }),
-
-/***/ 37:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, global) {// window._ = require('lodash');
@@ -176,12 +43,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 try {
   global.$ = global.jQuery = window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(0);
-  __webpack_require__(73);
+  __webpack_require__(65);
 } catch (e) {
   console.log(e);
 }
 
-__webpack_require__(5
+__webpack_require__(4
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -189,7 +56,7 @@ __webpack_require__(5
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-);window.axios = __webpack_require__(4);
+);window.axios = __webpack_require__(3);
 window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -207,191 +74,25 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(12)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(11)))
 
 /***/ }),
 
-/***/ 67:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 63:
+/***/ (function(module, exports) {
 
-var Component = __webpack_require__(3)(
-  /* script */
-  __webpack_require__(34),
-  /* template */
-  __webpack_require__(71),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Flash.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7beea40e", Component.options)
-  } else {
-    hotAPI.reload("data-v-7beea40e", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
+throw new Error("Module build failed: Error: \n\nVue packages version mismatch:\n\n- vue@2.3.4\n- vue-template-compiler@2.3.3\n\nThis may cause things to work incorrectly. Make sure to use the same version for both.\nIf you are using vue-loader@>=10.0, simply update vue-template-compiler.\nIf you are using vue-loader@<10.0 or vueify, re-installing vue-loader/vueify should bump vue-template-compiler to the latest.\n\n    at Object.<anonymous> (/Users/kenan/Projects/growthParty/node_modules/vue-template-compiler/index.js:8:9)\n    at Module._compile (module.js:571:32)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)\n    at Module.require (module.js:498:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (/Users/kenan/Projects/growthParty/node_modules/vue-loader/lib/parser.js:1:78)\n    at Module._compile (module.js:571:32)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)\n    at Module.require (module.js:498:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (/Users/kenan/Projects/growthParty/node_modules/vue-loader/lib/loader.js:2:13)\n    at Module._compile (module.js:571:32)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)\n    at Module.require (module.js:498:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (/Users/kenan/Projects/growthParty/node_modules/vue-loader/index.js:1:80)\n    at Module._compile (module.js:571:32)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)");
 
 /***/ }),
 
-/***/ 69:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ 64:
+/***/ (function(module, exports) {
 
-var Component = __webpack_require__(3)(
-  /* script */
-  __webpack_require__(36),
-  /* template */
-  __webpack_require__(70),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Navigation.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-24338ddb", Component.options)
-  } else {
-    hotAPI.reload("data-v-24338ddb", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
+throw new Error("Module build failed: Error: \n\nVue packages version mismatch:\n\n- vue@2.3.4\n- vue-template-compiler@2.3.3\n\nThis may cause things to work incorrectly. Make sure to use the same version for both.\nIf you are using vue-loader@>=10.0, simply update vue-template-compiler.\nIf you are using vue-loader@<10.0 or vueify, re-installing vue-loader/vueify should bump vue-template-compiler to the latest.\n\n    at Object.<anonymous> (/Users/kenan/Projects/growthParty/node_modules/vue-template-compiler/index.js:8:9)\n    at Module._compile (module.js:571:32)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)\n    at Module.require (module.js:498:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (/Users/kenan/Projects/growthParty/node_modules/vue-loader/lib/parser.js:1:78)\n    at Module._compile (module.js:571:32)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)\n    at Module.require (module.js:498:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (/Users/kenan/Projects/growthParty/node_modules/vue-loader/lib/loader.js:2:13)\n    at Module._compile (module.js:571:32)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)\n    at Module.require (module.js:498:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (/Users/kenan/Projects/growthParty/node_modules/vue-loader/index.js:1:80)\n    at Module._compile (module.js:571:32)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)");
 
 /***/ }),
 
-/***/ 70:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('nav', [_c('div', {
-    staticClass: "title-bar drop-shadow",
-    attrs: {
-      "data-responsive-toggle": "top-menu",
-      "data-hide-for": "medium"
-    }
-  }, [_c('button', {
-    staticClass: "menu-icon",
-    attrs: {
-      "type": "button",
-      "data-toggle": "top-menu"
-    }
-  }), _vm._v(" "), _c('img', {
-    staticClass: "l-logo-img",
-    attrs: {
-      "src": "/images/logo.jpe",
-      "alt": ""
-    }
-  }), _vm._v(" "), _c('h4', {
-    staticClass: "title-bar-title l-logo-text show-for-medium"
-  }, [_vm._v("Growth Party")]), _vm._v(" "), _c('div', {
-    attrs: {
-      "data-magellan": ""
-    }
-  }, [_c('a', {
-    staticClass: "register button m-b-0",
-    attrs: {
-      "href": "#registerForm"
-    }
-  }, [_vm._v("Join Our Beta")])])]), _vm._v(" "), _c('div', {
-    staticClass: "top-bar drop-shadow p-v-0",
-    attrs: {
-      "id": "top-menu"
-    }
-  }, [_c('div', {
-    staticClass: "top-bar-left"
-  }, [_c('ul', {
-    staticClass: "vertical medium-horizontal menu align-right",
-    attrs: {
-      "data-dropdown-menu": ""
-    }
-  }, [_c('li', {
-    staticClass: "menu-text show-for-medium flex-pull-left"
-  }, [_c('a', {
-    staticClass: "logo",
-    attrs: {
-      "href": "/"
-    }
-  }, [_c('img', {
-    staticClass: "l-logo-img",
-    attrs: {
-      "src": "/images/logo.jpe",
-      "alt": "company logo"
-    }
-  }), _c('span', {
-    staticClass: "logo-text"
-  }, [_vm._v("Growth Party")])])]), _vm._v(" "), _c('li', {
-    staticClass: "menu-text m-r-0 p-r-0"
-  }, [_c('a', {
-    attrs: {
-      "href": "/blog"
-    }
-  }, [_vm._v("Blog")])])])]), _vm._v(" "), _c('div', {
-    attrs: {
-      "data-magellan": ""
-    }
-  }, [_c('a', {
-    staticClass: "register button show-for-medium m-b-0",
-    attrs: {
-      "data-open": "registerModal"
-    }
-  }, [_vm._v("Join Our Beta")])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-24338ddb", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 71:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "alert callout",
-    attrs: {
-      "role": "alert"
-    }
-  }, [_c('strong', [_vm._v("Success")]), _vm._v("\n    " + _vm._s(_vm.body) + "\n")])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-7beea40e", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 73:
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -712,12 +413,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 
-/***/ 75:
+/***/ 67:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(13);
+module.exports = __webpack_require__(12);
 
 
 /***/ })
 
-},[75]);
+},[67]);
