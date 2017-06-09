@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-  Welcome to growth party!
+  Help business grow - growth party
 @endsection
 
 @push("page_styles")
@@ -46,6 +46,7 @@
   <div class="row l-padded l-small-v-padded">
 
     <div class="small-12 column">
+
       <div class="owl-carousel owl-theme">
         <div class="slide-item">
           <div class="row">
@@ -99,6 +100,7 @@
   </div>
 
   <!-- end how it works -->
+
   <!-- why join us -->
   <div class="l-padded p-b-0 row" id="aos-container">
     <div class="columns">
@@ -109,7 +111,7 @@
   <div class="l-h-padded row">
 
     <div class="l-padded small-12 medium-4 columns" data-aos="fade-down">
-      <img src="/images/icons/piggy-bank.svg" class="featured-icon" alt="piggy bank icon">
+      <img src="/images/icons/piggy-bank.svg" class="l-featured-icon" alt="piggy bank icon">
       <h3 class="pale-red-text">Extra income</h3>
       <p>With more companies on Growth Party,
       the opportunities to earn are endless so is funding your heart's content.
@@ -117,22 +119,19 @@
     </div>
 
     <div class="l-padded small-12 medium-4 columns" data-aos="fade-up">
-      <img src="/images/icons/book.svg" class="featured-icon" alt="book icon">
+      <img src="/images/icons/book.svg" class="l-featured-icon" alt="book icon">
       <h3 class="pale-red-text">Step-by-step</h3>
       <p>We are your partner. Tools and steps are prescribed to bring you to success.</p>
     </div>
 
     <div class="l-padded small-12 medium-4 columns" data-aos="fade-down">
-      <img src="/images/icons/timer.svg" class="featured-icon" alt="timer icon">
+      <img src="/images/icons/timer.svg" class="l-featured-icon" alt="timer icon">
       <h3 class="pale-red-text">Flexibility</h3>
       <p>It’s your lifestyle, set your days and decide when to earn and how often.</p>
     </div>
 
   </div>
-
   <!-- end why join us -->
-
-
 
   <!-- Stats -->
   <div class="l-medium-v-padded row medium-unstack bitmap-bg primary-text">

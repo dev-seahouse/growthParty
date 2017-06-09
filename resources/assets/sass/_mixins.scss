@@ -39,5 +39,18 @@
   @include responsive-padding('h', $offset);
 }
 
+// @param{string} type
+//  - padding or margin
+// @param{list} $direction
+//  - the direction {left, right, bottom ,top}
+// @param(unit) $size
 
-
+@mixin make-spacers($directions, $type, $size) {
+  $t: str-slice($type, 0, 1);
+  @each $direction in $directions {
+    $dir: str-slice($direction, 0, 1);
+    .#{$t}-#{$dir}-#{$size} {
+      #{$type}-#{$direction}: $size;
+    }
+  }
+}

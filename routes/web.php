@@ -11,10 +11,23 @@
 |
 */
 
+/*----------  App Routes  ----------*/
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+/*----------  Admin routes  ----------*/
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
+
+/*----------  Blog Routes  ----------*/
+
+Route::group(['prefix' => 'blog'],function(){
+  Route::get('/', 'PostController@index')->name('blog');
+  Route::get('/{post}', 'PostController@show');
+});
+
