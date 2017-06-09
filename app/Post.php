@@ -2,10 +2,12 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-
+use TCG\Voyager\Models\Post as Model;
 
 class Post extends Model
 {
-
+  public function getRouteKeyName()
+  {
+    return "slug";
+  }
 }

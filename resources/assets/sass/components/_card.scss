@@ -1,0 +1,43 @@
+$card-text: $warm-gray;
+$card-box-shadow: -1px -1px 50px 5px rgba(200, 200, 200, .6);
+$card-title-border-color: #EEEEEE;
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: rem-calc(2.5px);
+  box-shadow: $card-box-shadow;
+  margin-bottom: 10px;
+  color: $warm-gray;
+  background-image: linear-gradient(143deg, #81a2f8, #c96dd8);
+  background-image: linear-gradient(143deg, var(--periwinkle-blue), var(--lavender-pink));
+  
+  .card-content {
+    padding: rem-calc(30px);
+    flex-grow: 1;
+    text-align: center;
+    
+    .title {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid $card-title-border-color;
+    }
+  }
+  .card-image {
+    flex-grow: 1;
+  }
+  
+  @include breakpoint("large") {
+    flex-direction: row;
+    flex: 1;
+    .card-image {
+      flex: 1;
+      img {
+        height: 100%;
+        max-height: 400px;
+      }
+    }
+    .card-content {
+      flex: 1;
+    }
+  }
+}

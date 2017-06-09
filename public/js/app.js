@@ -358,7 +358,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Flash.vue"
+Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Flash.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -393,7 +393,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Modal.vue"
+Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Modal.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Modal.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -428,7 +428,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Navigation.vue"
+Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Navigation.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -618,7 +618,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _vm._v(" "), _c('img', {
     staticClass: "l-logo-img",
     attrs: {
-      "src": "images/logo.jpe",
+      "src": "/images/logo.jpe",
       "alt": ""
     }
   }), _vm._v(" "), _c('h4', {
@@ -656,7 +656,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('img', {
     staticClass: "l-logo-img",
     attrs: {
-      "src": "images/logo.jpe",
+      "src": "/images/logo.jpe",
       "alt": "company logo"
     }
   }), _c('span', {
