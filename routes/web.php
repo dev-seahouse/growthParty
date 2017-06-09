@@ -29,5 +29,6 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::group(['prefix' => 'blog'],function(){
   Route::get('/', 'PostController@index')->name('blog');
+  Route::get('/{post}', 'PostController@show');
 });
 
