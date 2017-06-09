@@ -1,14 +1,28 @@
 $padding-offsets: (default: 0, small: rem-calc(10px), medium: rem-calc(20px), large: rem-calc(30px));
+$directions:('top','right', 'bottom','left');
+/**
+ * ===========Layout Rules==============
+ * This section defines reusable classes
+ * defining how elements are positioned
+ *
+ */
 
-// ========= Alignments =========
-.flex-align-left {
+/*----------  Alignment helpers  ----------*/
+
+// same effect as float left, apply to flex item
+.flex-pull-left {
   align-self: flex-start;
   margin-right: auto;
 }
 
-.flex-align-right {
+// same effect as float right, apply to flex item
+.flex-pull-right {
   align-self: flex-end;
   margin-left: auto;
+}
+
+.flex-align-center {
+  @include flex-align($y:'middle');
 }
 
 // for each breakpoint, add breakpoint-{#hdir} flex classes
@@ -22,23 +36,25 @@ $padding-offsets: (default: 0, small: rem-calc(10px), medium: rem-calc(20px), la
   }
 }
 
-img.l-img-restraint-width {
+.l-img-restraint-width {
   max-width: 200px;
 }
 
-// ======= paddings =====
+/*---------- Gutter helpers ----------*/
+
 // generates vertical and horizontal padding
 // based on $padding-offsets map
+
 @each $key, $value in $padding-offsets {
   @if ($key == default) {
     .l-padded {
       @include v-and-h-padding($value)
     }
-    
+
     .l-v-padded {
       @include v-padding($value)
     }
-    
+
     .l-h-padded {
       @include h-padding($value)
     }
@@ -46,78 +62,52 @@ img.l-img-restraint-width {
     .l-#{$key}-padded {
       @include v-and-h-padding($value);
     }
-    
+
     .l-#{$key}-v-padded {
       @include v-padding($value);
     }
-    
+
     .l-#{$key}-h-padded {
       @include h-padding($value);
     }
   }
 }
 
-.p-b-0 {
-  padding-bottom: 0;
-}
 
-.p-l-0 {
-  padding-left: 0;
-}
-
-.p-r-0 {
-  padding-right: 0;
-}
-
+@include make-spacers($directions, 'padding', 0);
+@include make-spacers($directions, 'margin', 0);
 .p-v-0 {
   padding-top: 0;
   padding-bottom: 0;
 }
+/*----------  Logo layout  ----------*/
 
-.m-l-0 {
-  margin-left: 0;
-}
-
-.m-r-0 {
-  margin-right: 0;
-}
-
-.m-b-0 {
-  margin-bottom: 0;
-}
-
-// ====  Component specific layouts
-.l-logo-text {
-  @extend .flex-align-left;
-  padding-left: rem-calc(15px);
-  padding-top: rem-calc(15px);
-}
-
-img.logo {
+.l-logo-img {
   margin-left: rem-calc(30px);
   margin-right: auto;
   max-width: rem-calc(50px);
   @include breakpoint('medium') {
-    margin-right: 20px;
+    margin-right: rem-calc(20px);
+  }
+}
+// this is very bad ... high specificity
+.menu.vertical > li > a.logo {
+  align-items: center;
+  color: $black;
+  font-size:1.1rem;
+  .logo-text {
+    margin-left: 10px;
+    font-weight: 900;
   }
 }
 
-.featured-icon {
+/*----------  Icon layout  ----------*/
+.l-featured-icon {
   padding-bottom: rem-calc(20px);
 }
 
+/*----------  Footer layout  ----------*/
 .l-footer {
   min-height: 20vh;
 }
-
-/* menu */
-.menu > li > a.inline-block {
-  display: inline-block;
-}
-
-img.l-post-image {
-  height:300px;
-  max-width: 200px;
-}
-
 

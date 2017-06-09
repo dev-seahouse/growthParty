@@ -9186,14 +9186,14 @@ h6.thin-header {
   background-size: cover;
 }
 
-.flex-align-left {
+.flex-pull-left {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-right: auto;
 }
 
-.flex-align-right {
+.flex-pull-right {
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
       align-self: flex-end;
