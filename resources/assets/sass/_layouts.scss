@@ -76,6 +76,8 @@ $directions:('top','right', 'bottom','left');
 
 @include make-spacers($directions, 'padding', 0);
 @include make-spacers($directions, 'margin', 0);
+@include make-spacers($directions,'margin', 30px);
+
 .p-v-0 {
   padding-top: 0;
   padding-bottom: 0;

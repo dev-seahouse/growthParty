@@ -24,7 +24,7 @@
       <div class="l-h-padded columns">
 
 
-        <h1>Fund your <span class="pale-red-text typed"> passion </span> <br>by growing business.</h1>
+        <h1 class="jumbotron-text">Fund your <span class="pale-red-text typed"> passion </span> <br>by growing business.</h1>
 
         <h5 class="l-v-padded">
           <strong class="dark-text">Help business owners. Risk-Free. Reap rewards.</strong>
@@ -39,7 +39,7 @@
   <!-- How it works -->
   <div class="l-padded p-b-0 row">
     <div class="columns">
-      <h2 class="thin-header">How it works</h2>
+      <h2 class="thin-header title">How it works</h2>
     </div>
   </div>
 
@@ -104,7 +104,7 @@
   <!-- why join us -->
   <div class="l-padded p-b-0 row" id="aos-container">
     <div class="columns">
-      <h2 class="thin-header">Why you'll love joining this party.</h2>
+      <h2 class="thin-header title">Why you'll love joining this party.</h2>
     </div>
   </div>
 
