@@ -134,7 +134,7 @@
   <!-- end why join us -->
 
   <!-- Stats -->
-  <div class="l-medium-v-padded medium-unstack bitmap-bg primary-text">
+  <div class="l-medium-v-padded row medium-unstack bitmap-bg primary-text">
     <div class="l-padded columns text-center">
       <div class="stat"><span class="stat-animated">3,422</span></div>
       <p class="white-text">Flourishing companies</p>
