@@ -6,6 +6,6 @@
     <li><a href="#" title="Contact">Contact</a></li>
   </div>
     <div class="text-center secondary-text">
-    @2017 Growth Party. All rights reserved.
+    &copy;2017 Growth Party. All rights reserved.
   </div>
 </footer>
