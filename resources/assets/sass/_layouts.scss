@@ -43,7 +43,10 @@ $directions:('top','right', 'bottom','left');
     width: 100%;
    }
 }
-
+@media screen and (max-width: 39.9375em)
+.media-object.stack-for-small .media-object-section img {
+  width:40%;
+}
 /*---------- Gutter helpers ----------*/
 
 // generates vertical and horizontal padding
