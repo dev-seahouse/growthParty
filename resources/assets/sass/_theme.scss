@@ -28,7 +28,7 @@ $box-shadow-color: rgba(180, 180, 180, .5);
 .bitmap-bg {
   background: url("#{$bitmap-bg-url}") repeat center center;
   background-color: $bitmap-bg-color;
-  background-size: cover;
+  background-size: contain;
 }
 
 .drop-shadow {
