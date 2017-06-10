@@ -1,6 +1,6 @@
 webpackJsonp([2],{
 
-/***/ 12:
+/***/ 13:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {/**
@@ -9,11 +9,11 @@ webpackJsonp([2],{
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(33);
-window.Vue = __webpack_require__(5);
+__webpack_require__(37);
+window.Vue = __webpack_require__(6
 
 // define global mixin
-Vue.mixin({
+);Vue.mixin({
   data: function data() {
     return {
       get csrf_token() {
@@ -22,9 +22,9 @@ Vue.mixin({
     };
   }
 });
-Vue.component('flash', __webpack_require__(63));
-Vue.component('navigation', __webpack_require__(65));
-Vue.component('modal', __webpack_require__(64));
+Vue.component('flash', __webpack_require__(67));
+Vue.component('navigation', __webpack_require__(69));
+Vue.component('modal', __webpack_require__(68));
 
 var app = new Vue({
   el: '#app',
@@ -36,7 +36,6 @@ var app = new Vue({
 
 /***/ }),
 
-<<<<<<< Updated upstream
 /***/ 3:
 /***/ (function(module, exports) {
 
@@ -300,9 +299,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ }),
 
 /***/ 37:
-=======
-/***/ 33:
->>>>>>> Stashed changes
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, global) {// window._ = require('lodash');
@@ -314,12 +310,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 try {
   global.$ = global.jQuery = window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(0);
-  __webpack_require__(66);
+  __webpack_require__(73);
 } catch (e) {
   console.log(e);
 }
 
-__webpack_require__(4);
+__webpack_require__(5
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -327,7 +323,7 @@ __webpack_require__(4);
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(3);
+);window.axios = __webpack_require__(4);
 window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -345,7 +341,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     broadcaster: 'pusher',
 //     key: 'your-pusher-key'
 // });
-<<<<<<< Updated upstream
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(12)))
 
 /***/ }),
@@ -363,7 +358,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Flash.vue"
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Flash.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -398,7 +393,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Modal.vue"
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Modal.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Modal.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -433,7 +428,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Navigation.vue"
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Navigation.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -696,34 +691,71 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-24338ddb", module.exports)
   }
 }
-=======
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(11)))
 
 /***/ }),
 
-/***/ 63:
-/***/ (function(module, exports) {
+/***/ 71:
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: \n\nVue packages version mismatch:\n\n- vue@2.3.3\n- vue-template-compiler@2.3.4\n\nThis may cause things to work incorrectly. Make sure to use the same version for both.\nIf you are using vue-loader@>=10.0, simply update vue-template-compiler.\nIf you are using vue-loader@<10.0 or vueify, re-installing vue-loader/vueify should bump vue-template-compiler to the latest.\n\n    at Object.<anonymous> (C:\\xampp\\htdocs\\growthParty\\node_modules\\vue-template-compiler\\index.js:8:9)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)\n    at Module.require (module.js:497:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\growthParty\\node_modules\\vue-loader\\lib\\parser.js:1:78)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)\n    at Module.require (module.js:497:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\growthParty\\node_modules\\vue-loader\\lib\\loader.js:2:13)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)\n    at Module.require (module.js:497:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\growthParty\\node_modules\\vue-loader\\index.js:1:80)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)");
->>>>>>> Stashed changes
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "alert callout",
+    attrs: {
+      "role": "alert"
+    }
+  }, [_c('strong', [_vm._v("Success")]), _vm._v("\n    " + _vm._s(_vm.body) + "\n")])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-7beea40e", module.exports)
+  }
+}
 
 /***/ }),
 
-/***/ 64:
-/***/ (function(module, exports) {
+/***/ 72:
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: Error: \n\nVue packages version mismatch:\n\n- vue@2.3.3\n- vue-template-compiler@2.3.4\n\nThis may cause things to work incorrectly. Make sure to use the same version for both.\nIf you are using vue-loader@>=10.0, simply update vue-template-compiler.\nIf you are using vue-loader@<10.0 or vueify, re-installing vue-loader/vueify should bump vue-template-compiler to the latest.\n\n    at Object.<anonymous> (C:\\xampp\\htdocs\\growthParty\\node_modules\\vue-template-compiler\\index.js:8:9)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)\n    at Module.require (module.js:497:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\growthParty\\node_modules\\vue-loader\\lib\\parser.js:1:78)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)\n    at Module.require (module.js:497:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\growthParty\\node_modules\\vue-loader\\lib\\loader.js:2:13)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)\n    at Module.require (module.js:497:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\growthParty\\node_modules\\vue-loader\\index.js:1:80)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)");
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "reveal",
+    class: _vm.size,
+    attrs: {
+      "id": _vm.cid,
+      "data-reveal": "",
+      "data-overlay": _vm.overlay,
+      "data-animation-in": _vm.animationin,
+      "data-animation-out": _vm.animationout,
+      "aria-labelledby": _vm.labelledby
+    }
+  }, [_c('div', {
+    staticClass: "row column"
+  }, [_vm._t("title")], 2), _vm._v(" "), _vm._t("default"), _vm._v(" "), (_vm.closable) ? _c('button', {
+    staticClass: "close-button",
+    attrs: {
+      "data-close": "",
+      "aria-label": "Close Modal",
+      "type": "button"
+    }
+  }, [_c('span', {
+    attrs: {
+      "aria-hidden": "true"
+    }
+  }, [_vm._v("×")])]) : _vm._e()], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-f081db94", module.exports)
+  }
+}
 
 /***/ }),
 
-/***/ 65:
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed: Error: \n\nVue packages version mismatch:\n\n- vue@2.3.3\n- vue-template-compiler@2.3.4\n\nThis may cause things to work incorrectly. Make sure to use the same version for both.\nIf you are using vue-loader@>=10.0, simply update vue-template-compiler.\nIf you are using vue-loader@<10.0 or vueify, re-installing vue-loader/vueify should bump vue-template-compiler to the latest.\n\n    at Object.<anonymous> (C:\\xampp\\htdocs\\growthParty\\node_modules\\vue-template-compiler\\index.js:8:9)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)\n    at Module.require (module.js:497:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\growthParty\\node_modules\\vue-loader\\lib\\parser.js:1:78)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)\n    at Module.require (module.js:497:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\growthParty\\node_modules\\vue-loader\\lib\\loader.js:2:13)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)\n    at Module.require (module.js:497:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\growthParty\\node_modules\\vue-loader\\index.js:1:80)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)");
-
-/***/ }),
-
-/***/ 66:
+/***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -1044,12 +1076,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 
-/***/ 68:
+/***/ 75:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(12);
+module.exports = __webpack_require__(13);
 
 
 /***/ })
 
-},[68]);
+},[75]);

@@ -2242,7 +2242,7 @@ forwarded@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.0.tgz#19ef9874c4ae1c297bcf078fde63a09b66a84363"
 
-foundation-sites@^6.3.1:
+foundation-sites@~6.3.1:
   version "6.3.1"
   resolved "https://registry.yarnpkg.com/foundation-sites/-/foundation-sites-6.3.1.tgz#23853372deb9480c13b426499eaf0c8f90cdbe1d"
   dependencies:
@@ -3105,14 +3105,14 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-jquery.counterup@^2.1.0:
+jquery.counterup@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/jquery.counterup/-/jquery.counterup-2.1.0.tgz#96665d01460322d6d2320fa9dde3013cc7d12f60"
   dependencies:
     jquery ">=1.5.0"
     waypoints ">=3.0"
 
-jquery@>=1.5.0, jquery@>=2.2.0, jquery@^3.2.1:
+jquery@>=1.5.0, jquery@>=2.2.0, jquery@~3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
@@ -3230,7 +3230,7 @@ kind-of@^3.0.2:
   dependencies:
     is-buffer "^1.1.5"
 
-laravel-mix@^0.12.1:
+laravel-mix@~0.12.1:
   version "0.12.1"
   resolved "https://registry.yarnpkg.com/laravel-mix/-/laravel-mix-0.12.1.tgz#2b4a5b123ce4bc9167eea49461b7567ae2921503"
   dependencies:
@@ -3538,7 +3538,7 @@ lodash.templatesettings@^3.0.0:
     lodash._reinterpolate "^3.0.0"
     lodash.escape "^3.0.0"
 
-lodash@4.x.x, lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.2.0:
+lodash@4.x.x, lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.4, lodash@^4.2.0, lodash@~4.17.4:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -3768,7 +3768,7 @@ mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkd
   dependencies:
     minimist "0.0.8"
 
-motion-ui@^1.2.2:
+motion-ui@~1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/motion-ui/-/motion-ui-1.2.2.tgz#ee13bdc498c9d691f0d2907114afd8b0d7a76b2f"
   dependencies:
@@ -5697,7 +5697,7 @@ vue-style-loader@^2.0.0:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue-template-compiler@^2.0.0:
+vue-template-compiler@2.3.4, vue-template-compiler@^2.0.0:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.3.4.tgz#5a88ac2c5e4d5d6218e6aa80e7e221fb7e67894c"
   dependencies:
@@ -5708,7 +5708,7 @@ vue-template-es2015-compiler@^1.2.2:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.5.2.tgz#a0a6c50c941d2a4abda963f2f42c337ac450ee95"
 
-vue@^2.3.3:
+vue@2.3.4:
   version "2.3.4"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.3.4.tgz#5ec3b87a191da8090bbef56b7cfabd4158038171"
 
