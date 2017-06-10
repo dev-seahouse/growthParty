@@ -36,8 +36,11 @@ $directions:('top','right', 'bottom','left');
   }
 }
 
-.l-img-restraint-width {
-  width: 40%;
+.media-object-section img.l-img-restraint-width{
+  @include breakpoint("small") {
+    width: 40%;
+  }
+
 }
 
 /*---------- Gutter helpers ----------*/
