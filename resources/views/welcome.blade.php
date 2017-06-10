@@ -37,7 +37,7 @@
   <!-- end fullscreen header -->
 
   <!-- How it works -->
-  <div class="l-padded p-b-0 row">
+  <div class="l-padded p-b-0 m-t-30 row">
     <div class="columns">
       <h2 class="thin-header title">How it works</h2>
     </div>
