@@ -153,7 +153,7 @@
   <!-- End Stats -->
 
   <!-- Why they love the party -->
-  <div class="l-padded row">
+  <div class="l-padded row align-center">
     <div class="l-padded media-object stack-for-small">
 
       <div class="media-object-section text-center">
