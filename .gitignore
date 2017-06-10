@@ -5,8 +5,9 @@
 /vendor
 /.idea
 /.vagrant
+.phpstorm.meta.php
+_ide_helper.php
 Homestead.json
-Homestead.yaml
 npm-debug.log
 .env
 /.phpintel
@@ -82,7 +83,7 @@ bootstrap/compiled.php
 app/storage/
 
 # Laravel 5 & Lumen specific
-public/storage
+# public/storage
 public/hot
 storage/*.key
 .env.*.php
