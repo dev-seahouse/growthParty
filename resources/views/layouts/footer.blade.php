@@ -4,9 +4,9 @@
     <li><a href="#" title="Terms Of Use">Terms of Use</a></li>
     <li><a href="#" title="Privacy Policy">Privacy Policy</a></li>
     <li><a href="#" title="Contact">Contact</a></li>
-    <div class="text-center secondary-text">
+  </div>
+      <div class="text-center secondary-text block">
     &copy;2017 Growth Party. All rights reserved.
-  </div>
-  </div>
+    </div>
 
 </footer>
