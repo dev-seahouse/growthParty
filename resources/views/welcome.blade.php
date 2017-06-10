@@ -108,7 +108,7 @@
     </div>
   </div>
 
-  <div class="l-h-padded row">
+  <div class="l-h-padded l-featured row">
 
     <div class="l-padded small-12 medium-4 columns" data-aos="fade-down">
       <img src="/images/icons/piggy-bank.svg" class="l-featured-icon" alt="piggy bank icon">
