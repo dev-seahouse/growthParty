@@ -36,6 +36,10 @@ $directions:('top','right', 'bottom','left');
   }
 }
 
+.media-object.stact {
+  flex-direction: row;
+}
+
 .media-object.stack
 .media-object-section img.l-img-restraint-width{
    width: 40%;
