@@ -154,7 +154,7 @@
 
   <!-- Why they love the party -->
   <div class="l-padded row align-center">
-    <div class="l-padded media-object stack-for-small">
+    <div class="l-padded media-object stack">
 
       <div class="media-object-section text-center">
           <img class="l-img-restraint-width round-img" src="{{ asset('images/testimonial.png') }}">
