@@ -2,8 +2,8 @@
   @include menu-base;
   @include flex-align($x: 'center');
   background-color: $light-gray;
-  margin-top: rem-calc(30px);
-  min-height: rem-calc(250px);
+  margin-top: 1rem;
+  min-height: 8.625rem;
   padding: rem-calc(20px);
 
   a {
