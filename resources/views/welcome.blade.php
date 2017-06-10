@@ -160,7 +160,7 @@
           <img class="l-img-restraint-width round-img" src="{{ asset('images/testimonial.png') }}">
       </div>
 
-      <div class="media-object-section">
+      <div class="media-object-section text-center">
         <p>“One of the best things about GP is that I can also provide value to my community groups.” </p>
         <span>Shari C. SMU Business Student, Year 3</span>
       </div>
