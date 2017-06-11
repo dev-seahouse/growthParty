@@ -1,0 +1,19 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: ~/Projects
+        to: /home/vagrant/Projects
+sites:
+    -
+        map: growthparty.dev
+        to: /home/vagrant/Projects/growthparty/public
+databases:
+    - homestead
+name: growthparty
+hostname: growthparty
