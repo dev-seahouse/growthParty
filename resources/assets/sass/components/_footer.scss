@@ -5,9 +5,14 @@
   background-color: $light-gray;
   margin-top: 1rem;
   min-height: 8.625rem;
-  padding: rem-calc(20px);
 
   a {
     color: $dark-gray;
   }
+
+  .menu > li > a {
+    padding: 1rem .7rem;
+  }
+
+
 }
