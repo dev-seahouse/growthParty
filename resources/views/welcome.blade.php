@@ -161,8 +161,8 @@
       </div>
 
       <div class="media-object-section text-center">
-        <p>“By collaborating with vetted service providers on GP platform, i am able to upsell to my existing clients new solutions” </p>
-        <span></span>
+        <p>“By collaborating with vetted service providers on GP platform, I am able to upsell to my existing clients new solutionS.” </p>
+        <span>Ian Tay, Xiao Xiao Media</span>
       </div>
 
     </div>
