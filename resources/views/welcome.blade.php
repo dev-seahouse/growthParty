@@ -36,7 +36,7 @@
       <div class="l-h-padded columns">
 
 
-        <h1>Fund your <span class="pale-red-text typed"> passion </span> <br>by growing business.</h1>
+        <h1 class="jumbotron-text">Fund your <span class="pale-red-text typed"> passion </span> <br>by growing business.</h1>
 
         <h5 class="l-v-padded">
           <strong class="dark-text">Help business owners. Risk-Free. Reap rewards.</strong>
@@ -49,9 +49,9 @@
   <!-- end fullscreen header -->
 
   <!-- How it works -->
-  <div class="l-padded p-b-0 row">
+  <div class="l-padded p-b-0 m-t-30 row">
     <div class="columns">
-      <h2 class="thin-header">How it works</h2>
+      <h2 class="thin-header title">How it works</h2>
     </div>
   </div>
 
@@ -116,13 +116,13 @@
   <!-- why join us -->
   <div class="l-padded p-b-0 row" id="aos-container">
     <div class="columns">
-      <h2 class="thin-header">Why you'll love joining this party.</h2>
+      <h2 class="thin-header title">Why you'll love joining this party.</h2>
     </div>
   </div>
 
-  <div class="l-h-padded row">
+  <div class="l-h-padded l-featured row">
 
-    <div class="l-padded small-12 medium-4 columns" data-aos="fade-down">
+    <div class="l-padded small-12 medium-4 columns" data-aos="fade-right">
       <img src="/images/icons/piggy-bank.svg" class="l-featured-icon" alt="piggy bank icon">
       <h3 class="pale-red-text">Extra income</h3>
       <p>With more companies on Growth Party,
@@ -130,13 +130,13 @@
       </p>
     </div>
 
-    <div class="l-padded small-12 medium-4 columns" data-aos="fade-up">
+    <div class="l-padded small-12 medium-4 columns" data-aos="slide-up">
       <img src="/images/icons/book.svg" class="l-featured-icon" alt="book icon">
       <h3 class="pale-red-text">Step-by-step</h3>
       <p>We are your partner. Tools and steps are prescribed to bring you to success.</p>
     </div>
 
-    <div class="l-padded small-12 medium-4 columns" data-aos="fade-down">
+    <div class="l-padded small-12 medium-4 columns" data-aos="fade-right">
       <img src="/images/icons/timer.svg" class="l-featured-icon" alt="timer icon">
       <h3 class="pale-red-text">Flexibility</h3>
       <p>It’s your lifestyle, set your days and decide when to earn and how often.</p>
@@ -146,7 +146,7 @@
   <!-- end why join us -->
 
   <!-- Stats -->
-  <div class="l-medium-v-padded row medium-unstack bitmap-bg primary-text">
+  <div class="l-medium-v-padded row expanded medium-unstack bitmap-bg primary-text">
     <div class="l-padded columns text-center">
       <div class="stat"><span class="stat-animated">3,422</span></div>
       <p class="white-text">Flourishing companies</p>
@@ -165,16 +165,16 @@
   <!-- End Stats -->
 
   <!-- Why they love the party -->
-  <div class="l-padded row">
-    <div class="l-padded media-object stack-for-small">
+  <div class="l-padded row align-center">
+    <div class="l-padded media-object stack">
 
       <div class="media-object-section text-center">
-          <img class="l-img-restraint-width round-img" src="{{ asset('images/testimonial.png') }}">
+          <img class="l-img-restraint-width round-img l-small-v-padded" src="{{ asset('images/testimonial.png') }}">
       </div>
 
-      <div class="media-object-section">
-        <p>“One of the best things about GP is that I can also provide value to my community groups.” </p>
-        <span>Shari C. SMU Business Student, Year 3</span>
+      <div class="media-object-section text-center">
+        <p>“By collaborating with vetted service providers on GP platform, I am able to upsell to my existing clients new solution.” </p>
+        <span>Ian Tay, Xiao Xiao Media</span>
       </div>
 
     </div>
