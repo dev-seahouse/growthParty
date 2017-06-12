@@ -36,17 +36,13 @@ $directions:('top','right', 'bottom','left');
   }
 }
 
-.media-object.stact {
-  flex-direction: row;
+.media-object.stack {
+  flex-direction: column;
+  .media-object-section img.l-img-restraint-width{
+   width: 40%;
+ }
 }
 
-.media-object.stack
-.media-object-section img.l-img-restraint-width{
-   width: 40%;
-   @include breakpoint('medium'){
-    width: 100%;
-   }
-}
 
 /*---------- Gutter helpers ----------*/
 

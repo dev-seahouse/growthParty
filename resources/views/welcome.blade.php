@@ -157,7 +157,7 @@
     <div class="l-padded media-object stack">
 
       <div class="media-object-section text-center">
-          <img class="l-img-restraint-width round-img" src="{{ asset('images/testimonial.png') }}">
+          <img class="l-img-restraint-width round-img l-small-v-padded" src="{{ asset('images/testimonial.png') }}">
       </div>
 
       <div class="media-object-section text-center">
