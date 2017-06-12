@@ -161,8 +161,8 @@
       </div>
 
       <div class="media-object-section text-center">
-        <p>“One of the best things about GP is that I can also provide value to my community groups.” </p>
-        <span>Shari C. SMU Business Student, Year 3</span>
+        <p>“By collaborating with vetted service providers on GP platform, i am able to upsell to my existing clients new solutions” </p>
+        <span></span>
       </div>
 
     </div>
