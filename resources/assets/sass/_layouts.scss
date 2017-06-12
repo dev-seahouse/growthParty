@@ -121,7 +121,8 @@ $directions:('top','right', 'bottom','left');
   margin-bottom:rem-calc(65px);
 }
 
-@@include breakpoint("large"){
+/*----------Client Image-------------*/
+@@include breakpoint('large'){
 
   .media-object.stack .media-object-section img.l-img-restraint-width {
     width: 20%;
