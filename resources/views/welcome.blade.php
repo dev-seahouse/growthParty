@@ -110,7 +110,7 @@
 
   <div class="l-h-padded l-featured row">
 
-    <div class="l-padded small-12 medium-4 columns">
+    <div class="l-padded small-12 medium-4 columns" data-aos="fade-right">
       <img src="/images/icons/piggy-bank.svg" class="l-featured-icon" alt="piggy bank icon">
       <h3 class="pale-red-text">Extra income</h3>
       <p>With more companies on Growth Party,
@@ -118,13 +118,13 @@
       </p>
     </div>
 
-    <div class="l-padded small-12 medium-4 columns">
+    <div class="l-padded small-12 medium-4 columns" data-aos="slide-up">
       <img src="/images/icons/book.svg" class="l-featured-icon" alt="book icon">
       <h3 class="pale-red-text">Step-by-step</h3>
       <p>We are your partner. Tools and steps are prescribed to bring you to success.</p>
     </div>
 
-    <div class="l-padded small-12 medium-4 columns">
+    <div class="l-padded small-12 medium-4 columns" data-aos="fade-right">
       <img src="/images/icons/timer.svg" class="l-featured-icon" alt="timer icon">
       <h3 class="pale-red-text">Flexibility</h3>
       <p>It’s your lifestyle, set your days and decide when to earn and how often.</p>
@@ -157,12 +157,12 @@
     <div class="l-padded media-object stack">
 
       <div class="media-object-section text-center">
-          <img class="l-img-restraint-width round-img" src="{{ asset('images/testimonial.png') }}">
+          <img class="l-img-restraint-width round-img l-small-v-padded" src="{{ asset('images/testimonial.png') }}">
       </div>
 
       <div class="media-object-section text-center">
-        <p>“One of the best things about GP is that I can also provide value to my community groups.” </p>
-        <span>Shari C. SMU Business Student, Year 3</span>
+        <p>“By collaborating with vetted service providers on GP platform, i am able to upsell to my existing clients new solutions” </p>
+        <span></span>
       </div>
 
     </div>

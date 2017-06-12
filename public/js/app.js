@@ -151,7 +151,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     mounted: function mounted() {
@@ -299,13 +298,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "button",
       "data-toggle": "top-menu"
     }
-  }), _vm._v(" "), _c('img', {
+  }), _vm._v(" "), _c('a', {
+    staticClass: "flex-pull-left",
+    attrs: {
+      "href": "/"
+    }
+  }, [_c('img', {
     staticClass: "l-logo-img",
     attrs: {
       "src": "/images/logo.jpe",
       "alt": ""
     }
-  }), _vm._v(" "), _c('h4', {
+  })]), _vm._v(" "), _c('h4', {
     staticClass: "title-bar-title l-logo-text show-for-medium"
   }, [_vm._v("Growth Party")]), _vm._v(" "), _c('div', {
     attrs: {
@@ -314,9 +318,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('a', {
     staticClass: "register button m-b-0",
     attrs: {
-      "href": "#registerForm"
+      "href": "/blog"
     }
-  }, [_vm._v("Join Our Beta")])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Visit Blog")])])]), _vm._v(" "), _c('div', {
     staticClass: "top-bar drop-shadow p-v-0",
     attrs: {
       "id": "top-menu"
@@ -343,22 +347,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }), _c('span', {
     staticClass: "logo-text"
-  }, [_vm._v("Growth Party")])])]), _vm._v(" "), _c('li', {
-    staticClass: "menu-text m-r-0 p-r-0"
-  }, [_c('a', {
-    attrs: {
-      "href": "/blog"
-    }
-  }, [_vm._v("Blog")])])])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Growth Party")])])])])]), _vm._v(" "), _c('div', {
     attrs: {
       "data-magellan": ""
     }
   }, [_c('a', {
     staticClass: "register button show-for-medium m-b-0",
     attrs: {
-      "data-open": "registerModal"
+      "data-open": "registerModal",
+      "href": "/blog"
     }
-  }, [_vm._v("Join Our Beta")])])])])
+  }, [_vm._v("Visit Blog")])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
