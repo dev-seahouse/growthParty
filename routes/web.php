@@ -13,12 +13,10 @@
 
 /*----------  App Routes  ----------*/
 
-Route::get('/', function () {
-    return view('welcome.home');
-});
-
-Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
+Route::get('/', 'WelcomeController@index')->name('welcome');
+Route::get('/setup','SetupController@index')->name('setup');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 /*----------  Admin routes  ----------*/
 Route::group(['prefix' => 'admin'], function () {
@@ -26,7 +24,6 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 /*----------  Blog Routes  ----------*/
-
 Route::group(['prefix' => 'blog'],function(){
   Route::get('/', 'PostController@index')->name('blog');
   Route::get('/{post}', 'PostController@show');
