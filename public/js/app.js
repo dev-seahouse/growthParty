@@ -282,7 +282,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         loginId: this.loginId,
         password: this.password
       }).then(function (response) {
-        window.location.replace('/home');
+        window.location.replace('/dashboard');
       }).catch(function (error) {
         console.log(error.response.data);
         error = error.response.data;

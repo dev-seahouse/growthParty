@@ -99,9 +99,9 @@
           loginId: this.loginId,
           password: this.password
         }).then(response =>{
-            window.location.replace('/home');
+            window.location.replace('/dashboard');
         }).catch(error => {
-          console.log(error.response.data)
+          console.log(error.response.data);
           error = error.response.data;
           this.idError = error.mobile && (error.mobile || error.mobile.pop()) ||
             error.email && (error.email || error.email.pop());
