@@ -66,10 +66,10 @@ Licence: <a href="http://www.os-templates.com/template-terms">Website Template L
     <div id="container" class="clear">
       <section id="fof" class="clear">
         <div class="hgroup">
-          <h1><span><strong>4</strong></span><span><strong>0</strong></span><span><strong>4</strong></span></h1>
-          <h2>Error ! <span>Page Not Found</span></h2>
+          <h1><span><strong>4</strong></span><span><strong>0</strong></span><span><strong>3</strong></span></h1>
+          <h2>Locked ! <span> Did you entered the wrong url or trying to access a member only area ?</span></h2>
         </div>
-        <p>For Some Reason The Page You Requested Could Not Be Found On Our Server</p>
+        <p>Please click on go Home and sign in with username/mobile.</p>
         <p><a href="javascript:history.go(-1)">&laquo; Go Back</a> / <a href="#">Go Home &raquo;</a></p>
       </section>
     </div>
