@@ -27,7 +27,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    //protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -71,4 +71,19 @@ class RegisterController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+
+
+    /**
+     * The user will be directed to setup view.
+     */
+    protected function registered($user)
+    {
+        if($user->is_setup){
+            return redirect('/'); 
+        } 
+        return redirect()->route('accountsetup');  
+    }
+
+   
 }
