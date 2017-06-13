@@ -1,14 +1,18 @@
 .footer-bar {
   @include menu-base;
   @include flex-align($x: 'center');
+  flex-wrap:wrap;
   background-color: $light-gray;
-  margin-top: rem-calc(30px);
-  min-height: rem-calc(250px);
-  padding: rem-calc(20px);
+  margin-top: 1rem;
+  min-height: 8.625rem;
 
   a {
     color: $dark-gray;
-    letter-spacing: 1.2px;
-    margin: rem-calc(5px);
   }
+
+  .menu > li > a {
+    padding: 1rem .7rem;
+  }
+
+
 }

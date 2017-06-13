@@ -26,11 +26,19 @@ $box-shadow-color: rgba(180, 180, 180, .5);
 }
 
 .bitmap-bg {
-  background: url("#{$bitmap-bg-url}") no-repeat center center;
+  background: url("#{$bitmap-bg-url}") repeat center center;
   background-color: $bitmap-bg-color;
-  background-size: cover;
+  background-size: contain;
 }
 
 .drop-shadow {
   box-shadow: 0 4px 10px -1px $box-shadow-color;
+}
+
+.title {
+  font-weight: 1.8rem;
+}
+
+h1.jumbotron-text {
+  font-size: 2rem;
 }

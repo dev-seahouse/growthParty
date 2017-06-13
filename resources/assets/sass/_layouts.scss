@@ -36,9 +36,13 @@ $directions:('top','right', 'bottom','left');
   }
 }
 
-.l-img-restraint-width {
-  max-width: 200px;
+.media-object.stack {
+  flex-direction: column;
+  .media-object-section img.l-img-restraint-width{
+   width: 40%;
+ }
 }
+
 
 /*---------- Gutter helpers ----------*/
 
@@ -76,6 +80,8 @@ $directions:('top','right', 'bottom','left');
 
 @include make-spacers($directions, 'padding', 0);
 @include make-spacers($directions, 'margin', 0);
+@include make-spacers($directions,'margin', 30px);
+
 .p-v-0 {
   padding-top: 0;
   padding-bottom: 0;
@@ -108,6 +114,16 @@ $directions:('top','right', 'bottom','left');
 
 /*----------  Footer layout  ----------*/
 .l-footer {
-  min-height: 20vh;
+  min-height: 8.625rem;
 }
 
+.l-featured {
+  margin-bottom:rem-calc(65px);
+}
+
+@include breakpoint("large"){
+
+  .media-object.stack .media-object-section img.l-img-restraint-width {
+    width: 20%;
+  }
+};
