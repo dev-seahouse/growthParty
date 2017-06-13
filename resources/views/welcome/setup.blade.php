@@ -5,6 +5,14 @@
 @section('content')
   <div class="row align-center">
     <div class="small-8 columns">
+      <a href="{{ route('logout') }}"
+         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        Logout button for test purpose pleaes remove
+      </a>
+  
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        {{ csrf_field() }}
+      </form>
       <h2 class="leading">First Impression count</h2>
       <p class="sub-title">Time to use your charm. Smile!</p>
         {!! Form::open(['url' => 'upload', 'class' => 'dropzone', 'files'=>false, 'id'=>'real-dropzone']) !!}
