@@ -25,8 +25,8 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 /*----------  Profile Setup Routes  ----------*/
-Route::get('accountsetup', 'AccountSetup@index')->name('accountsetup');
-Route::post('updateinfo', 'AccountSetup@updateinfo');
+//Route::get('accountsetup', 'AccountSe@index')->name('accountsetup');
+Route::post('updateinfo', 'SetupController@updateinfo');
 //Route::get('accountsetup', 'AccountSetup@updateinfo');
 
 /*----------  Blog Routes  ----------*/

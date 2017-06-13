@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
+
 class RegisterController extends Controller
 {
     /*
@@ -79,10 +80,7 @@ class RegisterController extends Controller
      */
     protected function registered($user)
     {
-        if($user->is_setup){
-            return redirect('/'); 
-        } 
-        return redirect()->route('accountsetup');  
+        return redirect()->route('setup');
     }
 
    
