@@ -17,6 +17,7 @@ Auth::routes();
 Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('/setup','SetupController@index')->name('setup');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::post('/uploadProfilePic','SetupController@uploadProfilePic');
 
 /*----------  Admin routes  ----------*/
 Route::group(['prefix' => 'admin'], function () {
