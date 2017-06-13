@@ -14,7 +14,7 @@
 /*----------  App Routes  ----------*/
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome.home');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
