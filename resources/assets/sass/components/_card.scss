@@ -1,64 +1,83 @@
-$card-text: $warm-gray;
-$card-box-shadow: -1px -1px 50px 5px rgba(200, 200, 200, .6);
-$card-title-border-color: #EEEEEE;
 .card {
+  $card-text: $warm-gray;
+  $border-radius: rem-calc(2.5px);
+  $card-box-shadow: -1px -1px 50px 5px rgba(200, 200, 200, .6);
+  $card-title-border-color: #EEEEEE;
+  $gutter-small: rem-calc(10px);
+  $gutter-medium: rem-calc(15px);
+  $gutter-large: rem-calc(30px);
+  $title-font-size: 1.3rem;
+  $title-border: 2px solid $card-title-border-color;
+  $img-height-medium: rem-calc(300px);
+  $img-height-large: rem-calc(350px);
+  $profile-img-size: rem-calc(30px);
+
   display: flex;
   flex-direction: column;
-  border-radius: rem-calc(2.5px);
+  border-radius: $border-radius;
   box-shadow: $card-box-shadow;
-  margin-bottom: 10px;
+  margin-bottom: $gutter-small;
   color: $warm-gray;
-  background-image: linear-gradient(143deg, #81a2f8, #c96dd8);
-  background-image: linear-gradient(143deg, var(--periwinkle-blue), var(--lavender-pink));
-  
-  .card-content {
-    padding: rem-calc(30px);
-    flex-grow: 1;
-    text-align: center;
-    
-    .title {
-      margin-bottom: 20px;
-      font-size: 1.3rem;
-      border-bottom: 2px solid $card-title-border-color;
-    }
-  }
-  .card-image {
-    flex-grow: 1;
-  }
-  
-  .footer {
-    font-size:.8rem;
-    flex-grow: 0;
-    flex-wrap:wrap;
-    margin-left: 0;
-    margin-top:30px;
-    padding-left:0;
-    flex-direction: column;
-    text-align: left;
-  }
-  
-  .info {
-    margin-right:50px;
-  }
-  .profile-img {
-    width: 30px;
-    height: 30px;
-    margin-right:rem-calc(10px);
-  }
-  
-  
-  @include breakpoint("large") {
+
+  @include breakpoint('large') {
+    align-items: center;
     flex-wrap: wrap;
     flex-direction: row;
-    .card-image {
-      flex: 1 0 50%;
-      img {
-        height: 100%;
-        max-height: 400px;
-      }
-    }
-    .card-content {
-      flex: 1 0 50%;
+  }
+
+  .card-content {
+    padding: $gutter-large;
+    flex-grow: 1;
+    text-align: center;
+    @include breakpoint("large") {
+      flex: 1 0 55%;
     }
   }
+
+  .title {
+    padding-bottom: $gutter-medium;
+    font-size: $title-font-size;
+    border-bottom: $title-border;
+  }
+  .card-image-container {
+    flex-grow: 1;
+    @include breakpoint("medium") {
+      img {
+        height: 100%;
+        max-height: $img-height-medium;
+      }
+    }
+
+    @include breakpoint("large") {
+      flex: 1 0 45%;
+      img {
+        height: 100%;
+        max-height: $img-height-large;
+      }
+    }
+  }
+
+  .footer {
+    text-align: left;
+    font-size: .8rem;
+    margin-top: 50px;
+
+    @include breakpoint('large') {
+      margin-left: 0;
+    }
+  }
+
+  .info {
+    margin: $gutter-small 0 $gutter-small auto;
+    display: inline-block;
+    @include breakpoint('large') {
+    }
+  }
+
+  .profile-img {
+    width: $profile-img-size;
+    height: $profile-img-size;
+    margin-right: $gutter-small
+  }
+
 }
