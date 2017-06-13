@@ -25,6 +25,11 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+/*----------  Profile Setup Routes  ----------*/
+Route::get('accountsetup', 'AccountSetup@index')->name('accountsetup');
+Route::post('updateinfo', 'AccountSetup@updateinfo');
+//Route::get('accountsetup', 'AccountSetup@updateinfo');
+
 /*----------  Blog Routes  ----------*/
 
 Route::group(['prefix' => 'blog'],function(){
@@ -32,3 +37,8 @@ Route::group(['prefix' => 'blog'],function(){
   Route::get('/{post}', 'PostController@show');
 });
 
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
