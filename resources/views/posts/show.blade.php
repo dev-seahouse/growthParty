@@ -9,12 +9,12 @@
 @endsection
 @section('content')
   <div class="l-large-padded row align-center">
-    <div class="small-12 medium-6 columns"  >
+    <div class="small-12 medium-7 columns"  >
       <h1>{!! $post->title !!}</h1>
      <div class="footer">
          <p class="info">Posted by:
         <img src="/storage/{{$post->author->avatar}}" width="30px" height="auto" class="profile-img" alt="{{$post->author->name}}">
-        <a href="">{{$post->author->name}}</a>   <p class="info">{{$post->created_at->diffForHumans()}}</p>
+        <a href="">{{$post->author->name}}</a><p class="info">{{$post->created_at->diffForHumans()}}</p>
        <p>{{$post->estimated_read}} read </p>
       </div>
       <img src="/storage/{{$post->image}}" alt="{!! $post->title !!}">
