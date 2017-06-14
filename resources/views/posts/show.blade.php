@@ -19,6 +19,7 @@
       </div>
       <img src="/storage/{{$post->image}}" alt="{!! $post->title !!}">
       <br/>
+      <div class="sharethis-inline-share-buttons"></div>
       {!! $post->body !!}
     </div>
   </div>
