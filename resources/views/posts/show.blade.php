@@ -11,7 +11,8 @@
   <div class="l-large-padded row align-center">
     <div class="small-8-columns blogwidth" style="max-width:80%;" >
       <h1>{!! $post->title !!}</h1>
-      <img src="/storage/{{$post->image}}" alt="">
+      <img src="/storage/{{$post->image}}" alt="{!! $post->title !!}">
+      <br/>
       {!! $post->body !!}
     </div>
   </div>
