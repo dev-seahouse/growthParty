@@ -54,11 +54,7 @@
       flex: 1 0 $card-image-width;
       img {
         height: 100%;
-<<<<<<< HEAD
-        max-height: 300px;
-=======
         max-height: $img-height-large;
->>>>>>> production
       }
     }
   }
@@ -72,8 +68,6 @@
       margin-left: 0;
     }
   }
-<<<<<<< HEAD
-=======
 
   .info {
     margin: $gutter-small 0 $gutter-small auto;
@@ -88,5 +82,4 @@
     margin-right: $gutter-small
   }
 
->>>>>>> production
 }
