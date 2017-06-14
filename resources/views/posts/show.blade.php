@@ -9,7 +9,7 @@
 @endsection
 @section('content')
   <div class="l-large-padded row align-center">
-    <div class="small-8-columns" >
+    <div class="small-8-columns blogwidth" >
       <h1>{!! $post->title !!}</h1>
       <img src="/storage/{{$post->image}}" alt="">
       {!! $post->body !!}
