@@ -128,15 +128,4 @@ $directions:('top','right', 'bottom','left');
     width: 20%;
 }
 
-.blogwidth{
-  max-width: 40rem;
 }
-
-}
-
-@@include break('small'){
-  .blogwidth{
-    max-width: 20rem;
-  }
-
-};
