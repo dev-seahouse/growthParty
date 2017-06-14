@@ -27,7 +27,7 @@
               <div class="footer">
                 <img src="/storage/{{$post->author->avatar}}" class="profile-img" alt="{{$post->author->name}}">
                 <a href="">{{$post->author->name}}</a>
-                <p class="info">{{$post->created_at->diffForHumans()}} &nbsp;&nbsp; {{$post->estimated_read}} read </p>
+                <p class="info">Posted {{$post->created_at->diffForHumans()}} &nbsp;&nbsp; {{$post->estimated_read}} read </p>
               </div>
             </div>
           </div>
