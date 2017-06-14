@@ -11,6 +11,8 @@
   <div class="l-large-padded row align-center">
     <div class="small-8-columns blogwidth" style="max-width:80%;" >
       <h1>{!! $post->title !!}</h1>
+      <p class="info">Posted by: {{$post->updated_at->diffForHumans()}} </p>
+      <p>{{$post->estimated_read}} read </p>
       <img src="/storage/{{$post->image}}" alt="{!! $post->title !!}">
       <br/>
       {!! $post->body !!}
