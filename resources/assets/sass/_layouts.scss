@@ -121,10 +121,14 @@ $directions:('top','right', 'bottom','left');
   margin-bottom:rem-calc(65px);
 }
 
+<<<<<<< HEAD
 /*----------Client Image-------------*/
 @@include breakpoint('large'){
+=======
+@include breakpoint("large"){
+>>>>>>> production
 
   .media-object.stack .media-object-section img.l-img-restraint-width {
     width: 20%;
-}
+  }
 };
