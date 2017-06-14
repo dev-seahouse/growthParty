@@ -5,7 +5,7 @@
 @endsection
 
 @section('title')
-  Help business grow - growth party
+{!! $post->title !!}
 @endsection
 @section('content')
   <div class="l-large-padded row align-center">
