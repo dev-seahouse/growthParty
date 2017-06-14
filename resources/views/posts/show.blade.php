@@ -9,7 +9,7 @@
 @endsection
 @section('content')
   <div class="l-large-padded row align-center">
-    <div class="small-8-columns blogwidth" style="max-width:80%;" >
+    <div class="small-12 medium-6 columns"  >
       <h1>{!! $post->title !!}</h1>
      <div class="footer">
          <p class="info">Posted by:
