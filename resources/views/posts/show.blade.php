@@ -11,8 +11,12 @@
   <div class="l-large-padded row align-center">
     <div class="small-8-columns blogwidth" style="max-width:80%;" >
       <h1>{!! $post->title !!}</h1>
-      <p class="info">Posted by: {{$post->updated_at->diffForHumans()}} </p>
-      <p>{{$post->estimated_read}} read </p>
+     <div class="footer">
+         <p class="info">Posted by:
+        <img src="/storage/{{$post->author->avatar}}" class="profile-img" alt="{{$post->author->name}}">
+        <a href="">{{$post->author->name}}</a>
+        <p class="info">{{$post->created_at->diffForHumans()}} &nbsp;&nbsp; {{$post->estimated_read}} read </p>
+      </div>
       <img src="/storage/{{$post->image}}" alt="{!! $post->title !!}">
       <br/>
       {!! $post->body !!}
