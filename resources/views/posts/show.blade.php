@@ -10,7 +10,7 @@
 @section('content')
   <div class="l-large-padded row align-center">
     <div class="small-8-columns" >
-      <h4>{!! $post->title !!}</h4>
+      <h1>{!! $post->title !!}</h1>
       <img src="/storage/{{$post->image}}" alt="">
       {!! $post->body !!}
     </div>
