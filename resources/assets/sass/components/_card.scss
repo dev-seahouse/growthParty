@@ -1,4 +1,6 @@
 .card {
+  $contentWidth: 60%;
+  $card-image-width: 40%;
   $card-text: $warm-gray;
   $border-radius: rem-calc(2.5px);
   $card-box-shadow: -1px -1px 50px 5px rgba(200, 200, 200, .6);
@@ -30,7 +32,7 @@
     flex-grow: 1;
     text-align: center;
     @include breakpoint("large") {
-      flex: 1 0 60%;
+      flex: 1 0 $contentWidth;
     }
   }
 
@@ -49,7 +51,7 @@
     }
 
     @include breakpoint("large") {
-      flex: 1 0 40%;
+      flex: 1 0 $card-image-width;
       img {
         height: 100%;
         max-height: $img-height-large;
