@@ -13,7 +13,7 @@
       <h1>{!! $post->title !!}</h1>
      <div class="footer">
          <p class="info">Posted by:
-        <img src="/storage/{{$post->author->avatar}}" class="profile-img" alt="{{$post->author->name}}">
+        <img src="/storage/{{$post->author->avatar}}" width="30px" height="auto" class="profile-img" alt="{{$post->author->name}}">
         <a href="">{{$post->author->name}}</a>
         <p class="info">{{$post->created_at->diffForHumans()}} &nbsp;&nbsp; {{$post->estimated_read}} read </p>
       </div>
