@@ -21,7 +21,7 @@
             </div>
 
             <div class="card-content">
-              <h4 class="title">{{str_limit($post->title,15)}}</h4>
+              <h1 class="title">{{str_limit($post->title,15)}}</h1>
               <p class="content">{{str_limit($post->excerpt, 90)}}</p>
               <a href="/blog/{{$post->slug}}">Read more ...</a>
               <div class="footer">
