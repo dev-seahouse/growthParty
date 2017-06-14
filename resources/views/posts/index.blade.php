@@ -25,9 +25,9 @@
               <p class="content">{{str_limit($post->excerpt, 140)}}</p>
               <a href="/blog/{{$post->slug}}">Read more ...</a>
               <div class="footer">
-                <img src="/storage/{{$post->author->avatar}}" class="profile-img" alt="">
+                <img src="/storage/{{$post->author->avatar}}" class="profile-img" alt="{{$post->author->name}}">
                 <a href="">{{$post->author->name}}</a>
-                <p class="info">{{$post->updated_at->diffForHumans()}} &nbsp; {{$post->estimated_read}} read </p>
+                <p class="info">{{$post->created_at->diffForHumans()}} &nbsp;&nbsp; {{$post->estimated_read}} read </p>
               </div>
             </div>
           </div>
