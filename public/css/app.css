@@ -8436,9 +8436,9 @@ h1.jumbotron-text {
 }
 
 .card .footer {
-  text-align: left;
+  text-align: center;
   font-size: .8rem;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 @media print, screen and (min-width: 64em) {
