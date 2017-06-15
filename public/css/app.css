@@ -6473,6 +6473,8 @@ a.thumbnail image {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+          position:fixed;
+          width:100%;
 }
 
 .title-bar .menu-icon {
@@ -8131,16 +8133,16 @@ h1.jumbotron-text {
 }
 
 .l-large-padded {
-  padding-bottom: 2.65625rem;
-  padding-top: 2.65625rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
   padding-left: 2.65625rem;
   padding-right: 2.65625rem;
 }
 
 @media print, screen and (min-width: 40em) {
   .l-large-padded {
-    padding-bottom: 3.75rem;
-    padding-top: 3.75rem;
+    padding-bottom: 6.5rem;
+    padding-top: 6.5rem;
     padding-left: 3.75rem;
     padding-right: 3.75rem;
   }
