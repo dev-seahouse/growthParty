@@ -4,6 +4,10 @@
   <navigation></navigation>
 @endsection
 
+@section('title')
+{{str_limit($post->title)}}
+@endsection
+
   <meta property="og:url" content="https://www.growthparty.co/blog/{{$post->slug}}">
   <meta property="og:type" content="article">
   <meta property="og:title" content="{{str_limit($post->title)}}">
