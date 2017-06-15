@@ -15,21 +15,21 @@
       @foreach($chunk as $post)
         <div class="small-12 medium-6 columns">
           <div class="card" data-equalizer-watch>
-
+  <a href="/blog/{{$post->slug}}">
             <div class="card-image-container">
               <img src="/storage/{{$post->image}}" alt="">
             </div>
 
-            <div class="card-content">
-            <a href="/blog/{{$post->slug}}">  <h4 class="title">{{str_limit($post->title,90)}}</h4>
-              <p class="content">{{str_limit($post->excerpt, 140)}}</p>
-              Read more ...</a>
+           <div class="card-content">
+             <h4 style="color:black;" class="title">{{str_limit($post->title,90)}}</h4>
+              <p style="color:rgba(0,0,0,.6)!important;"class="content">{{str_limit($post->excerpt, 140)}}</p>
+              Read more ...
               <div class="footer">
                 <img style="display:none;" src="/storage/{{$post->author->avatar}}" class="profile-img" alt="{{$post->author->name}}">
                 <a style="display:none;" href="">{{$post->author->name}}</a>
-                <p class="info">Posted {{$post->created_at->diffForHumans()}} &nbsp;&nbsp; {{$post->estimated_read}} read </p>
+                <p class="info">Posted {{$post->created_at->diffForHumans()}} &nbsp;&nbsp; ⏳{{$post->estimated_read}} read </p>
               </div>
-            </div>
+            </div></a>
           </div>
 
         </div>
