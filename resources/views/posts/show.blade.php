@@ -4,23 +4,15 @@
   <navigation></navigation>
 @endsection
 @section('title')
-{!! $post->title !!}
+{{str_limit($post->title)}}
 @endsection
 
-@section('description')
-{{str_limit($post->excerpt, 140)}}
-@endsection
-
-@section('application-name')
-GrowthParty.co
-@endsection
-
-    <meta property="og:url" content="https://www.growthparty.co/blog/{{$post->slug}}">
-    <meta property="og:image" content="https://www.growthparty.co/storage/{{$post->image}}">
-    <meta property="og:description" content="{{str_limit($post->excerpt, 140)}}">
+  <meta property="og:url" content="https://www.growthparty.co/blog/{{$post->slug}}">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{!! $post->title !!}">
-  
+  <meta property="og:title" content="{{str_limit($post->title)}}">
+  <meta property="og:image" content="https://www.growthparty.co/storage/{{$post->image}}">
+  <meta property="og:description" content="{{str_limit($post->excerpt, 140)}}">
+  <meta property="fb:page_id" content="756709494453863" />
 @section('content')
   <div class="l-large-padded row align-center">
     <div class="small-12 medium-7 columns"  >
