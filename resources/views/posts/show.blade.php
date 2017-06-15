@@ -16,8 +16,8 @@ GrowthParty.co
 @endsection
 
     <meta property="og:url" content="https://www.growthparty.co/blog/{{$post->slug}}">
-    <meta property="og:image" content={{$post->image}}>
-    <meta property="og:description" content={{str_limit($post->excerpt, 140)}}>
+    <meta property="og:image" content="{{$post->image}}">
+    <meta property="og:description" content="{{str_limit($post->excerpt, 140)}}">
 
 @section('content')
   <div class="l-large-padded row align-center">
