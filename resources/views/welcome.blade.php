@@ -3,7 +3,8 @@
 @section('title')
   Help business grow - growth party
 @endsection
-
+<meta property="og:title" content="Growth Party - Sales of the Future">
+<meta property="og:description" content="Help business owners. Risk-Free. Reap rewards">
 @push("page_styles")
   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
