@@ -8462,6 +8462,9 @@ h1.jumbotron-text {
 ul.share-buttons{
   list-style: none;
   padding: 0;
+  margin: 1rem auto;
+  text-align: center;
+}
 }
 
 ul.share-buttons li{
