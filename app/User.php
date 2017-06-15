@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+
     use Notifiable;
 
     /**
@@ -19,7 +20,6 @@ class User extends Authenticatable
     protected $fillable = [
         'name', 'email', 'password','mobile'
     ];*/
-
     protected $fillable = [
         'email', 'password','mobile'
     ];
@@ -32,4 +32,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public static $profilePicName = "profile_pic";
+    public static $profilePicSmallName = "profile_pic_sm";
 }

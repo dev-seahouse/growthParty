@@ -6,11 +6,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.0.1/dropzone.css">
 @endpush('page_styles')
 @section('content')
-  <div class="row align-center">
+  <div class="row align-center ">
     <div class="small-8 columns">
       <a href="{{ route('logout') }}"
          onclick="event.preventDefault() document.getElementById('logout-form').submit()">
-        Logout button for test purpose pleaes remove
+        Logout
       </a>
 
       <!-- upload profile image -->
@@ -26,7 +26,7 @@
         <h4>Drop profile in this area </h4>
       </div>
       <div class="fallback">
-        <input name="profilePic" type="file"/>
+        <input type="file" name="avatar"/>
       </div>
       <div class="dropzone-previews" id="dropzonePreview"></div>
     {!! Form::close() !!}
@@ -36,7 +36,7 @@
   </div>
 
 
-  <div class="l-padded p-b-0 row">
+{{--  <div class="l-padded p-b-0 row">
     <div class="columns">
       <form enctype="multipart/form-data" method="post" action="/updateinfo">
         {{ csrf_field() }}
@@ -74,7 +74,7 @@
 
 
     </div>
-  </div>
+  </div>--}}
 
 @endsection('content')
 @push('page_scripts')
@@ -86,6 +86,7 @@
   // 4.on form submit update image
   Dropzone.options.profileUploadForm = {
     maxFiles: 1,
+    paramName: 'avatar',
     uploadMultiple: false,
     resizeMethod: 'crop',
     clickable: true,

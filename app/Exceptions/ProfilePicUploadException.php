@@ -5,7 +5,7 @@ use Exception;
 use Throwable;
 
 
-class ProfileUploadException extends Exception
+class ProfilePicUploadException extends Exception
 {
   public function __construct($message = "", $code = 0, Throwable $previous = null)
   {

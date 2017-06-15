@@ -44,6 +44,13 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if ($exception instanceof ProfilePicUploadException) {
+          return Response::json([
+            'error' => true,
+            'message' => $exception->getMessage(),
+            'code' => 400
+          ], 400);
+        }
         return parent::render($request, $exception);
     }
 

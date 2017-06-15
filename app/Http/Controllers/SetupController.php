@@ -2,20 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\ProfilePicUploadException;
+use App\User;
+use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
-use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\File;
+use Intervention\Image\Facades\Image;
 use Intervention\Image\ImageManager;
 
 class SetupController extends Controller
 {
   public function __construct()
   {
-    $this->middleware(array('auth'));
+    $this->middleware('auth');
   }
 
   public function index()
@@ -26,59 +29,31 @@ class SetupController extends Controller
   public function uploadProfilePic(Request $request)
   {
     $form_data = $request->all();
-    // validate format before upload  start
-    $rules = [
-      'file' => 'required|mimes:png,gif,jpeg,jpg,bmp'
-    ];
-    $messages = [
-      'file.mimes' => 'Uploaded file is not in image format',
-      'file.required' => 'Image is required'
-    ];
-    $validator = Validator::make($form_data, $rules, $messages);
-    if ($validator->fails()){
-      return Response::json([
-        'error' =>true,
-        'message' => $validator->messages()->first(),
-        'code' => 400
-      ], 400);
-    }
-
-    $photo = $form_data['file'];
-
-    $originalName = $photo->getClientOriginalName();
+    $validator = $this->makeValidator($form_data);
+    if ($validator->fails()) {throw new ProfilePicUploadException($validator->messages()->first());}
+    $photo = $form_data['avatar'];
     $extension = $photo->getClientOriginalExtension();
-    $originalNameWithoutExt = substr($originalName, 0, strlen($originalName) - strlen($extension) - 1);
-    $filename = $this->sanitize($originalNameWithoutExt);
-
-    $allowedFileName = $this->createUniqueFileName($filename, $extension);
+    $fileName = User::$profilePicName;
+    $imgPath = $this->makeImagePath($fileName, $extension);
+    $profilePic = $this->makeProfilePic($photo);
+    
     return "hello";
   }
 
-  public function createUniqueFileName($filename, $extension)
+  public function makeImagePath($filename, $extension)
   {
-
-  }
-
-  function sanitize($string, $force_lowercase = true, $anal = false)
-  {
-    $strip = array("~", "`", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "=", "+", "[", "{", "]",
-      "}", "\\", "|", ";", ":", "\"", "'", "&#8216;", "&#8217;", "&#8220;", "&#8221;", "&#8211;", "&#8212;",
-      "â€”", "â€“", ",", "<", ".", ">", "/", "?");
-    $clean = trim(str_replace($strip, "", strip_tags($string)));
-    $clean = preg_replace('/\s+/', "-", $clean);
-    $clean = ($anal) ? preg_replace("/[^a-zA-Z0-9]/", "", $clean) : $clean ;
-    return ($force_lowercase) ?
-      (function_exists('mb_strtolower')) ?
-        mb_strtolower($clean, 'UTF-8') :
-        strtolower($clean) :
-      $clean;
+    $user = Auth::user();
+    $userId = $user->id;
+    $userImgFolderUrl = asset('storage/user/');
+    $userImgPath = $userImgFolderUrl . "/{$userId}/" . $filename . '.' . $extension;
+    return $userImgPath;
   }
 
   public function updateinfo(Request $request)
   {
 
     $user = Auth::user();
-    if ($request->hasFile('avatar')) {
+/*    if ($request->hasFile('avatar')) {
 
       $file = $request->file('avatar');
       $path = $file->hashName('avatars');
@@ -94,7 +69,7 @@ class SetupController extends Controller
       $user = Auth::user();
       $user->avatar = $path;
       $user->save();
-    }
+    }*/
 
     //Save to users table
     $user = Auth::user();
@@ -108,5 +83,28 @@ class SetupController extends Controller
     // if succesfully saved and successfully updated info, redirect to dashboard
     // else return error page view('errors.something');
     return view('welcome.dashboard');
+  }
+
+  /**
+   * @param $form_data
+   * @return \Illuminate\Validation\Validator
+   */
+  protected function makeValidator($form_data)
+  {
+    $rules = [
+      'avatar' => 'required|mimes:png,gif,jpeg,jpg,bmp'
+    ];
+    $messages = [
+      'file.mimes' => 'Uploaded file is not in image format',
+      'file.required' => 'Image is required'
+    ];
+    $validator = Validator::make($form_data, $rules, $messages);
+    return $validator;
+  }
+
+  protected function makeProfilePic($photo)
+  {
+    $image = Image::make($photo);
+    return $image;
   }
 }

@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('CACHE_DRIVER', 'file'),
+    'default' => env('CACHE_DRIVER', 'avatar'),
 
     /*
     |--------------------------------------------------------------------------
@@ -44,8 +44,8 @@ return [
             'connection' => null,
         ],
 
-        'file' => [
-            'driver' => 'file',
+        'avatar' => [
+            'driver' => 'avatar',
             'path' => storage_path('framework/cache/data'),
         ],
 
