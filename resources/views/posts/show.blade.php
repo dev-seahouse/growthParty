@@ -15,11 +15,9 @@
 GrowthParty.co
 @endsection
 
-@section('facebook_meta')
     <meta property="og:url" content="https://www.growthparty.co/">
     <meta property="og:image" content={{$post->image}}>
     <meta property="og:description" content={{str_limit($post->excerpt, 140)}}>
-@endsection
 
 @section('content')
   <div class="l-large-padded row align-center">
