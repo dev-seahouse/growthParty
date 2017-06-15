@@ -15,7 +15,7 @@
 GrowthParty.co
 @endsection
 
-    <meta property="og:url" content="https://www.growthparty.co/">
+    <meta property="og:url" content="https://www.growthparty.co/blog/{{$post->slug}}">
     <meta property="og:image" content={{$post->image}}>
     <meta property="og:description" content={{str_limit($post->excerpt, 140)}}>
 
