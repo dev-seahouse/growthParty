@@ -21,9 +21,9 @@
             </div>
 
             <div class="card-content">
-              <h4 class="title">{{str_limit($post->title,90)}}</h4>
+            <a href="/blog/{{$post->slug}}">  <h4 class="title">{{str_limit($post->title,90)}}</h4>
               <p class="content">{{str_limit($post->excerpt, 140)}}</p>
-              <a href="/blog/{{$post->slug}}">Read more ...</a>
+              Read more ...</a>
               <div class="footer">
                 <img style="display:none;" src="/storage/{{$post->author->avatar}}" class="profile-img" alt="{{$post->author->name}}">
                 <a style="display:none;" href="">{{$post->author->name}}</a>
