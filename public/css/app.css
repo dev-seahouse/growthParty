@@ -8464,6 +8464,7 @@ ul.share-buttons{
   padding: 0;
   margin: 1rem auto;
   text-align: center;
+  max-width: 80%;
 }
 
 ul.share-buttons li{
