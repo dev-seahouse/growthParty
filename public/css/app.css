@@ -8445,7 +8445,7 @@ h1.jumbotron-text {
   .card .footer {
     margin-left: 0;
   }
-}
+
 
 .card .info {
   margin: 0.625rem 0 0.625rem auto;
@@ -8458,13 +8458,12 @@ h1.jumbotron-text {
   height: 1.875rem;
   margin-right: 0.625rem;
 }
-
+}
 ul.share-buttons{
   list-style: none;
   padding: 0;
   margin: 1rem auto;
   text-align: center;
-}
 }
 
 ul.share-buttons li{
