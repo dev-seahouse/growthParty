@@ -8013,16 +8013,16 @@ h1.jumbotron-text {
 /*---------- Gutter helpers ----------*/
 
 .l-padded {
-  padding-bottom: 0.78125rem;
-  padding-top: 0.78125rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
   padding-left: 0.78125rem;
   padding-right: 0.78125rem;
 }
 
 @media print, screen and (min-width: 40em) {
   .l-padded {
-    padding-bottom: 1.875rem;
-    padding-top: 1.875rem;
+    padding-bottom: 6.5rem;
+    padding-top: 6.5rem;
     padding-left: 1.875rem;
     padding-right: 1.875rem;
   }
