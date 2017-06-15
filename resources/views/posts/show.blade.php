@@ -3,21 +3,32 @@
 @section('nav')
   <navigation></navigation>
 @endsection
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta property="og:title" content="{!! $post->title !!}" />
-<meta property="og:description" content="{{str_limit($post->excerpt, 140)}}" />
-<meta name="application-name" content="GrowthParty.co" />
-<meta name="msapplication-TileColor" content="#FFFFFF" />
+
 <meta name="msapplication-TileImage" content="{{$post->image}}" />
 <meta name="msapplication-square70x70logo" content="{{$post->image}}" />
 <meta name="msapplication-square150x150logo" content="{{$post->image}}" />
 <meta name="msapplication-wide310x150logo" content="{{$post->image}}" />
 <meta name="msapplication-square310x310logo" content="{{$post->image}}" />
 <meta id="token" name="csrf-token" content="tdR6jG9JQIhL2cJTIACbGVDXccOzegp29CetxSHD" />
+
 @section('title')
 {!! $post->title !!}
 @endsection
+
+@section('description')
+{{str_limit($post->excerpt, 140)}}
+@endsection
+
+@section('application-name')
+GrowthParty.co
+@endsection
+
+@section('facebook_meta')
+    <meta property="og:url" content="https://www.growthparty.co/">
+    <meta property="og:image" content="{{$post->image}}">
+    <meta property="og:description" content="{{str_limit($post->excerpt, 140)}}">
+@endsection
+
 @section('content')
   <div class="l-large-padded row align-center">
     <div class="small-12 medium-7 columns"  >
