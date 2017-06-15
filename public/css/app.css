@@ -2974,19 +2974,20 @@ p + .stat {
 
 .button {
   display: inline-block;
-  vertical-align: middle;
-  margin: 0 0 1rem 0;
-  padding: 0.85em 1em;
-  -webkit-appearance: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  transition: background-color 0.25s ease-out, color 0.25s ease-out;
-  font-size: 0.9rem;
-  line-height: 1;
-  text-align: center;
-  cursor: pointer;
-  background-color: #63f3c9;
-  color: #4a4a4a;
+vertical-align: middle;
+margin: 0 0 1rem 0;
+padding: 0.85em 1em;
+-webkit-appearance: none;
+border: 1px solid transparent;
+border-radius: 4px;
+transition: background-color 0.25s ease-out, color 0.25s ease-out;
+font-size: 0.9rem;
+line-height: 1;
+font-weight: 700;
+text-align: center;
+cursor: pointer;
+background-color: #eb5e63;
+color: white;
 }
 
 [data-whatinput='mouse'] .button {
@@ -6593,6 +6594,9 @@ a.thumbnail image {
   padding: 0.5rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+position: fixed;
+width: 100%;
+z-index: 999;
 }
 
 .top-bar,
