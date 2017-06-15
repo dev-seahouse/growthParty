@@ -3,14 +3,6 @@
 @section('nav')
   <navigation></navigation>
 @endsection
-
-<meta name="msapplication-TileImage" content="{{$post->image}}" />
-<meta name="msapplication-square70x70logo" content="{{$post->image}}" />
-<meta name="msapplication-square150x150logo" content="{{$post->image}}" />
-<meta name="msapplication-wide310x150logo" content="{{$post->image}}" />
-<meta name="msapplication-square310x310logo" content="{{$post->image}}" />
-<meta id="token" name="csrf-token" content="tdR6jG9JQIhL2cJTIACbGVDXccOzegp29CetxSHD" />
-
 @section('title')
 {!! $post->title !!}
 @endsection
@@ -25,8 +17,8 @@ GrowthParty.co
 
 @section('facebook_meta')
     <meta property="og:url" content="https://www.growthparty.co/">
-    <meta property="og:image" content="{{$post->image}}">
-    <meta property="og:description" content="{{str_limit($post->excerpt, 140)}}">
+    <meta property="og:image" content={{$post->image}}>
+    <meta property="og:description" content={{str_limit($post->excerpt, 140)}}>
 @endsection
 
 @section('content')
