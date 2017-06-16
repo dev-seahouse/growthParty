@@ -48,8 +48,8 @@ class Handler extends ExceptionHandler
           return Response::json([
             'error' => true,
             'message' => $exception->getMessage(),
-            'code' => 400
-          ], 400);
+            'code' => $exception->getCode()
+          ], $exception->getCode());
         }
         return parent::render($request, $exception);
     }

@@ -8,31 +8,35 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
 
-    use Notifiable;
+  use Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    /*
-    old
-    protected $fillable = [
-        'name', 'email', 'password','mobile'
-    ];*/
-    protected $fillable = [
-        'email', 'password','mobile'
-    ];
+  /**
+   * The attributes that are mass assignable.
+   *
+   * @var array
+   */
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+  const storageFolderUrl = "/users/";
 
-    public static $profilePicName = "profile_pic";
-    public static $profilePicSmallName = "profile_pic_sm";
+  protected $fillable = [
+    'email', 'password', 'mobile'
+  ];
+
+  /**
+   * The attributes that should be hidden for arrays.
+   *
+   * @var array
+   */
+  protected $hidden = [
+    'password', 'remember_token',
+  ];
+
+  public static $profilePicFileName = "profilePic"; // filename of userUploaded profile picture
+  public static $smallProfilePicFileName = "avatar"; // filename of avatar, which is smaller sized user profile pic
+
+  public function getStoragePath()
+  {
+    return self::storageFolderUrl.$this->id.'/';
+  }
+
 }

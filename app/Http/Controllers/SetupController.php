@@ -29,66 +29,55 @@ class SetupController extends Controller
   public function uploadProfilePic(Request $request)
   {
     $form_data = $request->all();
-    $validator = $this->makeValidator($form_data);
-    if ($validator->fails()) {throw new ProfilePicUploadException($validator->messages()->first());}
+    $this->validateRequest($form_data);
     $photo = $form_data['avatar'];
+    $originalName = $photo->getClientOriginalName();
     $extension = $photo->getClientOriginalExtension();
-    $fileName = User::$profilePicName;
-    $imgPath = $this->makeImagePath($fileName, $extension);
+
+    $profilePicPath = $this->createImagePath(User::$profilePicFileName, $extension);
+    $smallProfilePicPath = $this->createImagePath(User::$smallProfilePicFileName, $extension);
+
     $profilePic = $this->makeProfilePic($photo);
-    
-    return "hello";
+    $avatar = $this->makeAvatar($photo);
+
+    $saveResultOfProfilePic = $profilePic->save($profilePicPath);
+    $saveResultOfAvatar = $avatar->save($smallProfilePicPath);
+
+    if (!($saveResultOfAvatar || $saveResultOfProfilePic)){
+      throw new ProfilePicUploadException("Server error while uploading",500);
+    }
+
+    Auth::user()-> avatar = $smallProfilePicPath;
+    Auth::user()->save();
+
+    return Response::json([
+      'error'=>false,
+      'code'=>200
+    ],200);
   }
 
-  public function makeImagePath($filename, $extension)
+  public function removeUploadedImages() {
+    $user = Auth::user();
+    $extension = pathinfo($user->avatar,PATHINFO_EXTENSION);
+
+    $profilePicPath = $this->getImgPath(User::$profilePicFileName, $extension);
+    $avatarPath = $this->getImgPath(User::$smallProfilePicFileName,$extension);
+    Storage::disk('public')->delete([$profilePicPath, $avatarPath]);
+
+    return Response::json([
+      'error' => false,
+      'code' => 200
+    ],200);
+  }
+
+  protected function validateRequest($form_data)
   {
-    $user = Auth::user();
-    $userId = $user->id;
-    $userImgFolderUrl = asset('storage/user/');
-    $userImgPath = $userImgFolderUrl . "/{$userId}/" . $filename . '.' . $extension;
-    return $userImgPath;
+    $validator = $this->makeValidator($form_data);
+    if ($validator->fails()) {
+      throw new ProfilePicUploadException($validator->messages()->first());
+    }
   }
 
-  public function updateinfo(Request $request)
-  {
-
-    $user = Auth::user();
-/*    if ($request->hasFile('avatar')) {
-
-      $file = $request->file('avatar');
-      $path = $file->hashName('avatars');
-      // avatars/bf5db5c75904dac712aea27d45320403.jpeg
-
-      $image = Image::make($file);
-      $image->fit(300, 300, function ($constraint) {
-        $constraint->aspectRatio();
-      });
-      Storage::disk('public')->put($path, (string)$image->encode());
-
-      //Save to users table
-      $user = Auth::user();
-      $user->avatar = $path;
-      $user->save();
-    }*/
-
-    //Save to users table
-    $user = Auth::user();
-    $user->name = $request->input('name');
-    $user->occupation = $request->input('occupation');
-    $user->is_setup = 1;
-    $user->save();
-    //respone->back()
-    // validate image format is only png or jepeg
-    // validate file size
-    // if succesfully saved and successfully updated info, redirect to dashboard
-    // else return error page view('errors.something');
-    return view('welcome.dashboard');
-  }
-
-  /**
-   * @param $form_data
-   * @return \Illuminate\Validation\Validator
-   */
   protected function makeValidator($form_data)
   {
     $rules = [
@@ -102,9 +91,47 @@ class SetupController extends Controller
     return $validator;
   }
 
+  public function createImagePath($filename, $extension)
+  {
+    $storagePath = Auth::user()->getStoragePath();
+    $userImgPath = $this->getImgPath($filename, $extension);
+    Storage::disk('public')->makeDirectory($storagePath);
+    return "storage".$userImgPath;
+  }
+
+  protected function getImgPath($filename, $extension)
+  {
+    $storagePath = Auth::user()->getStoragePath();
+    $userImgPath = $storagePath . $filename . '.' . $extension;
+    return $userImgPath;
+  }
+
   protected function makeProfilePic($photo)
   {
     $image = Image::make($photo);
     return $image;
   }
+
+  protected function makeAvatar($photo)
+  {
+    $image = Image::make($photo)->resize(300,null, function ($constraint){
+      $constraint->aspectRatio();
+    });
+    return $image;
+  }
+
+  public function updateinfo(Request $request)
+  {
+    $this->validate($request, [
+      'name' => 'required|max:50',
+      'occupation' => 'required|max:50',
+    ]);
+    $user = Auth::user();
+    $user->name = $request->input('name');
+    $user->occupation = $request->input('occupation');
+    $user->is_setup = 1;
+    $user->save();
+    return view('welcome.dashboard');
+  }
+
 }

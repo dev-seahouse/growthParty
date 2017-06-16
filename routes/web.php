@@ -16,8 +16,10 @@
 Auth::routes();
 Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('/setup','SetupController@index')->name('setup');
+Route::post('/setup/uploadProfilePic','SetupController@uploadProfilePic');
+Route::post("/setup/removeProfilePic", 'SetupController@removeUploadedImages');
+
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::post('/uploadProfilePic','SetupController@uploadProfilePic');
 
 /*----------  Admin routes  ----------*/
 Route::group(['prefix' => 'admin'], function () {
@@ -33,11 +35,5 @@ Route::post('updateinfo', 'SetupController@updateinfo');
 Route::group(['prefix' => 'blog'],function(){
   Route::get('/', 'PostController@index')->name('blog');
   Route::get('/{post}', 'PostController@show');
-});
-
-
-
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
 });
 
