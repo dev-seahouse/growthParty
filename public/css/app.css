@@ -6475,6 +6475,7 @@ a.thumbnail image {
           align-items: center;
           position:fixed;
           width:100%;
+          z-index:999;
 }
 
 .title-bar .menu-icon {
