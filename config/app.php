@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'GrowthParty'),
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://growthparty.co'),
 
     /*
     |--------------------------------------------------------------------------
@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Singapore',
 
     /*
     |--------------------------------------------------------------------------
@@ -120,7 +120,8 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
+    'log' =>'daily',
+  
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
@@ -169,6 +170,7 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         TCG\Voyager\VoyagerServiceProvider::class,
         Spatie\ResponseCache\ResponseCacheServiceProvider::class,
+        Arcanedev\LogViewer\LogViewerServiceProvider::class,
         /*
          * Application Service Providers...
          */
