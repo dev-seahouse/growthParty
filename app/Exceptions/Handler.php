@@ -3,8 +3,9 @@
 namespace App\Exceptions;
 
 use Exception;
+use GrahamCampbell\Exceptions\NewExceptionHandler as ExceptionHandler;
 use Illuminate\Auth\AuthenticationException;
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+
 
 class Handler extends ExceptionHandler
 {
@@ -44,8 +45,12 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+      if ($exception instanceof AuthenticationException){
+        return $this->unauthenticated($request, $exception);
+      }
+      
         if ($exception instanceof ProfilePicUploadException) {
-          return Response::json([
+          return response()->json([
             'error' => true,
             'message' => $exception->getMessage(),
             'code' => $exception->getCode()
@@ -58,7 +63,7 @@ class Handler extends ExceptionHandler
      * Convert an authentication exception into an unauthenticated response.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \Illuminate\Auth\AuthenticationException  $exception
+     * @param  AuthenticationException $exception
      * @return \Illuminate\Http\Response
      */
     protected function unauthenticated($request, AuthenticationException $exception)

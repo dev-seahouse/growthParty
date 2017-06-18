@@ -172,6 +172,7 @@ return [
         Spatie\ResponseCache\ResponseCacheServiceProvider::class,
         Arcanedev\LogViewer\LogViewerServiceProvider::class,
         Laracademy\Commands\MakeServiceProvider::class,
+        GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
         /*
          * Application Service Providers...
          */
