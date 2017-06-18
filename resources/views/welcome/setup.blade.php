@@ -3,19 +3,20 @@
   Account Setup - Growth Party
 @endsection
 @section('content')
+  <a href="{{ route('logout') }}"
+     onclick="event.preventDefault()document.getElementById('logout-form').submit()">
+    Logout
+  </a>
   <div class="row align-center dark-slate-grey-text">
-    <div class="small-8 columns step active">
-      <a href="{{ route('logout') }}"
-         onclick="event.preventDefault()document.getElementById('logout-form').submit()">
-        Logout
-      </a>
+    <div class="small-8 medium-7 large-5 columns step active">
+
 
       <!-- upload profile image -->
       {!! Form::open(['route' => "logout",'method'=>'post', 'id'=>'logout-form']) !!}
       {{ csrf_field() }}
       {!! Form::close() !!}
-      <h3 class="leading thin-header">First Impression count</h3>
-      <p class="sub-title">Time to use your charm. Smile!</p>
+      <h3 class="leading thin-header text-center">First Impression count</h3>
+      <p class="sub-title text-center">Time to use your charm. Smile!</p>
       {!! Form::open(['action'=>['SetupController@uploadProfilePic'],  'class' => 'dropzone', 'id'=>'profileUploadForm']) !!}
       {{ csrf_field() }}
 
@@ -52,47 +53,6 @@
 
   </div>
 
-
-  {{--  <div class="l-padded p-b-0 row">
-      <div class="columns">
-        <form enctype="multipart/form-data" method="post" action="/updateinfo">
-          {{ csrf_field() }}
-          <fieldset>
-            <div class="form-group">
-              <img src="/storage/{{ Auth::user()->avatar }}" style="width:150px; height:150px; border-radius:10%;"
-                   alt="avatar">
-            </div>
-
-            <div class="form-group">
-              <input type="file" name="avatar">
-            </div>
-
-          </fieldset>
-
-          <fieldset>
-            <h2>Last step, almost there!</h2>
-
-            <div class="form-group">
-              <label for="Name">What is your name?</label>
-              <input type="text" name="name" placeholder="James Ang">
-            </div>
-
-            <div class="form-group">
-              <label for="Occupation">What is your occupation?</label>
-              <input type="text" name="occupation" placeholder="Sales">
-            </div>
-
-
-          </fieldset>
-
-          <input type="submit" name="submit" class="submit btn btn-success" value="Submit"/>
-
-        </form>
-
-
-      </div>
-    </div>--}}
-
 @endsection('content')
 @push('page_scripts')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.0.1/min/dropzone.min.js"></script>
@@ -123,6 +83,10 @@
       this.on('addedfile', function (file) {
         console.log('file added')
         dropzone.processQueue()
+      })
+      
+      this.on('error', function(file, response){
+        $(file.previewElement).find('.dz-error-message').text(response.message);
       })
 
       this.on('removedfile', function (file) {

@@ -74,7 +74,7 @@ class SetupController extends Controller
   {
     $validator = $this->makeValidator($form_data);
     if ($validator->fails()) {
-      throw new ProfilePicUploadException($validator->messages()->first());
+      throw new ProfilePicUploadException($validator->messages()->first(), 400);
     }
   }
 

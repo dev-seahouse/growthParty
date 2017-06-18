@@ -99,6 +99,7 @@ return [
     */
 
     'levels' => [
+        App\Exceptions\ProfilePicUploadException::class                           => "warning",
         'Illuminate\Auth\Access\AuthorizationException'                           => 'warning',
         'Illuminate\Database\Eloquent\ModelNotFoundException'                     => 'warning',
         'Illuminate\Session\TokenMismatchException'                               => 'notice',

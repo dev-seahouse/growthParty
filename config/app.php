@@ -173,6 +173,7 @@ return [
         Arcanedev\LogViewer\LogViewerServiceProvider::class,
         Laracademy\Commands\MakeServiceProvider::class,
         GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -238,6 +239,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'ResponseCache' => Spatie\ResponseCache\ResponseCacheFacade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];
