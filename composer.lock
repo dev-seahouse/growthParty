@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e47411818d50f2be3d2b9160aee0d393",
+    "content-hash": "0a7288503e6fe59bae255c7290e7cc25",
     "packages": [
         {
             "name": "arcanedev/log-viewer",
@@ -948,6 +948,46 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "laracademy/interactive-make",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laracademy/interactive-make.git",
+                "reference": "bbc707262109ce1a6b76df5fc232124d65f261cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laracademy/interactive-make/zipball/bbc707262109ce1a6b76df5fc232124d65f261cd",
+                "reference": "bbc707262109ce1a6b76df5fc232124d65f261cd",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laracademy\\Commands\\MakeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laracademy\\Commands\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael McMullen",
+                    "email": "packages@laracademy.co"
+                }
+            ],
+            "description": "Interactive make CLI replacement for Laravel",
+            "time": "2017-06-03T13:24:21+00:00"
         },
         {
             "name": "larapack/doctrine-support",

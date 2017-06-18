@@ -171,6 +171,7 @@ return [
         TCG\Voyager\VoyagerServiceProvider::class,
         Spatie\ResponseCache\ResponseCacheServiceProvider::class,
         Arcanedev\LogViewer\LogViewerServiceProvider::class,
+        Laracademy\Commands\MakeServiceProvider::class,
         /*
          * Application Service Providers...
          */
