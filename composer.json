@@ -18,7 +18,6 @@
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.3",
-        "filp/whoops": "^2.1",
         "fzaninotto/faker": "~1.4",
         "laracasts/generators": "dev-master",
         "laravel/homestead": "^5.4",
