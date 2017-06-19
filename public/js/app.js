@@ -12,6 +12,8 @@ webpackJsonp([2],{
 __webpack_require__(37);
 window.Vue = __webpack_require__(6
 
+// plugins
+);__webpack_require__(38
 // define global mixin
 );Vue.mixin({
   data: function data() {
@@ -22,9 +24,9 @@ window.Vue = __webpack_require__(6
     };
   }
 });
-Vue.component('flash', __webpack_require__(67));
-Vue.component('navigation', __webpack_require__(69));
-Vue.component('modal', __webpack_require__(68));
+Vue.component('flash', __webpack_require__(68));
+Vue.component('navigation', __webpack_require__(70));
+Vue.component('modal', __webpack_require__(69));
 
 var app = new Vue({
   el: '#app',
@@ -177,7 +179,38 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function($) {Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -274,6 +307,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     };
   },
 
+  mounted: function mounted() {
+    $('.step-app').steps({
+      onFinish: function onFinish() {
+        $('#registerForm').submit();
+      },
+      onChange: function onChange(currentIndex, newIndex, stepDirection) {
+        if (currentIndex === 0 && stepDirection == 'forward') {}
+        return true;
+      }
+    });
+  },
   methods: {
     onSubmit: function onSubmit() {
       var _this = this;
@@ -295,6 +339,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     }
   }
 });
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 
@@ -310,7 +355,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  */
 try {
   global.$ = global.jQuery = window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(0);
-  __webpack_require__(73);
+  __webpack_require__(74);
 } catch (e) {
   console.log(e);
 }
@@ -345,20 +390,114 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ 67:
+/***/ 38:
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+/*!
+   * Steps v1.0.0
+   * https://github.com/oguzhanoya/jquery-steps
+   *
+   * Copyright (c) 2017 oguzhanoya
+   * Released under the MIT license
+   */
+!function (t, e) {
+   "object" == ( false ? "undefined" : _typeof(exports)) && "undefined" != typeof module ? e(__webpack_require__(0)) :  true ? !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(0)], __WEBPACK_AMD_DEFINE_FACTORY__ = (e),
+				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)) : e(t.$);
+}(this, function (t) {
+   "use strict";
+   t = "default" in t ? t.default : t;var e = { startAt: 0, showBackButton: !0, showFooterButtons: !0, onInit: $.noop, onDestroy: $.noop, onFinish: $.noop, onChange: function onChange() {
+         return !0;
+      } },
+       n = function n(t, e) {
+      if (!(t instanceof e)) throw new TypeError("Cannot call a class as a function");
+   },
+       i = function () {
+      function t(t, e) {
+         for (var n = 0; n < e.length; n++) {
+            var i = e[n];i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(t, i.key, i);
+         }
+      }return function (e, n, i) {
+         return n && t(e.prototype, n), i && t(e, i), e;
+      };
+   }(),
+       o = function () {
+      function o(i, s) {
+         n(this, o), this.options = t.extend({}, e, s), this.el = t(i), this.init();
+      }return i(o, [{ key: "init", value: function value() {
+            this.hook("onInit");var e = this;t(this.el).on("click", ".step-steps > li > a", function (n) {
+               n.preventDefault();var i = t(this).closest("li").index(),
+                   o = e.getStepIndex();e.setActiveStep(o, i);
+            }), t(this.el).on("click", ".step-footer > button", function (n) {
+               n.preventDefault();var i = t(this).data("direction");e.setAction(i);
+            }), this.setShowStep(this.options.startAt, "", "active"), this.setFooterBtns(), this.options.showFooterButtons || (this.hideFooterBtns(), this.setFooterBtns = t.noop);
+         } }, { key: "hook", value: function value(t) {
+            void 0 !== this.options[t] && this.options[t].call(this.el);
+         } }, { key: "destroy", value: function value() {
+            this.el.empty(), this.el.removeData("plugin_Steps"), this.hook("onDestroy");
+         } }, { key: "getStepIndex", value: function value() {
+            return this.el.find(".step-steps > li.active").index() || 0;
+         } }, { key: "getMaxStepCount", value: function value() {
+            return this.el.find(".step-steps > li").length - 1;
+         } }, { key: "getStepDirection", value: function value(t, e) {
+            var n = "none";return e < t ? n = "backward" : e > t && (n = "forward"), n;
+         } }, { key: "setShowStep", value: function value(e, n) {
+            var i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";this.el.find(".step-content > .step-tab-panel").removeClass("active");var o = this.el.find(".step-steps > li").eq(e);o.removeClass(n).addClass(i);var s = o.find("a").attr("href");t(s).addClass("active");
+         } }, { key: "setActiveStep", value: function value(t, e) {
+            if (e !== t) {
+               if (e > t) for (var n = 0; n <= e; n += 1) {
+                  var i = n === e;i ? this.setShowStep(n, "done", "active") : this.setShowStep(n, "active error", "done");var o = this.getStepDirection(n, e),
+                      s = this.options.onChange(n, e, o);if (!s) {
+                     this.setShowStep(n, "done", "error active"), this.setFooterBtns();break;
+                  }
+               }if (t > e) for (var r = t; r >= e; r -= 1) {
+                  var a = this.getStepDirection(r, e);this.options.onChange(r, e, a), this.setShowStep(r, "done active error"), r === e && this.setShowStep(r, "done error", "active");
+               }this.setFooterBtns();
+            }
+         } }, { key: "setFooterBtns", value: function value() {
+            var t = this.getStepIndex(),
+                e = this.getMaxStepCount(),
+                n = this.el.find(".step-footer");0 === t && n.find('button[data-direction="prev"]').hide(), t > 0 && this.options.showBackButton && n.find('button[data-direction="prev"]').show(), e === t ? (n.find('button[data-direction="prev"]').show(), n.find('button[data-direction="next"]').hide(), n.find('button[data-direction="finish"]').show()) : (n.find('button[data-direction="next"]').show(), n.find('button[data-direction="finish"]').hide()), this.options.showBackButton || n.find('button[data-direction="prev"]').hide();
+         } }, { key: "setAction", value: function value(t) {
+            var e = this.getStepIndex(),
+                n = e;if ("prev" === t && (n -= 1), "next" === t && (n += 1), "finish" === t) {
+               this.options.onChange(e, n, "forward") ? this.hook("onFinish") : this.setShowStep(e, "", "error");
+            }"finish" !== t && this.setActiveStep(e, n);
+         } }, { key: "hideFooterBtns", value: function value() {
+            this.el.find(".step-footer").hide();
+         } }], [{ key: "setDefaults", value: function value(n) {
+            t.extend(e, t.isPlainObject(n) && n);
+         } }]), o;
+   }(),
+       s = t.fn.steps;t.fn.steps = function (e) {
+      return this.each(function () {
+         t.data(this, "plugin_Steps") || t.data(this, "plugin_Steps", new o(this, e));
+      });
+   }, t.fn.steps.version = "1.0.0", t.fn.steps.setDefaults = o.setDefaults, t.fn.steps.noConflict = function () {
+      return t.fn.steps = s, this;
+   };
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+
+/***/ 68:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(3)(
   /* script */
   __webpack_require__(34),
   /* template */
-  __webpack_require__(71),
+  __webpack_require__(72),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Flash.vue"
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Flash.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -380,20 +519,20 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 68:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(3)(
   /* script */
   __webpack_require__(35),
   /* template */
-  __webpack_require__(72),
+  __webpack_require__(73),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Modal.vue"
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Modal.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Modal.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -415,20 +554,20 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 69:
+/***/ 70:
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(3)(
   /* script */
   __webpack_require__(36),
   /* template */
-  __webpack_require__(70),
+  __webpack_require__(71),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Navigation.vue"
+Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Navigation.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -450,7 +589,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 70:
+/***/ 71:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -548,13 +687,32 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "id": "registerModal",
       "closable": "true"
     }
-  }, [_c('h3', {
-    slot: "title"
-  }, [_vm._v("Register")]), _vm._v(" "), _c('form', {
+  }, [_c('form', {
     attrs: {
       "action": "/register",
       "method": "post",
-      "accept-charset": "utf-8"
+      "id": "registerForm"
+    }
+  }, [_c('h3', {
+    slot: "title"
+  }, [_vm._v("Register")]), _vm._v(" "), _c('p', [_vm._v("Please enter your mobile number to get started!")]), _vm._v(" "), _c('div', {
+    staticClass: "step-app"
+  }, [_c('ul', {
+    staticClass: "step-steps"
+  }, [_c('li', [_c('a', {
+    attrs: {
+      "href": "#step1"
+    }
+  }, [_vm._v("Step 1 - Enter")])]), _vm._v(" "), _c('li', [_c('a', {
+    attrs: {
+      "href": "#step2"
+    }
+  }, [_vm._v("Step 2 - Verify")])])]), _vm._v(" "), _c('div', {
+    staticClass: "step-content"
+  }, [_c('div', {
+    staticClass: "step-tab-panel",
+    attrs: {
+      "id": "step1"
     }
   }, [_c('input', {
     attrs: {
@@ -594,14 +752,32 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "name": "password",
       "placeholder": "Enter password"
     }
-  })])])]), _vm._v(" "), _c('div', {
-    staticClass: "row column"
+  })])])])]), _vm._v(" "), _c('div', {
+    staticClass: "step-tab-panel",
+    attrs: {
+      "id": "step2"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "row"
+  }, [_c('div', {
+    staticClass: "step-footer"
   }, [_c('button', {
     staticClass: "button",
     attrs: {
+      "data-direction": "prev"
+    }
+  }, [_vm._v("Previous")]), _vm._v(" "), _c('button', {
+    staticClass: "button",
+    attrs: {
+      "data-direction": "next"
+    }
+  }, [_vm._v("Confirm")]), _vm._v(" "), _c('button', {
+    staticClass: "button",
+    attrs: {
+      "data-direction": "finish",
       "type": "submit"
     }
-  }, [_vm._v("Register")])])])])], 1)
+  }, [_vm._v("Register")])])])])])])], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "title-bar drop-shadow",
@@ -694,7 +870,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 71:
+/***/ 72:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -715,7 +891,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 72:
+/***/ 73:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -755,7 +931,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 73:
+/***/ 74:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -1076,7 +1252,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 
-/***/ 75:
+/***/ 76:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(13);
@@ -1084,4 +1260,4 @@ module.exports = __webpack_require__(13);
 
 /***/ })
 
-},[75]);
+},[76]);
