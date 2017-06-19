@@ -15,7 +15,8 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
         "spatie/laravel-responsecache": "^3.1",
-        "tcg/voyager": "^0.11.12"
+        "tcg/voyager": "^0.11.12",
+        "twilio/sdk": "^5.11"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.3",
