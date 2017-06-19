@@ -23,7 +23,7 @@
      <div class="footer">
          <p class="info">Posted by:
         <img style="display:none;" src="/storage/{{$post->author->avatar}}" width="30px" height="auto" class="profile-img" alt="{{$post->author->name}}">
-        <a href="">{{$post->author->name}}</a>&nbsp; <span class="info"> {{$post->created_at->diffForHumans()}}</span> &nbsp;&nbsp; ⏳{{$post->estimated_read}} read </p>
+      <span class="info"> {{$post->created_at->diffForHumans()}}</span> &nbsp;&nbsp; ⏳{{$post->estimated_read}} read </p>
       </div>
       <img src="/storage/{{$post->image}}" alt="{!! $post->title !!}">
       <br/>
