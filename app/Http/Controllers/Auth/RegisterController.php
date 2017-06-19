@@ -52,7 +52,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             //'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'mobile' =>'required|numeric|digits:8',
+            'mobile' =>'required|digits:8',
             'password' => 'required|string|min:6',
         ]);
     }
