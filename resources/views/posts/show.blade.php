@@ -14,7 +14,7 @@
   <meta property="og:description" content="{{str_limit($post->excerpt)}}">
   <meta property="og:image" content="https://www.growthparty.co/storage/{{$post->image}}">
   <meta property="fb:app_id" content="756709494453863" />
-
+  <meta property="description" content="{{str_limit($post->excerpt)}}">
 
 @section('content')
   <div class="l-large-padded row align-center">
