@@ -18,7 +18,8 @@
     "lodash": "^4.17.4",
     "motion-ui": "^1.2.2",
     "vue": "2.3.4",
-    "vue-template-compiler": "2.3.4"
+    "vue-template-compiler": "2.3.4",
+    "headroom.js": "^0.9.3"
   },
   "dependencies": {},
   "false": {}
