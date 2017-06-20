@@ -120,7 +120,7 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
+    'log' => 'daily',
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
@@ -168,6 +168,7 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         TCG\Voyager\VoyagerServiceProvider::class,
+        Arcanedev\LogViewer\LogViewerServiceProvider::class,
         /*
          * Application Service Providers...
          */
