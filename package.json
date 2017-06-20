@@ -11,15 +11,16 @@
   },
   "devDependencies": {
     "axios": "^0.15.3",
+    "browser-sync": "^2.18.12",
+    "browser-sync-webpack-plugin": "^1.1.4",
+    "cross-env": "^3.2.3",
     "foundation-sites": "^6.3.1",
+    "headroom.js": "^0.9.3",
     "jquery": "^3.2.1",
     "jquery.counterup": "^2.1.0",
-    "laravel-mix": "^0.12.1",
+    "laravel-mix": "^1.0.0",
     "lodash": "^4.17.4",
-    "motion-ui": "^1.2.2",
-    "vue": "2.3.4",
-    "vue-template-compiler": "2.3.4",
-    "headroom.js": "^0.9.3"
+    "vue":"^2.3.4"
   },
   "dependencies": {},
   "false": {}
