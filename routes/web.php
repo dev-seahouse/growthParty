@@ -14,22 +14,26 @@
 /*----------  App Routes  ----------*/
 
 Auth::routes();
+
 Route::get('/', 'WelcomeController@index')->name('welcome');
-Route::get('/setup','SetupController@index')->name('setup');
-Route::post('/setup/uploadProfilePic','SetupController@uploadProfilePic');
-Route::post("/setup/removeProfilePic", 'SetupController@removeUploadedImages');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
 
 /*----------  Admin routes  ----------*/
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-/*----------  Profile Setup Routes  ----------*/
-//Route::get('accountsetup', 'AccountSe@index')->name('accountsetup');
-Route::post('updateinfo', 'SetupController@updateinfo');
-//Route::get('accountsetup', 'AccountSetup@updateinfo');
+/*----------  User Registration Routes  ----------*/
+Route::post('/otp/send',[
+  'middleware'=>'GrahamCampbell\Throttle\Http\Middleware\ThrottleMiddleware:1000,2',// limit otp access rate to be 1 time per 2 minute
+  'uses'=>'Auth\RegisterController@sendOtp'])
+  ->name('sendOtp');
+Route::get('/setup','SetupController@index')->name('setup');
+Route::post('/setup/uploadProfilePic','SetupController@uploadProfilePic');
+Route::post("/setup/removeProfilePic", 'SetupController@removeUploadedImages');
+Route::post('/updateinfo', 'SetupController@updateinfo');
 
 /*----------  Blog Routes  ----------*/
 Route::group(['prefix' => 'blog'],function(){
@@ -37,3 +41,4 @@ Route::group(['prefix' => 'blog'],function(){
   Route::get('/{post}', 'PostController@show');
 });
 
+/*----------   TwilloOTP route  ----------*/
