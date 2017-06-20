@@ -173,7 +173,9 @@ return [
         Arcanedev\LogViewer\LogViewerServiceProvider::class,
         Laracademy\Commands\MakeServiceProvider::class,
         GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
+        GrahamCampbell\Throttle\ThrottleServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -183,6 +185,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        App\Communications\SMSServiceProvider::class,
 
         // Interventions
         Intervention\Image\ImageServiceProvider::class,
@@ -222,6 +225,7 @@ return [
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
+        'Throttle' => GrahamCampbell\Throttle\Facades\Throttle::class,
         'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
         'Redirect' => Illuminate\Support\Facades\Redirect::class,
