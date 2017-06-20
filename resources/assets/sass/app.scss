@@ -7,9 +7,10 @@
 // mixins
 @import 'mixins';
 
-// foundation library
+// vendor styles
 @import 'settings/settings';
 @import 'foundation';
+@import '/node_modules/parsleyjs/src/parsley.css';
 
 // util
 @import 'utils';
@@ -24,6 +25,7 @@
 @import 'layouts';
 
 // Component Styles
+@import 'components/navigation';
 @import 'components/slider';
 @import 'components/typed';
 @import 'components/header';
