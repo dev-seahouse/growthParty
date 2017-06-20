@@ -8,6 +8,8 @@
     "globals" : {
       "$" : true,
       "Jquery" : true,
-      "Vue" : true
+      "Vue" : true,
+      "axios":true,
+      "Fondation":true
     }
 }
