@@ -134,6 +134,6 @@ $directions:('top','right', 'bottom','left');
 /* --------- Image Layouts ------------ */
 // overwrites progressively default height:100%
 .progressive__img {
-  height: auto;
+  height: auto!important;
 }
 

@@ -5,7 +5,6 @@
  */
 
 require('./bootstrap')
-var progressively = require('progressively')
 window.Vue = require('vue')
 /**
  * Next, we will create a fresh Vue application instance and attach it te
@@ -20,6 +19,5 @@ const app = new Vue({
   el: '#app',
   mounted () {
     $(document).foundation()
-    progressively.init()
   }
 })
