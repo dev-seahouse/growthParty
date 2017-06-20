@@ -4,6 +4,7 @@
   <navigation></navigation>
 @endsection
 
+
 @section('title')
 {{str_limit($post->title)}}
 @endsection
