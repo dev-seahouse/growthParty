@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Communications\Otp;
 use App\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Request;
 
 
 class RegisterController extends Controller
@@ -40,6 +41,11 @@ class RegisterController extends Controller
       $this->middleware('guest');
     }
 
+    public function sendOtp(Otp $otp){
+      $number = \request()->input('mobile');
+      $otp->send($number);
+    }
+
     /**
      * Attention: remember to modify rules defined in loginController
      * Get a validator for an incoming registration request.
@@ -50,7 +56,6 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            //'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'mobile' =>'required|digits:8',
             'password' => 'required|string|min:6',
@@ -66,14 +71,11 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            //'name' => $data['name'],
             'email' => $data['email'],
             'mobile' => $data['mobile'],
             'password' => bcrypt($data['password']),
         ]);
     }
-
-
 
     /**
      * The user will be directed to setup view.
