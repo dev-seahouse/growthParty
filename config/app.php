@@ -170,6 +170,7 @@ return [
         TCG\Voyager\VoyagerServiceProvider::class,
         Arcanedev\LogViewer\LogViewerServiceProvider::class,
         Spatie\ResponseCache\ResponseCacheServiceProvider::class,
+        GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -231,7 +232,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'ResponseCache' => Spatie\ResponseCache\ResponseCacheFacade::class,
-
+        'HTMLMin' => GrahamCampbell\HTMLMin\Facades\HTMLMin::class
     ],
 
 ];
