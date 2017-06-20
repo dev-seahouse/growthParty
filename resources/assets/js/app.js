@@ -9,6 +9,7 @@ window.Vue = require('vue')
 
 // plugins
 require('../vendor/jquery-steps-master/dist/jquery-steps.min')
+require('parsleyjs')
 // define global mixin
 Vue.mixin({
   data: function () {
@@ -26,6 +27,9 @@ Vue.component('modal', require('./components/Modal.vue'))
 const app = new Vue({
   el: '#app',
   mounted () {
-    $(document).foundation()
+    $(this.$el).foundation()
+  },
+  destroyed() {
+    $(this.$el).foundation.destroy();
   }
 })
