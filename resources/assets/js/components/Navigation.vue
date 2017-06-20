@@ -13,7 +13,7 @@
       
       <div class="top-bar-left">
         <ul class="vertical medium-horizontal menu align-right" data-dropdown-menu>
-          <li class="menu-text show-for-medium flex-pull-left">
+          <li class="menu-text no-padding show-for-medium flex-pull-left">
             <a href="/" class="logo"><img src="/images/logo.jpe" alt="company logo"
                                           class="l-logo-img"><span class="logo-text">Growth Party</span>
             </a>

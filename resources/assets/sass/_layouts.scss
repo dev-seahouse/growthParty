@@ -92,6 +92,13 @@ $directions:('top','right', 'bottom','left');
   padding-left:0;
   padding-right:0;
 }
+
+// this class is used to fix navigation menu covering content
+.row {
+  &.top-padded {
+
+  }
+}
 /*----------  Logo layout  ----------*/
 
 .l-logo-img {
@@ -126,3 +133,4 @@ $directions:('top','right', 'bottom','left');
 .l-featured {
   margin-bottom:rem-calc(65px);
 }
+
