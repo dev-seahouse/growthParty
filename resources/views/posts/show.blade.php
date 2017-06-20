@@ -30,7 +30,7 @@
         <p class="info">Posted
           <img style="display:none;" src="/storage/{{$post->author->avatar}}" width="30px" height="auto"
                class="profile-img" alt="{{$post->author->name}}">
-          <span class="info"> {{$post->created_at->diffForHumans()}}</span> &nbsp;&nbsp; ⏳{{$post->estimated_read}} read
+          <span class="info"> {{$post->created_at->diffForHumans()}}</span> &nbsp;&nbsp;<i class="fa fa-hourglass-half m-r-10"></i>{{$post->estimated_read}} read
         </p>
       </div>
       <!-- end post header -->

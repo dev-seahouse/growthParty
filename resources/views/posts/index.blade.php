@@ -30,7 +30,7 @@
                          alt="{{$post->author->name}}">
                     <a style="display:none;" href="">{{$post->author->name}}</a>
                     <p class="info">Posted {{$post->created_at->diffForHumans()}} &nbsp;&nbsp;
-                      ⏳{{$post->estimated_read}}
+                      <i class="fa fa-hourglass-half secondary-text" ></i> {{$post->estimated_read}}
                       read </p>
                   </div>
                 </div>

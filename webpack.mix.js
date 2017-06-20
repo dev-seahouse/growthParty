@@ -1,4 +1,4 @@
-const { mix } = require('laravel-mix')
+const {mix} = require('laravel-mix')
 
 mix.browserSync('growthparty.dev')
 mix.autoload({
@@ -16,9 +16,9 @@ mix.autoload({
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.sass('resources/assets/sass/app.scss', 'public/css')
-   .js('resources/assets/js/foundation.js', 'public/js')
-   .js('resources/assets/js/app.js', 'public/js')
-    .extract(['vue', 'axios', 'jquery', 'jquery.counterup'])
-
 mix.copy('resources/assets/img/', 'public/images/')
+mix.sass('resources/assets/sass/app.scss', 'public/css')
+  .js('resources/assets/js/foundation.js', 'public/js')
+  .js('resources/assets/js/app.js', 'public/js')
+  .extract(['vue', 'axios', 'jquery', 'jquery.counterup'])
+  .version()
