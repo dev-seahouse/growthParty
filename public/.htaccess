@@ -58,6 +58,11 @@ AddType image/svg+xml .svg
     ExpiresByType application/x-font-otf "access plus 1 year"
 </IfModule>
 
+<IfModule mod_headers.c>
+    Header unset Etag
+</IfModule>
+FileETag none
+
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html
   AddOutputFilterByType DEFLATE text/css
