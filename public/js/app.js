@@ -107,8 +107,9 @@ module.exports = __webpack_require__(35);
 /***/ }),
 
 /***/ 35:
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
 /* WEBPACK VAR INJECTION */(function($) {/**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -116,6 +117,7 @@ module.exports = __webpack_require__(35);
  */
 
 __webpack_require__(36);
+var progressively = __webpack_require__(69);
 window.Vue = __webpack_require__(11);
 /**
  * Next, we will create a fresh Vue application instance and attach it te
@@ -129,11 +131,11 @@ Vue.component('navigation', __webpack_require__(60));
 var app = new Vue({
   el: '#app',
   mounted: function mounted() {
-    console.log('root vue component mounted');
     $(document).foundation();
+    progressively.init();
   }
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
 
@@ -1296,6 +1298,14 @@ if (false) {
      require("vue-hot-reload-api").rerender("data-v-24338ddb", module.exports)
   }
 }
+
+/***/ }),
+
+/***/ 69:
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_RESULT__;!function(e,t){ true?!(__WEBPACK_AMD_DEFINE_RESULT__ = function(){return t(e)}.call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__)):"object"==typeof exports?module.exports=t:e.progressively=t(e)}(this,function(e){"use strict";function t(e,t){var n={};for(var o in e)n[o]=t.hasOwnProperty(o)?t[o]:e[o];return n}function n(e){return null===e.offsetParent}function o(e){if(n(e))return!1;var t=e.getBoundingClientRect(),o=t.top,r=t.height;e=e.parentNode;do{if(t=e.getBoundingClientRect(),o<=t.bottom==!1)return!1;if(o+r<=t.top)return!1;e=e.parentNode}while(e!==document.body);return o<=document.documentElement.clientHeight}function r(e){setTimeout(function(){var t=new Image;t.onload=function(){e.classList.remove("progressive--not-loaded"),e.classList.add("progressive--is-loaded"),e.src=this.src,d(e)},t.src=e.dataset.progressive},c.delay)}function i(){s||(clearTimeout(s),s=setTimeout(function(){u.check(),u.render(),s=null},c.throttle))}var c,s,d,l,u={};return d=function(){},c={throttle:300,delay:100,onLoadComplete:function(){},onLoad:function(){}},u.init=function(n){n=n||{},c=t(c,n),d=c.onLoad||d,l=[].slice.call(document.querySelectorAll(".progressive__img")),u.render(),document.addEventListener?(e.addEventListener("scroll",i,!1),e.addEventListener("load",i,!1)):(e.attachEvent("onscroll",i),e.attachEvent("onload",i))},u.render=function(){for(var e,t=l.length-1;t>=0;--t)e=l[t],o(e)&&e.classList.contains("progressive--not-loaded")&&(r(e),l.splice(t,1));this.check()},u.check=function(){l.length||(c.onLoadComplete(),this.drop())},u.drop=function(){document.removeEventListener?e.removeEventListener("scroll",i):e.detachEvent("onscroll",i),clearTimeout(s)},u});
 
 /***/ })
 

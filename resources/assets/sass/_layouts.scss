@@ -35,6 +35,7 @@ $directions:('top','right', 'bottom','left');
     }
   }
 }
+/* --------  Media object ---------- */
 
 .media-object.stack {
   flex-direction: column;
@@ -93,11 +94,8 @@ $directions:('top','right', 'bottom','left');
   padding-right:0;
 }
 
-// this class is used to fix navigation menu covering content
-.row {
-  &.top-padded {
-
-  }
+.fix-nav-cover-content {
+  margin-top: rem-calc(85px);
 }
 /*----------  Logo layout  ----------*/
 
@@ -132,5 +130,10 @@ $directions:('top','right', 'bottom','left');
 
 .l-featured {
   margin-bottom:rem-calc(65px);
+}
+/* --------- Image Layouts ------------ */
+// overwrites progressively default height:100%
+.progressive__img {
+  height: auto;
 }
 

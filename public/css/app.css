@@ -5147,6 +5147,55 @@ a.thumbnail image {
   }
 }
 
+.progressive {
+  overflow: hidden;
+  position: relative;
+  background: #efefef;
+}
+
+.progressive__img {
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.progressive--not-loaded {
+  -webkit-filter: blur(30px);
+          filter: blur(30px);
+}
+
+.progressive--is-loaded {
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  -webkit-animation: a .5s both;
+          animation: a .5s both;
+}
+
+@-webkit-keyframes a {
+  0% {
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+  }
+
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+@keyframes a {
+  0% {
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+  }
+
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
 .round-img {
   border-radius: 50%;
 }
@@ -5407,6 +5456,8 @@ h1.jumbotron-text {
   }
 }
 
+/* --------  Media object ---------- */
+
 .media-object.stack {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -5654,6 +5705,10 @@ h1.jumbotron-text {
   padding-right: 0;
 }
 
+.fix-nav-cover-content {
+  margin-top: 5.3125rem;
+}
+
 /*----------  Logo layout  ----------*/
 
 .l-logo-img {
@@ -5695,6 +5750,12 @@ h1.jumbotron-text {
 
 .l-featured {
   margin-bottom: 4.0625rem;
+}
+
+/* --------- Image Layouts ------------ */
+
+.progressive__img {
+  height: auto;
 }
 
 .button {

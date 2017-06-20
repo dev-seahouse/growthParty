@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap')
+var progressively = require('progressively')
 window.Vue = require('vue')
 /**
  * Next, we will create a fresh Vue application instance and attach it te
@@ -18,7 +19,7 @@ Vue.component('navigation', require('./components/Navigation.vue'))
 const app = new Vue({
   el: '#app',
   mounted () {
-    console.log('root vue component mounted')
     $(document).foundation()
+    progressively.init()
   }
 })

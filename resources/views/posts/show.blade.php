@@ -18,7 +18,7 @@
   <meta property="description" content="{{str_limit($post->excerpt)}}">
 
 @section('content')
-  <div class="l-large-padded row align-center">
+  <div class="l-padded row fix-nav-cover-content align-center">
     <div class="small-12 medium-7 columns"  >
       <h1>{!! $post->title !!}</h1>
      <div class="footer">
@@ -26,10 +26,16 @@
         <img style="display:none;" src="/storage/{{$post->author->avatar}}" width="30px" height="auto" class="profile-img" alt="{{$post->author->name}}">
       <span class="info"> {{$post->created_at->diffForHumans()}}</span> &nbsp;&nbsp; ⏳{{$post->estimated_read}} read </p>
       </div>
-      <img src="/storage/{{$post->image}}" alt="{!! $post->title !!}">
+      <figure class="progressive">
+        <img  class="progressive__img progressive--not-loaded" data-progressive="/storage/{{$post->image}}" src="/images/low.jpg" alt="{!! $post->title !!}">
+      </figure>
       <br/>
       {!! $post->body !!}
     </div>
   </div>
 
 @endsection
+@push('page_scripts')
+<script>
+</script>
+@endpush('page_scripts')
