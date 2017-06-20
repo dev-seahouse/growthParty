@@ -13,6 +13,7 @@
   $img-height-medium: rem-calc(300px);
   $img-height-large: rem-calc(390px);
   $profile-img-size: rem-calc(30px);
+  $want-side-by-side: false; // turn this on to get size by side layout
 
   display: flex;
   flex-direction: column;
@@ -31,8 +32,10 @@
     padding: $gutter-large;
     flex-grow: 1;
     text-align: center;
-    @include breakpoint("large") {
-      flex: 1 0 $contentWidth;
+    @if ($want-side-by-side) {
+      @include breakpoint("large") {
+        flex: 1 0 $contentWidth;
+      }
     }
   }
 
@@ -40,6 +43,12 @@
     padding-bottom: $gutter-medium;
     font-size: $title-font-size;
     border-bottom: $title-border;
+    color: black;
+    &:hover {
+      cursor: hand;
+      text-decoration: underline;
+      color: lighten(black,26%);
+    }
   }
   .card-image-container {
     flex-grow: 1;
@@ -72,7 +81,7 @@
   .info {
     margin: $gutter-small 0 $gutter-small auto;
     display: inline-block;
-    color:#808080; 
+    color: #808080;
     @include breakpoint('large') {
     }
   }
