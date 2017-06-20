@@ -135,5 +135,6 @@ $directions:('top','right', 'bottom','left');
 // overwrites progressively default height:100%
 .progressive__img {
   height: auto!important;
+  max-height: rem-calc(350px);
 }
 

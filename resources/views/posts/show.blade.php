@@ -23,7 +23,7 @@
 
 @section('content')
   <div class="l-padded row align-center fix-nav-cover-content">
-    <div class="small-12 medium-9 columns">
+    <div class="small-12 medium-10 columns">
       <h1>{!! $post->title !!}</h1>
       <!-- post header -->
       <div>
