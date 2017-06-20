@@ -7,7 +7,7 @@
 // mixins
 @import 'mixins';
 
-// foundation library
+// vendor styles
 @import 'settings/settings';
 @import 'foundation';
 
@@ -24,8 +24,10 @@
 @import 'layouts';
 
 // Component Styles
+@import 'components/button';
 @import 'components/slider';
 @import 'components/typed';
 @import 'components/header';
 @import 'components/footer';
 @import 'components/card';
+@import "components/navigation";
