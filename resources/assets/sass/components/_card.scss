@@ -8,7 +8,7 @@
   $gutter-small: rem-calc(10px);
   $gutter-medium: rem-calc(15px);
   $gutter-large: rem-calc(30px);
-  $title-font-size: 1.25rem;
+  $title-font-size: 1.5rem;
   $title-border: 2px solid $card-title-border-color;
   $img-height-medium: rem-calc(300px);
   $img-height-large: rem-calc(390px);
@@ -60,9 +60,9 @@
   }
 
   .footer {
-    text-align: left;
+    text-align: center;
     font-size: .8rem;
-    margin-top: 50px;
+    margin-top: 40px;
 
     @include breakpoint('large') {
       margin-left: 0;
