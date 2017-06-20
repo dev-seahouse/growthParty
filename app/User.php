@@ -36,7 +36,8 @@ class User extends Authenticatable
 
   public function getStoragePath()
   {
-    return self::storageFolderUrl.$this->id.'/';
+    return self::storageFolderUrl . $this->id . '/';
   }
+
 
 }
