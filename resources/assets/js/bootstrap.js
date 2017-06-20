@@ -8,12 +8,12 @@
 try {
   global.$ = global.jQuery = window.$ = window.jQuery = require('jquery')
   require('what-input')
+  window.Headroom = require('headroom.js')
 } catch (e) {
   console.log(e)
 }
 
 require('jquery.counterup')
-
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
