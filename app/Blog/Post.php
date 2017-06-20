@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Blog;
 
 use TCG\Voyager\Models\Post as Model;
 
