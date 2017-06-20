@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 @import 'node_modules/foundation-sites/scss/foundation';
-@import 'node_modules/motion-ui/motion-ui';
+// @import 'node_modules/motion-ui/motion-ui';
 
 $global-flexbox: true !global;
 @include foundation-global-styles;
@@ -47,5 +47,5 @@ $global-flexbox: true !global;
 @include foundation-float-classes;
 @include foundation-flex-classes;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
