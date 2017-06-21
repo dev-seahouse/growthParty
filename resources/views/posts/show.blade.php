@@ -55,7 +55,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Flowtype.js/1.1.0/flowtype.min.js"></script>
 <script>
   progressively.init()
-
   $('.text-container').flowtype({
     minimum : 600,
     maximum : 1200,
