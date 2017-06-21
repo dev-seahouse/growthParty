@@ -23,7 +23,7 @@
 
 @section('content')
   <div class="l-padded row align-center fix-nav-cover-content">
-    <div class="small-12 medium-6 columns">
+    <div class="small-12 medium-10 large-7 columns">
       <h1>{!! $post->title !!}</h1>
       <!-- post header -->
       <div>
@@ -59,7 +59,7 @@
     minimum : 600,
     maximum : 1200,
     minFont   : 12,
-    maxFont   : 30,
+    maxFont   : 35,
     fontRatio : 30
   });
 </script>
