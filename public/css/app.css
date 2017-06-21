@@ -8878,6 +8878,14 @@ ul.share-buttons .sr-only {
   text-align: center;
 }
 
+@media print, screen and (min-width: 64em) {
+  .card .card-content {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+  }
+}
+
 .card .title {
   padding-bottom: 0.9375rem;
   font-size: 1.5rem;

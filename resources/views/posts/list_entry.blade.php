@@ -1,4 +1,4 @@
-<div class="small-12 medium-6 columns">
+<div class="small-12 medium-6 l-padded columns">
   <!-- card component  start -->
   <div class="card" data-equalizer-watch>
       <a class="card-image-container" >

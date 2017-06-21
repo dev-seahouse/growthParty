@@ -1,4 +1,6 @@
 .card {
+  $want-side-by-side: true; // turn this on and refresh to get size by side layout
+
   $contentWidth: 50%;
   $card-image-width: 50%;
   $card-text: $warm-gray;
@@ -13,7 +15,6 @@
   $img-height-medium: rem-calc(300px);
   $img-height-large: rem-calc(390px);
   $profile-img-size: rem-calc(30px);
-  $want-side-by-side: false; // turn this on to get size by side layout
 
   display: flex;
   flex-direction: column;
