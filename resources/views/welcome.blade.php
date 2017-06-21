@@ -179,7 +179,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js" async></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js" async></script>
 
-  <script async>
+  <script>
     $(function(){
       // init typed js
       $(".typed").typed({
