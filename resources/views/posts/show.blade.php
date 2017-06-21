@@ -52,7 +52,7 @@
 @endsection
 @push('page_scripts')
 <script src="https://unpkg.com/progressively/dist/progressively.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Flowtype.js/1.1.0/flowtype.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Flowtype.js/1.1.0/flowtype.min.js" ></script>
 <script>
   progressively.init()
   $('.text-container').flowtype({

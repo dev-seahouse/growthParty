@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
     <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />we
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
@@ -51,7 +51,7 @@
       window.Laravel = {!!json_encode(['csrfToken' => csrf_token()])!!};
     </script>
     <!-- Hotjar Tracking Code for growthparty.co -->
-    <script>
+    <script async>
         (function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
             h._hjSettings={hjid:533964,hjsv:5};
@@ -62,7 +62,7 @@
         })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
     <!-- Google analytics Tracking Code for growthparty.co -->
-    <script>
+    <script async>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -74,7 +74,7 @@
     </script>
 
       <!— Start of HubSpot Embed Code —>
-      <script>
+      <script async>
         // HubSpot Script Loader. Please do not block this resource. See more: http://hubs.ly/H0702_H0
         function loadForm(){
             (function (id, src, attrs) {
@@ -140,7 +140,7 @@
       <!— End of HubSpot Embed Code —>
 
     <!--facebook analytics--->
-    <script>
+    <script async>
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '756709494453863',
