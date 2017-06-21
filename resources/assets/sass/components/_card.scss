@@ -1,5 +1,5 @@
 .card {
-  $want-side-by-side: true; // turn this on and refresh to get size by side layout
+  $want-side-by-side: false; // turn this on and refresh to get size by side layout
 
   $contentWidth: 50%;
   $card-image-width: 50%;
@@ -53,6 +53,9 @@
   }
   .card-image-container {
     flex-grow: 1;
+    img {
+      width: 100%;
+    }
     @include breakpoint("medium") {
       img {
         height: 100%;
