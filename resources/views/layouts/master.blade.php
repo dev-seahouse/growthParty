@@ -77,7 +77,7 @@
   var _token = '{!! Session::token() !!}'
   var _url = '{!! url("/") !!}'
 </script>
-<script src="{{ mix('/js/app.js') }}" defer></script>
+<script src="{{ mix('/js/app.js') }}"></script>
 
 <!-- page js libs/scripts -->
 @stack('page_scripts')
