@@ -23,7 +23,7 @@
 
 @section('content')
   <div class="l-padded row align-center fix-nav-cover-content">
-    <div class="small-12 medium-10 columns">
+    <div class="small-11 medium-8 columns">
       <h1>{!! $post->title !!}</h1>
       <!-- post header -->
       <div>
@@ -55,11 +55,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Flowtype.js/1.1.0/flowtype.min.js"></script>
 <script>
   progressively.init()
+
   $('.text-container').flowtype({
     minimum : 600,
     maximum : 1200,
-    minFont   : 13,
-    maxFont   : 40,
+    minFont   : 12,
+    maxFont   : 30,
     fontRatio : 30
   });
 </script>
