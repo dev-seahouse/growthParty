@@ -36,10 +36,7 @@
     @section('title') {{ config('app.name', 'Help business grow - growth party') }} @show
   </title>
   
-  
-  
   <!-- page specific styles -->
-  @stack('page_styles')
 
     <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -47,40 +44,40 @@
   <![endif]-->
   
   <!-- csrf script -->
-  <script>
+  <script async>
     window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!}
   </script>
-
 
 </head>
 
 <body>
 <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+@stack('page_styles')
 <div id="app">
   <!-- navigation bar -->
-@yield('nav')
-<!-- end navigation bar -->
+   @yield('nav')
+  <!-- end navigation bar -->
   
   <!-- header content, e.g jumpbotron , slider -->
-@yield('header')
-<!-- end header -->
+  @yield('header')
+  <!-- end header -->
   
   <!-- main content -->
-@yield('content')
-<!-- end main content -->
+  @yield('content')
+  <!-- end main content -->
   @include('layouts.footer')
 </div>
 <!-- webpack runtime -->
 <script src="{{ mix('/js/manifest.js') }}"></script>
 <!-- vendor libraries -->
 <script src="{{ mix('/js/vendor.js')}}"></script>
-<script src="{{ mix('js/foundation.js') }}"></script>
+<script src="{{ mix('/js/foundation.js') }}"></script>
 <!-- application wide script -->
 <script>
   var _token = '{!! Session::token() !!}'
   var _url = '{!! url("/") !!}'
 </script>
-<script src="{{ mix('/js/app.js') }}"></script>
+<script src="{{ mix('/js/app.js') }}" defer></script>
 
 <!-- page js libs/scripts -->
 @stack('page_scripts')
