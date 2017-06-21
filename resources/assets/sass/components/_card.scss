@@ -65,9 +65,16 @@
 
     @include breakpoint("large") {
       flex: 1 0 $card-image-width;
+      @if($want-side-by-side) {
+        height:100%;
+      }
       img {
         height: 100%;
         max-height: $img-height-large;
+        @if ($want-side-by-side){
+          width: auto;
+          max-height: 450px;
+        }
       }
     }
   }
