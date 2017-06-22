@@ -175,7 +175,7 @@
 
 @push('page_scripts')
 
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js" defer></script>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js" async></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js" async></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js" async></script>
