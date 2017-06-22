@@ -7,9 +7,8 @@
 <meta property="og:description" content="Help business owners. Risk-Free. Reap rewards">
 
 @push("page_styles")
-  <link  href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="preload" as="style" type="text/css" onload="this.rel='stylesheet'">
-  <link  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="preload" as="style" onload="this.rel='stylesheet'" type="text/css">
-  <link  href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.green.min.css" rel="preload" as="style" onload="this.rel='stylesheet'"  type="text/css">
+  <link  href="https://cdn.jsdelivr.net/npm/aos@2.1.1/dist/aos.min.css" rel="stylesheet" type="text/css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/combine/gh/OwlCarousel2/OwlCarousel2@2.2.1/dist/assets/owl.carousel.min.css,gh/OwlCarousel2/OwlCarousel2@2.2.1/dist/assets/owl.theme.green.min.css" as="style" onload="this.rel='stylesheet'" >
 @endpush
 
 @section('nav')
@@ -174,11 +173,8 @@
 @endsection
 
 @push('page_scripts')
-
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js" async></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js" async></script>
+  <script src="https://cdn.jsdelivr.net/g/jquery.typed.js@1.1.7,waypoints@4.0.1(jquery.waypoints.min.js)" async></script>
+  <script src="https://cdn.jsdelivr.net/combine/npm/aos@2.1.1/dist/aos.min.js,gh/OwlCarousel2/OwlCarousel2@2.2.1/dist/owl.carousel.min.js"></script>
 
   <script>
     $(function(){
