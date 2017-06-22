@@ -6,7 +6,6 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
-  <!-- fav icons -->
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png"/>
@@ -28,15 +27,13 @@
   <meta name="msapplication-square150x150logo" content="mstile-150x150.png"/>
   <meta name="msapplication-wide310x150logo" content="mstile-310x150.png"/>
   <meta name="msapplication-square310x310logo" content="mstile-310x310.png"/>
-  <!-- end fav icons -->
+
   <!-- CSRF Token -->
   <meta id="token" name="csrf-token" content="{{ csrf_token() }}">
   
   <title>
     @section('title') {{ config('app.name', 'Help business grow - growth party') }} @show
   </title>
-  
-  <!-- page specific styles -->
   
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -51,38 +48,35 @@
 </head>
 
 <body>
-<link href="{{ mix('css/app.css') }}" rel="stylesheet">
-@stack('page_styles')
+<!-- we insert these comment for the purpose of aid debugging -->
 <div id="app">
-  <!-- navigation bar -->
-@yield('nav')
-<!-- end navigation bar -->
-  
-  <!-- header content, e.g jumpbotron , slider -->
-@yield('header')
-<!-- end header -->
-  
-  <!-- main content -->
-@yield('content')
-<!-- end main content -->
+  <!----------    Navigation  ---------->
+  @yield('nav')
+  <!----------     Header     ---------->
+  @yield('header')
+  <!----------  Main Content  ---------->
+  @yield('content')
+  <!----------     footer  ------------>
   @include('layouts.footer')
 </div>
-<!-- webpack runtime -->
-<script src="{{ mix('/js/manifest.js') }}"></script>
-<!-- vendor libraries -->
-<script src="{{ mix('/js/vendor.js')}}"></script>
-<script src="{{ mix('/js/foundation.js') }}"></script>
-<!-- application wide script -->
+
+<link href="{{ mix('css/app.css') }}" rel="stylesheet">
+@stack('page_styles')
+
 <script>
   var _token = '{!! Session::token() !!}'
   var _url = '{!! url("/") !!}'
 </script>
-<script src="{{ mix('/js/app.js') }}"></script>
 
-<!-- page js libs/scripts -->
+<script src="{{ mix('/js/manifest.js') }}"></script>
+<script src="{{ mix('/js/vendor.js')}}"></script>
+<script src="{{ mix('/js/foundation.js') }}"></script>
+<script src="{{ mix('/js/app.js') }}"></script>
 @stack('page_scripts')
+
+<!-- Analytics -->
 <script src="{{mix('js/analytics.js')}}" async defer></script>
-<!-- Hotjar script loader for growthparty.co -->
+<!-- Hotjar script loader for growthparty.co need to be placed inline-->
 <script async defer>
   (function (h, o, t, j, a, r) {
     h.hj = h.hj || function () {(h.hj.q = h.hj.q || []).push(arguments)}
@@ -94,6 +88,5 @@
     a.appendChild(r)
   })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=')
 </script>
-<!-- End of HotJar script loader -->
 </body>
 </html>
