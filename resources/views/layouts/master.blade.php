@@ -45,10 +45,10 @@
   <script>
     window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!}
   </script>
-  <script src="{{mix('/js/loadCSS.js')}}"></script>
 </head>
 
 <body>
+<script src="{{mix('/js/loadCSS.js')}}"></script>
 <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
 @stack('page_styles')
 <!-- we insert these comment for the purpose of aid debugging -->
