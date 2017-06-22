@@ -22,3 +22,8 @@
   </div>
 @endsection
 
+@push('page_scripts')
+<script>
+  progressively.init();
+</script>
+@endpush

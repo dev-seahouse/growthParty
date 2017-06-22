@@ -24,8 +24,7 @@ mix.sass('resources/assets/sass/app.scss', 'public/css')
   .extract(['vue', 'axios', 'jquery', 'jquery.counterup','headroom.js'])
   .version()
 
-// combine vendor scripts that HAVE to be
-// compiled separately
+// combine vendor scripts that need to be compiled separately
 mix.combine(
   [
     'public/js/vendor.js',

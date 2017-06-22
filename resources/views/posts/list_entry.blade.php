@@ -2,7 +2,10 @@
   <!-- card component  start -->
   <div class="card" data-equalizer-watch>
       <a class="card-image-container" >
-      <img src="/storage/{{$post->image}}" alt="{{$post->title}}">
+        <figure class="progressive">
+          <img class="progressive__img progressive--not-loaded" data-progressive="/storage/{{$post->image}}"
+               src="/images/low.jpg" alt="{!! $post->title !!}">
+        </figure>
     </a>
     <!-- card content -->
     <div class="card-content">
