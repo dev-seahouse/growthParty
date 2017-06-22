@@ -120,8 +120,7 @@ return [
     |
     */
 
-    'log' =>'daily',
-  
+    'log' => 'daily',
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
@@ -174,6 +173,7 @@ return [
         Laracademy\Commands\MakeServiceProvider::class,
         GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
+        GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
         /*
          * Application Service Providers...
          */

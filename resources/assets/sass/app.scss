@@ -1,5 +1,7 @@
 // fonts
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+@import "node_modules/progressively/dist/progressively.min";
 
 // custom variables
 @import 'settings/custom_variables';
@@ -7,7 +9,7 @@
 // mixins
 @import 'mixins';
 
-// foundation library
+// vendor styles
 @import 'settings/settings';
 @import 'foundation';
 
@@ -24,9 +26,11 @@
 @import 'layouts';
 
 // Component Styles
+@import 'components/button';
 @import 'components/slider';
 @import 'components/typed';
 @import 'components/header';
 @import 'components/footer';
 @import 'components/card';
 @import 'components/profileUploader';
+@import "components/navigation";

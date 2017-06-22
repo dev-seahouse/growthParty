@@ -3,11 +3,12 @@
 @section('title')
   Help business grow - growth party
 @endsection
+<meta property="og:title" content="Growth Party - Sales of the Future">
+<meta property="og:description" content="Help business owners. Risk-Free. Reap rewards">
 
 @push("page_styles")
-  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.green.min.css">
+  <link  href="https://cdn.jsdelivr.net/npm/aos@2.1.1/dist/aos.min.css" rel="stylesheet" type="text/css">
+  <link rel="preload" href="https://cdn.jsdelivr.net/combine/gh/OwlCarousel2/OwlCarousel2@2.2.1/dist/assets/owl.carousel.min.css,gh/OwlCarousel2/OwlCarousel2@2.2.1/dist/assets/owl.theme.green.min.css" as="style" onload="this.rel='stylesheet'" >
 @endpush
 
 @section('nav')
@@ -17,19 +18,7 @@
 
 @section('content')
   <!-- fullscreen header -->
-  <div class="full-screen-header">
-  <div>
-                            {{-- @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                                 @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif  --}}
-  </div>
+  <div class="full-screen-header m-t-30">
     <img src="{{ asset('images/partybg.png') }}" class="header-bg" alt="color background of header">
     <div class="row column l-padded">
 
@@ -146,7 +135,7 @@
   <!-- end why join us -->
 
   <!-- Stats -->
-  <div class="l-medium-v-padded row expanded medium-unstack bitmap-bg primary-text">
+  <div class="l-medium-v-padded row expanded medium-unstack bitmap-bg secondary-text">
     <div class="l-padded columns text-center">
       <div class="stat"><span class="stat-animated">3,422</span></div>
       <p class="white-text">Flourishing companies</p>
@@ -184,11 +173,9 @@
 @endsection
 
 @push('page_scripts')
+  <script src="https://cdn.jsdelivr.net/g/jquery.typed.js@1.1.7,waypoints@4.0.1(jquery.waypoints.min.js)" async></script>
+  <script src="https://cdn.jsdelivr.net/combine/npm/aos@2.1.1/dist/aos.min.js,gh/OwlCarousel2/OwlCarousel2@2.2.1/dist/owl.carousel.min.js"></script>
 
-  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></script>
   <script>
     $(function(){
       // init typed js

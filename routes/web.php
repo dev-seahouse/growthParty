@@ -32,6 +32,7 @@ Route::post('updateinfo', 'SetupController@updateinfo');
 //Route::get('accountsetup', 'AccountSetup@updateinfo');
 
 /*----------  Blog Routes  ----------*/
+
 Route::group(['prefix' => 'blog'],function(){
   Route::get('/', 'PostController@index')->name('blog');
   Route::get('/{post}', 'PostController@show');

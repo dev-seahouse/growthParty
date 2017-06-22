@@ -9,7 +9,7 @@
       </ul>
 
       <div class="text-center">
-        <p class="secondary-text">&copy;2017 Growth Party. All rights reserved.</p>
+        <p >&copy;2017 Growth Party. All rights reserved.</p>
       </div>
 
   </div>
