@@ -21,6 +21,11 @@ mix.sass('resources/assets/sass/app.scss', 'public/css')
   .js('resources/assets/js/foundation.js', 'public/foundation-dist.js')
   .js('resources/assets/js/app.js', 'public/js')
   .js('resources/assets/js/analytics.js','public/js')
+  .combine([
+    'node_modules/fg-loadcss/src/loadCSS',
+    'node_modules/fg-loadcss/src/cssrelpreload',
+    'node_modules/fg-loadcss/src/onloadCSS'],
+    'public/js/loadCSS.js')
   .extract(['vue', 'axios', 'jquery', 'jquery.counterup','headroom.js'])
   .version()
 
