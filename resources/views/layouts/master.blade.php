@@ -48,9 +48,6 @@
 </head>
 
 <body>
-<script src="{{mix('/js/loadCSS.js')}}"></script>
-<link href="{{ mix('/css/app.css') }}" rel="stylesheet">
-@stack('page_styles')
 <!-- we insert these comment for the purpose of aid debugging -->
 <div id="app">
   <!----------    Navigation  ---------->
@@ -63,7 +60,9 @@
   @include('layouts.footer')
 </div>
 
-
+<script src="{{mix('/js/loadCSS.js')}}"></script>
+<link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+@stack('page_styles')
 <script>
   var _token = '{!! Session::token() !!}'
   var _url = '{!! url("/") !!}'
