@@ -7,9 +7,9 @@
 <meta property="og:description" content="Help business owners. Risk-Free. Reap rewards">
 
 @push("page_styles")
-  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.green.min.css">
+  <link  onload="this.rel='stylesheet'" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="preload" as="style">
+  <link  onload="this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="preload" as="style">
+  <link  onload="this.rel='stylesheet'" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.green.min.css" rel="preload" as="style">
 @endpush
 
 @section('nav')
@@ -19,7 +19,7 @@
 
 @section('content')
   <!-- fullscreen header -->
-  <div class="full-screen-header">
+  <div class="full-screen-header m-t-30">
     <img src="{{ asset('images/partybg.png') }}" class="header-bg" alt="color background of header">
     <div class="row column l-padded">
 

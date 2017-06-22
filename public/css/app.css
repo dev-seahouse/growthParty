@@ -8778,6 +8778,7 @@ ul.share-buttons .sr-only {
   height: 60vh;
   overflow: hidden;
   z-index: 100;
+  margin-top: 66px;
 }
 
 .full-screen-header img.header-bg {
