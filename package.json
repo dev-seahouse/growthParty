@@ -24,11 +24,11 @@
     "jquery.counterup": "^2.1.0",
     "laravel-mix": "^1.0.3",
     "lodash": "^4.17.4",
-    "vue": "^2.3.4"
-  },
-  "dependencies": {
+    "vue": "^2.3.4",
     "fg-loadcss": "^1.3.1",
     "progressively": "^1.1.2"
+  },
+  "dependencies": {
   },
   "false": {}
 }
