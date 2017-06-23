@@ -7,18 +7,24 @@
   <navigation></navigation>
 @endsection
 
+@section('meta')
+  <meta property="og:url" content="https://www.growthparty.co/blog/{{$post->slug}}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{str_limit($post->title)}}">
+  <meta property="og:description" content="{{$post->meta_description}}">
+  <meta property="og:image" itemprop="image" content="https://www.growthparty.co/storage/{{$post->image}}">
+  <meta property="fb:app_id" content="756709494453863"/>
+  <meta property="description" content="{{$post->meta_description}}">
+  <meta property="title" content="{{$post->seo_title}}">
+  <meta name="keywords" content="{{ $post->meta_keywords }}">
+  <meta name="author" content="{{ $post->author->name }}">
+@endsection
 
 @section('title')
   {{str_limit($post->title)}}
 @endsection
 
-<meta property="og:url" content="https://www.growthparty.co/blog/{{$post->slug}}">
-<meta property="og:type" content="article">
-<meta property="og:title" content="{{str_limit($post->title)}}">
-<meta property="og:description" content="{{str_limit($post->excerpt)}}">
-<meta property="og:image" itemprop="image" content="https://www.growthparty.co/storage/{{$post->image}}">
-<meta property="fb:app_id" content="756709494453863"/>
-<meta property="description" content="{{str_limit($post->excerpt)}}">
+
 
 @section('content')
   <div class="l-padded row align-center fix-nav-cover-content">

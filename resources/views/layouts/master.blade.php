@@ -6,7 +6,6 @@
   <meta charset="utf-8"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  
   <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png"/>
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png"/>
@@ -21,13 +20,17 @@
   <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"/>
   <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128"/>
   <link rel="icon" href="/favicon.ico">
-  <meta name="application-name" content="&nbsp;"/>
   <meta name="msapplication-TileColor" content="#FFFFFF"/>
   <meta name="msapplication-TileImage" content="mstile-144x144.png"/>
   <meta name="msapplication-square70x70logo" content="mstile-70x70.png"/>
   <meta name="msapplication-square150x150logo" content="mstile-150x150.png"/>
   <meta name="msapplication-wide310x150logo" content="mstile-310x150.png"/>
   <meta name="msapplication-square310x310logo" content="mstile-310x310.png"/>
+
+  <meta name="application-name" content="Growth Party"/>
+  <meta property="og:site_name" content="Growth Party"/>
+  
+  @yield('meta')
 
   <!-- CSRF Token -->
   <meta id="token" name="csrf-token" content="{{ csrf_token() }}">

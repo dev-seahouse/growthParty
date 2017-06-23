@@ -31,8 +31,6 @@ Route::group(['prefix' => 'blog'],function(){
   Route::get('/{post}', 'PostController@show');
 });
 
-
-
 Route::group(['prefix' => 'admin','middleware' => 'doNotCacheResponse'], function () {
     Voyager::routes();
 });
