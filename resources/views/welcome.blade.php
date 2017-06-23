@@ -25,7 +25,7 @@
       <div class="l-h-padded columns">
 
 
-        <h1 class="jumbotron-text">Fund your <span class="pale-red-text typed"> passion </span> <br>by growing business.</h1>
+        <h1 class="jumbotron-text">Fund your <span class="pale-red-text typed"> passion </span> <br>by growing businesses.</h1>
 
         <h5 class="l-v-padded">
           <strong class="dark-text">Help business owners. Risk-Free. Reap rewards.</strong>
