@@ -3,8 +3,11 @@
 @section('title')
   Help business grow - growth party
 @endsection
-<meta property="og:title" content="Growth Party - Sales of the Future">
-<meta property="og:description" content="Help business owners. Risk-Free. Reap rewards">
+
+@section('meta')
+  <meta property="og:title" content="Growth Party - Sales of the Future">
+  <meta property="og:description" content="Help business owners. Risk-Free. Reap rewards">
+@endsection
 
 @push("page_styles")
   <link  href="https://cdn.jsdelivr.net/npm/aos@2.1.1/dist/aos.min.css" rel="stylesheet" type="text/css">
