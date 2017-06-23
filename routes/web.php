@@ -33,6 +33,6 @@ Route::group(['prefix' => 'blog'],function(){
 
 
 
-Route::group(['prefix' => 'admin'], function () {
+Route::group(['prefix' => 'admin','middleware' => 'doNotCacheResponse'], function () {
     Voyager::routes();
 });
