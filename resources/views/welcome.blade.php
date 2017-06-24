@@ -7,6 +7,7 @@
 @section('meta')
   <meta property="og:title" content="Growth Party - Sales of the Future">
   <meta property="og:description" content="Help business owners. Risk-Free. Reap rewards">
+  <meta name="description" content="Help business owners. Risk-Free. Reap rewards">
 @endsection
 
 @push("page_styles")
