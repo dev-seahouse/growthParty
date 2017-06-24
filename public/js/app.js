@@ -358,7 +358,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Flash.vue"
+Component.options.__file = "C:\\xampp\\htdocs\\growthParty\\resources\\assets\\js\\components\\Flash.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -393,7 +393,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Modal.vue"
+Component.options.__file = "C:\\xampp\\htdocs\\growthParty\\resources\\assets\\js\\components\\Modal.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Modal.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -428,7 +428,7 @@ var Component = __webpack_require__(3)(
   /* cssModules */
   null
 )
-Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Navigation.vue"
+Component.options.__file = "C:\\xampp\\htdocs\\growthParty\\resources\\assets\\js\\components\\Navigation.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -703,7 +703,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "role": "alert"
     }
-  }, [_c('strong', [_vm._v("Success")]), _vm._v("\n    " + _vm._s(_vm.body) + "\n")])
+  }, [_c('strong', [_vm._v("Success")]), _vm._v("\r\n    " + _vm._s(_vm.body) + "\r\n")])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -23,6 +24,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('welcome/dashboard');
+        $user = Auth::user();
+        $programsOfUser = $user->programs;
+        $serviceProvider = $programsOfUser->first()->serviceProvider;
+
+        return view('welcome/dashboard', compact('user', 'programsOfUser', 'serviceProvider'));
     }
 }

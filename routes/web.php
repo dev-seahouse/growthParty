@@ -19,12 +19,7 @@ Route::get('/setup','SetupController@index')->name('setup');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::post('/uploadProfilePic','SetupController@uploadProfilePic');
 
-/*----------  Admin routes  ----------*/
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
-
-/*----------  Profile Setup Routes  ----------*/
+/*----------  Admin route tes  ----------*/
 //Route::get('accountsetup', 'AccountSe@index')->name('accountsetup');
 Route::post('updateinfo', 'SetupController@updateinfo');
 //Route::get('accountsetup', 'AccountSetup@updateinfo');

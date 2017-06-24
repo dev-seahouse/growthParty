@@ -5,4 +5,6 @@
     <li>If user try to access this page without authenticated, redirect to /home </li>
     <li>If user is authenticated but have not setup, redirect to setup</li>
   </ul>
+
+  <p>{{ $user->name}} {{ $programsOfUser}}</p>
 @endsection
