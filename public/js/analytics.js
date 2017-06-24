@@ -16,10 +16,10 @@ webpackJsonp([3],{
 })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
 ga('create', 'UA-32995284-5', 'auto');
-ga('send', 'pageview');
+ga('send', 'pageview'
 
 // facebook connect api init
-window.fbAsyncInit = function () {
+);window.fbAsyncInit = function () {
   FB.init({
     appId: '756709494453863',
     xfbml: true,
