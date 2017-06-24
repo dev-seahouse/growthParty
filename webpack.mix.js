@@ -27,15 +27,18 @@ mix.sass('resources/assets/sass/app.scss', 'public/css')
     'node_modules/fg-loadcss/src/onloadCSS.js'],
     'public/js/loadCSS.js')
   .extract(['vue', 'axios', 'jquery', 'jquery.counterup','headroom.js'])
-  .version()
 
 // combine vendor scripts that need to be compiled separately
 mix.combine(
   [
-    'public/js/vendor.js',
-    'node_modules/progressively/dist/progressively.min.js',
-    'public/foundation-dist.js'
+    'public/js/vendor',
+    'node_modules/progressively/dist/progressively.min',
+    'public/foundation-dist'
   ],
   'public/js/vendor.js')
+
+if (mix.inProduction()) {
+    mix.version();
+}
 
 
