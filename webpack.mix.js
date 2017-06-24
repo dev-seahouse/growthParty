@@ -16,6 +16,9 @@ mix.autoload({
  | file for the application as well as bundling up all the JS files.
  |
  */
+if (mix.inProduction()) {
+  mix.version();
+}
 mix.copy('resources/assets/img/', 'public/images/')
 mix.sass('resources/assets/sass/app.scss', 'public/css')
   .js('resources/assets/js/foundation.js', 'public/foundation-dist.js')
@@ -31,14 +34,12 @@ mix.sass('resources/assets/sass/app.scss', 'public/css')
 // combine vendor scripts that need to be compiled separately
 mix.combine(
   [
-    'public/js/vendor',
-    'node_modules/progressively/dist/progressively.min',
-    'public/foundation-dist'
+    'public/js/vendor.js',
+    'node_modules/progressively/dist/progressively.min.js',
+    'public/foundation-dist.js'
   ],
   'public/js/vendor.js')
 
-if (mix.inProduction()) {
-    mix.version();
-}
+
 
 

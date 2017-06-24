@@ -1,6 +1,14 @@
 webpackJsonp([3],{
 
-/***/ "./resources/assets/js/analytics.js":
+/***/ 61:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(62);
+
+
+/***/ }),
+
+/***/ 62:
 /***/ (function(module, exports) {
 
 // google analytics
@@ -135,14 +143,6 @@ window.onbeforeunload = function () {
   localStorage.clear();
 };
 
-/***/ }),
-
-/***/ 2:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__("./resources/assets/js/analytics.js");
-
-
 /***/ })
 
-},[2]);
+},[61]);

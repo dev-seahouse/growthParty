@@ -1,90 +1,6 @@
 webpackJsonp([2],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Flash.vue":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            body: "Temp for now"
-        };
-    },
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Navigation.vue":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function mounted() {
-    var header = document.querySelector("nav.navbar");
-    var headroom = new Headroom(header, {
-      "offset": 205,
-      "tolerance": 5,
-      "classes": {
-        "initial": "animated",
-        "pinned": "slideDown",
-        "unpinned": "slideUp"
-      }
-    });
-    headroom.init();
-  },
-
-  methods: {}
-
-});
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/component-normalizer.js":
+/***/ 13:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -182,119 +98,93 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-24338ddb\"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Navigation.vue":
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('nav', {
-    staticClass: "navbar fixed"
-  }, [_c('div', {
-    staticClass: "title-bar drop-shadow",
-    attrs: {
-      "data-responsive-toggle": "top-menu",
-      "data-hide-for": "medium"
-    }
-  }, [_c('button', {
-    staticClass: "menu-icon",
-    attrs: {
-      "type": "button",
-      "data-toggle": "top-menu"
-    }
-  }), _vm._v(" "), _c('a', {
-    staticClass: "flex-pull-left",
-    attrs: {
-      "href": "/"
-    }
-  }, [_c('img', {
-    staticClass: "l-logo-img",
-    attrs: {
-      "src": "/images/logo.jpe",
-      "alt": ""
-    }
-  })]), _vm._v(" "), _c('h4', {
-    staticClass: "title-bar-title l-logo-text show-for-medium"
-  }, [_vm._v("Growth Party")]), _vm._v(" "), _c('div', {
-    attrs: {
-      "data-magellan": ""
-    }
-  }, [_c('a', {
-    staticClass: "register button m-b-0",
-    attrs: {
-      "href": "/blog"
-    }
-  }, [_vm._v("Visit Blog")])])]), _vm._v(" "), _c('div', {
-    staticClass: "top-bar drop-shadow p-v-0",
-    attrs: {
-      "id": "top-menu"
-    }
-  }, [_c('div', {
-    staticClass: "top-bar-left"
-  }, [_c('ul', {
-    staticClass: "vertical medium-horizontal menu align-right",
-    attrs: {
-      "data-dropdown-menu": ""
-    }
-  }, [_c('li', {
-    staticClass: "menu-text no-padding show-for-medium flex-pull-left"
-  }, [_c('a', {
-    staticClass: "logo",
-    attrs: {
-      "href": "/"
-    }
-  }, [_c('img', {
-    staticClass: "l-logo-img",
-    attrs: {
-      "src": "/images/logo.jpe",
-      "alt": "company logo"
-    }
-  }), _c('span', {
-    staticClass: "logo-text"
-  }, [_vm._v("Growth Party")])])])])]), _vm._v(" "), _c('div', {
-    attrs: {
-      "data-magellan": ""
-    }
-  }, [_c('a', {
-    staticClass: "register button show-for-medium m-b-0",
-    attrs: {
-      "data-open": "registerModal",
-      "href": "/blog"
-    }
-  }, [_vm._v("Visit Blog")])])])])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-24338ddb", module.exports)
-  }
-}
+module.exports = __webpack_require__(34);
+
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-7beea40e\"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Flash.vue":
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "alert callout",
-    attrs: {
-      "role": "alert"
-    }
-  }, [_c('strong', [_vm._v("Success")]), _vm._v("\n    " + _vm._s(_vm.body) + "\n")])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-7beea40e", module.exports)
+/* WEBPACK VAR INJECTION */(function($) {/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
+
+__webpack_require__(35);
+window.Vue = __webpack_require__(12
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it te
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+);Vue.component('flash', __webpack_require__(55));
+Vue.component('navigation', __webpack_require__(58));
+
+var app = new Vue({
+  el: '#app',
+  mounted: function mounted() {
+    $(document).foundation();
   }
-}
+});
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
 
-/***/ "./node_modules/what-input/dist/what-input.js":
+/***/ 35:
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, global) {// window._ = require('lodash');
+
+/**
+ * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+try {
+  global.$ = global.jQuery = window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(0);
+  __webpack_require__(36);
+  window.Headroom = __webpack_require__(4);
+} catch (e) {
+  console.log(e);
+}
+
+__webpack_require__(5
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+
+);window.axios = __webpack_require__(6);
+window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+/**
+ * Echo exposes an expressive API for subscribing to channels and listening
+ * for events that are broadcast by Laravel. Echo and event broadcasting
+ * allows your team to easily build robust real-time web applications.
+ */
+
+// import Echo from 'laravel-echo'
+
+// window.Pusher = require('pusher-js');
+
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: 'your-pusher-key'
+// });
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(3)))
+
+/***/ }),
+
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -615,93 +505,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ }),
 
-/***/ "./resources/assets/js/app.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function($) {/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
-__webpack_require__("./resources/assets/js/bootstrap.js");
-window.Vue = __webpack_require__("./node_modules/vue/dist/vue.common.js"
-
-/**
- * Next, we will create a fresh Vue application instance and attach it te
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-);Vue.component('flash', __webpack_require__("./resources/assets/js/components/Flash.vue"));
-Vue.component('navigation', __webpack_require__("./resources/assets/js/components/Navigation.vue"));
-
-var app = new Vue({
-  el: '#app',
-  mounted: function mounted() {
-    $(document).foundation();
-  }
-});
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/jquery/dist/jquery.js")))
-
-/***/ }),
-
-/***/ "./resources/assets/js/bootstrap.js":
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, global) {// window._ = require('lodash');
-
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
- */
-try {
-  global.$ = global.jQuery = window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__("./node_modules/jquery/dist/jquery.js");
-  __webpack_require__("./node_modules/what-input/dist/what-input.js");
-  window.Headroom = __webpack_require__("./node_modules/headroom.js/dist/headroom.js");
-} catch (e) {
-  console.log(e);
-}
-
-__webpack_require__("./node_modules/jquery.counterup/jquery.counterup.js"
-/**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
- */
-
-);window.axios = __webpack_require__("./node_modules/axios/index.js");
-window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
-/**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
- */
-
-// import Echo from 'laravel-echo'
-
-// window.Pusher = require('pusher-js');
-
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: 'your-pusher-key'
-// });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/jquery/dist/jquery.js"), __webpack_require__("./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
-/***/ "./resources/assets/js/components/Flash.vue":
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var Component = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")(
+var Component = __webpack_require__(13)(
   /* script */
-  __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Flash.vue"),
+  __webpack_require__(56),
   /* template */
-  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-7beea40e\"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Flash.vue"),
+  __webpack_require__(57),
   /* styles */
   null,
   /* scopeId */
@@ -734,15 +546,62 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ "./resources/assets/js/components/Navigation.vue":
+/***/ 56:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            body: "Temp for now"
+        };
+    },
+    mounted: function mounted() {
+        console.log('Component mounted.');
+    }
+});
+
+/***/ }),
+
+/***/ 57:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "alert callout",
+    attrs: {
+      "role": "alert"
+    }
+  }, [_c('strong', [_vm._v("Success")]), _vm._v("\n    " + _vm._s(_vm.body) + "\n")])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-7beea40e", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 58:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var Component = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")(
+var Component = __webpack_require__(13)(
   /* script */
-  __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/Navigation.vue"),
+  __webpack_require__(59),
   /* template */
-  __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-24338ddb\"}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Navigation.vue"),
+  __webpack_require__(60),
   /* styles */
   null,
   /* scopeId */
@@ -775,12 +634,153 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 1:
+/***/ 59:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    var header = document.querySelector("nav.navbar");
+    var headroom = new Headroom(header, {
+      "offset": 205,
+      "tolerance": 5,
+      "classes": {
+        "initial": "animated",
+        "pinned": "slideDown",
+        "unpinned": "slideUp"
+      }
+    });
+    headroom.init();
+  },
+
+  methods: {}
+
+});
+
+/***/ }),
+
+/***/ 60:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./resources/assets/js/app.js");
-
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('nav', {
+    staticClass: "navbar fixed"
+  }, [_c('div', {
+    staticClass: "title-bar drop-shadow",
+    attrs: {
+      "data-responsive-toggle": "top-menu",
+      "data-hide-for": "medium"
+    }
+  }, [_c('button', {
+    staticClass: "menu-icon",
+    attrs: {
+      "type": "button",
+      "data-toggle": "top-menu"
+    }
+  }), _vm._v(" "), _c('a', {
+    staticClass: "flex-pull-left",
+    attrs: {
+      "href": "/"
+    }
+  }, [_c('img', {
+    staticClass: "l-logo-img",
+    attrs: {
+      "src": "/images/logo.jpe",
+      "alt": ""
+    }
+  })]), _vm._v(" "), _c('h4', {
+    staticClass: "title-bar-title l-logo-text show-for-medium"
+  }, [_vm._v("Growth Party")]), _vm._v(" "), _c('div', {
+    attrs: {
+      "data-magellan": ""
+    }
+  }, [_c('a', {
+    staticClass: "register button m-b-0",
+    attrs: {
+      "href": "/blog"
+    }
+  }, [_vm._v("Visit Blog")])])]), _vm._v(" "), _c('div', {
+    staticClass: "top-bar drop-shadow p-v-0",
+    attrs: {
+      "id": "top-menu"
+    }
+  }, [_c('div', {
+    staticClass: "top-bar-left"
+  }, [_c('ul', {
+    staticClass: "vertical medium-horizontal menu align-right",
+    attrs: {
+      "data-dropdown-menu": ""
+    }
+  }, [_c('li', {
+    staticClass: "menu-text no-padding show-for-medium flex-pull-left"
+  }, [_c('a', {
+    staticClass: "logo",
+    attrs: {
+      "href": "/"
+    }
+  }, [_c('img', {
+    staticClass: "l-logo-img",
+    attrs: {
+      "src": "/images/logo.jpe",
+      "alt": "company logo"
+    }
+  }), _c('span', {
+    staticClass: "logo-text"
+  }, [_vm._v("Growth Party")])])])])]), _vm._v(" "), _c('div', {
+    attrs: {
+      "data-magellan": ""
+    }
+  }, [_c('a', {
+    staticClass: "register button show-for-medium m-b-0",
+    attrs: {
+      "data-open": "registerModal",
+      "href": "/blog"
+    }
+  }, [_vm._v("Visit Blog")])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-24338ddb", module.exports)
+  }
+}
 
 /***/ })
 
-},[1]);
+},[33]);
