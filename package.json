@@ -29,6 +29,8 @@
     "progressively": "^1.1.2",
     "parsleyjs": "^2.7.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jquery-steps": "git://github.com/rstaib/jquery-steps.git#master"
+  },
   "false": {}
 }
