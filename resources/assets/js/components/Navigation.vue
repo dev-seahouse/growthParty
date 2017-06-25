@@ -117,76 +117,74 @@
 </template>
 
 <script>
-
   export default {
     data() {
       return {
-        loginId: "",
-        password: "",
-        passError: "",
-        idError: ""
-      }
+        loginId: '',
+        password: '',
+        passError: '',
+        idError: ''
+      };
     },
-    mounted: function () {
-      var header = document.querySelector("nav.navbar");
-      var headroom = new Headroom(header,{
-          "offset": 205,
-          "tolerance": 5,
-          "classes": {
-            "initial": "animated",
-            "pinned": "slideDown",
-            "unpinned": "slideUp"
-          }
+    mounted() {
+      const header = this.$el;
+      const headroom = new Headroom(header, {
+        offset: 205,
+        tolerance: 5,
+        classes: {
+          initial: 'animated',
+          pinned: 'slideDown',
+          unpinned: 'slideUp'
         }
-      );
+      });
 
-      headroom.init()
+      headroom.init();
 
-      $('.top-bar').on('sticky.zf.stuckto:top', function () {
-        $(this).addClass('shrink')
-        $('top-bar-left').addClass('shrink')
-      }).on('sticky.zf.unstuckfrom:top', function () {
+      $('.top-bar').on('sticky.zf.stuckto:top', function() {
+        $(this).addClass('shrink');
+        $('top-bar-left').addClass('shrink');
+      }).on('sticky.zf.unstuckfrom:top', function() {
         $(this).removeClass('shrink');
-      })
+      });
       $('.step-app').steps({
-        onFinish: function () {
-          $('#registerForm').submit()
+        onFinish() {
+          $('#registerForm').submit();
         },
-        onChange: function (currentIndex, newIndex, stepDirection) {
-          if (currentIndex === 0 && stepDirection == 'forward') {
-            let mobile = $('#js-reg-mobile').val()
+        onChange(currentIndex, newIndex, stepDirection) {
+          if (currentIndex === 0 && stepDirection === 'forward') {
+            const mobile = $('#js-reg-mobile').val();
             axios.post('/otp/send', {
-              mobile: mobile
+              mobile
             })
-              .then(function (response) {
-                console.log(response)
+              .then((response) => {
+                console.log(response);
               })
-              .catch(function (response) {
-                console.log(response)
-              })
+              .catch((response) => {
+                console.log(response);
+              });
           }
-          return true
+          return true;
         }
-      })
+      });
     },
     methods: {
-      onSubmit () {
-        axios.post("/login", {
+      onSubmit() {
+        axios.post('/login', {
           loginId: this.loginId,
           password: this.password
         }).then(response => {
-          window.location.replace('/dashboard')
+          window.location.replace('/dashboard');
         }).catch(error => {
-          console.log(error.response.data)
-          error = error.response.data
-          this.idError = error.mobile && (error.mobile || error.mobile.pop()) ||
-            error.email && (error.email || error.email.pop())
+          console.log(error.response.data);
+          error = error.response.data;
+          this.idError = (error.mobile && (error.mobile || error.mobile.pop())) ||
+                         (error.email && (error.email || error.email.pop()));
           if (Array.isArray(this.idError)) {
-            this.idError = this.idError.toString()
+            this.idError = this.idError.toString();
           }
-          this.passError = error.password && error.password.pop() || ""
-        })
+          this.passError = (error.password && error.password.pop()) || '';
+        });
       }
     }
-  }
+  };
 </script>
