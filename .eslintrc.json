@@ -6,11 +6,12 @@
     "html"
   ],
   "globals" : {
-    "$" : true,
-    "Jquery" : true,
-    "Vue" : true,
-    "axios":true,
-    "Fondation":true
+    "$": true,
+    "Jquery": true,
+    "Vue": true,
+    "axios": true,
+    "Fondation": true,
+    "Headroom": true
   },
   "rules": {
     "indent": [
