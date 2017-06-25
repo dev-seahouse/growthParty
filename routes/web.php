@@ -36,6 +36,7 @@ Route::post("/setup/removeProfilePic", 'SetupController@removeUploadedImages');
 Route::post('/updateinfo', 'SetupController@updateinfo');
 
 /*----------  Blog Routes  ----------*/
+
 Route::group(['prefix' => 'blog'],function(){
   Route::get('/', 'PostController@index')->name('blog');
   Route::get('/{post}', 'PostController@show');

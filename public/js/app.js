@@ -1,14 +1,14 @@
 webpackJsonp([2],{
 
-/***/ 34:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(35);
+module.exports = __webpack_require__(34);
 
 
 /***/ }),
 
-/***/ 35:
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {/**
@@ -17,12 +17,12 @@ module.exports = __webpack_require__(35);
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(36);
-window.Vue = __webpack_require__(12);
+__webpack_require__(35);
+window.Vue = __webpack_require__(13);
 
 // plugins
+__webpack_require__(55);
 __webpack_require__(56);
-__webpack_require__(57);
 // define global mixin
 Vue.mixin({
   data: function data() {
@@ -33,9 +33,9 @@ Vue.mixin({
     };
   }
 });
-Vue.component('flash', __webpack_require__(58));
-Vue.component('navigation', __webpack_require__(61));
-Vue.component('modal', __webpack_require__(64));
+Vue.component('flash', __webpack_require__(57));
+Vue.component('navigation', __webpack_require__(60));
+Vue.component('modal', __webpack_require__(63));
 
 var app = new Vue({
   el: '#app',
@@ -50,7 +50,7 @@ var app = new Vue({
 
 /***/ }),
 
-/***/ 36:
+/***/ 35:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_provided_window_dot_jQuery, global) {// window._ = require('lodash');
@@ -62,20 +62,20 @@ var app = new Vue({
  */
 try {
   global.$ = global.jQuery = window.$ = __webpack_provided_window_dot_jQuery = __webpack_require__(0);
-  __webpack_require__(37);
+  __webpack_require__(36);
+  window.Headroom = __webpack_require__(5);
 } catch (e) {
   console.log(e);
 }
 
-__webpack_require__(5);
-
+__webpack_require__(6);
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(6);
+window.axios = __webpack_require__(7);
 window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -97,7 +97,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ 37:
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -562,7 +562,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 56:
+/***/ 55:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -656,7 +656,7 @@ module.exports = function normalizeComponent (
 
 /***/ }),
 
-/***/ 57:
+/***/ 56:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/*!
@@ -3126,15 +3126,15 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 /***/ }),
 
-/***/ 58:
+/***/ 57:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(4)(
   /* script */
-  __webpack_require__(59),
+  __webpack_require__(58),
   /* template */
-  __webpack_require__(60),
+  __webpack_require__(59),
   /* styles */
   null,
   /* scopeId */
@@ -3167,7 +3167,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 59:
+/***/ 58:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3193,7 +3193,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 60:
+/***/ 59:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -3214,15 +3214,15 @@ if (false) {
 
 /***/ }),
 
-/***/ 61:
+/***/ 60:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(4)(
   /* script */
-  __webpack_require__(62),
+  __webpack_require__(61),
   /* template */
-  __webpack_require__(63),
+  __webpack_require__(62),
   /* styles */
   null,
   /* scopeId */
@@ -3255,30 +3255,12 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 62:
+/***/ 61:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* WEBPACK VAR INJECTION */(function($) {//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -3409,6 +3391,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   mounted: function mounted() {
+    var header = document.querySelector("nav.navbar");
+    var headroom = new Headroom(header, {
+      "offset": 205,
+      "tolerance": 5,
+      "classes": {
+        "initial": "animated",
+        "pinned": "slideDown",
+        "unpinned": "slideUp"
+      }
+    });
+
+    headroom.init();
+
     $('.top-bar').on('sticky.zf.stuckto:top', function () {
       $(this).addClass('shrink');
       $('top-bar-left').addClass('shrink');
@@ -3459,11 +3454,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 63:
+/***/ 62:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('nav', [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('modal', {
+  return _c('nav', {
+    staticClass: "navbar fixed"
+  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('modal', {
     staticClass: "small",
     attrs: {
       "id": "loginModal",
@@ -3660,25 +3657,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("Register")])])])])])], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "hide-for-medium",
-    attrs: {
-      "data-sticky-container": ""
-    }
-  }, [_c('div', {
-    staticStyle: {
-      "width": "100%"
-    },
-    attrs: {
-      "data-sticky": "",
-      "data-sticky-on": "small",
-      "data-sticky": "",
-      "data-top-anchor": "1",
-      "data-options": "marginTop:0"
-    }
-  }, [_c('div', {
     staticClass: "title-bar drop-shadow",
     attrs: {
-      "data-responsive-toggle": "top-menu"
+      "data-responsive-toggle": "top-menu",
+      "data-hide-for": "medium"
     }
   }, [_c('button', {
     staticClass: "menu-icon",
@@ -3686,13 +3668,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "button",
       "data-toggle": "top-menu"
     }
-  }), _vm._v(" "), _c('img', {
+  }), _vm._v(" "), _c('a', {
+    staticClass: "flex-pull-left",
+    attrs: {
+      "href": "/"
+    }
+  }, [_c('img', {
     staticClass: "l-logo-img",
     attrs: {
       "src": "/images/logo.jpe",
-      "alt": "growthparty logo"
+      "alt": ""
     }
-  }), _vm._v(" "), _c('h4', {
+  })]), _vm._v(" "), _c('h4', {
     staticClass: "title-bar-title l-logo-text show-for-medium"
   }, [_vm._v("Growth Party")]), _vm._v(" "), _c('div', {
     attrs: {
@@ -3703,22 +3690,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "data-open": "registerModal"
     }
-  }, [_vm._v("Join Our Beta")])])])])])
+  }, [_vm._v("Join Our Beta")])])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
+    staticClass: "top-bar drop-shadow p-v-0",
     attrs: {
-      "data-sticky-container": ""
-    }
-  }, [_c('div', {
-    staticClass: "top-bar drop-shadow p-v-0 p-h-0",
-    staticStyle: {
-      "width": "100%"
-    },
-    attrs: {
-      "data-sticky": "",
-      "data-top-anchor": "1",
-      "data-sticky-on": "medium",
-      "data-options": "marginTop:0",
       "id": "top-menu"
     }
   }, [_c('div', {
@@ -3729,7 +3705,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "data-dropdown-menu": ""
     }
   }, [_c('li', {
-    staticClass: "menu-text show-for-medium flex-pull-left"
+    staticClass: "menu-text no-padding show-for-medium flex-pull-left"
   }, [_c('a', {
     staticClass: "logo",
     attrs: {
@@ -3755,17 +3731,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "data-open": "loginModal"
     }
-  }, [_vm._v("Login")])]), _vm._v(" "), _c('div', {
-    staticClass: "p-r-10",
+  }, [_vm._v("Login")])])])]), _vm._v(" "), _c('div', {
     attrs: {
       "data-magellan": ""
     }
   }, [_c('a', {
-    staticClass: "register button show-for-medium",
+    staticClass: "register button show-for-medium m-b-0",
     attrs: {
       "data-open": "registerModal"
     }
-  }, [_vm._v("Join Our Beta")])])])])])])
+  }, [_vm._v("Join Our Beta")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -3777,15 +3752,15 @@ if (false) {
 
 /***/ }),
 
-/***/ 64:
+/***/ 63:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var Component = __webpack_require__(4)(
   /* script */
-  __webpack_require__(65),
+  __webpack_require__(64),
   /* template */
-  __webpack_require__(66),
+  __webpack_require__(65),
   /* styles */
   null,
   /* scopeId */
@@ -3818,7 +3793,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 65:
+/***/ 64:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3871,7 +3846,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 66:
+/***/ 65:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -3911,4 +3886,4 @@ if (false) {
 
 /***/ })
 
-},[34]);
+},[33]);

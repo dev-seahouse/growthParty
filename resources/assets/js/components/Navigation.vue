@@ -1,69 +1,51 @@
 <template>
-  <nav>
-    <!-- mobile menu -->
-    <div data-sticky-container class="hide-for-medium">
-      <div data-sticky data-sticky-on="small" data-sticky data-top-anchor="1" style="width:100%;"
-           data-options="marginTop:0">
-        <div class="title-bar drop-shadow" data-responsive-toggle="top-menu">
-          <button class="menu-icon" type="button" data-toggle="top-menu"></button>
-          <img src="/images/logo.jpe" alt="growthparty logo" class="l-logo-img" >
-          <h4 class="title-bar-title l-logo-text show-for-medium">Growth Party</h4>
-          <div data-magellan>
-            <a class="register button m-b-0" data-open="registerModal">Join Our Beta</a>
-          </div>
-        </div>
+  <nav class="navbar fixed">
+    <div class="title-bar drop-shadow" data-responsive-toggle="top-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle="top-menu"></button>
+      <a class="flex-pull-left" href="/"><img src="/images/logo.jpe" alt="" class="l-logo-img"/></a>
+      <h4 class="title-bar-title l-logo-text show-for-medium">Growth Party</h4>
+      <div data-magellan>
+        <a class="register button m-b-0" data-open="registerModal">Join Our Beta</a>
       </div>
-
     </div>
 
-    <!-- end mobile menu -->
+    <div class="top-bar drop-shadow p-v-0" id="top-menu">
 
-    <!-- desktop menu -->
-    <div data-sticky-container>
+      <div class="top-bar-left">
+        <ul class="vertical medium-horizontal menu align-right" data-dropdown-menu>
+          <li class="menu-text no-padding show-for-medium flex-pull-left">
+            <a href="/" class="logo"><img src="/images/logo.jpe" alt="company logo"
+                                          class="l-logo-img"><span class="logo-text">Growth Party</span>
+            </a>
+         </li>
+          <li class="menu-text m-r-0 p-r-0"><a href="/blog">Blog</a></li>
+         <li class="menu-text"><a data-open="loginModal">Login</a></li>
+       </ul>
+      </div>
 
-      <div class="top-bar drop-shadow p-v-0 p-h-0" style="width:100%;" data-sticky data-top-anchor="1"
-           data-sticky-on="medium" data-options="marginTop:0"
-           id="top-menu">
-        <!-- menu entries shared by both mobile and desktop-->
-        <div class="top-bar-left">
-          <ul class="vertical medium-horizontal menu align-right" data-dropdown-menu>
-            <li class="menu-text show-for-medium flex-pull-left">
-              <a href="/" class="logo"><img src="/images/logo.jpe" alt="company logo"
-                                            class="l-logo-img"><span class="logo-text">Growth Party</span>
-              </a>
-            </li>
-            <li class="menu-text m-r-0 p-r-0"><a href="/blog">Blog</a></li>
-            <li class="menu-text"><a data-open="loginModal">Login</a></li>
-            <div data-magellan class="p-r-10">
-              <a class="register button show-for-medium" data-open="registerModal">Join Our Beta</a>
-            </div>
-          </ul>
-
-        </div>
-        <!-- end menu entries -->
+      <div data-magellan>
+        <a class="register button show-for-medium m-b-0" data-open="registerModal">Join Our Beta</a>
       </div>
     </div>
 
     <!-- end desktop menu -->
 
     <modal class="small" id="loginModal" closable=true>
-      <h3 slot="title">Login</h3>
-      <form action="/login" method="post" @submit.prevent="onSubmit">
-        <input type="hidden" name="_token" :value="csrf_token">
-        <div class="row">
-          <div class="small-12 columns">
-            <label>Email or phone<input type="text" v-model="loginId" name="loginId"
-                                        placeholder="Enter email or mobile"></label>
-            <span class="form-error is-visible">{{ idError }}</span>
+        <h3 slot="title">Login</h3>
+        <form action="/login" method="post" @submit.prevent="onSubmit">
+          <input type="hidden" name="_token" :value="csrf_token">
+          <div class="row">
+            <div class="small-12 columns">
+              <label>Email or phone<input type="text" v-model="loginId" name="loginId" placeholder="Enter email or mobile"></label>
+              <span class="form-error is-visible">{{ idError }}</span>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="small-12 columns">
-            <label>Password<input type="password" name="password" v-model="password"
-                                  placeholder="Enter password"></label>
-            <span class="form-error is-visible">{{ passError }}</span>
+          <div class="row">
+            <div class="small-12 columns">
+              <label>Password<input type="password" name="password" v-model="password" placeholder="Enter password"></label>
+              <span class="form-error is-visible">{{ passError }}</span>
+            </div>
           </div>
-        </div>
         </div>
         <div class="row column">
           <button type="submit" class="button">Login</button>
@@ -146,6 +128,20 @@
       }
     },
     mounted: function () {
+      var header = document.querySelector("nav.navbar");
+      var headroom = new Headroom(header,{
+          "offset": 205,
+          "tolerance": 5,
+          "classes": {
+            "initial": "animated",
+            "pinned": "slideDown",
+            "unpinned": "slideUp"
+          }
+        }
+      );
+
+      headroom.init()
+
       $('.top-bar').on('sticky.zf.stuckto:top', function () {
         $(this).addClass('shrink')
         $('top-bar-left').addClass('shrink')

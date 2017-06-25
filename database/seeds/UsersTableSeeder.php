@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
         if (User::count() == 0) {
             $adminRole = Role::where('name', 'admin')->firstOrFail();
             $userRole = Role::where('name', 'user')->firstOrFail();
-            
+
             User::create([
                 'name'           => 'Admin',
                 'email'          => 'marcus@growthparty.co',
