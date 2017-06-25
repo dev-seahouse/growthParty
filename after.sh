@@ -6,7 +6,7 @@
 cd /home/vagrant/Projects/growthparty
 cp .env.vagrant .env
 php artisan key:generate
-php artisan db:migrate
+php artisan migrate
 php artisan db:seed
 composer install
 npm install
