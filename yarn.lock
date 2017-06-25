@@ -3810,9 +3810,11 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-"jquery-steps@git://github.com/rstaib/jquery-steps.git#master":
-  version "1.1.0"
-  resolved "git://github.com/rstaib/jquery-steps.git#4e1078beec5a7c40abbb3c27e6aefc8203cc2ffc"
+"jquery-steps@git://github.com/oguzhanoya/jquery-steps.git#master":
+  version "1.0.0"
+  resolved "git://github.com/oguzhanoya/jquery-steps.git#5dd3ad098bde20b8c51a6aaefb61fe58cc9bd819"
+  dependencies:
+    jquery "^3.2.1"
 
 jquery.counterup@^2.1.0:
   version "2.1.0"
