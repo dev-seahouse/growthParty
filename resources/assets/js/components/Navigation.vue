@@ -59,6 +59,8 @@
         <!-- Begin Step -->
         <div class="step-app">
           <!-- step nav -->
+
+          <!-- TODO: Review implemenation of steps tabs. It may be wrongly view as a choice instead of progress -->
           <ul class="step-steps">
             <li><a href="#step1">Step 1 - Enter</a></li>
             <li><a href="#step2">Step 2 - Verify</a></li>
@@ -66,38 +68,8 @@
           <!-- end step nav -->
           <!-- step content -->
           <div class="step-content">
-            <!-- step 1 -->
-            <div class="step-tab-panel" id="step1">
-              <p>Please enter your mobile number to get started!</p>
-              <input type="hidden" name="_token" :value="csrf_token">
-              <div class="row">
-                <div class="small-12 columns">
-                  <label>Email<input type="email" name="email" placeholder="Enter email" required></label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="small-12 columns">
-                  <label>Phone No.<input type="text" name="mobile" id="js-reg-mobile" placeholder="Enter phone no."
-                                         required></label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="small-12 columns">
-                  <label>Password<input type="password" name="password" placeholder="Enter password" required></label>
-                </div>
-              </div>
-
-            </div>
-            <!-- end step 1 -->
-            <!-- step 2 -->
-            <div class="step-tab-panel" id="step2">
-              <p>Please enter the OTP we have sent to your mobile number below.</p>
-              <div class="l-padded row small-6 columns align-center">
-                <input type="text" name="otp" placeholder="Enter OTP">
-              </div>
-            </div>
-            <!-- end step 2 -->
-
+            <step-1></step-1>
+            <step-2></step-2>
           </div>
           <!-- end step content -->
           <div class="step-footer">
@@ -117,7 +89,14 @@
 </template>
 
 <script>
+  import StepOne from './Registration/Step1';
+  import StepTwo from './Registration/Step2';
+
   export default {
+    components: {
+      'step-1': StepOne,
+      'step-2': StepTwo,
+    },
     data() {
       return {
         loginId: '',
@@ -146,6 +125,7 @@
       }).on('sticky.zf.unstuckfrom:top', function() {
         $(this).removeClass('shrink');
       });
+
       $('.step-app').steps({
         onFinish() {
           $('#registerForm').submit();
@@ -153,9 +133,9 @@
         onChange(currentIndex, newIndex, stepDirection) {
           if (currentIndex === 0 && stepDirection === 'forward') {
             const mobile = $('#js-reg-mobile').val();
-            axios.post('/otp/send', {
-              mobile
-            })
+
+            // TODO: Append +65 here or at controller
+            axios.post('/otp/send', { mobile })
               .then((response) => {
                 console.log(response);
               })
