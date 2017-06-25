@@ -8,7 +8,7 @@ require('./bootstrap')
 window.Vue = require('vue')
 
 // plugins
-require('jquery-steps/build/jquery.steps')
+require('jquery-steps/dist/jquery-steps')
 require('parsleyjs')
 // define global mixin
 Vue.mixin({
