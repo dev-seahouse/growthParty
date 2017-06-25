@@ -30,7 +30,7 @@
     "imagemin-webpack-plugin": "^1.4.4",
     "jquery": "^3.2.1",
     "jquery.counterup": "^2.1.0",
-    "jquery-steps": "git@github.com:rstaib/jquery-steps.git.git#master",
+    "jquery-steps": "git://github.com/oguzhanoya/jquery-steps.git#master",
     "laravel-mix": "^1.0.4",
     "lodash": "^4.17.4",
     "vue": "^2.3.4",
