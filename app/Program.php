@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Program extends Model
 {
-
 	public function serviceProvider()
     {
         return $this->belongsTo('App\ServiceProvider');
@@ -14,7 +13,7 @@ class Program extends Model
 
     public function programMaterials()
     {
-        return $this->hasMany('App\ProgramMaterial');
+        return $this->hasMany('App\Materials');
     }
 
     public function users()
