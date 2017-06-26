@@ -2,21 +2,37 @@
   <form action="/login" method="post" @submit.prevent="onSubmit">
     <h3 slot="title">Login</h3>
     <input type="hidden" name="_token" :value="csrf_token">
+
     <div class="row">
       <div class="small-12 columns">
-        <label>Email or phone<input type="text" v-model="detail.loginId" name="loginId" placeholder="Enter email or mobile"></label>
+        <label>
+          Email or phone
+          <input
+            type="text"
+            v-model="detail.loginId"
+            placeholder="Enter email or mobile">
+        </label>
         <span class="form-error is-visible">{{ error.loginId }}</span>
       </div>
     </div>
+
     <div class="row">
       <div class="small-12 columns">
-        <label>Password<input type="password" name="password" v-model="detail.password" placeholder="Enter password"></label>
+        <label>
+          Password
+          <input
+            type="password"
+            v-model="detail.password"
+            placeholder="Enter password">
+        </label>
         <span class="form-error is-visible">{{ error.password }}</span>
       </div>
     </div>
+
     <div class="row column">
       <button type="submit" class="button">Login</button>
     </div>
+
   </form>
 </template>
 
