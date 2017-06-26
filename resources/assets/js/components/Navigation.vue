@@ -18,13 +18,16 @@
                                           class="l-logo-img"><span class="logo-text">Growth Party</span>
             </a>
           </li>
-          <li class="menu-text m-r-0 p-r-0"><a href="/blog">Blog</a></li>
-          <li class="menu-text"><a data-open="loginModal">Login</a></li>
+          <li class="menu-text m-r-0 p-r-0">
+            <a href="/blog">Blog</a>
+          </li>
+          <li class="menu-text">
+            <a data-open="loginModal">Login</a>
+          </li>
+          <li class="menu-text">
+            <a class="register button show-for-medium m-b-0" data-open="registerModal">Join Our Beta</a>
+          </li>
         </ul>
-      </div>
-
-      <div data-magellan>
-        <a class="register button show-for-medium m-b-0" data-open="registerModal">Join Our Beta</a>
       </div>
     </div>
 
