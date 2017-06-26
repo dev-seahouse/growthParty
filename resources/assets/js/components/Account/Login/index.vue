@@ -21,6 +21,20 @@
 </template>
 
 <script>
+const getError = (error, type) => (error[type] || error[type].pop());
+const resolveError = (error, type) => (error[type] && getError(error, type));
+const parseError = (body) => {
+  const error = body.response.data;
+  const output = {
+    loginId: resolveError(error, 'mobile') || resolveError(error, 'email'),
+    password: getError(error, 'password') || '',
+  };
+  // Normalise loginId
+  output.loginId = (Array.isArray(output.loginId)) ? output.loginId.toString() : output.loginId;
+
+  return output;
+};
+
 export default {
   data() {
     return {
@@ -40,15 +54,8 @@ export default {
         .then(response => {
           window.location.replace('/dashboard');
         })
-        .catch(error => {
-          console.log(error.response.data);
-          error = error.response.data;
-          this.error.loginId = (error.mobile && (error.mobile || error.mobile.pop())) ||
-                               (error.email && (error.email || error.email.pop()));
-          if (Array.isArray(this.error.loginId)) {
-            this.error.loginId = this.error.loginId.toString();
-          }
-          this.error.password = (error.password && error.password.pop()) || '';
+        .catch((error) => {
+          this.error = parseError(error);
         });
     }
   }
