@@ -46,11 +46,10 @@
               <span class="form-error is-visible">{{ passError }}</span>
             </div>
           </div>
-        </div>
-        <div class="row column">
-          <button type="submit" class="button">Login</button>
-        </div>
-      </form>
+          <div class="row column">
+            <button type="submit" class="button">Login</button>
+          </div>
+        </form>
     </modal>
 
     <modal class="small" id="registerModal" closable=true>
