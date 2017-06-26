@@ -1,16 +1,14 @@
 <template>
   <nav class="navbar fixed">
+
     <div class="title-bar drop-shadow" data-responsive-toggle="top-menu" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle="top-menu"></button>
       <a class="flex-pull-left" href="/"><img src="/images/logo.jpe" alt="" class="l-logo-img"></a>
       <h4 class="title-bar-title l-logo-text show-for-medium">Growth Party</h4>
-      <div data-magellan>
-        <a class="register button m-b-0" data-open="registerModal">Join Our Beta</a>
-      </div>
+      <a class="register button m-b-0" data-open="registerModal">Join Our Beta</a>
     </div>
 
     <div class="top-bar drop-shadow p-v-0" id="top-menu">
-
       <div class="top-bar-left">
         <ul class="vertical medium-horizontal menu align-right" data-dropdown-menu>
           <li class="menu-text no-padding show-for-medium flex-pull-left">
@@ -25,13 +23,12 @@
             <a data-open="loginModal">Login</a>
           </li>
           <li class="menu-text">
-            <a class="register button show-for-medium m-b-0" data-open="registerModal">Join Our Beta</a>
+            <a data-open="registerModal"
+               class="register button show-for-medium m-b-0">Join Our Beta</a>
           </li>
         </ul>
       </div>
     </div>
-
-    <!-- end desktop menu -->
 
     <modal class="small" id="loginModal" closable=true>
       <login></login>
@@ -42,7 +39,6 @@
     </modal>
 
   </nav>
-
 </template>
 
 <script>
