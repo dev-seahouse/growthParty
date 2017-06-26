@@ -17,10 +17,10 @@
             <a href="/" class="logo"><img src="/images/logo.jpe" alt="company logo"
                                           class="l-logo-img"><span class="logo-text">Growth Party</span>
             </a>
-         </li>
+          </li>
           <li class="menu-text m-r-0 p-r-0"><a href="/blog">Blog</a></li>
-         <li class="menu-text"><a data-open="loginModal">Login</a></li>
-       </ul>
+          <li class="menu-text"><a data-open="loginModal">Login</a></li>
+        </ul>
       </div>
 
       <div data-magellan>
