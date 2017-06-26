@@ -1,30 +1,12 @@
 <template>
-  <form action="/register" method="post" id="registerForm">
-    <h3 slot="title">Register</h3>
-    <!-- Begin Step -->
-    <div class="step-app">
-      <!-- step nav -->
-
-      <!-- TODO: Review implemenation of steps tabs. It may be wrongly view as a choice instead of progress -->
-      <ul class="step-steps">
-        <li><a href="#step1">Step 1 - Enter</a></li>
-        <li><a href="#step2">Step 2 - Verify</a></li>
-      </ul>
-      <!-- end step nav -->
-      <!-- step content -->
-      <div class="step-content">
-        <step-1></step-1>
-        <step-2></step-2>
-      </div>
-      <!-- end step content -->
-      <div class="step-footer">
-        <button data-direction="prev" class="button">Previous</button>
-        <button data-direction="next" class="button">Confirm</button>
-        <button data-direction="finish" type="submit" class="button">Register</button>
-      </div>
-    </div>
-    <!-- end step -->
-
+  <form action="/register" method="post">
+    <h3>Register</h3>
+    <component
+      :is="stepView"
+      :detail="detail"
+      @prev="executePrev"
+      @next="executeNext">
+    </component>
   </form>
 </template>
 
@@ -32,32 +14,57 @@
 import StepOne from './Step1';
 import StepTwo from './Step2';
 
+const components = {
+  'step-1': StepOne,
+  'step-2': StepTwo,
+};
+const componentsCount = Object.keys(components).length;
+let formParsley;
+
 export default {
-  components: {
-    'step-1': StepOne,
-    'step-2': StepTwo,
+  components,
+  computed: {
+    stepView() {
+      return `step-${this.currentStep}`;
+    },
+  },
+  data() {
+    return {
+      currentStep: 1,
+      detail: {},
+    };
+  },
+  methods: {
+    executePrev() {
+      if (this.currentStep > 1) {
+        this.currentStep--;
+      }
+    },
+    executeNext(response) {
+      formParsley.whenValidate()
+        .then(() => {
+          const result = (typeof response === 'function') ? response() : response;
+          if (result) {
+            if (this.currentStep < componentsCount) {
+              // Move to next section
+              this.currentStep++;
+              formParsley = $(this.$el).parsley();
+
+              // Merge result
+              Object.keys(result).forEach((key) => {
+                this.detail[key] = result[key];
+              });
+            } else {
+              axios.post('/register', this.detail)
+                .then(console.log)
+                .catch(console.log);
+            }
+          }
+        });
+    },
   },
   mounted() {
-    $('.step-app').steps({
-      onFinish() {
-        $('#registerForm').submit();
-      },
-      onChange(currentIndex, newIndex, stepDirection) {
-        if (currentIndex === 0 && stepDirection === 'forward') {
-          const mobile = $('#js-reg-mobile').val();
-
-          // TODO: Append +65 here or at controller
-          axios.post('/otp/send', { mobile })
-            .then((response) => {
-              console.log(response);
-            })
-            .catch((response) => {
-              console.log(response);
-            });
-        }
-        return true;
-      }
-    });
+    formParsley = $(this.$el).parsley();
   }
 };
 </script>
