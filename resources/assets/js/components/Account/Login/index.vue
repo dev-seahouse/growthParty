@@ -4,14 +4,14 @@
     <input type="hidden" name="_token" :value="csrf_token">
     <div class="row">
       <div class="small-12 columns">
-        <label>Email or phone<input type="text" v-model="loginId" name="loginId" placeholder="Enter email or mobile"></label>
-        <span class="form-error is-visible">{{ idError }}</span>
+        <label>Email or phone<input type="text" v-model="detail.loginId" name="loginId" placeholder="Enter email or mobile"></label>
+        <span class="form-error is-visible">{{ error.loginId }}</span>
       </div>
     </div>
     <div class="row">
       <div class="small-12 columns">
-        <label>Password<input type="password" name="password" v-model="password" placeholder="Enter password"></label>
-        <span class="form-error is-visible">{{ passError }}</span>
+        <label>Password<input type="password" name="password" v-model="detail.password" placeholder="Enter password"></label>
+        <span class="form-error is-visible">{{ error.password }}</span>
       </div>
     </div>
     <div class="row column">
@@ -24,30 +24,33 @@
 export default {
   data() {
     return {
-      loginId: '',
-      password: '',
-      passError: '',
-      idError: '',
+      detail: {
+        loginId: '',
+        password: '',
+      },
+      error: {
+        loginId: '',
+        password: '',
+      }
     };
   },
   methods: {
     onSubmit() {
-      axios.post('/login', {
-        loginId: this.loginId,
-        password: this.password
-      }).then(response => {
-        window.location.replace('/dashboard');
-      }).catch(error => {
-        console.log(error.response.data);
-        error = error.response.data;
-        this.idError = (error.mobile && (error.mobile || error.mobile.pop())) ||
-                        (error.email && (error.email || error.email.pop()));
-        if (Array.isArray(this.idError)) {
-          this.idError = this.idError.toString();
-        }
-        this.passError = (error.password && error.password.pop()) || '';
-      });
+      axios.post('/login', this.detail)
+        .then(response => {
+          window.location.replace('/dashboard');
+        })
+        .catch(error => {
+          console.log(error.response.data);
+          error = error.response.data;
+          this.error.loginId = (error.mobile && (error.mobile || error.mobile.pop())) ||
+                               (error.email && (error.email || error.email.pop()));
+          if (Array.isArray(this.error.loginId)) {
+            this.error.loginId = this.error.loginId.toString();
+          }
+          this.error.password = (error.password && error.password.pop()) || '';
+        });
     }
   }
-}
+};
 </script>
