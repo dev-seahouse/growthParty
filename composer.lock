@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "84e3b1041448755a0dbcf0d2470f067a",
+    "content-hash": "2b8e24b872c9f2cdc6e8698a2d245586",
     "packages": [
         {
             "name": "arcanedev/log-viewer",
