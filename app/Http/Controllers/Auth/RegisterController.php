@@ -41,9 +41,15 @@ class RegisterController extends Controller
       $this->middleware('guest');
     }
 
-    public function sendOtp(Otp $otp){
+    public function sendOtp(Otp $otp)
+    {
       $number = \request()->input('mobile');
       $otp->send($number);
+    }
+    
+    public function verifyOtp(Otp $otp)
+    {
+      $verificationCode = Request::input('');
     }
 
     /**
