@@ -10,7 +10,7 @@ class PostsTableSeeder extends Seeder
    */
   public function run()
   {
-    factory(App\Post::class,50)->create();
+    factory(App\Blog\Post::class,50)->create();
 
     $post = $this->findPost('lorem-ipsum-post');
     if (!$post->exists) {

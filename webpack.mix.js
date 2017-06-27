@@ -34,11 +34,10 @@ mix.sass('resources/assets/sass/app.scss', 'public/css')
 // combine vendor scripts that need to be compiled separately
 mix.combine(
   [
-    'public/js/vendor.js',
     'node_modules/progressively/dist/progressively.min.js',
     'public/foundation-dist.js'
   ],
-  'public/js/vendor.js')
+  'public/js/vendor-extra.js')
 
 
 

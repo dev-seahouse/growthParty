@@ -31,6 +31,7 @@ export default {
   methods: {
     prev() { this.$emit('prev'); },
     next() { this.$emit('next', this.localDetail); },
+    // when it is last step, need to call /verifyOtp
     sendOtp() {
       this.numTry++;
       console.log(`Tries ${this.numTry}. Sending OTP code to ${this.detail.mobile}.`);

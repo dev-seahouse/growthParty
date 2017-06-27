@@ -4,7 +4,7 @@
 @endsection
 @section('content')
   <a href="{{ route('logout') }}"
-     onclick="event.preventDefault()document.getElementById('logout-form').submit()">
+     onclick="event.preventDefault();document.getElementById('logout-form').submit()">
     Logout
   </a>
   <div class="row align-center dark-slate-grey-text">
