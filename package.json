@@ -29,15 +29,14 @@
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-webpack-plugin": "^1.4.4",
     "jquery": "^3.2.1",
-    "jquery.counterup": "^2.1.0",
     "jquery-steps": "git://github.com/oguzhanoya/jquery-steps.git#master",
-    "laravel-mix": "^1.0.4",
+    "jquery.counterup": "^2.1.0",
+    "laravel-mix": "^1.0.7",
     "lodash": "^4.17.4",
-    "vue": "^2.3.4",
+    "parsleyjs": "^2.7.2",
     "progressively": "^1.1.2",
-    "parsleyjs": "^2.7.2"
+    "vue": "^2.3.4"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "false": {}
 }
