@@ -1,12 +1,13 @@
 <template>
   <form action="/register" method="post">
     <h3>Register</h3>
-    <component
-      :is="stepView"
-      :detail="detail"
-      @prev="executePrev"
-      @next="executeNext">
-    </component>
+      <component
+          :is="stepView"
+          :detail="detail"
+          @prev="executePrev"
+          @next="executeNext">
+      </component>
+    </keep-alive>
   </form>
 </template>
 
@@ -45,18 +46,24 @@ export default {
         .then(() => {
           const result = (typeof response === 'function') ? response() : response;
           if (result) {
+            // Merge result
+            Object.keys(result).forEach((key) => {
+              this.detail[key] = result[key];
+            });
+
             if (this.currentStep < componentsCount) {
               // Move to next section
               this.currentStep++;
               formParsley = $(this.$el).parsley();
 
-              // Merge result
-              Object.keys(result).forEach((key) => {
-                this.detail[key] = result[key];
-              });
+
             } else {
               axios.post('/register', this.detail)
-                .then(console.log)
+                .then(function(res){
+                  console.log(res);
+                  // if registration sucessful please redirect to /dashboard
+                  // if not sucessful, please show error message, demo is inside login.vue  + login controller. there is also a regex to validate singapore number e.g starting with +98 not +12
+                })
                 .catch(console.log);
             }
           }
