@@ -5,6 +5,51 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+/**
+ * App\User
+ *
+ * @property int $id
+ * @property int|null $role_id
+ * @property string|null $name
+ * @property string $email
+ * @property string|null $avatar
+ * @property string $password
+ * @property string|null $remember_token
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @property string $last_login
+ * @property string|null $dob for verification
+ * @property string|null $first_name
+ * @property string|null $last_name
+ * @property string|null $last_login_ip
+ * @property string|null $registered_ip
+ * @property int $is_activated
+ * @property string $mobile
+ * @property int $is_setup
+ * @property string|null $occupation
+ * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Program[] $programs
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereAvatar($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereDob($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereFirstName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereIsActivated($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereIsSetup($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereLastLogin($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereLastLoginIp($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereLastName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereMobile($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereOccupation($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User wherePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRegisteredIp($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRememberToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRoleId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
 class User extends Authenticatable
 {
 
