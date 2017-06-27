@@ -11,9 +11,9 @@ class Program extends Model
         return $this->belongsTo('App\ServiceProvider');
     }
 
-    public function programMaterials()
+    public function programMaterial()
     {
-        return $this->hasMany('App\Materials');
+        return $this->hasMany('App\Material');
     }
 
     public function users()

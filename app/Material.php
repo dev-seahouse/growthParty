@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Materials extends Model
+class Material extends Model
 {
-    public function programMaterials()
+    public function program()
     {
         return $this->belongsTo('App\Program');
     }

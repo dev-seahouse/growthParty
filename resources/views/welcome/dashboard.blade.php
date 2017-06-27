@@ -3,6 +3,22 @@
 <!-- If user try to access this page without authenticated, redirect to /home  -->
 <!-- If user is authenticated but have not setup, redirect to setup  -->
 
+
+	@if(is_null($programsOfUser))
+        // whatever you need to do here
+        <p>Nothing</p>
+    @else 
+        @foreach($programsOfUser as $programofuser)
+
+        @foreach($programofuser->programMaterial as $programofusermat)
+        <p>{{ $programofusermat->directory }}</p>
+        @endforeach
+
+        @endforeach
+    @endif
+
+
+
 <div class="l-padded p-b-0 row">
 	<div class="columns">
 		<table style="width:100%">
@@ -12,7 +28,9 @@
 				<td>{{ $program->name }}</td>
 			</tr>
 			<tr>
-				<td>by {{ $program->serviceProvider->name }} </td>
+				<td>by {{ $program->serviceProvider->name }} 
+					
+				</td>
 
 			</tr>
 			<tr>

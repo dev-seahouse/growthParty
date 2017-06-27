@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Program;
 use App\ServiceProvider;
+use App\Materials;
 
 class DashboardController extends Controller
 {
