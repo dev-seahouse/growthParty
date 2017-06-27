@@ -174,7 +174,6 @@ return [
         GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
         GrahamCampbell\Throttle\ThrottleServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
-
         GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
         /*
          * Application Service Providers...
