@@ -37,7 +37,7 @@
     <div class="small-8 columns step">
 
       <h3 class="leading thin-header">Last Step, almost done!</h3>
-      {{ Form::open(['action'=>['SetupController@updateinfo']]) }}
+      {{ Form::open(['action'=>['SetupController@store']]) }}
 
         <label for="Name">What is your name?
           <input type="text" name="name" placeholder="James Ang" required>
