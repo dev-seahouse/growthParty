@@ -10,7 +10,7 @@
 
     <div ref="top-bar" class="top-bar drop-shadow p-v-0" id="res-toggle__top-menu">
       <div class="top-bar-left">
-        <ul class="vertical medium-horizontal menu align-right" data-dropdown-menu>
+        <ul class="vertical medium-horizontal menu align-left" data-dropdown-menu>
           <li class="menu-text no-padding show-for-medium flex-pull-left">
             <a href="/" class="logo"><img src="/images/logo.jpe" alt="company logo"
                                           class="l-logo-img"><span class="logo-text">Growth Party</span>
