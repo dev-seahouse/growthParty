@@ -13,6 +13,11 @@
 
 ga('create', 'UA-32995284-5', 'auto')
 ga('send', 'pageview')
+var cliendId="";
+ga(function (tracker) {
+ cliendId=tracker.get('clientId');
+ console.log(clientId);
+})
 
 // facebook connect api init
 window.fbAsyncInit = function () {

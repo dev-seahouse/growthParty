@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 61:
+/***/ 78:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(62);
+module.exports = __webpack_require__(79);
 
 
 /***/ }),
 
-/***/ 62:
+/***/ 79:
 /***/ (function(module, exports) {
 
 // google analytics
@@ -24,10 +24,15 @@ module.exports = __webpack_require__(62);
 })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
 ga('create', 'UA-32995284-5', 'auto');
-ga('send', 'pageview'
+ga('send', 'pageview');
+var cliendId = "";
+ga(function (tracker) {
+  cliendId = tracker.get('clientId');
+  console.log(clientId);
+});
 
 // facebook connect api init
-);window.fbAsyncInit = function () {
+window.fbAsyncInit = function () {
   FB.init({
     appId: '756709494453863',
     xfbml: true,
@@ -145,4 +150,4 @@ window.onbeforeunload = function () {
 
 /***/ })
 
-},[61]);
+},[78]);

@@ -18,6 +18,7 @@ class Post extends Model
     // retrieve user object
     return $this->authorId();
   }
+
   public function getEstimatedReadAttribute()
   {
     $postContent = $this->body;

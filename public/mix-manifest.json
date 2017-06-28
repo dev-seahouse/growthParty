@@ -1,9 +1,10 @@
 {
     "/js/vendor.js": "/js/vendor.js",
+    "/js/app.js": "/js/app.js",
     "/foundation-dist.js": "/foundation-dist.js",
     "/css/app.css": "/css/app.css",
-    "/js/app.js": "/js/app.js",
     "/js/analytics.js": "/js/analytics.js",
     "/js/manifest.js": "/js/manifest.js",
-    "/js/loadCSS.js": "/js/loadCSS.js"
+    "/js/loadCSS.js": "/js/loadCSS.js",
+    "/js/vendor-extra.js": "/js/vendor-extra.js"
 }

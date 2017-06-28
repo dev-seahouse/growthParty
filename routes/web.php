@@ -14,23 +14,27 @@
 /*----------  App Routes  ----------*/
 
 Route::get('/', function () {
-    return view('welcome');
+  return view('welcome');
 })->name('welcome');
 
 Auth::routes();
 
 /*----------  Admin routes  ----------*/
 Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
+  Voyager::routes();
 });
 
 /*----------  Blog Routes  ----------*/
 
-Route::group(['prefix' => 'blog'],function(){
+Route::group(['prefix' => 'blog'], function () {
   Route::get('/', 'PostController@index')->name('blog');
   Route::get('/{post}', 'PostController@show');
 });
 
-Route::group(['prefix' => 'admin','middleware' => 'doNotCacheResponse'], function () {
-    Voyager::routes();
+Route::group(['prefix' => 'admin', 'middleware' => 'doNotCacheResponse'], function () {
+  Voyager::routes();
+  Route::group(['as' => 'voyager.'], function () {
+    $namespacePrefix = '\\' . config('voyager.controllers.namespace') . '\\';
+    Route::delete('/cache', ['uses' => $namespacePrefix . 'VoyagerCacheController@destroy', 'as' =>"cache"]);
+  });
 });
