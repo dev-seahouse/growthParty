@@ -4,10 +4,10 @@
 @endsection
 @section('content')
   <a href="{{ route('logout') }}"
-     onclick="event.preventDefault();document.getElementById('logout-form').submit()">
+     onclick="event.preventDefault()document.getElementById('logout-form').submit()">
     Logout
   </a>
-  <div class="row align-center dark-slate-grey-text">
+  <div class="row dark-slate-grey-text align-center-middle l-full-height">
     <div class="small-8 medium-7 large-5 columns step active">
 
 
@@ -15,7 +15,7 @@
       {!! Form::open(['route' => "logout",'method'=>'post', 'id'=>'logout-form']) !!}
       {{ csrf_field() }}
       {!! Form::close() !!}
-      <h3 class="leading thin-header text-center">First Impression count</h3>
+      <h3 class="leading thin-header pale-red-text text-center">First Impression count</h3>
       <p class="sub-title text-center">Time to use your charm. Smile!</p>
       {!! Form::open(['action'=>['SetupController@uploadProfilePic'],  'class' => 'dropzone', 'id'=>'profileUploadForm']) !!}
       {{ csrf_field() }}
@@ -36,16 +36,29 @@
 
     <div class="small-8 columns step">
 
-      <h3 class="leading thin-header">Last Step, almost done!</h3>
+      <h3 class="leading thin-header pale-red-text">Last Step, almost done!</h3>
       {{ Form::open(['action'=>['SetupController@store']]) }}
+
+
+      <div class="row column expanded">
 
         <label for="Name">What is your name?
           <input type="text" name="name" placeholder="James Ang" required>
         </label>
 
-        <label for="Occupation">What is your occupation?
-          <input type="text" name="occupation" placeholder="Sales" required>
-        </label>
+      </div>
+
+      <div class="row column expanded">
+
+        <label for="js-select-occupation">What is your occupation?</label>
+        <select name="occupation" class="select2 js-states" id="js-select-occupation" style="width:100%;">
+          @foreach($occupations as $occupation)
+            <option value="{{ $occupation->id }}">{{ $occupation->name }}</option>
+          @endforeach
+        </select>
+
+      </div>
+
       <button class="button submit" type="submit">Get Started!</button>
       {!! Form::close() !!}
     </div>
@@ -84,9 +97,9 @@
         console.log('file added')
         dropzone.processQueue()
       })
-      
-      this.on('error', function(file, response){
-        $(file.previewElement).find('.dz-error-message').text(response.message);
+
+      this.on('error', function (file, response) {
+        $(file.previewElement).find('.dz-error-message').text(response.message)
       })
 
       this.on('removedfile', function (file) {
@@ -98,26 +111,31 @@
   }
 
   $('.step .next').click(function () {
-    $currStep = $(this).parent('.step');
-    $nextStep = $currStep.next();
-    $currStep.toggleClass('active');
-    $nextStep.toggleClass('active');
+    $currStep = $(this).parent('.step')
+    $nextStep = $currStep.next()
+    $currStep.toggleClass('active')
+    $nextStep.toggleClass('active')
     // check if element exist
     // add a previous button
 
-    if ($(".previous.button").length === 0){
-      $(".button.submit").before("<button class='previous button'>Previous</button>")
+    if ($('.previous.button').length === 0) {
+      $('.button.submit').before('<button class=\'previous button\'>Previous</button>')
     }
 
-    $(".previous.button").one('click',function(e){
-      e.preventDefault();
-      $currStep.toggleClass('active');
-      $nextStep.toggleClass('active');
-      console.log("hi");
-      $temp = $currStep;
-      $nextStep = $currStep;
-      $currStep = $temp;
+    $('.previous.button').one('click', function (e) {
+      e.preventDefault()
+      $currStep.toggleClass('active')
+      $nextStep.toggleClass('active')
+      console.log('hi')
+      $temp = $currStep
+      $nextStep = $currStep
+      $currStep = $temp
     })
+  })
+
+  $('#js-select-occupation').select2({
+    allowClear: true,
+    placeholder: 'Select the most suitable choice that describes what you do'
   })
 
 </script>
