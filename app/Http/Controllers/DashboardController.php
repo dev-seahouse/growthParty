@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Debugbar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
@@ -18,7 +19,7 @@ class DashboardController extends Controller
      */
     public function __construct()
     {
-        $this->middleware(array('auth','isSetup'));
+        $this->middleware(array('auth','notSetup'));
     }
 
     /**
@@ -30,21 +31,7 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
         $programsOfUser = $user->programs;
-        return view('welcome/dashboard', compact('user', 'programsOfUser'));
-        //$serviceProvider = $programsOfUser->first()->serviceProvider;
-
-        //$sp = ServiceProvider::with('programs')->get();
-        //return view('welcome/dashboard')->with('sP', $sp);
-
-        //$program = $user->programs;
-        //$serviceprovider = $program->serviceProvider;
-
-        // Dump all children/products of this BaseProduct
-        //dd($serviceprovider->programs->toArray());
-
-
-
-
-        //return view('welcome/dashboard', compact('user', 'programsOfUser', 'serviceProvider'));
+        DebugBar::info($programsOfUser);
+        return view('dashboard.index', compact('user', 'programsOfUser'));
     }
 }
