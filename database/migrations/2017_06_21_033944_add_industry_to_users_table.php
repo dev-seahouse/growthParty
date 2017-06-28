@@ -14,7 +14,7 @@ class AddIndustryToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('industry')->nullable()->default(null);
+            $table->string('industry')->nullable();
         });
     }
 
