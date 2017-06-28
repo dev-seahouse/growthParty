@@ -176,6 +176,7 @@ return [
     Barryvdh\Debugbar\ServiceProvider::class,
     Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
+    Radic\BladeExtensions\BladeExtensionsServiceProvider::class,
     /*
      * Application Service Providers...
      */
