@@ -13,27 +13,24 @@
 
 /*----------  App Routes  ----------*/
 
-Auth::routes();
-
 Route::get('/', 'WelcomeController@index')->name('welcome');
-
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
 
-/*----------  Admin routes  ----------*/
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
-
-/*----------  User Registration Routes  ----------*/
+/*----------  Auth Routes  ----------*/
+Auth::routes();
 Route::post('/otp/send',[
   'middleware'=>'GrahamCampbell\Throttle\Http\Middleware\ThrottleMiddleware:1000,2',// limit otp access rate to be 1 time per 2 minute
   'uses'=>'Auth\RegisterController@sendOtp'])
   ->name('sendOtp');
+
+
+/* --------------- Application Setup Routes --------- */
 Route::get('/setup','SetupController@index')->name('setup');
 Route::post('/setup/uploadProfilePic','SetupController@uploadProfilePic');
 Route::post("/setup/removeProfilePic", 'SetupController@removeUploadedImages');
-Route::post('/updateinfo', 'SetupController@updateinfo');
+Route::post('/setup', 'SetupController@store');
+
 
 /*----------  Blog Routes  ----------*/
 
@@ -42,4 +39,9 @@ Route::group(['prefix' => 'blog'],function(){
   Route::get('/{post}', 'PostController@show');
 });
 
-/*----------   TwilloOTP route  ----------*/
+
+/*----------  Admin routes  ----------*/
+Route::group(['prefix' => 'admin'], function () {
+  Voyager::routes();
+});
+
