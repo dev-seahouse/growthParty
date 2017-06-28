@@ -12,6 +12,7 @@
 // vendor styles
 @import 'settings/settings';
 @import 'foundation';
+@import 'node_modules/select2/dist/css/select2.min';
 @import 'node_modules/parsleyjs/src/parsley';
 
 // util
@@ -36,6 +37,7 @@
 @import 'components/card';
 @import 'components/profileUploader';
 @import 'components/steps';
+@import 'components/select2';
 
 // Vendor styles
 
