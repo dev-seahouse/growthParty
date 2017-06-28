@@ -226,3 +226,4 @@ $RECYCLE.BIN/
 !/resources/assets/vendor/
 !/public/vendor/
 public/fonts/
+/public/vendor/
