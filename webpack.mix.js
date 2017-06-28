@@ -29,7 +29,7 @@ mix.sass('resources/assets/sass/app.scss', 'public/css')
     'node_modules/fg-loadcss/src/cssrelpreload.js',
     'node_modules/fg-loadcss/src/onloadCSS.js'],
     'public/js/loadCSS.js')
-  .extract(['vue', 'axios', 'jquery', 'jquery.counterup','headroom.js'])
+  .extract(['vue', 'axios', 'jquery', 'jquery.counterup','headroom.js','select2'])
 
 // combine vendor scripts that need to be compiled separately
 mix.combine(
