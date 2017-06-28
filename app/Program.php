@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Program extends Model
 {
+
 	public function serviceProvider()
     {
         return $this->belongsTo('App\ServiceProvider');
@@ -27,5 +28,11 @@ class Program extends Model
     public function users()
     {
         return $this->belongsToMany('App\User');
+    }
+
+
+    public function isAssigned()
+    {
+      return true;
     }
 }
