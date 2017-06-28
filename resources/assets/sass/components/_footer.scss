@@ -10,6 +10,11 @@
     color: $dark-gray;
   }
 
+  .menu {
+    width: 100%;
+    align-items:center;
+  }
+
   .menu > li > a {
     padding: 1rem .7rem;
   }
