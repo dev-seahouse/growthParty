@@ -34,8 +34,8 @@
 		</div>
 	@endisset
 
-	@empty($programsOfUser)
+	@if(!isset($programsOfUser) || count($programsOfUser) <= 0)
 		<p>Due to wild populartity, there is nothing left for now, please check back later</p>
-	@endempty
+	@endif
 
 @endsection
