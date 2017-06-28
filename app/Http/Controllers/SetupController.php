@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Exceptions\ProfilePicUploadException;
+use App\Occupation;
 use App\User;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
@@ -23,7 +24,8 @@ class SetupController extends Controller
 
   public function index()
   {
-    return view('welcome.setup');
+    $occupations = Occupation::all();
+    return view('welcome.setup')->with(compact('occupations'));
   }
 
   public function store(Request $request)
@@ -34,7 +36,8 @@ class SetupController extends Controller
     ]);
     $user = Auth::user();
     $user->name = $request->input('name');
-    $user->occupation = $request->input('occupation');
+    $occupationId = $user->occupation_id = $request->input('occupation');
+    $user->industry_id = Occupation::find($occupationId)->industry_id;
     $user->is_setup = 1;
     $user->save();
     return view('dashboard.index');
@@ -133,7 +136,5 @@ class SetupController extends Controller
     });
     return $image;
   }
-
-
 
 }
