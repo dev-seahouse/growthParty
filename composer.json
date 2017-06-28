@@ -9,16 +9,17 @@
         "arcanedev/log-viewer": "^4.3",
         "barryvdh/laravel-debugbar": "^2.4",
         "graham-campbell/exceptions": "^9.3",
+        "graham-campbell/htmlmin": "^4.5",
         "graham-campbell/throttle": "^5.3",
         "intervention/image": "^2.3",
         "laracademy/interactive-make": "^1.1",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.4.0",
+        "radic/blade-extensions": "^7.0",
         "spatie/laravel-responsecache": "^3.1",
         "tcg/voyager": "^0.11.12",
-        "twilio/sdk": "^5.11",
-        "graham-campbell/htmlmin": "^4.5"
+        "twilio/sdk": "^5.11"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.4",
