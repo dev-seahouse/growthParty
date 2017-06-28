@@ -223,3 +223,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/macos,windows,laravel,intellij,phpstorm,sublimetext,visualstudiocode
+!/resources/assets/vendor/
