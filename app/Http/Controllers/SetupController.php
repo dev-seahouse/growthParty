@@ -18,12 +18,26 @@ class SetupController extends Controller
 {
   public function __construct()
   {
-    $this->middleware('auth');
+    $this->middleware(['auth','setup']);
   }
 
   public function index()
   {
     return view('welcome.setup');
+  }
+
+  public function store(Request $request)
+  {
+    $this->validate($request, [
+      'name' => 'required|max:50',
+      'occupation' => 'required|max:50',
+    ]);
+    $user = Auth::user();
+    $user->name = $request->input('name');
+    $user->occupation = $request->input('occupation');
+    $user->is_setup = 1;
+    $user->save();
+    return view('dashboard.index');
   }
 
   public function uploadProfilePic(Request $request)
@@ -120,18 +134,6 @@ class SetupController extends Controller
     return $image;
   }
 
-  public function updateinfo(Request $request)
-  {
-    $this->validate($request, [
-      'name' => 'required|max:50',
-      'occupation' => 'required|max:50',
-    ]);
-    $user = Auth::user();
-    $user->name = $request->input('name');
-    $user->occupation = $request->input('occupation');
-    $user->is_setup = 1;
-    $user->save();
-    return view('welcome.dashboard');
-  }
+
 
 }
