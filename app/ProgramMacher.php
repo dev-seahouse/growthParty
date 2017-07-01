@@ -28,6 +28,7 @@ class ProgramMacher implements ProgramMacherInterface
 
   public function match($user, $numMatches)
   {
+    $occupation = $user->occupation;
 
   }
 }
