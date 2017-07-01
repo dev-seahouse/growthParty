@@ -16,5 +16,6 @@ class DatabaseSeeder extends Seeder
       $this->call(VoyagerDummyDatabaseSeeder::class);
       $this->call(OccupationSeeder::class);
       $this->call(ServiceProviderSeeder::class);
+      $this->call(ProgramsTableSeeder::class);
     }
 }
