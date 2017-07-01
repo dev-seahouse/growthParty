@@ -18,7 +18,7 @@ class CreateProgramsTable extends Migration
             $table->integer('service_provider_id')->unsigned();
             $table->string('name');
             $table->string('description');
-            $table->integer('affiliate_count')->unsigned();
+            $table->integer('affiliate_count')->unsigned()->default(0);
             $table->timestamps();
         });
     }
