@@ -223,12 +223,12 @@
                 items:1,
                 nav:false
             },
-            600:{
+            800:{
                 items:2,
                 nav:false,
                 dots:true
             },
-            1000:{
+            1300:{
                 items:3,
                 nav:true,
                 loop:false
