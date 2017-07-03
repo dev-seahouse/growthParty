@@ -14,25 +14,23 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Program extends Model
 {
+  protected $casts = [
+    'matching_requirements' => 'array',
+  ];
 
-	public function serviceProvider()
-    {
-        return $this->belongsTo('App\ServiceProvider');
-    }
+  public function serviceProvider()
+  {
+    return $this->belongsTo('App\ServiceProvider');
+  }
 
-    public function programMaterial()
-    {
-        return $this->hasMany('App\Material');
-    }
+  public function programMaterial()
+  {
+    return $this->hasMany('App\Material');
+  }
 
-    public function users()
-    {
-        return $this->belongsToMany('App\User');
-    }
+  public function users()
+  {
+    return $this->belongsToMany('App\User');
+  }
 
-
-    public function isAssigned()
-    {
-      return true;
-    }
 }
