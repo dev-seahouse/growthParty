@@ -33,4 +33,15 @@ class Program extends Model
     return $this->belongsToMany('App\User');
   }
 
+
+  public static function findByName($name)
+  {
+    return self::where('name',$name)->firstOrFail();
+  }
+
+  public static function getIdByName($name)
+  {
+    return self::findByName($name)->id;
+  }
+
 }

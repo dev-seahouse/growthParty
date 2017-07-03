@@ -9,7 +9,7 @@ trait JsonSeederTrait
 
   /**
    * @param $dataUrl
-   * @return mixed
+   * @return
    */
   public function getDataFromJson($dataUrl)
   {
