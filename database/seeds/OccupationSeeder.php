@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
-
+use Database\Traits\JsonSeederTrait;
 class OccupationSeeder extends Seeder
 {
   /**
@@ -11,27 +11,19 @@ class OccupationSeeder extends Seeder
    * @return void
    */
 
+  use JsonSeederTrait;
+
+
   public function run()
   {
     $dataUrl = 'database/data/occupations.json';
-    $convertedDataSet = $this->getListOfIndustryAndOccupationsFromJson($dataUrl);
+    $convertedDataSet = $this->getDataFromJson($dataUrl);
     foreach ($convertedDataSet as $key => $values) {
       $industry = $this->insertIndustryNameIntoDb($key);
       $this->insertOccupationsIntoDb($industry, $values);
     }
   }
 
-  /**
-   * @return mixed
-   */
-  protected function getListOfIndustryAndOccupationsFromJson($dataUrl)
-  {
-    // use this to convert excel to json
-    // https://shancarter.github.io/mr-data-converter/
-    $occupationsJson = File::get($dataUrl);
-    $convertedDataSet = json_decode($occupationsJson);
-    return $convertedDataSet;
-  }
 
   /**
    * @param $values

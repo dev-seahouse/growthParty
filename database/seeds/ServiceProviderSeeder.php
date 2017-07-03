@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Industry;
+use Database\Traits\JsonSeederTrait;
 
 class ServiceProviderSeeder extends Seeder
 {
@@ -10,10 +11,13 @@ class ServiceProviderSeeder extends Seeder
    *
    * @return void
    */
+  use JsonSeederTrait;
+
   public function run()
   {
     $dataUrl = 'database/data/serviceProviders.json';
-    $convertedDataSet = $this->getListOfIndustryAndOccupationsFromJson($dataUrl);
+    $convertedDataSet = $this->getDataFromJson($dataUrl);
+
     foreach ($convertedDataSet as $serviceProvider) {
       $industryName = $serviceProvider['industry'];
       $industryId = Industry::where('name', $industryName)->first()->id;
@@ -22,15 +26,5 @@ class ServiceProviderSeeder extends Seeder
       \App\ServiceProvider::create($serviceProvider);
     }
   }
-
-  protected function getListOfIndustryAndOccupationsFromJson($dataUrl)
-  {
-    // use this to convert excel to json
-    // https://shancarter.github.io/mr-data-converter/
-    $occupationsJson = File::get($dataUrl);
-    $convertedDataSet = json_decode($occupationsJson, true);
-    return $convertedDataSet;
-  }
-
-
 }
+
