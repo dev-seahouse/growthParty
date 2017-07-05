@@ -13,27 +13,31 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
-    static $password;
-
-    return [
-        'name' => $faker->name,
-        'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
-        'remember_token' => str_random(10),
+  static $password;
+  $randMobile = '+6592';
+  for ($i = 0; $i < 6; $i++) {
+    $randMobile .= mt_rand(1, 9);
+  }
+  return [
+    'name'           => $faker->name,
+    'email'          => $faker->unique()->safeEmail,
+    'password'       => $password ?: $password = bcrypt('secret'),
+    'remember_token' => str_random(10),
+    'mobile'         => $randMobile
     ];
 });
 
 $factory->define(App\Blog\Post::class, function (Faker\Generator $faker) {
   $content = $faker->unique()->text(1000);
-  $excerpt = str_limit($content,100);
+  $excerpt = str_limit($content, 100);
   return [
-    'title'            => $faker->sentence(3,true),
+    'title'            => $faker->sentence(3, true),
     'author_id'        => 1,
     'seo_title'        => null,
     'excerpt'          => $excerpt,
     'body'             => "<p>{$content}</p>",
     'image'            => 'posts/nlje9NZQ7bTMYOUG4lF1.jpg',
-    'slug'             => function(array $post){
+    'slug'             => function (array $post) {
       return $post['title'];
     },
     'meta_description' => 'This is the meta description',

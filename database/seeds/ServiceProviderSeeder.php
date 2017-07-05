@@ -15,7 +15,7 @@ class ServiceProviderSeeder extends Seeder
 
   public function run()
   {
-    $dataUrl = 'database/data/serviceProviders.json';
+    $dataUrl = base_path().'/database/data/serviceProviders.json';
     $convertedDataSet = $this->getDataFromJson($dataUrl);
 
     foreach ($convertedDataSet as $serviceProvider) {

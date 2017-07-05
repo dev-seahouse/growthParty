@@ -16,7 +16,7 @@ class OccupationSeeder extends Seeder
 
   public function run()
   {
-    $dataUrl = 'database/data/occupations.json';
+    $dataUrl = base_path().'/database/data/occupations.json';
     $convertedDataSet = $this->getDataFromJson($dataUrl);
     foreach ($convertedDataSet as $key => $values) {
       $industry = $this->insertIndustryNameIntoDb($key);

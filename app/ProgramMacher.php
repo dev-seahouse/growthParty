@@ -1,13 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kenan
- * Date: 29/6/17
- * Time: 04:58
- */
 
 namespace App;
 
+
+use Cache;
 
 class ProgramMacher implements ProgramMacherInterface
 {
@@ -17,18 +13,14 @@ class ProgramMacher implements ProgramMacherInterface
 
   public function __construct()
   {
-    $this->industries = \Cache::remember('industries', 60*24*7,function(){
-      return Industry::all();
-    });
-
-    $this->programs =  \Cache::remember('programs', 60*24*7,function(){
-      return Program::all();
+    $this->programs = Cache::remember('programs', 10080, function () {
+      return \App\Program::all();
     });
   }
 
   public function match($user, $numMatches)
   {
-    $occupation = $user->occupation;
-
+    print_r($this->programs->take(3));
+    return $this->programs;
   }
 }

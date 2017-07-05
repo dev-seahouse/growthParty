@@ -7,14 +7,17 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class ExampleTest extends TestCase
+class HomePageTest extends TestCase
 {
+
     /**
      * A basic test example.
      *
      * @return void
      */
-    public function testBasicTest()
+    use DatabaseMigrations;
+
+    public function test_a_user_can_see_browse_home_page()
     {
         $response = $this->get('/');
 
