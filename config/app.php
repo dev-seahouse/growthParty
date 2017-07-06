@@ -177,6 +177,8 @@ return [
     Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
     GrahamCampbell\HTMLMin\HTMLMinServiceProvider::class,
     Radic\BladeExtensions\BladeExtensionsServiceProvider::class,
+    Way\Generators\GeneratorsServiceProvider::class,
+    Xethron\MigrationsGenerator\MigrationsGeneratorServiceProvider::class,
     /*
      * Application Service Providers...
      */
