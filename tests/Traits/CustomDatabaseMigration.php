@@ -1,15 +1,21 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kenan
- * Date: 7/7/17
- * Time: 00:15
- */
+namespace Tests\Traits;
 
-namespace Tests;
-
+use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 trait CustomDatabaseMigration
 {
+  use DatabaseMigrations;
+  public function runDatabaseMigrations()
+  {
+    $this->artisan('migrate');
+    $this->artisan('db:seed');
 
+    $this->app[Kernel::class]->setArtisan(null);
+
+    $this->beforeApplicationDestroyed(function () {
+      $this->artisan('migrate:rollback');
+    });
+  }
 }
