@@ -10,11 +10,13 @@ trait CustomDatabaseMigration
   public function runDatabaseMigrations()
   {
     $this->artisan('migrate');
+    $this->artisan('migrate',['--path'=>'/database/migrations/test_only']);
     $this->artisan('db:seed');
 
     $this->app[Kernel::class]->setArtisan(null);
 
     $this->beforeApplicationDestroyed(function () {
+      $this->artisan('migrate:rollback',['--path'=>'/database/migrations/test_only']);
       $this->artisan('migrate:rollback');
     });
   }
