@@ -6,8 +6,7 @@ use App\ProgramMacher;
 use App\User;
 use Hamcrest\Matcher;
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Tests\Traits\CustomDatabaseMigration as DatabaseMigrations;
 
 class TestProgramMatcher extends TestCase
 {
@@ -18,10 +17,8 @@ class TestProgramMatcher extends TestCase
   public function setUp()
   {
     parent::setUp();
-    $this->users = $this->createRandomUsers();
+    $this->users = $this->createRandomUsers(10);
     $this->matcher = new ProgramMacher();
-    $this->artisan('db:seed');
-    $this->artisan('cache:clear');
   }
 
   public function testCanCreateMatcher()
@@ -37,8 +34,12 @@ class TestProgramMatcher extends TestCase
     $this->assertEquals($numberOfProgramMatchesToReturn, $matchedPrograms->count());
   }
 
-  protected function createRandomUsers()
+  public function testItCanAssignProgramToUser()
   {
-    return factory(User::class, 10)->create();
+  }
+
+  protected function createRandomUsers($numberUsers)
+  {
+    return factory(User::class, $numberUsers)->create();
   }
 }
