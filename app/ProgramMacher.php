@@ -13,14 +13,13 @@ class ProgramMacher implements ProgramMacherInterface
 
   public function __construct()
   {
-    $this->programs = Cache::remember('programs', 10080, function () {
-      return \App\Program::all();
+    $this->programs = Cache::get('programs',function () {
+      return Program::all();
     });
   }
 
   public function match($user, $numMatches)
   {
-    print_r($this->programs->take(3));
-    return $this->programs;
+    return $this->programs->take($numMatches);
   }
 }
