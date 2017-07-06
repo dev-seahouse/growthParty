@@ -15,7 +15,7 @@ class ProgramOccupationMappingSeeder extends Seeder
 
     public function run()
     {
-      $dataUrl = "database/data/program_occupation_mapping.json";
+      $dataUrl = base_path("database/data/program_occupation_mapping.json");
       $programs = $this->getDataFromJson($dataUrl);
       foreach ($programs as $programName => $matchingOccupations)
       {
