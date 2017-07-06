@@ -116,7 +116,7 @@ module.exports = __webpack_require__(34);
  */
 
 __webpack_require__(35);
-window.Vue = __webpack_require__(12
+window.Vue = __webpack_require__(12);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it te
@@ -124,7 +124,7 @@ window.Vue = __webpack_require__(12
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-);Vue.component('flash', __webpack_require__(55));
+Vue.component('flash', __webpack_require__(55));
 Vue.component('navigation', __webpack_require__(58));
 
 var app = new Vue({
@@ -155,14 +155,14 @@ try {
   console.log(e);
 }
 
-__webpack_require__(5
+__webpack_require__(5);
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-);window.axios = __webpack_require__(6);
+window.axios = __webpack_require__(6);
 window.axios.defaults.headers.common['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -189,7 +189,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /**
  * what-input - A global utility for tracking the current input method (mouse, keyboard or touch).
- * @version v4.1.3
+ * @version v4.2.0
  * @link https://github.com/ten1seven/what-input
  * @license MIT
  */
@@ -256,17 +256,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * variables
 	   */
 
-	  // cache document.documentElement
-	  var docElem = document.documentElement;
-
 	  // last used input type
 	  var currentInput = 'initial';
 
 	  // last used input intent
 	  var currentIntent = null;
 
+	  // cache document.documentElement
+	  var doc = document.documentElement;
+
 	  // form input types
 	  var formInputs = ['input', 'select', 'textarea'];
+
+	  var functionList = [];
 
 	  // list of modifier keys commonly used with the mouse and
 	  // can be safely ignored to prevent false keyboard detection
@@ -275,6 +277,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	  18, // alt
 	  91, // Windows key / left Apple cmd
 	  93 // Windows menu / right Apple cmd
+	  ];
+
+	  // list of keys for which we change intent even for form inputs
+	  var changeIntentMap = [9 // tab
 	  ];
 
 	  // mapping of events to input types
@@ -311,6 +317,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    4: 'mouse'
 	  };
 
+	  var supportsPassive = false;
+
+	  try {
+	    var opts = Object.defineProperty({}, 'passive', {
+	      get: function get() {
+	        supportsPassive = true;
+	      }
+	    });
+
+	    window.addEventListener('test', null, opts);
+	  } catch (e) {}
+
 	  /*
 	   * set up
 	   */
@@ -334,28 +352,28 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    // pointer events (mouse, pen, touch)
 	    if (window.PointerEvent) {
-	      docElem.addEventListener('pointerdown', updateInput);
-	      docElem.addEventListener('pointermove', setIntent);
+	      doc.addEventListener('pointerdown', updateInput);
+	      doc.addEventListener('pointermove', setIntent);
 	    } else if (window.MSPointerEvent) {
-	      docElem.addEventListener('MSPointerDown', updateInput);
-	      docElem.addEventListener('MSPointerMove', setIntent);
+	      doc.addEventListener('MSPointerDown', updateInput);
+	      doc.addEventListener('MSPointerMove', setIntent);
 	    } else {
 	      // mouse events
-	      docElem.addEventListener('mousedown', updateInput);
-	      docElem.addEventListener('mousemove', setIntent);
+	      doc.addEventListener('mousedown', updateInput);
+	      doc.addEventListener('mousemove', setIntent);
 
 	      // touch events
 	      if ('ontouchstart' in window) {
-	        docElem.addEventListener('touchstart', touchBuffer);
-	        docElem.addEventListener('touchend', touchBuffer);
+	        doc.addEventListener('touchstart', touchBuffer);
+	        doc.addEventListener('touchend', touchBuffer);
 	      }
 	    }
 
 	    // mouse wheel
-	    docElem.addEventListener(detectWheel(), setIntent);
+	    doc.addEventListener(detectWheel(), setIntent, supportsPassive ? { passive: true } : false);
 
 	    // keyboard events
-	    docElem.addEventListener('keydown', updateInput);
+	    doc.addEventListener('keydown', updateInput);
 	  };
 
 	  // checks conditions before updating new input
@@ -369,8 +387,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (currentInput !== value || currentIntent !== value) {
 	        var activeElem = document.activeElement;
 	        var activeInput = false;
+	        var notFormInput = activeElem && activeElem.nodeName && formInputs.indexOf(activeElem.nodeName.toLowerCase()) === -1;
 
-	        if (activeElem && activeElem.nodeName && formInputs.indexOf(activeElem.nodeName.toLowerCase()) === -1) {
+	        if (notFormInput || changeIntentMap.indexOf(eventKey) !== -1) {
 	          activeInput = true;
 	        }
 
@@ -378,7 +397,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        // ignore mouse modifier keys
 	        value === 'mouse' ||
 	        // don't switch if the current element is a form input
-	        value === 'keyboard' && activeInput && ignoreMap.indexOf(eventKey) === -1) {
+	        value === 'keyboard' && eventKey && activeInput && ignoreMap.indexOf(eventKey) === -1) {
 	          // set the current and catch-all variable
 	          currentInput = currentIntent = value;
 
@@ -390,13 +409,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  // updates the doc and `inputTypes` array with new input
 	  var setInput = function setInput() {
-	    docElem.setAttribute('data-whatinput', currentInput);
-	    docElem.setAttribute('data-whatintent', currentInput);
+	    doc.setAttribute('data-whatinput', currentInput);
+	    doc.setAttribute('data-whatintent', currentInput);
 
 	    if (inputTypes.indexOf(currentInput) === -1) {
 	      inputTypes.push(currentInput);
-	      docElem.className += ' whatinput-types-' + currentInput;
+	      doc.className += ' whatinput-types-' + currentInput;
 	    }
+
+	    fireFunctions('input');
 	  };
 
 	  // updates input intent for `mousemove` and `pointermove`
@@ -421,7 +442,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (currentIntent !== value) {
 	        currentIntent = value;
 
-	        docElem.setAttribute('data-whatintent', currentIntent);
+	        doc.setAttribute('data-whatintent', currentIntent);
+
+	        fireFunctions('intent');
 	      }
 	    }
 	  };
@@ -435,6 +458,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      updateInput(event);
 	    } else {
 	      isBuffering = true;
+	    }
+	  };
+
+	  var fireFunctions = function fireFunctions(type) {
+	    for (var i = 0, len = functionList.length; i < len; i++) {
+	      if (functionList[i].type === type) {
+	        functionList[i].function.call(undefined, currentIntent);
+	      }
 	    }
 	  };
 
@@ -494,6 +525,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // returns array: all the detected input types
 	    types: function types() {
 	      return inputTypes;
+	    },
+
+	    // overwrites ignored keys with provided array
+	    ignoreKeys: function ignoreKeys(arr) {
+	      ignoreMap = arr;
+	    },
+
+	    // attach functions to input and intent "events"
+	    // funct: function to fire on change
+	    // eventType: 'input'|'intent'
+	    onChange: function onChange(funct, eventType) {
+	      functionList.push({
+	        function: funct,
+	        type: eventType
+	      });
 	    }
 	  };
 	}();
@@ -521,7 +567,7 @@ var Component = __webpack_require__(13)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Flash.vue"
+Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Flash.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -609,7 +655,7 @@ var Component = __webpack_require__(13)(
   /* moduleIdentifier (server only) */
   null
 )
-Component.options.__file = "/Users/kenan/Projects/growthParty/resources/assets/js/components/Navigation.vue"
+Component.options.__file = "/home/kenan/sites/growthParty/resources/assets/js/components/Navigation.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Navigation.vue: functional components are not supported with templates, they should use render functions.")}
 
