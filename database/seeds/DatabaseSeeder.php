@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
       $this->call(OccupationSeeder::class);
       $this->call(ServiceProviderSeeder::class);
       $this->call(ProgramsTableSeeder::class);
+      $this->call(ProgramOccupationMappingSeeder::class);
     }
 }

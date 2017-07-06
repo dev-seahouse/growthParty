@@ -14,7 +14,7 @@ class AlterProgramsTableAddMatchingRequirementColumn extends Migration
     public function up()
     {
       Schema::table('programs', function(Blueprint $table) {
-        $table->json('matching_requirements')->nullable();
+        $table->text('matching_requirements')->nullable();
       });
     }
 
