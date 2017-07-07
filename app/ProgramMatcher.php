@@ -10,16 +10,17 @@ class ProgramMatcher implements ProgramMacherInterface
   protected $industries;
   protected $programs;
 
-
   public function __construct()
   {
-    $this->programs = Cache::get('programs',function () {
+    $this->programs = Cache::get('programs', function () {
       return Program::get();
     });
   }
 
   public function match($user, $numMatches)
   {
-    return $this->programs->take($numMatches);
+    $occupationName = $user->occupation->name;
+    $candidates = Program::matchedPrograms($occupationName);
+    return $candidates->take($numMatches);
   }
 }
