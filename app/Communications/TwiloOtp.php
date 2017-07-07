@@ -36,7 +36,6 @@ class TwiloOtp implements Otp
   {
 
     $validToken = Session::get('twillo_token');
-    DebugBar::info('the opt in session is : ' . $validToken);
     if ($otp == $validToken) {
       Session::forget('twillo_token');
       return true;

@@ -2,6 +2,7 @@
 
 namespace App\Communications;
 
+use Debugbar;
 use Illuminate\Support\ServiceProvider;
 use Twilio\Rest\Client;
 

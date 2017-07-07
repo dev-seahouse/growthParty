@@ -2,12 +2,18 @@
   <div>
     <div class="step-tab-panel">
       <p>Please enter the OTP we have sent to your mobile number below.</p>
-      <div class="l-padded row small-6 columns align-center">
+      <div class="v-padded row small-10 columns align-center">
+        <div class="input-group">
         <input type="text"
           name="otp"
           placeholder="Enter OTP"
           v-model="localDetail.otp"
           required>
+          <div class="input-group-button">
+            <input type="submit" class="button" value="Resend">
+          </div>
+        </div>
+
       </div>
     </div>
     <div class="step-footer">
@@ -30,13 +36,18 @@ export default {
   props: ['detail'],
   methods: {
     prev() { this.$emit('prev'); },
-    next() { this.$emit('next', this.localDetail); },
+    next() {
+      console.log("emitting next");
+      this.$emit('next', this.localDetail);
+      },
     // when it is last step, need to call /verifyOtp
     sendOtp() {
       this.numTry++;
       console.log(`Tries ${this.numTry}. Sending OTP code to ${this.detail.mobile}.`);
-      axios.post('/otp/send', { mobile: this.detail.mobile })
-        .then(console.log)
+      axios.post('/otp/send', { mobile: this.detail.countryCode + this.detail.mobile })
+        .then(function () {
+
+        })
         .catch(console.log);
     }
   },

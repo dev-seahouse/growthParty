@@ -3,11 +3,15 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Communications\Otp;
-use App\Http\Controllers\Controller;
+use App\Exceptions\InvalidOTPException;
 use App\User;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
+
+use Debugbar;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Request;
-use Illuminate\Support\Facades\Validator;
+use Mockery\Exception;
 
 
 class RegisterController extends Controller
@@ -37,20 +41,22 @@ class RegisterController extends Controller
    *
    * @return void
    */
-  public function __construct()
+  public function __construct(Otp $otp)
   {
+    $this->otp = $otp;
     $this->middleware('guest');
   }
 
-  public function sendOtp(Otp $otp)
+  public function sendOtp()
   {
     $number = \request()->input('mobile');
-    $otp->send($number);
+    $this->otp->send($number);
   }
 
-  public function verifyOtp(Otp $otp)
+  public function verifyOtp($otp)
   {
-    $verificationCode = Request::input('');
+    $result = $this->otp->validate($otp);
+    if (!$result) throw new InvalidOTPException("The OTP you entered is invalid",422);
   }
 
   /**
@@ -77,6 +83,7 @@ class RegisterController extends Controller
    */
   protected function create(array $data)
   {
+    $this->verifyOtp($data['otp']);
     return User::create([
       'email'    => $data['email'],
       'mobile'   => $data['mobile'],

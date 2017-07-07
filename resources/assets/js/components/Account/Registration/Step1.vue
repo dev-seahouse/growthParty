@@ -17,14 +17,17 @@
       </div>
       <div class="row">
         <div class="small-12 columns">
-          <label>
-            Phone No.
-            <input type='tel'
+          <label for="mobile">Phone No.
+            <div class="input-group">
+              <span class="input-group-label">{{ localDetail.countryCode }}</span>
+              <input
+                  id="mobile"
               pattern='[+]?[\d ]*'
               name="mobile" 
               placeholder="Enter phone no."
               v-model="localDetail.mobile"
-              required>
+                  class="input-group-field" type="number">
+            </div>
           </label>
         </div>
       </div>
@@ -50,16 +53,17 @@
 
 <script>
 export default {
+  props: ['detail'],
   data() {
     return {
       localDetail: {
+        countryCode: "+65",
         email: this.detail.email || '',
         mobile: this.detail.mobile || '',
         password: this.detail.password || '',
       },
     };
   },
-  props: ['detail'],
   methods: {
     next(event) { this.$emit('next', this.localDetail); },
   },
