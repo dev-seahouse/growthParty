@@ -5,7 +5,7 @@ namespace App;
 
 use Cache;
 
-class ProgramMacher implements ProgramMacherInterface
+class ProgramMatcher implements ProgramMacherInterface
 {
   protected $industries;
   protected $programs;
