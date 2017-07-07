@@ -14,17 +14,25 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\User::class, function (Faker\Generator $faker) {
   static $password;
+
   $randMobile = '+6592';
   for ($i = 0; $i < 6; $i++) {
     $randMobile .= mt_rand(1, 9);
   }
+
+  $numOccupations = \App\Occupation::count();
+  $randomIndexOfOccupation = mt_rand(1, $numOccupations - 1);
+
   return [
     'name'           => $faker->name,
     'email'          => $faker->unique()->safeEmail,
     'password'       => $password ?: $password = bcrypt('secret'),
     'remember_token' => str_random(10),
-    'mobile'         => $randMobile
-    ];
+    'mobile'         => $randMobile,
+    'occupation_id'     => $randomIndexOfOccupation
+  ];
+
+
 });
 
 $factory->define(App\Blog\Post::class, function (Faker\Generator $faker) {
