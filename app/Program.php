@@ -36,7 +36,7 @@ class Program extends Model
 
   public static function findByName($name)
   {
-    return self::where('name',$name)->firstOrFail();
+    return self::where('name', $name)->firstOrFail();
   }
 
   public static function getIdByName($name)
@@ -44,4 +44,8 @@ class Program extends Model
     return self::findByName($name)->id;
   }
 
+  public function scopeMatchedPrograms($query, $occupation)
+  {
+    return $query->whereRaw('json_contains(JSON_UNQUOTE(matching_requirements),json_quote(?))',$occupation);
+  }
 }
