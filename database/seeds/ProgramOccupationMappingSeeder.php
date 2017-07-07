@@ -20,7 +20,7 @@ class ProgramOccupationMappingSeeder extends Seeder
       foreach ($programs as $programName => $matchingOccupations)
       {
         $program = Program::findByName($programName);
-        $program->matching_requirements = json_encode($matchingOccupations);
+        $program->matching_requirements = json_encode($matchingOccupations,JSON_UNESCAPED_UNICODE);
         $program->save();
       }
     }
