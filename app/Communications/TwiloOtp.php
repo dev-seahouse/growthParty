@@ -3,7 +3,7 @@
 namespace App\Communications;
 
 
-use DebugBar\DebugBar;
+use DebugBar;
 use Session;
 use Twilio\Rest\Client;
 
@@ -19,6 +19,7 @@ class TwiloOtp implements Otp
 
   public function send($mobile)
   {
+    // TODO: throw invalid request exception  if failed
     $otp_num = mt_rand(0, 9999);
     Session::put('twillo_token', $otp_num);
     $sms = $this->client->messages->create(
@@ -28,11 +29,14 @@ class TwiloOtp implements Otp
         'body' => $this->message . " Your one-time pin is " . $otp_num
       )
     );
+    return true;
   }
 
   public function validate($otp)
   {
+
     $validToken = Session::get('twillo_token');
+    DebugBar::info('the opt in session is : '.$validToken);
     if ($otp == $validToken) {
       Session::forget('twillo_token');
       return true;

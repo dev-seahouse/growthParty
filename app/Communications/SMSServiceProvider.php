@@ -22,7 +22,6 @@ class SMSServiceProvider extends ServiceProvider
    * Register the application services.
    *
    * @return void
-   * @throws \Twilio\Exceptions\ConfigurationException
    */
   public function register()
   {
