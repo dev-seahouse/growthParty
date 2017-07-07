@@ -6,7 +6,7 @@
  * Time: 05:05
  */
 
-namespace App;
+namespace App\Programs;
 
 Interface ProgramMacherInterface
 {

@@ -6,7 +6,7 @@ use Debugbar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
-use App\Program;
+use App\Programs\Program;
 use App\ServiceProvider;
 use App\Materials;
 

@@ -1,8 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Programs;
 
 
+use App\Programs\ProgramMacherInterface;
+use App\Programs\Program;
 use Cache;
 
 class ProgramMatcher implements ProgramMacherInterface

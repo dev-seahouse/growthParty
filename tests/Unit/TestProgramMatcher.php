@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use App\Program;
-use App\ProgramMatcher;
+use App\Programs\Program;
+use App\Programs\ProgramMatcher;
 use App\User;
 use Tests\TestCase;
 use Tests\Traits\CustomDatabaseMigration as DatabaseMigrations;

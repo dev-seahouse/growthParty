@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * App\ServiceProvider
  *
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Program[] $programs
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Programs\Program[] $programs
  * @mixin \Eloquent
  */
 class ServiceProvider extends Model
 {
     public function programs()
     {
-        return $this->hasMany('App\Program');
+        return $this->hasMany('App\Programs\Program');
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-use App\Program;
+use App\Programs\Program;
 use Illuminate\Database\Seeder;
 use Database\Traits\JsonSeederTrait;
 
