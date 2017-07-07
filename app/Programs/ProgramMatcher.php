@@ -15,6 +15,6 @@ Interface ProgramMatcher
   // @param User $user
   // @param int $numMathes
   // @return array::Program
-  public function match( $user, $numMatches);
+  public function getMatches($user, $numMatches);
 
 }

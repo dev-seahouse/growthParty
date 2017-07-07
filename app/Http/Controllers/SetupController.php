@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Exceptions\ProfilePicUploadException;
 use App\Occupation;
+use App\Programs\ProgramAssigner;
 use App\User;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
@@ -17,9 +18,11 @@ use Intervention\Image\ImageManager;
 
 class SetupController extends Controller
 {
-  public function __construct()
+  private $programAssigner;
+  public function __construct(ProgramAssigner $assigner)
   {
     $this->middleware(['auth','setup']);
+    $this->programAssigner = $assigner;
   }
 
   public function index()
@@ -40,6 +43,7 @@ class SetupController extends Controller
     $user->industry_id = Occupation::find($occupationId)->industry_id;
     $user->is_setup = 1;
     $user->save();
+    $this->programAssigner->assign($user);
     return view('dashboard.index');
   }
 

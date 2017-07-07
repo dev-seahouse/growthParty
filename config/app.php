@@ -189,6 +189,7 @@ return [
     App\Providers\RouteServiceProvider::class,
     Collective\Html\HtmlServiceProvider::class,
     App\Communications\SMSServiceProvider::class,
+    App\Programs\ProgramMatcherServiceProvider::class,
 
     // Interventions
     Intervention\Image\ImageServiceProvider::class,

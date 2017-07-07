@@ -126,7 +126,6 @@
       e.preventDefault()
       $currStep.toggleClass('active')
       $nextStep.toggleClass('active')
-      console.log('hi')
       $temp = $currStep
       $nextStep = $currStep
       $currStep = $temp

@@ -19,7 +19,7 @@ class ProgramMatcherImpl implements ProgramMatcher
     });
   }
 
-  public function match($user, $numMatches)
+  public function getMatches($user, $numMatches)
   {
     $occupationName = $user->occupation->name;
     $candidates = Program::matchedPrograms($occupationName);

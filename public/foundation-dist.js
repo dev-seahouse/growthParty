@@ -300,7 +300,7 @@ var Foundation = {
 
     this._uuids.push(plugin.uuid);
 
-    return;
+
   },
   /**
    * @function
@@ -323,7 +323,7 @@ var Foundation = {
     for (var prop in plugin) {
       plugin[prop] = null; //clean up script to prep for garbage collection.
     }
-    return;
+
   },
 
   /**
@@ -415,7 +415,7 @@ var Foundation = {
         } catch (er) {
           console.error(er);
         } finally {
-          return;
+
         }
       });
     });
@@ -816,9 +816,8 @@ var Box = {
  */
 function ImNotTouchingYou(element, parent, lrOnly, tbOnly, ignoreBottom) {
   return OverlapArea(element, parent, lrOnly, tbOnly, ignoreBottom) === 0;
-};
-
-function OverlapArea(element, parent, lrOnly, tbOnly, ignoreBottom) {
+}
+        function OverlapArea(element, parent, lrOnly, tbOnly, ignoreBottom) {
   var eleDims = GetDimensions(element),
       topOver,
       bottomOver,
@@ -2091,7 +2090,7 @@ var Nest = {
       }
     });
 
-    return;
+
   },
   Burn: function (menu, type) {
     var //items = menu.find('li'),
@@ -4294,7 +4293,7 @@ var DropdownMenu = function (_Plugin) {
         if (hasSub) {
           if (hasClicked) {
             if (!_this.options.closeOnClick || !_this.options.clickOpen && !hasTouch || _this.options.forceFollow && hasTouch) {
-              return;
+
             } else {
               e.stopImmediatePropagation();
               e.preventDefault();
@@ -4361,7 +4360,7 @@ var DropdownMenu = function (_Plugin) {
           if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).is($element)) {
             $prevElement = $elements.eq(i - 1);
             $nextElement = $elements.eq(i + 1);
-            return;
+
           }
         });
 
@@ -4382,7 +4381,7 @@ var DropdownMenu = function (_Plugin) {
             $element.find('li > a:first').focus();
             e.preventDefault();
           } else {
-            return;
+
           }
         },
             closeSub = function () {
@@ -5032,7 +5031,7 @@ var Equalizer = function (_Plugin) {
   }, {
     key: '_killswitch',
     value: function _killswitch() {
-      return;
+
     }
 
     /**

@@ -89,7 +89,6 @@ class User extends Authenticatable
     return $this->belongsTo(Occupation::class);
   }
 
-
   public function programs()
   {
     return $this->belongsToMany('App\Programs\Program');
