@@ -38,13 +38,12 @@ class TestProgramMatcher extends TestCase
     $user = $this->users->first();
     $occupationName = $user->occupation->name;
     $listOfExpectedMatches = Program::matchedPrograms($occupationName);
-
+    $actualReturnedMatch = $this->matcher->match($user, 1)->first();
+    $this->assertTrue($listOfExpectedMatches->contains($actualReturnedMatch));
   }
 
   protected function createRandomUsers($numberUsers)
   {
     return factory(User::class, $numberUsers)->create();
   }
-
-
 }
