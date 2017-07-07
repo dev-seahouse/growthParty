@@ -33,7 +33,6 @@ class Program extends Model
     return $this->belongsToMany('App\User');
   }
 
-
   public static function findByName($name)
   {
     return self::where('name', $name)->firstOrFail();
@@ -47,6 +46,9 @@ class Program extends Model
   public function scopeMatchedPrograms($query, $occupation)
   {
     return $query->whereRaw('
-    json_contains( JSON_UNQUOTE ( matching_requirements ), json_quote( ? ))',$occupation);
+    JSON_CONTAINS ( JSON_UNQUOTE ( matching_requirements ), JSON_QUOTE( ? )) 
+    OR JSON_CONTAINS ( JSON_UNQUOTE ( matching_requirements ), JSON_QUOTE( ? ) ) ',
+      [$occupation, "any"])
+      ->get();
   }
 }
