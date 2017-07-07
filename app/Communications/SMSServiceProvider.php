@@ -22,18 +22,22 @@ class SMSServiceProvider extends ServiceProvider
    * Register the application services.
    *
    * @return void
+   * @throws \Twilio\Exceptions\ConfigurationException
    */
   public function register()
   {
-    $this->app->singleton('Twilio\Rest\Client', function ($app) {
+    $this->app->singleton(/**
+     * @param $app
+     * @return Client
+     */
+      Client::class, function ($app) {
       $config = \Config::get('services.twilo');
-      DebugBar::info($config);
       return new Client($config['key'], $config['secret']);
     });
 
     $this->app->bind(
-      'App\Communications\Otp',
-      'App\Communications\TwiloOtp'
+      Otp::class,
+      TwiloOtp::class
     );
 
   }
