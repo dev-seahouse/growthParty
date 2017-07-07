@@ -3,9 +3,8 @@
 namespace Tests\Unit;
 
 use App\Program;
-use App\ProgramMacher;
+use App\ProgramMatcher;
 use App\User;
-use Hamcrest\Matcher;
 use Tests\TestCase;
 use Tests\Traits\CustomDatabaseMigration as DatabaseMigrations;
 
@@ -19,12 +18,12 @@ class TestProgramMatcher extends TestCase
   {
     parent::setUp();
     $this->users = $this->createRandomUsers(10);
-    $this->matcher = new ProgramMacher();
+    $this->matcher = new ProgramMatcher();
   }
 
   public function testCanCreateMatcher()
   {
-    $this->assertInstanceOf(ProgramMacher::class, $this->matcher);
+    $this->assertInstanceOf(ProgramMatcher::class, $this->matcher);
   }
 
   public function testItShouldReturnCorrectNumberOfPrograms()
@@ -38,9 +37,7 @@ class TestProgramMatcher extends TestCase
   public function testGivenAUserItShouldReturnAMatchingProgram(){
     $user = $this->users->first();
     $occupationName = $user->occupation->name;
-    print_r($occupationName);
-    $matchedPrograms = Program::matchedPrograms($occupationName);
-    print_r($matchedPrograms->count());
+    $listOfExpectedMatches = Program::matchedPrograms($occupationName);
 
   }
 
