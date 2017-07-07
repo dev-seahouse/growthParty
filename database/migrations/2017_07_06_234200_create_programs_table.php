@@ -20,7 +20,7 @@ class CreateProgramsTable extends Migration {
 			$table->string('description', 191);
 			$table->integer('affiliate_count')->unsigned()->default(0);
 			$table->timestamps();
-			$table->json('matching_requirements', 65535)->nullable();
+			$table->text('matching_requirements', 65535)->nullable();
 		});
 	}
 
