@@ -1,28 +1,20 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: kenan
+ * Date: 29/6/17
+ * Time: 05:05
+ */
 
 namespace App\Programs;
 
-
-use App\Programs\ProgramMacherInterface;
-use App\Programs\Program;
-use Cache;
-
-class ProgramMatcher implements ProgramMacherInterface
+Interface ProgramMatcher
 {
-  protected $industries;
-  protected $programs;
+  // given user and number of expected mathes,
+  // return list of matched programs
+  // @param User $user
+  // @param int $numMathes
+  // @return array::Program
+  public function match( $user, $numMatches);
 
-  public function __construct()
-  {
-    $this->programs = Cache::get('programs', function () {
-      return Program::get();
-    });
-  }
-
-  public function match($user, $numMatches)
-  {
-    $occupationName = $user->occupation->name;
-    $candidates = Program::matchedPrograms($occupationName);
-    return $candidates->take($numMatches);
-  }
 }

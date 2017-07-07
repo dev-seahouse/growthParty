@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 use App\Programs\Program;
-use App\Programs\ProgramMatcher;
+use App\Programs\ProgramMatcherImpl;
 use App\User;
 use Tests\TestCase;
 use Tests\Traits\CustomDatabaseMigration as DatabaseMigrations;
@@ -18,12 +18,12 @@ class TestProgramMatcher extends TestCase
   {
     parent::setUp();
     $this->users = $this->createRandomUsers(10);
-    $this->matcher = new ProgramMatcher();
+    $this->matcher = new ProgramMatcherImpl();
   }
 
   public function testCanCreateMatcher()
   {
-    $this->assertInstanceOf(ProgramMatcher::class, $this->matcher);
+    $this->assertInstanceOf(ProgramMatcherImpl::class, $this->matcher);
   }
 
   public function testItShouldReturnCorrectNumberOfPrograms()
