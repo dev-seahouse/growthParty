@@ -19,9 +19,9 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Occupation extends Model
 {
-  public function occupation()
+  public function user()
   {
-    return $this->hasOne('App\Occupation');
-    
+    return $this->hasMany(User::class);
   }
+
 }
