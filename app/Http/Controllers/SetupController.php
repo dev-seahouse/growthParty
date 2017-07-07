@@ -44,7 +44,7 @@ class SetupController extends Controller
     $user->is_setup = 1;
     $user->save();
     $this->programAssigner->assign($user);
-    return view('dashboard.index');
+    return redirect('/dashboard');
   }
 
   public function uploadProfilePic(Request $request)
