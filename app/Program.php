@@ -46,6 +46,7 @@ class Program extends Model
 
   public function scopeMatchedPrograms($query, $occupation)
   {
-    return $query->whereRaw('json_contains(JSON_UNQUOTE(matching_requirements),json_quote(?))',$occupation);
+    return $query->whereRaw('
+    json_contains( JSON_UNQUOTE ( matching_requirements ), json_quote( ? ))',$occupation);
   }
 }

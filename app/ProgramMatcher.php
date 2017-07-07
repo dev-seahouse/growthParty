@@ -14,7 +14,7 @@ class ProgramMacher implements ProgramMacherInterface
   public function __construct()
   {
     $this->programs = Cache::get('programs',function () {
-      return Program::all();
+      return Program::get();
     });
   }
 
