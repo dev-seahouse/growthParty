@@ -84,9 +84,14 @@ class User extends Authenticatable
     return self::storageFolderUrl . $this->id . '/';
   }
 
+  public function occupation()
+  {
+    return $this->belongsTo(Occupation::class);
+  }
 
-    public function programs()
-    {
-        return $this->belongsToMany('App\Program');
-    }
+
+  public function programs()
+  {
+    return $this->belongsToMany('App\Program');
+  }
 }
