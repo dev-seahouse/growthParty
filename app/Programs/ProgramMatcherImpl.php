@@ -3,8 +3,6 @@
 namespace App\Programs;
 
 
-use App\Programs\ProgramMatcher;
-use App\Programs\Program;
 use Cache;
 
 class ProgramMatcherImpl implements ProgramMatcher

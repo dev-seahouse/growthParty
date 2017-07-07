@@ -7,6 +7,7 @@ use App\User;
 class ProgramAssigner
 {
   private $matcher;
+
   public function __construct(ProgramMatcher $matcher)
   {
     $this->matcher = $matcher;
@@ -21,7 +22,7 @@ class ProgramAssigner
     $numProgramsUserHave = $userPrograms->count();
     $numProgramsToMatch = $numProgramsShouldHave - $numProgramsUserHave;
     $matchedPrograms = $this->matcher->getMatches($user, $numProgramsToMatch);
-    if ($numProgramsToMatch!==0 && !$userPrograms->contains($matchedPrograms)) {
+    if ($numProgramsToMatch !== 0 && !$userPrograms->contains($matchedPrograms)) {
       $user->programs()->saveMany($matchedPrograms);
     }
   }

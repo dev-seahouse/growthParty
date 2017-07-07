@@ -3,14 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Communications\Otp;
-use App\Exceptions\InvalidOTPException;
-use App\User;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Validator;
-
-use Debugbar;
+use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\Validator;
 
 
 class RegisterController extends Controller

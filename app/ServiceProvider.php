@@ -12,8 +12,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class ServiceProvider extends Model
 {
-    public function programs()
-    {
-        return $this->hasMany('App\Programs\Program');
-    }
+  public function programs()
+  {
+    return $this->hasMany('App\Programs\Program');
+  }
 }

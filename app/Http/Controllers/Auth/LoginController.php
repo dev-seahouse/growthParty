@@ -118,13 +118,13 @@ class LoginController extends Controller
   {
     $messages = [
       'password.required' => 'did you forget to enter password?',
-      'password.min' => 'please choose a password with more than 6 characters',
-      'email.required' => 'did you forget to enter login id?',
-      'mobile.required' => 'did you forget to enter login id',
-      'mobile.digits' => 'please enter a valid mobile number',
-      'mobile.numeric' => 'please enter a valid mobile number',
-      'mobile.regex' => 'please enter a valid mobile number',
-      'email.email' => 'please enter a valid email address'
+      'password.min'      => 'please choose a password with more than 6 characters',
+      'email.required'    => 'did you forget to enter login id?',
+      'mobile.required'   => 'did you forget to enter login id',
+      'mobile.digits'     => 'please enter a valid mobile number',
+      'mobile.numeric'    => 'please enter a valid mobile number',
+      'mobile.regex'      => 'please enter a valid mobile number',
+      'email.email'       => 'please enter a valid email address'
     ];
     $rules = $this->prepareValidationRules($request);
     $this->validate($request, $rules);

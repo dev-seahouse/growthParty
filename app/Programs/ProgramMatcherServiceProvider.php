@@ -24,10 +24,10 @@ class ProgramMatcherServiceProvider extends ServiceProvider
   {
     $this->app->singleton(
       ProgramMatcherImpl::class, function ($app) {
-        return new ProgramMatcherImpl();
+      return new ProgramMatcherImpl();
     });
 
-    $this->app->bind (
+    $this->app->bind(
       ProgramMatcher::class,
       ProgramMatcherImpl::class
     );

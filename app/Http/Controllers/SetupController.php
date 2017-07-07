@@ -6,22 +6,20 @@ use App\Exceptions\ProfilePicUploadException;
 use App\Occupation;
 use App\Programs\ProgramAssigner;
 use App\User;
-use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\File;
 use Intervention\Image\Facades\Image;
-use Intervention\Image\ImageManager;
 
 class SetupController extends Controller
 {
   private $programAssigner;
+
   public function __construct(ProgramAssigner $assigner)
   {
-    $this->middleware(['auth','setup']);
+    $this->middleware(['auth', 'setup']);
     $this->programAssigner = $assigner;
   }
 
@@ -34,7 +32,7 @@ class SetupController extends Controller
   public function store(Request $request)
   {
     $this->validate($request, [
-      'name' => 'required|max:50',
+      'name'       => 'required|max:50',
       'occupation' => 'required|max:50',
     ]);
     $user = Auth::user();
@@ -64,31 +62,32 @@ class SetupController extends Controller
     $saveResultOfProfilePic = $profilePic->save($profilePicPath);
     $saveResultOfAvatar = $avatar->save($smallProfilePicPath);
 
-    if (!($saveResultOfAvatar || $saveResultOfProfilePic)){
-      throw new ProfilePicUploadException("Server error while uploading",500);
+    if (!($saveResultOfAvatar || $saveResultOfProfilePic)) {
+      throw new ProfilePicUploadException("Server error while uploading", 500);
     }
 
-    Auth::user()-> avatar = $smallProfilePicPath;
+    Auth::user()->avatar = $smallProfilePicPath;
     Auth::user()->save();
 
     return Response::json([
-      'error'=>false,
-      'code'=>200
-    ],200);
+      'error' => false,
+      'code'  => 200
+    ], 200);
   }
 
-  public function removeUploadedImages() {
+  public function removeUploadedImages()
+  {
     $user = Auth::user();
-    $extension = pathinfo($user->avatar,PATHINFO_EXTENSION);
+    $extension = pathinfo($user->avatar, PATHINFO_EXTENSION);
 
     $profilePicPath = $this->getImgPath(User::$profilePicFileName, $extension);
-    $avatarPath = $this->getImgPath(User::$smallProfilePicFileName,$extension);
+    $avatarPath = $this->getImgPath(User::$smallProfilePicFileName, $extension);
     Storage::disk('public')->delete([$profilePicPath, $avatarPath]);
 
     return Response::json([
       'error' => false,
-      'code' => 200
-    ],200);
+      'code'  => 200
+    ], 200);
   }
 
   protected function validateRequest($form_data)
@@ -105,7 +104,7 @@ class SetupController extends Controller
       'avatar' => 'required|mimes:png,gif,jpeg,jpg,bmp'
     ];
     $messages = [
-      'file.mimes' => 'Uploaded file is not in image format',
+      'file.mimes'    => 'Uploaded file is not in image format',
       'file.required' => 'Image is required'
     ];
     $validator = Validator::make($form_data, $rules, $messages);
@@ -117,7 +116,7 @@ class SetupController extends Controller
     $storagePath = Auth::user()->getStoragePath();
     $userImgPath = $this->getImgPath($filename, $extension);
     Storage::disk('public')->makeDirectory($storagePath);
-    return "storage".$userImgPath;
+    return "storage" . $userImgPath;
   }
 
   protected function getImgPath($filename, $extension)
@@ -135,7 +134,7 @@ class SetupController extends Controller
 
   protected function makeAvatar($photo)
   {
-    $image = Image::make($photo)->resize(300,null, function ($constraint){
+    $image = Image::make($photo)->resize(300, null, function ($constraint) {
       $constraint->aspectRatio();
     });
     return $image;

@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Materials;
 use App\Programs\ProgramAssigner;
 use App\Programs\ProgramMatcher;
-use Debugbar;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\User;
-use App\Materials;
 
 class DashboardController extends Controller
 {
@@ -17,8 +14,8 @@ class DashboardController extends Controller
    *
    * @param ProgramMatcher $matcher
    */
-   private $programAssigner;
-  
+  private $programAssigner;
+
   public function __construct(ProgramAssigner $assigner)
   {
     $this->middleware(array('auth', 'notSetup'));
