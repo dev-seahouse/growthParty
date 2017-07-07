@@ -31,7 +31,6 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
         $programsOfUser = $user->programs;
-        DebugBar::info($programsOfUser);
         return view('dashboard.index', compact('user', 'programsOfUser'));
     }
 }
