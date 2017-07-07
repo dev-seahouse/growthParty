@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Program;
 use App\ProgramMacher;
 use App\User;
 use Hamcrest\Matcher;
@@ -34,12 +35,19 @@ class TestProgramMatcher extends TestCase
     $this->assertEquals($numberOfProgramMatchesToReturn, $matchedPrograms->count());
   }
 
-  public function testItCanAssignProgramToUser()
-  {
+  public function testGivenAUserItShouldReturnAMatchingProgram(){
+    $user = $this->users->first();
+    $occupationName = $user->occupation->name;
+    print_r($occupationName);
+    $matchedPrograms = Program::matchedPrograms($occupationName);
+    print_r($matchedPrograms->count());
+
   }
 
   protected function createRandomUsers($numberUsers)
   {
     return factory(User::class, $numberUsers)->create();
   }
+
+
 }
