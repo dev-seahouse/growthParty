@@ -28,7 +28,8 @@ class DashboardController extends Controller
    */
   public function index()
   {
-    $programsOfUser = Auth::user()->programs;
+    $user = Auth::user();
+    $programsOfUser = $user->programs;
     return view('dashboard.index', compact('user', 'programsOfUser'));
   }
 }
