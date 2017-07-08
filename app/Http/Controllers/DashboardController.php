@@ -16,10 +16,9 @@ class DashboardController extends Controller
    */
   private $programAssigner;
 
-  public function __construct(ProgramAssigner $assigner)
+  public function __construct()
   {
     $this->middleware(array('auth', 'notSetup'));
-    $this->programAssigner = $assigner;
   }
 
   /**
@@ -29,9 +28,7 @@ class DashboardController extends Controller
    */
   public function index()
   {
-    $user = Auth::user();
-    $this->programAssigner->assign($user);
-    $programsOfUser = $user->programs;
+    $programsOfUser = Auth::user()->programs;
     return view('dashboard.index', compact('user', 'programsOfUser'));
   }
 }
