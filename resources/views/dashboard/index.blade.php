@@ -9,28 +9,23 @@
       @endforeach
 
     @endforeach
-
-    <div class="l-padded p-b-0 row">
-      <div class="columns">
-        <table style="width:100%">
-          @foreach ($programsOfUser as $program)
-            <tr>
-              <th rowspan="3"><img src="/storage/{{ Auth::user()->avatar }}" alt="Program Image"></th>
-              <td>{{ $program->name }}</td>
-            </tr>
-            <tr>
-              <td>by {{ $program->serviceProvider->name }}
-
-              </td>
-
-            </tr>
-            <tr>
-              <td>Earn up to $XXX rewards</td>
-            </tr>
-          @endforeach
-
-        </table>
-      </div>
+    <div class="l-padded p-b-0 row align-center">
+    @foreach ($programsOfUser as $program)
+        <div class="small-12 columns">
+          <div class="media-object">
+            <div class="media-object-section">
+              <div class="thumbnail">
+                <img src="{{ $program->serviceProvider->getCompanyLogoPath() }}" alt="Program Image">
+              </div>
+            </div>
+            <div class="media-object-section main-section">
+              <h4>{{ $program->name }}</h4>
+              <p class="gray-text">{{$program->serviceProvider->name}}</p>
+              <span class="reward">Earn up to $100 rewards</span>
+            </div>
+          </div>
+        </div>
+    @endforeach
     </div>
   @endisset
 

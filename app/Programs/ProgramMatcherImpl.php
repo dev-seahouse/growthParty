@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Programs;
-
-
 use Cache;
 
 class ProgramMatcherImpl implements ProgramMatcher
