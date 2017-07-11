@@ -7,7 +7,7 @@
      onclick="event.preventDefault();document.getElementById('logout-form').submit()">
     Logout
   </a>
-  <div class="row dark-slate-grey-text align-center-middle l-full-height">
+  <div class="row dark-slate-grey-text align-center l-full-height">
     <div class="small-8 medium-7 large-5 columns step active">
 
 
