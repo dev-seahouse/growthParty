@@ -1,3 +1,11 @@
-.round-img {
-  border-radius:50%;
+// Image utils
+
+img {
+  &.round-img {
+    border-radius: 50%;
+  }
+  &.round-corner {
+    border-radius: 30px;
+  }
 }
+
