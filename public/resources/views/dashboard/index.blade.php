@@ -11,14 +11,13 @@
 
     @endforeach
 
-    <div class="l-full-height">
-      @foreach ($programsOfUser as $program)
-        <div class="l-padded p-b-0 row align-center">
-          <div class="media-object">
+    <div class="l-padded p-b-0 row align-center l-full-height">
+    @foreach ($programsOfUser as $program)
+        <div class="small-12 columns">
+          <div class="media-object ">
             <div class="media-object-section">
               <div class="thumbnail company-logo">
-                <img src="{{ $program->serviceProvider->getCompanyLogoPath() }}" alt="Company Image"
-                     class="round-corner">
+                <img src="{{ $program->serviceProvider->getCompanyLogoPath() }}" alt="Company Image" class="round-corner">
               </div>
             </div>
             <div class="media-object-section main-section">
@@ -28,9 +27,8 @@
             </div>
           </div>
         </div>
-      @endforeach
+    @endforeach
     </div>
-
   @endisset
 
   @if(!isset($programsOfUser) || count($programsOfUser) <= 0)

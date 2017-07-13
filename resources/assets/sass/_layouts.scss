@@ -43,8 +43,6 @@ $directions:('top','right', 'bottom','left');
    width: 40%;
  }
 }
-
-
 /*---------- Gutter helpers ----------*/
 
 // generates vertical and horizontal padding
@@ -142,5 +140,15 @@ $directions:('top','right', 'bottom','left');
 .progressive__img {
   height: auto!important;
   max-height: rem-calc(350px);
+}
+
+.reward {
+  border-radius:4px;
+  display:inline-block;
+  margin:20px;
+  margin-left:0;
+  padding:25px;
+  padding-right: 35px;
+  background-color:get_color(light-gray);
 }
 
