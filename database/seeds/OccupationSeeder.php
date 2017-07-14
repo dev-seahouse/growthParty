@@ -24,7 +24,6 @@ class OccupationSeeder extends Seeder
     }
   }
 
-
   /**
    * @param $values
    */
@@ -44,7 +43,7 @@ class OccupationSeeder extends Seeder
    */
   protected function insertIndustryNameIntoDb($key)
   {
-    $industry = \App\Industry::create(array(
+    $industry = \App\Industry::firstOrCreate(array(
       'name' => $key
     ));
     return $industry;
