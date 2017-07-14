@@ -19,6 +19,12 @@ class ServiceProvider extends Model
     return $this->hasMany(Programs\Program::class);
   }
 
+  public function ratings()
+  {
+    return $this->hasOne(Rating::class);
+  }
+
+
   public function getCompanyLogoPath()
   {
     $fileTypeAllowed = '{jpg, png}';
