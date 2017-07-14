@@ -2,10 +2,10 @@
 
 namespace App\Programs;
 
-use Illuminate\Database\Eloquent\Model;
-use App\ServiceProvider;
 use App\Material;
+use App\ServiceProvider;
 use App\User;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * App\Program
@@ -29,13 +29,19 @@ class Program extends Model
     return $this->hasMany(Material::class);
   }
 
-  public function programTemplate(){
+  public function programTemplate()
+  {
     return $this->belongsTo(ProgramTemplate::class);
   }
 
   public function users()
   {
     return $this->belongsToMany(User::class);
+  }
+
+  public function programName()
+  {
+    return $this->programTemplate()->first()->name;
   }
 
   public static function findByName($name)
@@ -50,11 +56,11 @@ class Program extends Model
 
   public function scopeMatchedPrograms($query, $occupation)
   {
-    return $query->join("program_templates","programs.id", "program_templates.id")
+    return $query->join("program_templates", "programs.id", "program_templates.id")
       ->whereRaw('
     JSON_CONTAINS ( JSON_UNQUOTE ( matching_requirements ), JSON_QUOTE( ? )) 
     OR JSON_CONTAINS ( JSON_UNQUOTE ( matching_requirements ), JSON_QUOTE( ? ) ) ',
-      [$occupation, "any"])
+        [$occupation, "any"])
       ->get();
   }
 }
