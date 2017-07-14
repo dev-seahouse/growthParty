@@ -20,7 +20,11 @@ class ServiceProviderSeeder extends Seeder
 
     foreach ($convertedDataSet as $serviceProvider) {
       $industryName = $serviceProvider['industry'];
-      $industryId = Industry::where('name', $industryName)->first()->id;
+      try{
+        $industryId = Industry::where('name', $industryName)->first()->id;
+      } catch (ErrorException $ex){
+        throw new ErrorException('Check that name of industries in industry list matches industries of service providers.');
+      }
       array_forget($serviceProvider, 'industry');
       $serviceProvider['industry_id'] = $industryId;
       \App\ServiceProvider::create($serviceProvider);
