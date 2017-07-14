@@ -4,7 +4,7 @@ use App\Programs\Program;
 use Illuminate\Database\Seeder;
 use Database\Traits\JsonSeederTrait;
 
-class ProgramOccupationMappingSeeder extends Seeder
+class programTemplateMatchRequirementSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class ProgramOccupationMappingSeeder extends Seeder
 
     public function run()
     {
-      $dataUrl = base_path("database/data/program_occupation_mapping.json");
+      $dataUrl = base_path("database/data/program_template_match_requirements.json");
       $programs = $this->getDataFromJson($dataUrl);
       foreach ($programs as $programName => $matchingOccupations)
       {
