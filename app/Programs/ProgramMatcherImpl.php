@@ -19,6 +19,11 @@ class ProgramMatcherImpl implements ProgramMatcher
   {
     $occupationName = $user->occupation->name;
     $candidates = Program::matchedPrograms($occupationName);
-    return $candidates->take($numMatches);
+    $matches = collect();
+    $pq = new ProgramMatchQueue($candidates);
+    for ($counter = 0; $counter < $numMatches; $counter++){
+      $matches->push($pq->extract());
+    }
+    return $matches;
   }
 }
