@@ -18,6 +18,7 @@ class ServiceProvider extends Model
   {
     return $this->hasMany(Programs\Program::class);
   }
+
   public function getCompanyLogoPath()
   {
     $fileTypeAllowed = '{jpg, png}';
@@ -27,6 +28,11 @@ class ServiceProvider extends Model
     $logoFile = glob($serviceProviderStoragePath.'logo'. '/' .$fileTypeAllowed, GLOB_BRACE);
     if (!$logoFile) {$logoFile = array($publicStoragePath. 'default.png');}
     return $logoFile[0];
+  }
+
+  public static function findByName($name)
+  {
+    return self::where('name', $name)->firstOrFail();
   }
 
 }
