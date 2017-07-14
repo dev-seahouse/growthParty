@@ -1,0 +1,30 @@
+[
+  {
+    "name": "SEO",
+    "description": "improve search ranking of websites."
+  },
+  {
+    "name": "Web Development",
+    "description": "develop web applications and static web pages"
+  },
+  {
+    "name": "Graphic Design",
+    "description": "general graphics design service"
+  },
+  {
+    "name": "UX/UI Design",
+    "description": "design user interaction and graphical user interface for software applications"
+  },
+  {
+    "name": "Consultancy",
+    "description": "general consultancy services"
+  },
+  {
+    "name": "Marketing",
+    "description": "marketing services"
+  },
+  {
+    "name": "Others",
+    "description": "other services"
+  }
+]
