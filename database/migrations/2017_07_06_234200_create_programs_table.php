@@ -16,11 +16,10 @@ class CreateProgramsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->integer('service_provider_id')->unsigned();
-			$table->string('name', 191);
-			$table->string('description', 191);
-			$table->integer('affiliate_count')->unsigned()->default(0);
+			$table->integer('affiliate_count')->default(0);
+			$table->unsignedInteger('program_template_id');
 			$table->timestamps();
-			$table->text('matching_requirements', 65535)->nullable();
+
 		});
 	}
 
