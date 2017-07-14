@@ -22,7 +22,7 @@
               </div>
             </div>
             <div class="media-object-section main-section">
-              <h4>Dummy Program Name</h4>
+              <h4>{{$program->programName()}}</h4>
               <p class="medium-gray-text">by {{$program->serviceProvider->name}}</p>
               <div class="reward">Earn up to $100 rewards</div>
             </div>
