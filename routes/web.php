@@ -20,9 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 
 /*----------  Admin routes  ----------*/
-Route::group(['prefix' => 'admin'], function () {
-  Voyager::routes();
-});
+// Route::group(['prefix' => 'admin'], function () {
+//   Voyager::routes();
+// });
 
 /*----------  Blog Routes  ----------*/
 
