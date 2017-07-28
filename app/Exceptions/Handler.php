@@ -77,7 +77,7 @@ class Handler extends ExceptionHandler
     {
       if (!\Auth::check())
       {
-        return redirect()->route('/welcome');
+        return redirect()->route('welcome');
       }
 
       $exception = FlattenException::create($exception);

@@ -76,7 +76,7 @@
                     this.element.val(this.slug(strOrigin));
                     this.element.update = true;
                 }
-
+                return;
             },
 
 

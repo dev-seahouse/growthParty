@@ -71,7 +71,7 @@
 				res.searchURL = url;
 				if(typeof(callback) == "function"){
 					callback(res);
-
+					return;
 				}
 			}
 		});
@@ -91,7 +91,8 @@
 			first=false;
 		}
 		return root + ret;
-  }
-  return new f();
+	};
+
+	return new f();
 
 })(jQuery);

@@ -18,12 +18,6 @@ Route::get('/', function () {
 })->name('welcome');
 
 Auth::routes();
-
-/*----------  Admin routes  ----------*/
-// Route::group(['prefix' => 'admin'], function () {
-//   Voyager::routes();
-// });
-
 /*----------  Blog Routes  ----------*/
 
 Route::group(['prefix' => 'blog'], function () {
