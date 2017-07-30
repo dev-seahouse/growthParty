@@ -58,9 +58,7 @@ class Program extends Model
   {
     return $query->join("program_templates", "programs.id", "program_templates.id")
       ->whereRaw('
-    JSON_CONTAINS ( JSON_UNQUOTE ( matching_requirements ), JSON_QUOTE( ? )) 
-    OR JSON_CONTAINS ( JSON_UNQUOTE ( matching_requirements ), JSON_QUOTE( ? ) ) ',
-        [$occupation, "any"])
+    JSON_CONTAINS ( JSON_UNQUOTE ( matching_requirements ), JSON_QUOTE( ? ))', [$occupation])
       ->get();
   }
 }
