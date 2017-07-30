@@ -7,6 +7,10 @@ use App\Programs\ProgramAssigner;
 use App\Programs\ProgramMatcher;
 use Illuminate\Support\Facades\Auth;
 
+// I'm very sorry that this class should really be called
+// Programs controller and the corresponding view should be
+// named ProgramsView, because i am lazy i did not change 
+// - Xin Kenan
 class DashboardController extends Controller
 {
   /**
