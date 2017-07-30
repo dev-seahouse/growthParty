@@ -13,6 +13,9 @@
 
     <div class="l-full-height">
       @foreach ($programsOfUser as $program)
+      
+      {!! Form::open(['action' => ['DashboardController@show', $program], 'method'=>"get"]) !!}
+
         <div class="l-padded p-b-0 row align-center">
           <div class="media-object">
             <div class="media-object-section">
@@ -24,10 +27,13 @@
             <div class="media-object-section main-section">
               <h4>{{$program->programName()}}</h4>
               <p class="medium-gray-text">by {{$program->serviceProvider->name}}</p>
-              <div class="reward">Earn up to $100 rewards</div>
+              <button class="reward button">Earn up to $100 rewards</button>
             </div>
           </div>
         </div>
+        
+        {!! Form::close() !!}
+        
       @endforeach
     </div>
 

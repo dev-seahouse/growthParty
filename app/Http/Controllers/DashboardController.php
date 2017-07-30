@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Materials;
+use App\Programs\Program;
 use App\Programs\ProgramAssigner;
 use App\Programs\ProgramMatcher;
 use Illuminate\Support\Facades\Auth;
@@ -35,5 +36,10 @@ class DashboardController extends Controller
     $user = Auth::user();
     $programsOfUser = $user->programs;
     return view('dashboard.index', compact('user', 'programsOfUser'));
+  }
+
+  public function show(Program $program)
+  {
+    return view("dashboard.show", compact('program'));
   }
 }

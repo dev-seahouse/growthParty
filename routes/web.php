@@ -15,7 +15,7 @@
 
 Route::get('/', 'WelcomeController@index')->name('welcome');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::get('dashboard/{id}','DashboardController@show');
+Route::get('dashboard/{program}','DashboardController@show');
 
 
 /*----------  Auth Routes  ----------*/
