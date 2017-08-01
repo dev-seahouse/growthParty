@@ -18,7 +18,6 @@ use Illuminate\Database\Eloquent\Model;
 class Program extends Model
 {
 
-
   public function serviceProvider()
   {
     return $this->belongsTo(ServiceProvider::class);
@@ -36,7 +35,16 @@ class Program extends Model
 
   public function users()
   {
-    return $this->belongsToMany(User::class);
+    return $this->belongsToMany(User::class)->withTimestamps();
+  }
+
+  public function hasUser($user_id)
+  {
+    foreach ($this->users as $user) {
+      if($user->id == $user_id) {
+        return true;
+      }
+    }
   }
 
   public function programName()
