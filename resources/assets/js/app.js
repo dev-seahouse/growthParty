@@ -23,6 +23,7 @@ Vue.mixin({
 Vue.component('flash', require('./components/Flash.vue'))
 Vue.component('navigation', require('./components/Navigation.vue'))
 Vue.component('modal', require('./components/Modal.vue'))
+Vue.component('group-chat',require('./components/GroupChat.vue'))
 
 const app = new Vue({
   el: '#app',
