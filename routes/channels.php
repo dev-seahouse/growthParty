@@ -11,6 +11,12 @@
 |
 */
 
+use App\Programs\Program;
+
 Broadcast::channel('App.User.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
+});
+
+Broadcast::channel('programs.{program}',function($user, Program $program){
+  return $program->hasUser($user->id);
 });
