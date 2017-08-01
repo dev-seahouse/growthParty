@@ -4,6 +4,7 @@
       <ul class="chat">
         <li v-for="conversation in conversations">
           <div class="chat-body">
+            {{ conversation.user.name }} says:
             {{ conversation.message }}
           </div>
         </li>
@@ -26,11 +27,18 @@
       };
     },
     mounted() {
+      this.fetchChatHistory();
       this.listenForNewMessage();
     },
     methods: {
+      fetchChatHistory() {
+        axios.get('/conversations/'+this.program_id)
+          .then((response) => {
+          this.conversations = response.data;
+            //this.conversations.push(response.data);
+          });
+      },
       store() {
-        console.log(this.program_id);
         axios.post('/conversations', {message: this.message, program_id: this.program_id})
           .then((response) => {
             this.message = '';
