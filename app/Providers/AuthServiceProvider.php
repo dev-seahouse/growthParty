@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Policies\DashboardPolicy;
+use App\Programs\Program;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -12,7 +14,7 @@ class AuthServiceProvider extends ServiceProvider
    * @var array
    */
   protected $policies = [
-    'App\Model' => 'App\Policies\ModelPolicy',
+    Program::class => DashboardPolicy::class
   ];
 
   /**

@@ -40,6 +40,7 @@ class DashboardController extends Controller
 
   public function show(Program $program)
   {
+    $this->authorize('view', $program);
     return view("dashboard.show", compact('program'));
   }
 }
