@@ -41,6 +41,10 @@ Route::group(['prefix' => 'blog'],function(){
 });
 
 
+
+/*----------  Group Chat Routes  ----------*/
+Route::resource('conversations', 'ConversationController');
+
 /*----------  Admin routes  ----------*/
 Route::group(['prefix' => 'admin'], function () {
   Voyager::routes();
