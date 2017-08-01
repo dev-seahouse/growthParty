@@ -2,20 +2,20 @@
 </template>
 <script>
   export default {
-    props: ['program'],
+    props: ['program_id'],
     data() {
       return {
         conversations: [],
         message:'',
-        program_id: this.program.id
-      }
+        programId: this.program_id
+      };
     },
-    mounted(){
-
+    mounted() {
+      this.listenForNewMessage();
     },
     methods: {
       store() {
-        axios.post('/conversations', {message: this.message, program_id: this.program_id})
+        axios.post('/conversations', {message: this.message, program_id: this.programId})
           .then((response) => {
             this.message = '';
             this.conversations.push(response.data);
@@ -23,14 +23,12 @@
       },
 
       listenForNewMessage() {
-        Echo.private('programs.' + this.program.id)
+        Echo.private('programs.' + this.programId)
           .listen('NewMessage', (e) => {
             // console.log(e);
             this.conversations.push(e);
           });
       }
-
-
     }
   }
 </script>
