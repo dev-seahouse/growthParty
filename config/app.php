@@ -184,7 +184,7 @@ return [
      */
     App\Providers\AppServiceProvider::class,
     App\Providers\AuthServiceProvider::class,
-    // App\Providers\BroadcastServiceProvider::class,
+    App\Providers\BroadcastServiceProvider::class,
     App\Providers\EventServiceProvider::class,
     App\Providers\RouteServiceProvider::class,
     Collective\Html\HtmlServiceProvider::class,
@@ -248,6 +248,7 @@ return [
     'Image'         => Intervention\Image\Facades\Image::class,
     'ResponseCache' => Spatie\ResponseCache\ResponseCacheFacade::class,
     'Debugbar'      => Barryvdh\Debugbar\Facade::class,
+    'Pusher'        => Pusher\Pusher::class,
   ],
 
 ];
