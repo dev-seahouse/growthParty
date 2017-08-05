@@ -16,6 +16,11 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Occupation whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Occupation whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property string $name
+ * @property int $industry_id
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $user
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Occupation whereIndustryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Occupation whereName($value)
  */
 class Occupation extends Model
 {
