@@ -11,6 +11,29 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Carbon\Carbon $created_at
  * @property int $id
  * @property \Carbon\Carbon $updated_at
+ * @property string $name
+ * @property string|null $address
+ * @property string|null $uen
+ * @property string|null $website
+ * @property string|null $email
+ * @property string $industry_id
+ * @property string|null $phone
+ * @property string|null $source
+ * @property string|null $description
+ * @property-read \App\Rating $ratings
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ServiceProvider whereAddress($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ServiceProvider whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ServiceProvider whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ServiceProvider whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ServiceProvider whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ServiceProvider whereIndustryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ServiceProvider whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ServiceProvider wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ServiceProvider whereSource($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ServiceProvider whereUen($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ServiceProvider whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\ServiceProvider whereWebsite($value)
+ * @mixin \Eloquent
  */
 class ServiceProvider extends Model
 {
