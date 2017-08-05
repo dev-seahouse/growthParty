@@ -36,11 +36,11 @@
     "parsleyjs": "^2.7.2",
     "progressively": "^1.1.2",
     "select2": "^4.0.3",
-    "vue": "^2.3.4"
-  },
-  "dependencies": {
+    "vue": "^2.3.4",
     "laravel-echo": "^1.3.2",
     "pusher-js": "^4.1.0"
+  },
+  "dependencies": {
   },
   "false": {}
 }
