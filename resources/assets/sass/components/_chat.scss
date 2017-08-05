@@ -1,0 +1,98 @@
+.chat {
+  $border-rad: 5px 5px 0 0;
+  margin: 15px;
+  ::-webkit-scrollbar {
+    width: 3px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background:get-color(primary);
+  }
+
+  &.restrained {
+    width: 400px;
+    .thread {
+      height: 450px;
+    }
+  }
+
+  &.bottom {
+    position: fixed;
+    bottom: 30px;
+  }
+
+  &.right {
+    position: fixed;
+    right: 1px;
+  }
+
+  .header {
+    background: get-color(primary);
+    border-radius: $border-rad;
+    color: white;
+    cursor: pointer;
+    padding: 15px 24px;
+
+    .title {
+      font-weight: 800;
+      font-size: .8rem;
+    }
+
+    .minimize {
+      margin-top: 12px;
+      border: 2px solid white;
+      width: 25px;
+      color: white;
+      float: right;
+    }
+  }
+  .body {
+    background: #E9E9E9;
+  }
+  .thread {
+    padding: 8px 24px;
+    overflow-y: scroll;
+    border-bottom:3px dotted white;
+    margin-bottom:0;
+  }
+  .message {
+    font-size: 14px;
+    margin: 8px 0;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .info {
+    color: black;
+  }
+
+  .date {
+    float: right;
+    color: #999;
+  }
+
+  .whostyping {
+    margin-top:10px;
+    margin-left:25px;
+    color:#999;
+    font-style:italic;
+    font-size:.9rem;
+  }
+  .controls {
+    padding: 0px 25px;
+  }
+
+  .input {
+    background: #D3D3D3;
+    color: black;
+    margin-right: 20px;
+    border-radius: 5px;
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+}
+
+
+
