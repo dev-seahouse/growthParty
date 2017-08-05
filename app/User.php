@@ -49,6 +49,12 @@ use Illuminate\Notifications\Notifiable;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRoleId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property int $maxMatches
+ * @property int $occupation_id
+ * @property int $industry_id
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereIndustryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereMaxMatches($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereOccupationId($value)
  */
 class User extends Authenticatable
 {
