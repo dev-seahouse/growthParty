@@ -5,7 +5,7 @@
     width: 3px;
   }
   ::-webkit-scrollbar-thumb {
-    background:get-color(primary);
+    background: get-color(primary);
   }
 
   &.restrained {
@@ -17,7 +17,7 @@
 
   &.bottom {
     position: fixed;
-    bottom: 30px;
+    bottom: 20px;
   }
 
   &.right {
@@ -34,7 +34,19 @@
 
     .title {
       font-weight: 800;
-      font-size: .8rem;
+      font-size: .9rem;
+    }
+
+    .subtitle {
+      margin-left: 10px;
+      font-style: italic;
+      font-weight: normal;
+      color: white;
+      animation: blink normal 1.5s infinite ease-in-out;
+    }
+
+    .icon {
+      margin-right: 5px;
     }
 
     .minimize {
@@ -51,8 +63,8 @@
   .thread {
     padding: 8px 24px;
     overflow-y: scroll;
-    border-bottom:3px dotted white;
-    margin-bottom:0;
+    border-bottom: 3px dotted white;
+    margin-bottom: 0;
   }
   .message {
     font-size: 14px;
@@ -72,14 +84,13 @@
   }
 
   .whostyping {
-    margin-top:10px;
-    margin-left:25px;
-    color:#999;
-    font-style:italic;
-    font-size:.9rem;
+    margin-top: 10px;
+    margin-left: 25px;
+    color: #999;
+    font-style: italic;
   }
   .controls {
-    padding: 0px 25px;
+    padding: 18px 15px 0px 15px;
   }
 
   .input {
@@ -92,6 +103,19 @@
     }
   }
 
+  @keyframes blink {
+    0% {
+      color: rgba(255, 255, 255, 1)
+    }
+
+    50% {
+      color: rgba(255, 255, 255, .5)
+    }
+
+    100% {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
 }
 
 
