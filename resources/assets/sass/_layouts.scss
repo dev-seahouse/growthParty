@@ -1,5 +1,6 @@
 $padding-offsets: (default: 0, small: rem-calc(10px), medium: rem-calc(20px), large: rem-calc(30px));
 $directions:('top','right', 'bottom','left');
+$footer-height: 8.625rem;
 /**
  * ===========Layout Rules==============
  * This section defines reusable classes
@@ -99,7 +100,7 @@ $directions:('top','right', 'bottom','left');
 }
 
 .l-full-height {
-  height:85vh;
+  min-height: calc(100vh - #{$footer-height + 2.3rem});
 }
 /*----------  Logo layout  ----------*/
 
@@ -129,7 +130,7 @@ $directions:('top','right', 'bottom','left');
 
 /*----------  Footer layout  ----------*/
 .l-footer {
-  min-height: 8.625rem;
+  min-height: $footer-height;
 }
 
 .l-featured {
