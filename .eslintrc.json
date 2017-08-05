@@ -11,7 +11,8 @@
     "Vue": true,
     "axios": true,
     "Fondation": true,
-    "Headroom": true
+    "Headroom": true,
+    "Echo": true
   },
   "rules": {
     "indent": [
@@ -21,10 +22,6 @@
     "quotes": [
       "error",
       "single"
-    ],
-    "semi": [
-      "error",
-      "always"
     ],
     "no-console": "warn",
     "linebreak-style": "off",
@@ -61,7 +58,6 @@
     "object-shorthand": "warn",
     "prefer-const": "warn",
     "arrow-body-style": "warn",
-    "space-before-function-paren": ["error", "never"],
     "strict": ["error", "safe"],
     "no-var": "error"
   }
