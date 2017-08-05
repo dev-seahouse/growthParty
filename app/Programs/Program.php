@@ -14,6 +14,20 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read \App\ServiceProvider $serviceProvider
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $users
  * @mixin \Eloquent
+ * @property int $id
+ * @property int $service_provider_id
+ * @property int $affiliate_count
+ * @property int $program_template_id
+ * @property \Carbon\Carbon|null $created_at
+ * @property \Carbon\Carbon|null $updated_at
+ * @property-read \App\Programs\ProgramTemplate $programTemplate
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Programs\Program matchedPrograms($occupation)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Programs\Program whereAffiliateCount($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Programs\Program whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Programs\Program whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Programs\Program whereProgramTemplateId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Programs\Program whereServiceProviderId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Programs\Program whereUpdatedAt($value)
  */
 class Program extends Model
 {
