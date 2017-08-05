@@ -8,9 +8,9 @@
         <label>
           Email or phone
           <input
-            type="text"
-            v-model="detail.loginId"
-            placeholder="Enter email or mobile">
+              type="text"
+              v-model="detail.loginId"
+              placeholder="Enter email or mobile">
         </label>
         <span class="form-error is-visible">{{ error.loginId }}</span>
       </div>
@@ -21,9 +21,9 @@
         <label>
           Password
           <input
-            type="password"
-            v-model="detail.password"
-            placeholder="Enter password">
+              type="password"
+              v-model="detail.password"
+              placeholder="Enter password">
         </label>
         <span class="form-error is-visible">{{ error.password }}</span>
       </div>
@@ -37,43 +37,55 @@
 </template>
 
 <script>
-const getError = (error, type) => (error[type] || error[type].pop());
-const resolveError = (error, type) => (error[type] && getError(error, type));
-const parseError = (body) => {
-  const error = body.response.data;
-  const output = {
-    loginId: resolveError(error, 'mobile') || resolveError(error, 'email'),
-    password: getError(error, 'password') || '',
-  };
-  // Normalise loginId
-  output.loginId = (Array.isArray(output.loginId)) ? output.loginId.toString() : output.loginId;
+  /* eslint-disable no-trailing-spaces */
 
-  return output;
-};
+  const getError = (error, type) => {
+    if (error[type]) { return (error[type] || error[type].pop()) }
+    return ""
+  }
+  const resolveError = (error, type) => {
+// eslint-disable-next-line curly
+    if (error[type])
+      return (error[type] && getError(error, type))
+    return ""
+  }
+  const parseError = (body) => {
+    const error = body.response.data
+    const output = {
+      loginId: resolveError(error, 'mobile') || resolveError(error, 'email'),
+      password: getError(error, 'password') || '',
+    }
+    // Normalise loginId
+    output.loginId = (Array.isArray(output.loginId)) ? output.loginId.toString() : output.loginId
+    // Normalize password
+    output.password = (Array.isArray(output.password)) ? output.password.toString() : output.password
 
-export default {
-  data() {
-    return {
-      detail: {
-        loginId: '',
-        password: '',
-      },
-      error: {
-        loginId: '',
-        password: '',
+    return output
+  }
+
+  export default {
+    data () {
+      return {
+        detail: {
+          loginId: '',
+          password: '',
+        },
+        error: {
+          loginId: '',
+          password: '',
+        }
       }
-    };
-  },
-  methods: {
-    onSubmit() {
-      axios.post('/login', this.detail)
-        .then(response => {
-          window.location.replace('/dashboard');
-        })
-        .catch((error) => {
-          this.error = parseError(error);
-        });
+    },
+    methods: {
+      onSubmit () {
+        axios.post('/login', this.detail)
+          .then(response => {
+            window.location.replace('/dashboard')
+          })
+          .catch((error) => {
+            this.error = parseError(error)
+          })
+      }
     }
   }
-};
 </script>
