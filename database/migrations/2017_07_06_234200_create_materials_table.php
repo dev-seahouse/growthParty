@@ -18,7 +18,8 @@ class CreateMaterialsTable extends Migration {
 			$table->integer('program_id')->unsigned();
 			$table->string('name', 191);
 			$table->string('type', 191);
-			$table->string('directory', 191);
+			$table->string('uri', 512)->nullable();
+			$table->string('comment')->nullable();
 			$table->timestamps();
 		});
 	}
