@@ -5,10 +5,11 @@
         <h1 class="title">Materials</h1>
       </header>
       <!-- Menu -->
+
       <ul class="vertical menu">
-        <li><a href="#">Pitch Deck</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Brochures</a></li>
+        <li><a href="#" :class=" {'is-active' : isActive('pitch-deck')} " @click="switchView('pitch-deck')">Pitch Deck</a></li>
+        <li><a href="#" :class=" {'is-active' : isActive('portfolio')} " @click="switchView('portfolio')">Portfolio</a></li>
+        <li><a href="#" :class=" {'is-active' : isActive('brochures')} " @click="switchView('brochures')">Brochures</a></li>
       </ul>
 
       <!-- Close button -->
@@ -20,21 +21,75 @@
 
     <div class="off-canvas-content" data-off-canvas-content>
       <!-- set loader based on doc type passed in, if ppt use microsoft laoder, if pdf use google loader-->
-
-      <iframe
-          src='https://view.officeapps.live.com/op/embed.aspx?src=http%3A%2F%2Fdev%2Eawsm%2Ein%3A80%2Finnovations%2Fwp%2Dcontent%2Fuploads%2F2014%2F11%2Fppt%2Dsample%2Epptx&wdAr=1.3333333333333333&Embed=1'
-          width='100%' height='600px' frameborder='0'>This is an embedded <a target='_blank' href='https://office.com'>Microsoft Office</a>
-        presentation, powered by <a target='_blank' href='https://office.com/webapps'>Office Online</a>.
-      </iframe>
+      <component
+          :is="currentDocLoader"
+          :uri= "currentDocUri"
+      ></component>
     </div>
   </div>
 
 </template>
 <script>
+  import OfficeLoader from './DocLoaders/OfficeLoader'
+  import GoogleLoader from './DocLoaders/GoogleLoader'
+  const components = {
+    'office-loader': OfficeLoader,
+    'google-loader': GoogleLoader
+  }
+  const whichViewLoadWhichDocumentMap = {
+    // basically a mapping between name of
+    // view and the name field in Material table for each program
+    'pitch-deck': 'Pitch Deck',
+    'portfolio': 'Porfolio',
+    'brochures': 'Brochure'
+  }
   export default {
+    components,
+    data () {
+      return {
+        currentView: 'pitch-deck',
+        currentDocLoader: 'office-loader',
+        currentDocUri: ''
+      }
+    },
+    mounted () {
+      this.loadDoc()
+    },
+    methods: {
+      switchView (nameOfView) {
+        this.currentView = nameOfView
+        // decide which document to load depend on viewName
+        this.loadDoc()
+      },
+      isActive (selectedViewName) {
+        return selectedViewName === this.currentView
+      },
+      loadDoc () {
+        let nameOfdocToLoad = this.determineDocToLoad(this.currentView, whichViewLoadWhichDocumentMap)
+        let docToLoad = this.findDocObj(nameOfdocToLoad, this.documents)
+        this.currentDocUri = docToLoad.uri
+        this.setLoader(docToLoad.type)
+        console.log(this.currentView)
+        console.log('The current doc url is' + this.currentDocUri)
+      },
+      setLoader (extension) {
+        if (extension === 'ppt' || extension === 'pptx') {
+          this.currentDocLoader = 'office-loader'
+        } else {
+          this.currentDocLoader= 'google-loader'
+        }
+      },
+      findDocObj (docName, docs) {
+        // search through materials belonging to current program and return brochure, pitch deck or portfolio
+        if (!docs.length) throw new Error('No documents are found. Check that materials for this program are uploaded.')
+        return docs.filter(doc => doc.name === docName).pop()
+      },
+      determineDocToLoad (viewName, mapping) {
+        return mapping[viewName]
+      }
+    },
     props: [
       'documents',
-      'curr_page'
     ]
   }
 </script>

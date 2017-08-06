@@ -19,7 +19,7 @@ class MaterialSeeder extends Seeder
         $pitch = Material::make([
           "name" => "Pitch Deck",
           "type" => "ppt",
-          "uri" => "https://www.google.com.sg/url?sa=t&rct=j&q=&esrc=s&source=web&cd=11&cad=rja&uact=8&ved=0ahUKEwjS6Mezu8LVAhVLro8KHZYpBTAQFghXMAo&url=http%3A%2F%2Fgsm.ucdavis.edu%2Fsites%2Fmain%2Ffiles%2Ffile-attachments%2Fbusiness_summary_template_2014.ppt&usg=AFQjCNESP7-Jv0jNJbVxpc_uhkRhCpzspA"
+          "uri" => "https://gsm.ucdavis.edu/sites/main/files/file-attachments/business_summary_template_2014.ppt"
         ]);
         // create a pdf portfolio
         $portfolio = Material::make([

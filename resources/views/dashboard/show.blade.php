@@ -21,7 +21,7 @@
 
 @section('content')
   <group-chat :program_id="{{$program->id}}" :curr_user="{{ Auth::user() }}"></group-chat>
-  <doc-loader></doc-loader>
+  <doc-loader :documents="{{$program->materials}}"></doc-loader>
 @endsection
 @push('page_styles')
   <style>

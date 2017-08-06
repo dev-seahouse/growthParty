@@ -12,7 +12,7 @@
           <div class="media-object">
             <div class="media-object-section">
               <div class="thumbnail company-logo">
-                <img src="{{ $program->serviceProvider->getCompanyLogoPath() }}" alt="Company Image"
+                <img src="/{{ $program->serviceProvider->getCompanyLogoPath() }}" alt="Company Image"
                      class="round-corner">
               </div>
             </div>

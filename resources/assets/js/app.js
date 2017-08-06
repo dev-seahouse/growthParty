@@ -9,6 +9,7 @@ window.Vue = require('vue')
 // plugins
 require('jquery-steps/dist/jquery-steps')
 require('parsleyjs')
+window.pace = require('pace-progress')
 // define global mixin
 Vue.mixin({
   data: function () {
@@ -29,6 +30,7 @@ const app = new Vue({
   el: '#app',
   mounted () {
     $(this.$el).foundation()
+    pace.start()
   },
   destroyed () {
     $(this.$el).foundation.destroy()
