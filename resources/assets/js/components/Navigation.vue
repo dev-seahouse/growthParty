@@ -42,18 +42,18 @@
 </template>
 
 <script>
-  import Registration from './Account/Registration';
-  import Login from './Account/Login';
+  import Registration from './Account/Registration'
+  import Login from './Account/Login'
 
   export default {
     components: {
       registration: Registration,
       login: Login,
     },
-    data() {
-      return {};
+    data () {
+      return {}
     },
-    mounted() {
+    mounted () {
       const headroom = new Headroom(this.$el, {
         offset: 205,
         tolerance: 5,
@@ -62,8 +62,8 @@
           pinned: 'slideDown',
           unpinned: 'slideUp'
         }
-      });
-      headroom.init();
+      })
+      headroom.init()
     },
-  };
+  }
 </script>
