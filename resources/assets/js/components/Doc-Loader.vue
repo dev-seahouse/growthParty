@@ -7,9 +7,9 @@
       <!-- Menu -->
 
       <ul class="vertical menu">
-        <li><a href="#" @click="switchView('pitch-deck')">Pitch Deck</a></li>
-        <li><a href="#" @click="switchView('portfolio')">Portfolio</a></li>
-        <li><a href="#" @click="switchView('brochures')">Brochures</a></li>
+        <li><a href="#" :class=" {'is-active' : isActive('pitch-deck')} " @click="switchView('pitch-deck')">Pitch Deck</a></li>
+        <li><a href="#" :class=" {'is-active' : isActive('portfolio')} " @click="switchView('portfolio')">Portfolio</a></li>
+        <li><a href="#" :class=" {'is-active' : isActive('brochures')} " @click="switchView('brochures')">Brochures</a></li>
       </ul>
 
       <!-- Close button -->
@@ -21,8 +21,6 @@
 
     <div class="off-canvas-content" data-off-canvas-content>
       <!-- set loader based on doc type passed in, if ppt use microsoft laoder, if pdf use google loader-->
-      <component>
-      </component>
     </div>
   </div>
 
@@ -32,6 +30,7 @@
   const components = {
     'office-loader': OfficeLoader
   }
+
   export default {
     components,
     data () {
@@ -41,10 +40,11 @@
       }
     },
     methods: {
-      toggleActive () {
-      },
       switchView (nameOfView) {
         this.currentView = nameOfView
+      },
+      isActive(selectedViewName) {
+        return  selectedViewName == this.currentView
       }
     },
     props: [
