@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
       $this->call(RatingsTableSeeder::class);
       $this->call(ProgramTemplateSeeder::class);
       $this->call(ProgramsTableSeeder::class);
-
+      $this->call(MaterialSeeder::class);
       // blog seeders
       $this->call(VoyagerDatabaseSeeder::class);
       $this->call(UsersTableSeeder::class);
