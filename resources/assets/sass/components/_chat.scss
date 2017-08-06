@@ -10,15 +10,14 @@
   }
 
   &.restrained {
-    width: 400px;
     .thread {
-      height: 450px;
+      height: 350px;
     }
   }
 
   &.bottom {
     position: fixed;
-    bottom: 20px;
+    bottom: 5px;
   }
 
   &.right {
@@ -31,7 +30,7 @@
     border-radius: $border-rad;
     color: white;
     cursor: pointer;
-    padding: 15px 24px;
+    padding: 10px 19px;
 
     .title {
       font-weight: 800;
@@ -51,9 +50,10 @@
     }
 
     .minimize {
+      margin-left:5px;
       margin-top: 12px;
       border: 2px solid white;
-      width: 25px;
+      width: 10px;
       color: white;
       float: right;
     }
