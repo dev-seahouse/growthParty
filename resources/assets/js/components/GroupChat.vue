@@ -1,7 +1,7 @@
 <template>
   <div class="chat restrained bottom right">
     <div class="header" @click="toggleChat">
-      <span class="title">Group Chat</span>
+      <span class="title">Chat</span>
       <transition name="fade">
         <span v-show="typing" class="subtitle"><i class="fa fa-bullhorn icon" aria-hidden="true"></i>Someone is typing ...</span>
       </transition>
