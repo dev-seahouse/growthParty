@@ -54,6 +54,7 @@
 <!-- we insert these comment for the purpose of aid debugging -->
 <div id="app">
   <!----------    Navigation  ---------->
+
   @yield('nav')
   <!----------     Header     ---------->
   @yield('header')
