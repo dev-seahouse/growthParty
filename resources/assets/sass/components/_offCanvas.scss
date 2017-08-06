@@ -1,14 +1,19 @@
 .off-canvas {
     .header {
-        background: white;
-        height: 50px;
+        background: #fff;
+        height: 65px;
+        padding: 14px;
+        padding-bottom:20px;
     }
     .title {
-        font-size: 2rem;
-        margin: 14px;
+        font-size: 1.5rem;
+        color: #555;
+        padding-bottom:20px;
     }
+
     .is-active {
         color: white;
+        font-weight: 600;
         background: get-color(primary);
     }
 }
