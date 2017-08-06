@@ -5,10 +5,11 @@
         <h1 class="title">Materials</h1>
       </header>
       <!-- Menu -->
+
       <ul class="vertical menu">
-        <li><a href="#">Pitch Deck</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Brochures</a></li>
+        <li><a href="#" @click="switchView('pitch-deck')">Pitch Deck</a></li>
+        <li><a href="#" @click="switchView('portfolio')">Portfolio</a></li>
+        <li><a href="#" @click="switchView('brochures')">Brochures</a></li>
       </ul>
 
       <!-- Close button -->
@@ -20,18 +21,32 @@
 
     <div class="off-canvas-content" data-off-canvas-content>
       <!-- set loader based on doc type passed in, if ppt use microsoft laoder, if pdf use google loader-->
-
-      <iframe
-          src='https://view.officeapps.live.com/op/embed.aspx?src=http%3A%2F%2Fdev%2Eawsm%2Ein%3A80%2Finnovations%2Fwp%2Dcontent%2Fuploads%2F2014%2F11%2Fppt%2Dsample%2Epptx&wdAr=1.3333333333333333&Embed=1'
-          width='100%' height='600px' frameborder='0'>This is an embedded <a target='_blank' href='https://office.com'>Microsoft Office</a>
-        presentation, powered by <a target='_blank' href='https://office.com/webapps'>Office Online</a>.
-      </iframe>
+      <component>
+      </component>
     </div>
   </div>
 
 </template>
 <script>
+  import OfficeLoader from './DocLoaders/OfficeLoader'
+  const components = {
+    'office-loader': OfficeLoader
+  }
   export default {
+    components,
+    data () {
+      return {
+        currentView: '',
+        currentComponent: ''
+      }
+    },
+    methods: {
+      toggleActive () {
+      },
+      switchView (nameOfView) {
+        this.currentView = nameOfView
+      }
+    },
     props: [
       'documents',
       'curr_page'
