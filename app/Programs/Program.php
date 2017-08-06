@@ -37,7 +37,7 @@ class Program extends Model
     return $this->belongsTo(ServiceProvider::class);
   }
 
-  public function programMaterial()
+  public function materials()
   {
     return $this->hasMany(Material::class);
   }
