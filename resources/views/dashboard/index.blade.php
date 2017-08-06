@@ -3,14 +3,6 @@
 
   @isset($programsOfUser)
 
-{{--    @foreach($programsOfUser as $programofuser)
-
-      @foreach($programofuser->materials as $programofusermat)
-        <p>{{ $programofusermat->uri }}</p>
-      @endforeach
-
-    @endforeach--}}
-
     <div class="l-full-height">
       @foreach ($programsOfUser as $program)
       

@@ -34,6 +34,7 @@
   export default {
     props: [
       'documents',
+      'curr_page'
     ]
   }
 </script>
