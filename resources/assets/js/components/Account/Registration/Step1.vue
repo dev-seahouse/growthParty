@@ -8,10 +8,10 @@
           <label>
             Email
             <input type="email"
-              name="email"
-              placeholder="Enter email"
-              v-model="localDetail.email"
-              required>
+                   name="email"
+                   placeholder="Enter email"
+                   v-model="localDetail.email"
+                   required>
           </label>
         </div>
       </div>
@@ -22,10 +22,10 @@
               <span class="input-group-label">{{ localDetail.countryCode }}</span>
               <input
                   id="mobile"
-              pattern='[+]?[\d ]*'
-              name="mobile" 
-              placeholder="Enter phone no."
-              v-model="localDetail.mobile"
+                  pattern='[+]?[\d ]*'
+                  name="mobile"
+                  placeholder="Enter phone no."
+                  v-model="localDetail.mobile"
                   class="input-group-field" type="number">
             </div>
           </label>
@@ -36,11 +36,11 @@
           <label>
             Password
             <input type="password"
-              minlength="6"
-              name="password"
-              placeholder="Enter password"
-              v-model="localDetail.password"
-              required>
+                   minlength="6"
+                   name="password"
+                   placeholder="Enter password"
+                   v-model="localDetail.password"
+                   required>
           </label>
         </div>
       </div>
@@ -52,20 +52,20 @@
 </template>
 
 <script>
-export default {
-  props: ['detail'],
-  data() {
-    return {
-      localDetail: {
-        countryCode: "+65",
-        email: this.detail.email || '',
-        mobile: this.detail.mobile || '',
-        password: this.detail.password || '',
-      },
-    };
-  },
-  methods: {
-    next(event) { this.$emit('next', this.localDetail); },
-  },
-};
+  export default {
+    props: ['detail'],
+    data () {
+      return {
+        localDetail: {
+          countryCode: '+65',
+          email: this.detail.email || '',
+          mobile: this.detail.mobile || '',
+          password: this.detail.password || '',
+        },
+      }
+    },
+    methods: {
+      next (event) { this.$emit('next', this.localDetail) },
+    },
+  }
 </script>
