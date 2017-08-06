@@ -6,7 +6,6 @@
 
 require('./bootstrap')
 window.Vue = require('vue')
-
 // plugins
 require('jquery-steps/dist/jquery-steps')
 require('parsleyjs')
@@ -14,7 +13,7 @@ require('parsleyjs')
 Vue.mixin({
   data: function () {
     return {
-      get csrf_token(){
+      get csrf_token () {
         return window._token
       }
     }
@@ -23,14 +22,15 @@ Vue.mixin({
 Vue.component('flash', require('./components/Flash.vue'))
 Vue.component('navigation', require('./components/Navigation.vue'))
 Vue.component('modal', require('./components/Modal.vue'))
-Vue.component('group-chat',require('./components/GroupChat.vue'))
+Vue.component('group-chat', require('./components/GroupChat.vue'))
+Vue.component('doc-loader', require('./components/Doc-Loader.vue'))
 
 const app = new Vue({
   el: '#app',
   mounted () {
     $(this.$el).foundation()
   },
-  destroyed() {
-    $(this.$el).foundation.destroy();
+  destroyed () {
+    $(this.$el).foundation.destroy()
   }
 })
