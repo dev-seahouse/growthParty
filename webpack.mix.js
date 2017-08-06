@@ -17,19 +17,19 @@ mix.autoload({
  |
  */
 if (mix.inProduction()) {
-  mix.version();
+  mix.version()
 }
 mix.copy('resources/assets/img/', 'public/images/')
 mix.sass('resources/assets/sass/app.scss', 'public/css')
   .js('resources/assets/js/foundation.js', 'public/foundation-dist.js')
   .js('resources/assets/js/app.js', 'public/js')
-  .js('resources/assets/js/analytics.js','public/js')
+  .js('resources/assets/js/analytics.js', 'public/js')
   .combine([
-    'node_modules/fg-loadcss/src/loadCSS.js',
-    'node_modules/fg-loadcss/src/cssrelpreload.js',
-    'node_modules/fg-loadcss/src/onloadCSS.js'],
+      'node_modules/fg-loadcss/src/loadCSS.js',
+      'node_modules/fg-loadcss/src/cssrelpreload.js',
+      'node_modules/fg-loadcss/src/onloadCSS.js'],
     'public/js/loadCSS.js')
-  .extract(['vue', 'axios', 'jquery', 'jquery.counterup','headroom.js','select2'])
+  .extract(['vue', 'axios', 'jquery', 'jquery.counterup', 'headroom.js', 'select2'])
 
 // combine vendor scripts that need to be compiled separately
 mix.combine(
