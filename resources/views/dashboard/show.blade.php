@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('nav')
-  <div class="row menu-bar">
+  <div class="menu-bar l-restrained">
     <section class="info">
       <img src="/{{ $program->serviceProvider->getCompanyLogoPath() }}" alt="Company Image"
            class="logo round-corner">
@@ -13,7 +13,7 @@
 
     <section class="menu controls">
       <a href="#" class="memu-item" data-toggle="offCanvas"><i class="fa fa-folder-open-o fa-2x" aria-hidden="true"></i></a>
-      <a href="" class="memu-item"><i class="fa fa-calendar fa-2x" aria-hidden="true"></i></a>
+      <a href="#" class="memu-item"><i class="fa fa-calendar fa-2x" aria-hidden="true"></i></a>
     </section>
 
   </div>
