@@ -1,0 +1,41 @@
+.menu-bar {
+  display: flex;
+  padding:10px 15px;
+  margin-bottom: 10px;
+  box-shadow: 3px 3px 5px #888888;
+  //border-bottom:1px solid #eee;
+
+  .info {
+    margin-left:18px; // added so that icons on the right have the same gutter space from border as logos on the left
+    display:inline-flex;
+    align-items: center;
+    flex-basis: 300px;
+
+  }
+  .detail {
+    display:flex;
+    flex-basis: 200px;
+    flex-direction: column;
+    margin:0 15px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .subtitle {
+    font-size:.8rem;
+    color: #bbb;
+  }
+
+  .logo {
+    height: 85px;
+    width: auto;
+  }
+
+  .controls {
+    display: inline-flex;
+    align-self: center;
+    margin-left:auto;
+  }
+}
