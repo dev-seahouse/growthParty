@@ -8,6 +8,10 @@ $footer-height: 8.625rem;
  *
  */
 
+.l-restrained {
+  max-width: $grid_row-width;
+  margin: auto;
+}
 /*----------  Alignment helpers  ----------*/
 
 // same effect as float left, apply to flex item
@@ -152,4 +156,5 @@ $footer-height: 8.625rem;
   padding-right: 35px;
   background-color:get_color(light-gray);
 }
+
 
