@@ -7,9 +7,12 @@
       <!-- Menu -->
 
       <ul class="vertical menu">
-        <li><a href="#" :class=" {'is-active' : isActive('pitch-deck')} " @click="switchView('pitch-deck')">Pitch Deck</a></li>
-        <li><a href="#" :class=" {'is-active' : isActive('portfolio')} " @click="switchView('portfolio')">Portfolio</a></li>
-        <li><a href="#" :class=" {'is-active' : isActive('brochures')} " @click="switchView('brochures')">Brochures</a></li>
+        <li><a href="#" :class=" {'is-active' : isActive('pitch-deck')} "
+               @click="switchView('pitch-deck')">Pitch Deck</a></li>
+        <li><a href="#" :class=" {'is-active' : isActive('portfolio')} " @click="switchView('portfolio')">Portfolio</a>
+        </li>
+        <li><a href="#" :class=" {'is-active' : isActive('brochures')} " @click="switchView('brochures')">Brochures</a>
+        </li>
       </ul>
 
       <!-- Close button -->
@@ -21,10 +24,15 @@
 
     <div class="off-canvas-content" data-off-canvas-content>
       <!-- set loader based on doc type passed in, if ppt use microsoft laoder, if pdf use google loader-->
-      <component
-          :is="currentDocLoader"
-          :uri= "currentDocUri"
-      ></component>
+      <transition>
+        <keep-alive>
+          <component
+              :is="currentDocLoader"
+              :uri="currentDocUri"
+          ></component>
+        </keep-alive>
+      </transition>
+
     </div>
   </div>
 
@@ -32,9 +40,10 @@
 <script>
   import OfficeLoader from './DocLoaders/OfficeLoader'
   import GoogleLoader from './DocLoaders/GoogleLoader'
+
   const components = {
     'office-loader': OfficeLoader,
-    'google-loader': GoogleLoader
+    'google-loader': GoogleLoader // note that https://en.yumpu.com/ provides better alternative embedded pdf.
   }
   const whichViewLoadWhichDocumentMap = {
     // basically a mapping between name of
@@ -69,14 +78,14 @@
         let docToLoad = this.findDocObj(nameOfdocToLoad, this.documents)
         this.currentDocUri = docToLoad.uri
         this.setLoader(docToLoad.type)
-        console.log(this.currentView)
-        console.log('The current doc url is' + this.currentDocUri)
+        // console.log(this.currentView)
+        // console.log('The current doc url is' + this.currentDocUri)
       },
       setLoader (extension) {
         if (extension === 'ppt' || extension === 'pptx') {
           this.currentDocLoader = 'office-loader'
         } else {
-          this.currentDocLoader= 'google-loader'
+          this.currentDocLoader = 'google-loader'
         }
       },
       findDocObj (docName, docs) {
